@@ -80,7 +80,7 @@ class SearchRequest(BaseModel):
 class MetadataUpdate(BaseModel):
     """Single metadata update."""
 
-    doc_id: UUID = Field(..., description="Document ID")
+    doc_id: str = Field(..., description="Document ID")
     changes: Dict[str, Any] = Field(..., description="Fields to update")
 
     class Config:
@@ -141,13 +141,13 @@ class EmbeddingReindexRequest(BaseModel):
 class SearchResultItem(BaseModel):
     """Single search result item."""
 
-    doc_id: UUID = Field(..., description="Document ID")
+    doc_id: str = Field(..., description="Document ID")
     rank: int = Field(..., description="Result rank")
     title: str = Field(..., description="Document title")
     source: str = Field(..., description="Document source/filepath")
     owner: str = Field(..., description="Document owner")
     classification: str = Field(..., description="Classification level")
-    created_date: datetime = Field(..., description="Creation date")
+    created_date: str = Field(..., description="Creation date (ISO format)")
     relevance_score: float = Field(..., ge=0.0, le=1.0, description="Relevance score (0-1)")
     search_type: Literal["hybrid", "keyword", "semantic"] = Field(..., description="Type of search that found this result")
     excerpt: str = Field(..., description="Document excerpt")
@@ -258,7 +258,7 @@ class MetadataResponse(BaseModel):
 class BulkUpdateResult(BaseModel):
     """Result of a single bulk update."""
 
-    doc_id: UUID = Field(..., description="Document ID")
+    doc_id: str = Field(..., description="Document ID")
     status: Literal["updated", "failed", "not_found"] = Field(..., description="Update status")
     error: Optional[str] = Field(default=None, description="Error message if failed")
 

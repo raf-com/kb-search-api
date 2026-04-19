@@ -1,0 +1,215 @@
+version: '3.9'
+
+# Standalone deployment of kb-search-api with dedicated ports
+# Usage: docker-compose -f docker-compose.standalone.yml up
+# This version uses unique ports (8010, 6380, 6340) to avoid conflicts with main infra
+
+services:
+  # =========================================================================
+  # PostgreSQL (Source of Truth)
+  # =========================================================================
+  postgresql:
+    image: postgres:15-alpine
+    container_name: kb_search_postgresql
+    environment:
+      POSTGRES_DB: kb_db
+      POSTGRES_USER: kb_user
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-kbsearch-secure-password}
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 -c autovacuum=on -c autovacuum_naptime=10min -c autovacuum_vacuum_scale_factor=0.1 -c autovacuum_analyze_scale_factor=0.05 -c log_statement=all -c log_min_duration_statement=1000 -c checkpoint_timeout=30min"
+    volumes:
+      - kb_search_postgresql_data:/var/lib/postgresql/data
+      - ./init-scripts/kb-schema.sql:/docker-entrypoint-initdb.d/01-kb-schema.sql
+    ports:
+      - "5433:5432"  # Adjusted to avoid conflict with main infra postgres:5432
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kb_user -d kb_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - kb_search_network
+
+  # =========================================================================
+  # Meilisearch (Full-Text Search)
+  # =========================================================================
+  meilisearch:
+    image: getmeili/meilisearch:v1.7.0
+    container_name: kb_search_meilisearch
+    environment:
+      MEILI_ENV: production
+      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY:-kb-search-32-char-secret-key-minimum}
+      MEILI_ANALYTICS: "false"
+      MEILI_MAX_INDEXING_MEMORY: 2gb  # Reduced from 4gb for shared resources
+    volumes:
+      - kb_search_meilisearch_data:/meili_data
+    ports:
+      - "7701:7700"  # Adjusted to avoid conflict with main infra meilisearch:7700
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7700/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - kb_search_network
+
+  # =========================================================================
+  # Qdrant (Vector Search) — OPTION 1: Dedicated instance
+  # =========================================================================
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: kb_search_qdrant
+    environment:
+      QDRANT_API_KEY: ${QDRANT_API_KEY:-kb-search-qdrant-api-key}
+    volumes:
+      - kb_search_qdrant_data:/qdrant/storage
+    ports:
+      - "6335:6333"  # Adjusted to avoid conflict with infra-qdrant (note: 6335→6333 mapping)
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    restart: unless-stopped
+    networks:
+      - kb_search_network
+
+  # =========================================================================
+  # Redis (Caching)
+  # =========================================================================
+  redis:
+    image: redis:7-alpine
+    container_name: kb_search_redis
+    command: redis-server --maxmemory 512mb --maxmemory-policy allkeys-lru --appendonly yes --appendfsync everysec
+    volumes:
+      - kb_search_redis_data:/data
+    ports:
+      - "6380:6379"  # Adjusted to avoid conflict with main infra redis:6379
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 256M
+        reservations:
+          cpus: '0.125'
+          memory: 128M
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - kb_search_network
+
+  # =========================================================================
+  # FastAPI Search Service
+  # =========================================================================
+  search-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kb_search_api_service
+    environment:
+      ENVIRONMENT: ${ENVIRONMENT:-production}
+      DEBUG: ${DEBUG:-false}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      DATABASE_URL: postgresql://kb_user:${DB_PASSWORD:-kbsearch-secure-password}@postgresql:5432/kb_db
+      MEILISEARCH_URL: http://meilisearch:7700
+      MEILISEARCH_KEY: ${MEILI_MASTER_KEY:-kb-search-32-char-secret-key-minimum}
+      QDRANT_URL: http://qdrant:6333
+      QDRANT_API_KEY: ${QDRANT_API_KEY:-kb-search-qdrant-api-key}
+      REDIS_URL: redis://redis:6379/0
+      LITELLM_API_KEY: ${LITELLM_API_KEY:-sk-your-openai-api-key}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-text-embedding-3-small}
+      API_WORKERS: ${API_WORKERS:-2}
+      API_HOST: 0.0.0.0
+      API_PORT: 8000
+      DEFAULT_SEARCH_LIMIT: ${DEFAULT_SEARCH_LIMIT:-10}
+      MAX_SEARCH_LIMIT: ${MAX_SEARCH_LIMIT:-100}
+      DEFAULT_SEMANTIC_WEIGHT: ${DEFAULT_SEMANTIC_WEIGHT:-0.5}
+    ports:
+      - "8010:8000"  # Adjusted to avoid conflict with main infra env-var-registry:8000
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    depends_on:
+      postgresql:
+        condition: service_healthy
+      meilisearch:
+        condition: service_healthy
+      qdrant:
+        condition: service_started
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - kb_search_network
+
+# ============================================================================
+# Volumes
+# ============================================================================
+volumes:
+  kb_search_postgresql_data:
+    driver: local
+  kb_search_meilisearch_data:
+    driver: local
+  kb_search_qdrant_data:
+    driver: local
+  kb_search_redis_data:
+    driver: local
+
+# ============================================================================
+# Networks
+# ============================================================================
+networks:
+  kb_search_network:
+    driver: bridge
+
+# ============================================================================
+# USAGE
+# ============================================================================
+# Start: docker-compose -f docker-compose.standalone.yml up -d
+# Stop:  docker-compose -f docker-compose.standalone.yml down
+# Logs:  docker-compose -f docker-compose.standalone.yml logs -f search-api
+#
+# Test:  curl http://localhost:8010/api/v1/health
+#
+# PORT MAPPING (Standalone vs Main Infra):
+#   Service               | Standalone | Main Infra | Conflict?
+#   ----------------------+------------+------------+-----------
+#   FastAPI              | 8010       | 8000       | None
+#   Meilisearch          | 7701       | 7700       | None
+#   Qdrant               | 6334       | 6333       | None
+#   Redis                | 6380       | 6379       | None
+#   PostgreSQL           | 5433       | 5432       | None

@@ -1,0 +1,105 @@
+services:
+  kb-search-api:
+    image: kb-search-api:latest
+    container_name: kb-search-api-dev
+    ports:
+      - "8002:8000"
+    environment:
+      ENVIRONMENT: development
+      DEBUG: "true"
+      LOG_LEVEL: DEBUG
+      API_HOST: 0.0.0.0
+      API_PORT: 8000
+      API_WORKERS: 2
+      # Database
+      DATABASE_URL: "postgresql://kb_user:kb_password@kb-postgres:5432/kb_search"
+      # Redis
+      REDIS_URL: "redis://kb-redis:6379"
+      # Search
+      MEILISEARCH_URL: "http://kb-meilisearch:7700"
+      QDRANT_URL: "http://kb-qdrant:6333"
+      # LiteLLM (optional)
+      LITELLM_PROXY_URL: "http://localhost:4000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - kb-network
+    depends_on:
+      kb-postgres:
+        condition: service_healthy
+      kb-redis:
+        condition: service_healthy
+
+  kb-web-ui:
+    image: kb-web-ui:latest
+    container_name: kb-web-ui-dev
+    ports:
+      - "3003:80"
+    environment:
+      API_URL: "kb-search-api:8000"
+      VITE_API_URL: "http://kb-search-api:8000/api"
+      VITE_API_TIMEOUT: "10000"
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - kb-network
+    depends_on:
+      kb-search-api:
+        condition: service_healthy
+
+  kb-postgres:
+    image: postgres:15-alpine
+    container_name: kb-postgres-dev
+    environment:
+      POSTGRES_USER: kb_user
+      POSTGRES_PASSWORD: kb_password
+      POSTGRES_DB: kb_search
+    volumes:
+      - kb-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kb_user"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - kb-network
+
+  kb-redis:
+    image: redis:7-alpine
+    container_name: kb-redis-dev
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - kb-network
+
+  kb-meilisearch:
+    image: getmeili/meilisearch:latest
+    container_name: kb-meilisearch-dev
+    environment:
+      MEILI_ENV: development
+    networks:
+      - kb-network
+
+  kb-qdrant:
+    image: qdrant/qdrant:latest
+    container_name: kb-qdrant-dev
+    networks:
+      - kb-network
+
+networks:
+  kb-network:
+    driver: bridge
+
+volumes:
+  kb-postgres-data:

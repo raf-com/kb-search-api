@@ -9,6 +9,7 @@ from typing import AsyncGenerator, Optional
 from contextlib import asynccontextmanager
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
 from sqlalchemy.pool import NullPool, QueuePool
+from sqlalchemy import text
 from redis.asyncio import Redis, ConnectionPool
 from config import get_settings
 
@@ -60,15 +61,12 @@ class DatabaseManager:
             logger.info("PostgreSQL engine initialized")
 
             # Redis connection
+            # Note: socket_keepalive_options disabled for Windows compatibility
+            # (some socket options not supported on Windows IPv6 sockets)
             self.redis_client = await Redis.from_url(
                 self.settings.redis_url,
                 encoding="utf8",
                 decode_responses=True,
-                socket_keepalive=True,
-                socket_keepalive_options={
-                    1: 1,  # TCP_KEEPIDLE
-                    2: 1,  # TCP_KEEPINTVL
-                },
             )
 
             # Test connection
@@ -148,7 +146,7 @@ class DatabaseManager:
         # PostgreSQL health check
         try:
             async with self.postgres_engine.connect() as conn:
-                await conn.execute("SELECT 1")
+                await conn.execute(text("SELECT 1"))
             health["postgresql"] = True
         except Exception as e:
             logger.error(f"PostgreSQL health check failed: {e}")

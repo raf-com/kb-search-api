@@ -11,6 +11,7 @@ from datetime import datetime
 
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from config import get_settings
@@ -527,13 +528,16 @@ async def health_check(
 @app.exception_handler(HTTPException)
 async def http_exception_handler(request, exc):
     """Handle HTTP exceptions."""
-    return ErrorResponse(
-        status="error",
-        error={
-            "code": exc.status_code,
-            "message": exc.detail,
-            "details": {},
-        },
+    return JSONResponse(
+        status_code=exc.status_code,
+        content={
+            "status": "error",
+            "error": {
+                "code": exc.status_code,
+                "message": exc.detail,
+                "details": {},
+            }
+        }
     )
 
 
@@ -541,13 +545,16 @@ async def http_exception_handler(request, exc):
 async def general_exception_handler(request, exc):
     """Handle unexpected exceptions."""
     logger.error(f"Unexpected error: {exc}")
-    return ErrorResponse(
-        status="error",
-        error={
-            "code": "INTERNAL_SERVER_ERROR",
-            "message": "An unexpected error occurred",
-            "details": {},
-        },
+    return JSONResponse(
+        status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+        content={
+            "status": "error",
+            "error": {
+                "code": "INTERNAL_SERVER_ERROR",
+                "message": "An unexpected error occurred",
+                "details": {},
+            }
+        }
     )
 
 

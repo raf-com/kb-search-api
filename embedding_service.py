@@ -203,6 +203,11 @@ class EmbeddingService:
             >>> print(health['status'])
             'ok'
         """
+        # Skip health check if no API key is configured (development mode)
+        if not self.settings.litellm_api_key:
+            logger.info("Embedding service health check skipped (no API key configured)")
+            return {"status": "ok", "model": self.settings.embedding_model, "note": "API key not configured"}
+
         try:
             # Test embedding generation
             response = await self.litellm.aembedding(

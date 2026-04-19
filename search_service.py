@@ -5,6 +5,7 @@ Implements Reciprocal Rank Fusion for combining results from multiple sources.
 """
 
 import hashlib
+import json
 import logging
 import time
 from typing import List, Dict, Optional, Any
@@ -87,7 +88,7 @@ class SearchService:
         cached_results = await self.redis.get(cache_key)
         if cached_results:
             logger.debug(f"Cache hit for query: {query}")
-            return cached_results
+            return json.loads(cached_results)
 
         results = []
 
@@ -123,7 +124,7 @@ class SearchService:
             await self.redis.setex(
                 cache_key,
                 self.settings.redis_cache_ttl,
-                str(response),  # Simple string caching
+                json.dumps(response),  # JSON serialization
             )
 
             return response
@@ -154,25 +155,30 @@ class SearchService:
             list: Search results from Meilisearch
         """
         try:
-            search_params = {
-                "q": query,
+            # Build filter expression
+            filter_expr = None
+            if filters:
+                filter_expr = self._build_meilisearch_filter(filters)
+
+            # Build search options dict (Meilisearch client expects opt_params dict)
+            search_options = {
                 "limit": limit,
                 "offset": offset,
             }
 
-            # Build filter expression
-            if filters:
-                filter_expr = self._build_meilisearch_filter(filters)
-                if filter_expr:
-                    search_params["filter"] = filter_expr
+            if filter_expr:
+                search_options["filter"] = filter_expr
 
             # Add highlight
             if highlight:
-                search_params["attributesToHighlight"] = ["title", "content"]
+                search_options["attributesToHighlight"] = ["title", "content"]
 
+            logger.debug(f"Meilisearch query: query={query}, index={self.settings.meilisearch_index}, options={search_options}")
             response = self.meilisearch.index(self.settings.meilisearch_index).search(
-                **search_params
+                query,
+                opt_params=search_options
             )
+            logger.debug(f"Meilisearch response: {response}")
 
             results = []
             for i, hit in enumerate(response.get("hits", [])):
@@ -196,7 +202,7 @@ class SearchService:
             return results
 
         except Exception as e:
-            logger.error(f"Meilisearch search failed: {e}")
+            logger.error(f"Meilisearch search failed: {e}", exc_info=True)
             return []
 
     async def _qdrant_search(
@@ -362,13 +368,18 @@ class SearchService:
             doc_id = str(result["doc_id"])
 
             if doc_id not in doc_scores:
+                # Convert datetime to ISO string for JSON serialization
+                created_date = result["created_date"]
+                if isinstance(created_date, datetime):
+                    created_date = created_date.isoformat()
+
                 doc_scores[doc_id] = {
                     "doc_id": result["doc_id"],
                     "title": result["title"],
                     "source": result["source"],
                     "owner": result["owner"],
                     "classification": result["classification"],
-                    "created_date": result["created_date"],
+                    "created_date": created_date,
                     "excerpt": result["excerpt"],
                     "highlighted_excerpt": result["highlighted_excerpt"],
                     "topics": result["topics"],
@@ -392,15 +403,20 @@ class SearchService:
             keyword_weight = 1 - semantic_weight
             final_score = (keyword_weight * keyword_rrf) + (semantic_weight * semantic_rrf)
 
+            # Ensure created_date is a string
+            created_date = scores["created_date"]
+            if isinstance(created_date, datetime):
+                created_date = created_date.isoformat()
+
             final_results.append(
                 SearchResultItem(
-                    doc_id=scores["doc_id"],
+                    doc_id=str(scores["doc_id"]),  # Convert UUID to string for JSON serialization
                     rank=len(final_results) + 1,
                     title=scores["title"],
                     source=scores["source"],
                     owner=scores["owner"],
                     classification=scores["classification"],
-                    created_date=scores["created_date"],
+                    created_date=created_date,  # ISO format string
                     relevance_score=min(final_score, 1.0),
                     search_type="hybrid",
                     excerpt=scores["excerpt"],
@@ -473,11 +489,14 @@ class SearchService:
         # Qdrant
         try:
             start = time.time()
-            self.qdrant.health()
+            # Check health by trying to list collections
+            collections = self.qdrant.get_collections()
             latency = round((time.time() - start) * 1000)
+            collection_count = len(collections.collections) if hasattr(collections, 'collections') else len(collections) if isinstance(collections, list) else 0
             health["qdrant"] = {
                 "status": "ok",
                 "latency_ms": latency,
+                "collections": collection_count,
             }
         except Exception as e:
             logger.error(f"Qdrant health check failed: {e}")
