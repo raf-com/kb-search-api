@@ -1,0 +1,10 @@
+# CODEOWNERS for kb-search-api
+
+# Default owner for all code
+* @ajame
+
+# Critical components
+/src/main.py @ajame
+/src/config/ @ajame
+/src/circuit_breaker.py @ajame
+/src/caching_patterns.py @ajame
