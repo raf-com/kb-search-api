@@ -6,10 +6,9 @@ Provides PostgreSQL and Redis connection utilities with proper cleanup.
 
 import logging
 from typing import AsyncGenerator, Optional
-from contextlib import asynccontextmanager
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
 from sqlalchemy.pool import NullPool, QueuePool
-from sqlalchemy import text
+from sqlalchemy import select, literal
 from redis.asyncio import Redis, ConnectionPool
 from config import get_settings
 
@@ -35,7 +34,9 @@ class DatabaseManager:
         """
         try:
             # PostgreSQL engine
-            database_url = self.settings.database_url.replace("postgresql://", "postgresql+asyncpg://")
+            database_url = self.settings.database_url.replace(
+                "postgresql://", "postgresql+asyncpg://"
+            )
 
             engine_kwargs = {
                 "echo": self.settings.db_echo,
@@ -146,7 +147,9 @@ class DatabaseManager:
         # PostgreSQL health check
         try:
             async with self.postgres_engine.connect() as conn:
-                await conn.execute(text("SELECT 1"))
+                # Use select and literal instead of text for better SQLAlchemy 2.0 compatibility
+                result = await conn.execute(select(literal(1)))
+                result.close()
             health["postgresql"] = True
         except Exception as e:
             logger.error(f"PostgreSQL health check failed: {e}")

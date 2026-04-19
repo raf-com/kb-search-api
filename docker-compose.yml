@@ -16,7 +16,7 @@ services:
       - postgresql_data:/var/lib/postgresql/data
       - ./init-scripts/kb-schema.sql:/docker-entrypoint-initdb.d/01-kb-schema.sql
     ports:
-      - "5432:5432"
+      - "5433:5432"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U kb_user -d kb_db"]
       interval: 10s
@@ -61,7 +61,7 @@ services:
     volumes:
       - qdrant_data:/qdrant/storage
     ports:
-      - "6333:6333"
+      - "6335:6333"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:6333/health"]
       interval: 10s
@@ -81,7 +81,7 @@ services:
     volumes:
       - redis_data:/data
     ports:
-      - "6379:6379"
+      - "6380:6379"
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 10s

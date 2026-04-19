@@ -13,16 +13,20 @@ import pytest
 import json
 from datetime import datetime
 from unittest.mock import AsyncMock, MagicMock, patch
-from uuid import UUID, uuid4
+from uuid import uuid4
 from fastapi.testclient import TestClient
-from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
+from sqlalchemy.ext.asyncio import AsyncSession
 
-from main import app, get_session, get_search_service, get_metadata_service, get_embedding_service
-from models import SearchRequest, SearchFilters, MetadataUpdate, BulkMetadataUpdateRequest
+from main import app
+from models import (
+    SearchRequest,
+    SearchFilters,
+    MetadataUpdate,
+    BulkMetadataUpdateRequest,
+)
 from search_service import SearchService
 from metadata_service import MetadataService
 from embedding_service import EmbeddingService
-
 
 # ============================================================================
 # Fixtures
@@ -585,8 +589,9 @@ def test_bulk_update_endpoint(client, sample_metadata_updates):
 
 def test_health_endpoint(client):
     """Test GET /api/v1/health endpoint."""
-    with patch("main.get_search_service") as mock_search_service, \
-         patch("main.get_embedding_service") as mock_embedding_service:
+    with patch("main.get_search_service") as mock_search_service, patch(
+        "main.get_embedding_service"
+    ) as mock_embedding_service:
 
         mock_search_svc = AsyncMock()
         mock_search_svc.health_check.return_value = {

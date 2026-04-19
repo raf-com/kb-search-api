@@ -7,7 +7,7 @@ Uses LiteLLM to generate embeddings with caching via Redis.
 import logging
 import json
 import hashlib
-from typing import List, Optional, Dict, Any
+from typing import List, Dict, Any
 from redis.asyncio import Redis
 from tenacity import retry, stop_after_attempt, wait_exponential
 
@@ -37,7 +37,9 @@ class EmbeddingService:
         except ImportError:
             raise ImportError("litellm is required. Install with: pip install litellm")
 
-    @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=10))
+    @retry(
+        stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=10)
+    )
     async def embed_text(self, text: str) -> List[float]:
         """
         Generate embedding for text.
@@ -78,7 +80,10 @@ class EmbeddingService:
             embedding = response.data[0]["embedding"]
 
             # Validate embedding
-            if not isinstance(embedding, list) or len(embedding) != self.settings.embedding_dimension:
+            if (
+                not isinstance(embedding, list)
+                or len(embedding) != self.settings.embedding_dimension
+            ):
                 raise ValueError(
                     f"Invalid embedding dimension: {len(embedding)} "
                     f"(expected {self.settings.embedding_dimension})"
@@ -205,8 +210,14 @@ class EmbeddingService:
         """
         # Skip health check if no API key is configured (development mode)
         if not self.settings.litellm_api_key:
-            logger.info("Embedding service health check skipped (no API key configured)")
-            return {"status": "ok", "model": self.settings.embedding_model, "note": "API key not configured"}
+            logger.info(
+                "Embedding service health check skipped (no API key configured)"
+            )
+            return {
+                "status": "ok",
+                "model": self.settings.embedding_model,
+                "note": "API key not configured",
+            }
 
         try:
             # Test embedding generation
@@ -217,7 +228,11 @@ class EmbeddingService:
                 timeout=5,  # Short timeout for health check
             )
 
-            if response.data and len(response.data[0]["embedding"]) == self.settings.embedding_dimension:
+            if (
+                response.data
+                and len(response.data[0]["embedding"])
+                == self.settings.embedding_dimension
+            ):
                 return {"status": "ok", "model": self.settings.embedding_model}
 
             return {"status": "error", "error": "Invalid embedding dimension"}

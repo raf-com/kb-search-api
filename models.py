@@ -6,9 +6,8 @@ Includes request/response schemas, data models, and validation rules.
 
 from datetime import datetime
 from typing import List, Optional, Dict, Any, Literal
-from pydantic import BaseModel, Field, validator, HttpUrl
+from pydantic import BaseModel, Field, validator
 from uuid import UUID
-
 
 # ============================================================================
 # Request Models
@@ -26,11 +25,16 @@ class SearchFilters(BaseModel):
     status: Optional[Literal["active", "archived", "deprecated"]] = Field(
         default=None, description="Filter by status"
     )
-    created_after: Optional[datetime] = Field(default=None, description="Filter documents created after this date")
-    created_before: Optional[datetime] = Field(default=None, description="Filter documents created before this date")
+    created_after: Optional[datetime] = Field(
+        default=None, description="Filter documents created after this date"
+    )
+    created_before: Optional[datetime] = Field(
+        default=None, description="Filter documents created before this date"
+    )
 
     class Config:
         """Pydantic configuration."""
+
         json_schema_extra = {
             "example": {
                 "owner": "platform-eng",
@@ -49,10 +53,15 @@ class SearchRequest(BaseModel):
     limit: int = Field(default=10, ge=1, le=100, description="Result limit")
     offset: int = Field(default=0, ge=0, description="Result offset for pagination")
     semantic_weight: float = Field(
-        default=0.5, ge=0.0, le=1.0, description="Weight for semantic search (0=keyword only, 1=semantic only)"
+        default=0.5,
+        ge=0.0,
+        le=1.0,
+        description="Weight for semantic search (0=keyword only, 1=semantic only)",
     )
     highlight: bool = Field(default=True, description="Include highlighted excerpts")
-    include_similar: bool = Field(default=False, description="Include similar documents")
+    include_similar: bool = Field(
+        default=False, description="Include similar documents"
+    )
 
     @validator("limit")
     def validate_limit(cls, v):
@@ -61,6 +70,7 @@ class SearchRequest(BaseModel):
 
     class Config:
         """Pydantic configuration."""
+
         json_schema_extra = {
             "example": {
                 "query": "postgresql replication",
@@ -85,6 +95,7 @@ class MetadataUpdate(BaseModel):
 
     class Config:
         """Pydantic configuration."""
+
         json_schema_extra = {
             "example": {
                 "doc_id": "550e8400-e29b-41d4-a716-446655440000",
@@ -99,10 +110,13 @@ class MetadataUpdate(BaseModel):
 class BulkMetadataUpdateRequest(BaseModel):
     """Request model for bulk metadata updates."""
 
-    updates: List[MetadataUpdate] = Field(..., min_items=1, max_items=100, description="List of metadata updates")
+    updates: List[MetadataUpdate] = Field(
+        ..., min_items=1, max_items=100, description="List of metadata updates"
+    )
 
     class Config:
         """Pydantic configuration."""
+
         json_schema_extra = {
             "example": {
                 "updates": [
@@ -118,12 +132,19 @@ class BulkMetadataUpdateRequest(BaseModel):
 class EmbeddingReindexRequest(BaseModel):
     """Request model for reindexing embeddings."""
 
-    doc_ids: List[UUID] = Field(..., min_items=1, max_items=1000, description="Document IDs to reindex")
-    force: bool = Field(default=False, description="Force reindex even if already indexed")
-    priority: Literal["low", "normal", "high"] = Field(default="normal", description="Job priority")
+    doc_ids: List[UUID] = Field(
+        ..., min_items=1, max_items=1000, description="Document IDs to reindex"
+    )
+    force: bool = Field(
+        default=False, description="Force reindex even if already indexed"
+    )
+    priority: Literal["low", "normal", "high"] = Field(
+        default="normal", description="Job priority"
+    )
 
     class Config:
         """Pydantic configuration."""
+
         json_schema_extra = {
             "example": {
                 "doc_ids": ["550e8400-e29b-41d4-a716-446655440000"],
@@ -148,14 +169,21 @@ class SearchResultItem(BaseModel):
     owner: str = Field(..., description="Document owner")
     classification: str = Field(..., description="Classification level")
     created_date: str = Field(..., description="Creation date (ISO format)")
-    relevance_score: float = Field(..., ge=0.0, le=1.0, description="Relevance score (0-1)")
-    search_type: Literal["hybrid", "keyword", "semantic"] = Field(..., description="Type of search that found this result")
+    relevance_score: float = Field(
+        ..., ge=0.0, le=1.0, description="Relevance score (0-1)"
+    )
+    search_type: Literal["hybrid", "keyword", "semantic"] = Field(
+        ..., description="Type of search that found this result"
+    )
     excerpt: str = Field(..., description="Document excerpt")
-    highlighted_excerpt: Optional[str] = Field(default=None, description="Highlighted excerpt with <mark> tags")
+    highlighted_excerpt: Optional[str] = Field(
+        default=None, description="Highlighted excerpt with <mark> tags"
+    )
     topics: List[str] = Field(default_factory=list, description="Document topics")
 
     class Config:
         """Pydantic configuration."""
+
         json_encoders = {UUID: str, datetime: lambda v: v.isoformat()}
 
 
@@ -170,7 +198,9 @@ class SearchFacets(BaseModel):
     """Faceted counts from search results."""
 
     owner: Optional[List[FacetValue]] = Field(default=None, description="Owner facet")
-    classification: Optional[List[FacetValue]] = Field(default=None, description="Classification facet")
+    classification: Optional[List[FacetValue]] = Field(
+        default=None, description="Classification facet"
+    )
     topics: Optional[List[FacetValue]] = Field(default=None, description="Topics facet")
     status: Optional[List[FacetValue]] = Field(default=None, description="Status facet")
 
@@ -183,6 +213,7 @@ class SearchResponse(BaseModel):
 
     class Config:
         """Pydantic configuration."""
+
         json_schema_extra = {
             "example": {
                 "status": "success",
@@ -213,10 +244,13 @@ class DocumentMetadata(BaseModel):
     created_by: Optional[str] = Field(default=None, description="Creator username")
     updated_by: Optional[str] = Field(default=None, description="Last updater username")
     topics: List[str] = Field(default_factory=list, description="Document topics")
-    external_id: Optional[str] = Field(default=None, description="External ID for linking")
+    external_id: Optional[str] = Field(
+        default=None, description="External ID for linking"
+    )
 
     class Config:
         """Pydantic configuration."""
+
         json_encoders = {UUID: str, datetime: lambda v: v.isoformat()}
 
 
@@ -228,6 +262,7 @@ class DocumentResponse(BaseModel):
 
     class Config:
         """Pydantic configuration."""
+
         json_schema_extra = {
             "example": {
                 "status": "success",
@@ -252,6 +287,7 @@ class MetadataResponse(BaseModel):
 
     class Config:
         """Pydantic configuration."""
+
         json_encoders = {UUID: str, datetime: lambda v: v.isoformat()}
 
 
@@ -259,7 +295,9 @@ class BulkUpdateResult(BaseModel):
     """Result of a single bulk update."""
 
     doc_id: str = Field(..., description="Document ID")
-    status: Literal["updated", "failed", "not_found"] = Field(..., description="Update status")
+    status: Literal["updated", "failed", "not_found"] = Field(
+        ..., description="Update status"
+    )
     error: Optional[str] = Field(default=None, description="Error message if failed")
 
 
@@ -271,6 +309,7 @@ class BulkUpdateResponse(BaseModel):
 
     class Config:
         """Pydantic configuration."""
+
         json_schema_extra = {
             "example": {
                 "status": "success",
@@ -297,6 +336,7 @@ class ReindexResponse(BaseModel):
 
     class Config:
         """Pydantic configuration."""
+
         json_schema_extra = {
             "example": {
                 "status": "accepted",
@@ -313,20 +353,31 @@ class ReindexResponse(BaseModel):
 class ComponentHealth(BaseModel):
     """Health status of a service component."""
 
-    status: Literal["ok", "degraded", "error"] = Field(..., description="Component status")
-    latency_ms: Optional[int] = Field(default=None, description="Response latency in milliseconds")
-    details: Optional[Dict[str, Any]] = Field(default=None, description="Additional component details")
+    status: Literal["ok", "degraded", "error"] = Field(
+        ..., description="Component status"
+    )
+    latency_ms: Optional[int] = Field(
+        default=None, description="Response latency in milliseconds"
+    )
+    details: Optional[Dict[str, Any]] = Field(
+        default=None, description="Additional component details"
+    )
 
 
 class HealthResponse(BaseModel):
     """Response model for health check endpoint."""
 
-    status: Literal["healthy", "degraded", "unhealthy"] = Field(..., description="Overall health status")
+    status: Literal["healthy", "degraded", "unhealthy"] = Field(
+        ..., description="Overall health status"
+    )
     timestamp: datetime = Field(..., description="Health check timestamp")
-    components: Dict[str, ComponentHealth] = Field(..., description="Component health details")
+    components: Dict[str, ComponentHealth] = Field(
+        ..., description="Component health details"
+    )
 
     class Config:
         """Pydantic configuration."""
+
         json_encoders = {datetime: lambda v: v.isoformat()}
         json_schema_extra = {
             "example": {
@@ -350,6 +401,7 @@ class ErrorResponse(BaseModel):
 
     class Config:
         """Pydantic configuration."""
+
         json_schema_extra = {
             "example": {
                 "status": "error",

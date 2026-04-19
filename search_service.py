@@ -10,11 +10,10 @@ import logging
 import time
 from typing import List, Dict, Optional, Any
 from datetime import datetime
-from uuid import UUID
 
 import meilisearch
 from qdrant_client import QdrantClient
-from qdrant_client.models import PointStruct, Filter, FieldCondition, MatchValue
+from qdrant_client.models import Filter, FieldCondition, MatchValue
 from redis.asyncio import Redis
 
 from config import get_settings
@@ -45,7 +44,9 @@ class SearchService:
         # Qdrant client
         self.qdrant = QdrantClient(
             url=self.settings.qdrant_url,
-            api_key=self.settings.qdrant_api_key if self.settings.qdrant_api_key else None,
+            api_key=(
+                self.settings.qdrant_api_key if self.settings.qdrant_api_key else None
+            ),
             timeout=self.settings.qdrant_timeout,
         )
 
@@ -173,10 +174,11 @@ class SearchService:
             if highlight:
                 search_options["attributesToHighlight"] = ["title", "content"]
 
-            logger.debug(f"Meilisearch query: query={query}, index={self.settings.meilisearch_index}, options={search_options}")
+            logger.debug(
+                f"Meilisearch query: query={query}, index={self.settings.meilisearch_index}, options={search_options}"
+            )
             response = self.meilisearch.index(self.settings.meilisearch_index).search(
-                query,
-                opt_params=search_options
+                query, opt_params=search_options
             )
             logger.debug(f"Meilisearch response: {response}")
 
@@ -189,7 +191,9 @@ class SearchService:
                     "source": hit.get("source"),
                     "owner": hit.get("owner"),
                     "classification": hit.get("classification"),
-                    "created_date": datetime.fromisoformat(hit.get("created_date", datetime.now().isoformat())),
+                    "created_date": datetime.fromisoformat(
+                        hit.get("created_date", datetime.now().isoformat())
+                    ),
                     "relevance_score": 1.0 / (1 + i),  # Estimate relevance from rank
                     "search_type": "keyword",
                     "excerpt": hit.get("content", "")[:200],
@@ -251,7 +255,9 @@ class SearchService:
                     "source": point.payload.get("source", ""),
                     "owner": point.payload.get("owner"),
                     "classification": point.payload.get("classification"),
-                    "created_date": datetime.fromtimestamp(point.payload.get("created_date", 0)),
+                    "created_date": datetime.fromtimestamp(
+                        point.payload.get("created_date", 0)
+                    ),
                     "relevance_score": point.score,
                     "search_type": "semantic",
                     "excerpt": point.payload.get("summary", "")[:200],
@@ -267,39 +273,43 @@ class SearchService:
             logger.error(f"Qdrant search failed: {e}")
             return []
 
-    def _build_meilisearch_filter(self, filters: SearchFilters) -> Optional[List]:
+    def _build_meilisearch_filter(self, filters: SearchFilters) -> Optional[str]:
         """
-        Build Meilisearch filter expression.
+        Build Meilisearch filter expression (string format).
 
         Args:
             filters: Search filters
 
         Returns:
-            list: Meilisearch filter expression
+            str: Meilisearch filter expression string
 
         Example:
             >>> filters = SearchFilters(owner="platform-eng", classification="internal")
             >>> filter_expr = service._build_meilisearch_filter(filters)
             >>> print(filter_expr)
-            [['owner', '=', 'platform-eng'], ['classification', '=', 'internal']]
+            owner = 'platform-eng' AND classification = 'internal'
         """
         conditions = []
 
         if filters.owner:
-            conditions.append(["owner", "=", filters.owner])
+            conditions.append(f"owner = '{filters.owner}'")
         if filters.classification:
-            conditions.append(["classification", "=", filters.classification])
+            conditions.append(f"classification = '{filters.classification}'")
         if filters.status:
-            conditions.append(["status", "=", filters.status])
+            conditions.append(f"status = '{filters.status}'")
         if filters.topics:
             for topic in filters.topics:
-                conditions.append(["topics", "IN", [topic]])
+                conditions.append(f"topics = '{topic}'")
         if filters.created_after:
-            conditions.append(["created_date", ">=", int(filters.created_after.timestamp())])
+            conditions.append(
+                f"created_date >= {int(filters.created_after.timestamp())}"
+            )
         if filters.created_before:
-            conditions.append(["created_date", "<=", int(filters.created_before.timestamp())])
+            conditions.append(
+                f"created_date <= {int(filters.created_before.timestamp())}"
+            )
 
-        return conditions if conditions else None
+        return " AND ".join(conditions) if conditions else None
 
     def _build_qdrant_filter(self, filters: SearchFilters) -> Optional[Filter]:
         """
@@ -323,7 +333,9 @@ class SearchService:
             )
         if filters.classification:
             must_conditions.append(
-                FieldCondition(key="classification", match=MatchValue(value=filters.classification))
+                FieldCondition(
+                    key="classification", match=MatchValue(value=filters.classification)
+                )
             )
         if filters.status:
             must_conditions.append(
@@ -389,19 +401,33 @@ class SearchService:
 
             # Apply weights based on search type
             if result["search_type"] == "keyword":
-                doc_scores[doc_id]["keyword_score"] += result.get("relevance_score", 0.5)
+                doc_scores[doc_id]["keyword_score"] += result.get(
+                    "relevance_score", 0.5
+                )
             elif result["search_type"] == "semantic":
-                doc_scores[doc_id]["semantic_score"] += result.get("relevance_score", 0.5)
+                doc_scores[doc_id]["semantic_score"] += result.get(
+                    "relevance_score", 0.5
+                )
 
         # Calculate final scores
         final_results = []
         for doc_id, scores in doc_scores.items():
-            keyword_rrf = 1 / (k + scores.get("rank", 1000)) if scores.get("keyword_score", 0) > 0 else 0
-            semantic_rrf = 1 / (k + scores.get("rank", 1000)) if scores.get("semantic_score", 0) > 0 else 0
+            keyword_rrf = (
+                1 / (k + scores.get("rank", 1000))
+                if scores.get("keyword_score", 0) > 0
+                else 0
+            )
+            semantic_rrf = (
+                1 / (k + scores.get("rank", 1000))
+                if scores.get("semantic_score", 0) > 0
+                else 0
+            )
 
             # Blend scores
             keyword_weight = 1 - semantic_weight
-            final_score = (keyword_weight * keyword_rrf) + (semantic_weight * semantic_rrf)
+            final_score = (keyword_weight * keyword_rrf) + (
+                semantic_weight * semantic_rrf
+            )
 
             # Ensure created_date is a string
             created_date = scores["created_date"]
@@ -410,7 +436,9 @@ class SearchService:
 
             final_results.append(
                 SearchResultItem(
-                    doc_id=str(scores["doc_id"]),  # Convert UUID to string for JSON serialization
+                    doc_id=str(
+                        scores["doc_id"]
+                    ),  # Convert UUID to string for JSON serialization
                     rank=len(final_results) + 1,
                     title=scores["title"],
                     source=scores["source"],
@@ -492,7 +520,11 @@ class SearchService:
             # Check health by trying to list collections
             collections = self.qdrant.get_collections()
             latency = round((time.time() - start) * 1000)
-            collection_count = len(collections.collections) if hasattr(collections, 'collections') else len(collections) if isinstance(collections, list) else 0
+            collection_count = (
+                len(collections.collections)
+                if hasattr(collections, "collections")
+                else len(collections) if isinstance(collections, list) else 0
+            )
             health["qdrant"] = {
                 "status": "ok",
                 "latency_ms": latency,

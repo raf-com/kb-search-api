@@ -5,7 +5,6 @@ Main application module with route definitions and lifecycle management.
 """
 
 import logging
-import time
 from contextlib import asynccontextmanager
 from datetime import datetime
 
@@ -27,7 +26,6 @@ from models import (
     ReindexResponse,
     HealthResponse,
     ComponentHealth,
-    ErrorResponse,
 )
 from search_service import SearchService
 from metadata_service import MetadataService
@@ -100,7 +98,9 @@ async def get_search_service() -> SearchService:
     return SearchService(redis)
 
 
-async def get_metadata_service(session: AsyncSession = Depends(get_session)) -> MetadataService:
+async def get_metadata_service(
+    session: AsyncSession = Depends(get_session),
+) -> MetadataService:
     """Get metadata service."""
     return MetadataService(session)
 
@@ -473,7 +473,11 @@ async def health_check(
         else:
             components["meilisearch"] = ComponentHealth(
                 status="error",
-                details={"error": search_health.get("meilisearch", {}).get("error", "Unknown")},
+                details={
+                    "error": search_health.get("meilisearch", {}).get(
+                        "error", "Unknown"
+                    )
+                },
             )
 
         if search_health.get("qdrant", {}).get("status") == "ok":
@@ -485,7 +489,9 @@ async def health_check(
         else:
             components["qdrant"] = ComponentHealth(
                 status="error",
-                details={"error": search_health.get("qdrant", {}).get("error", "Unknown")},
+                details={
+                    "error": search_health.get("qdrant", {}).get("error", "Unknown")
+                },
             )
 
         # Embedding service
@@ -536,8 +542,8 @@ async def http_exception_handler(request, exc):
                 "code": exc.status_code,
                 "message": exc.detail,
                 "details": {},
-            }
-        }
+            },
+        },
     )
 
 
@@ -553,8 +559,8 @@ async def general_exception_handler(request, exc):
                 "code": "INTERNAL_SERVER_ERROR",
                 "message": "An unexpected error occurred",
                 "details": {},
-            }
-        }
+            },
+        },
     )
 
 

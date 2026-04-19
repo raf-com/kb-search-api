@@ -13,12 +13,11 @@ Implements:
 - Fallback responses with cache fallback
 """
 
-import hashlib
 import json
 import logging
 import asyncio
 from typing import Any, Optional, Callable, Dict, List, Tuple
-from datetime import datetime, timedelta
+from datetime import datetime
 from enum import Enum
 from dataclasses import dataclass
 import time
@@ -30,6 +29,7 @@ logger = logging.getLogger(__name__)
 
 class CacheStrategy(str, Enum):
     """Cache strategy enumeration."""
+
     READ_THROUGH = "read_through"
     WRITE_THROUGH = "write_through"
     WRITE_BEHIND = "write_behind"
@@ -38,6 +38,7 @@ class CacheStrategy(str, Enum):
 
 class InvalidationType(str, Enum):
     """Cache invalidation strategy."""
+
     TTL = "ttl"
     EVENT = "event"
     EXPLICIT = "explicit"
@@ -47,6 +48,7 @@ class InvalidationType(str, Enum):
 @dataclass
 class CacheConfig:
     """Cache configuration."""
+
     ttl: int = 300  # Default TTL in seconds (5 minutes)
     max_size: int = 1000000  # Max cache size in bytes
     strategy: CacheStrategy = CacheStrategy.READ_THROUGH
@@ -59,6 +61,7 @@ class CacheConfig:
 @dataclass
 class CacheMetrics:
     """Cache performance metrics."""
+
     hits: int = 0
     misses: int = 0
     evictions: int = 0
@@ -161,7 +164,9 @@ class CacheManager:
                     await self.set(key, fresh_data)
                     latency = (time.time() - start_time) * 1000
                     self._update_latency(latency)
-                    logger.debug(f"Cache MISS (fetched) for key: {key} ({latency:.2f}ms)")
+                    logger.debug(
+                        f"Cache MISS (fetched) for key: {key} ({latency:.2f}ms)"
+                    )
                     return fresh_data
 
             # Return fallback
@@ -229,9 +234,7 @@ class CacheManager:
                 }
                 metadata_ttl = ttl + self.config.stale_while_revalidate
                 await self.redis.setex(
-                    metadata_key,
-                    metadata_ttl,
-                    self._serialize(metadata)
+                    metadata_key, metadata_ttl, self._serialize(metadata)
                 )
 
                 logger.debug(f"Cache SET for key: {key} (ttl={ttl}s)")
@@ -288,9 +291,7 @@ class CacheManager:
 
             while True:
                 cursor, keys = await self.redis.scan(
-                    cursor=cursor,
-                    match=f"{self.namespace}:{pattern}",
-                    count=100
+                    cursor=cursor, match=f"{self.namespace}:{pattern}", count=100
                 )
 
                 if keys:
@@ -299,7 +300,9 @@ class CacheManager:
                 if cursor == 0:
                     break
 
-            logger.info(f"Invalidated {deleted_count} cache entries matching pattern: {pattern}")
+            logger.info(
+                f"Invalidated {deleted_count} cache entries matching pattern: {pattern}"
+            )
             return deleted_count
 
         except Exception as e:
@@ -394,7 +397,9 @@ class CacheManager:
         try:
             # Try to get stale value after TTL expires
             # In production, implement a separate "stale" key or use Redis stream
-            metadata_key = cache_key.replace(f"{self.namespace}:", f"{self.namespace}:metadata:")
+            metadata_key = cache_key.replace(
+                f"{self.namespace}:", f"{self.namespace}:metadata:"
+            )
             metadata = await self.redis.get(metadata_key)
 
             if metadata:
@@ -503,8 +508,7 @@ class CacheManager:
             # Simple exponential moving average
             alpha = 0.1
             self.metrics.avg_latency_ms = (
-                alpha * latency_ms +
-                (1 - alpha) * self.metrics.avg_latency_ms
+                alpha * latency_ms + (1 - alpha) * self.metrics.avg_latency_ms
             )
 
 

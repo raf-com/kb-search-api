@@ -6,9 +6,8 @@ Integrates with cache fallback for resilience.
 """
 
 import logging
-import time
 from enum import Enum
-from datetime import datetime, timedelta
+from datetime import datetime
 from typing import Optional, Callable, Any, Dict, List
 from dataclasses import dataclass, field
 
@@ -17,6 +16,7 @@ logger = logging.getLogger(__name__)
 
 class CircuitState(str, Enum):
     """Circuit breaker states."""
+
     CLOSED = "closed"  # Normal operation
     OPEN = "open"  # Failing, reject requests
     HALF_OPEN = "half_open"  # Testing recovery
@@ -25,6 +25,7 @@ class CircuitState(str, Enum):
 @dataclass
 class CircuitBreakerConfig:
     """Circuit breaker configuration."""
+
     failure_threshold: int = 5  # Failures before opening
     success_threshold: int = 2  # Successes before closing from half-open
     timeout: int = 60  # Seconds before attempting recovery (half-open)
@@ -34,6 +35,7 @@ class CircuitBreakerConfig:
 @dataclass
 class CircuitBreakerMetrics:
     """Circuit breaker metrics."""
+
     failures: int = 0
     successes: int = 0
     total_requests: int = 0
@@ -61,11 +63,7 @@ class CircuitBreaker:
         self._half_open_attempts = 0
 
     async def call(
-        self,
-        fn: Callable,
-        *args,
-        fallback: Optional[Callable] = None,
-        **kwargs
+        self, fn: Callable, *args, fallback: Optional[Callable] = None, **kwargs
     ) -> Any:
         """
         Execute function with circuit breaker protection.
@@ -149,13 +147,15 @@ class CircuitBreaker:
         self.last_state_change = datetime.utcnow()
 
         # Record state change
-        self.metrics.state_changes.append({
-            "from": old_state.value,
-            "to": new_state.value,
-            "timestamp": self.last_state_change.isoformat(),
-            "failures": self.metrics.failures,
-            "successes": self.metrics.successes,
-        })
+        self.metrics.state_changes.append(
+            {
+                "from": old_state.value,
+                "to": new_state.value,
+                "timestamp": self.last_state_change.isoformat(),
+                "failures": self.metrics.failures,
+                "successes": self.metrics.successes,
+            }
+        )
 
     def reset(self) -> None:
         """Manually reset circuit breaker."""
@@ -174,7 +174,11 @@ class CircuitBreaker:
                 "failures": self.metrics.failures,
                 "successes": self.metrics.successes,
                 "total_requests": self.metrics.total_requests,
-                "last_failure": self.metrics.last_failure.isoformat() if self.metrics.last_failure else None,
+                "last_failure": (
+                    self.metrics.last_failure.isoformat()
+                    if self.metrics.last_failure
+                    else None
+                ),
                 "last_failure_reason": self.metrics.last_failure_reason,
             },
             "state_changes": self.metrics.state_changes[-10:],  # Last 10 changes
@@ -214,7 +218,7 @@ class CircuitBreakerPool:
         *args,
         fallback: Optional[Callable] = None,
         config: Optional[CircuitBreakerConfig] = None,
-        **kwargs
+        **kwargs,
     ) -> Any:
         """
         Execute function with circuit breaker.
@@ -235,10 +239,7 @@ class CircuitBreakerPool:
 
     def get_all_status(self) -> Dict[str, Any]:
         """Get status of all circuit breakers."""
-        return {
-            name: breaker.get_status()
-            for name, breaker in self._breakers.items()
-        }
+        return {name: breaker.get_status() for name, breaker in self._breakers.items()}
 
     def reset_all(self) -> None:
         """Reset all circuit breakers."""
@@ -249,6 +250,7 @@ class CircuitBreakerPool:
 
 class CircuitBreakerOpenException(Exception):
     """Exception when circuit breaker is open."""
+
     pass
 
 
@@ -256,6 +258,7 @@ class CircuitBreakerOpenException(Exception):
 @dataclass
 class RetryConfig:
     """Retry configuration."""
+
     max_attempts: int = 3
     initial_delay: float = 0.1  # seconds
     max_delay: float = 10.0  # seconds
@@ -269,12 +272,7 @@ class RetryPolicy:
         """Initialize retry policy."""
         self.config = config or RetryConfig()
 
-    async def execute(
-        self,
-        fn: Callable,
-        *args,
-        **kwargs
-    ) -> Any:
+    async def execute(self, fn: Callable, *args, **kwargs) -> Any:
         """
         Execute function with retries.
 
@@ -302,10 +300,7 @@ class RetryPolicy:
                 await asyncio.sleep(delay)
 
                 # Exponential backoff
-                delay = min(
-                    delay * self.config.exponential_base,
-                    self.config.max_delay
-                )
+                delay = min(delay * self.config.exponential_base, self.config.max_delay)
 
 
 import asyncio

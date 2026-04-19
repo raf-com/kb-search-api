@@ -6,16 +6,13 @@ Tests cache strategies, fallbacks, circuit breakers, and resilience patterns.
 
 import pytest
 import asyncio
-from unittest.mock import AsyncMock, MagicMock, patch
-from datetime import datetime, timedelta
+from unittest.mock import AsyncMock
 
 from redis.asyncio import Redis
 from cache_manager import (
     CacheManager,
     CacheConfig,
     CacheStrategy,
-    InvalidationType,
-    CacheMetrics,
     FallbackResponseBuilder,
 )
 from circuit_breaker import (
@@ -24,7 +21,6 @@ from circuit_breaker import (
     CircuitBreakerPool,
     CircuitBreakerOpenException,
 )
-
 
 # ============================================================================
 # CACHE MANAGER TESTS
@@ -359,7 +355,9 @@ def test_fallback_degraded_response():
 
 
 @pytest.mark.asyncio
-async def test_cache_with_circuit_breaker(redis_mock, cache_config, circuit_breaker_config):
+async def test_cache_with_circuit_breaker(
+    redis_mock, cache_config, circuit_breaker_config
+):
     """Test cache with circuit breaker integration."""
     redis_mock.get.return_value = None
     redis_mock.setex = AsyncMock()
@@ -390,8 +388,7 @@ async def test_cache_with_circuit_breaker(redis_mock, cache_config, circuit_brea
 
     # Next call should use fallback
     result = await breaker.call(
-        fetch_with_breaker,
-        fallback=lambda: {"cached": "fallback"}
+        fetch_with_breaker, fallback=lambda: {"cached": "fallback"}
     )
     assert result == {"cached": "fallback"}
 

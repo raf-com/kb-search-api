@@ -5,14 +5,13 @@ Handles CRUD operations for document metadata with audit logging.
 """
 
 import logging
-import json
 from typing import List, Optional, Dict, Any
 from datetime import datetime
 from uuid import UUID
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, insert, update, delete
+from sqlalchemy import select, update, delete
 from sqlalchemy.orm import declarative_base
-from sqlalchemy import Column, String, Text, DateTime, Integer, ARRAY, JSON, Boolean
+from sqlalchemy import Column, String, Text, DateTime, Integer, JSON
 from sqlalchemy.dialects.postgresql import UUID as PG_UUID
 
 logger = logging.getLogger(__name__)
@@ -228,9 +227,7 @@ class MetadataService:
 
             # Update document
             await self.session.execute(
-                update(KBDocument)
-                .where(KBDocument.id == doc_id)
-                .values(**update_data)
+                update(KBDocument).where(KBDocument.id == doc_id).values(**update_data)
             )
 
             # Update topics if provided
@@ -296,11 +293,13 @@ class MetadataService:
 
             except Exception as e:
                 failed += 1
-                results.append({
-                    "doc_id": str(doc_id),
-                    "status": "failed",
-                    "error": str(e),
-                })
+                results.append(
+                    {
+                        "doc_id": str(doc_id),
+                        "status": "failed",
+                        "error": str(e),
+                    }
+                )
 
         return {
             "total": total,

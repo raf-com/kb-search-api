@@ -19,9 +19,14 @@ from qdrant_client import QdrantClient
 from redis.asyncio import Redis
 
 from config import get_settings
-from models import SearchFilters, SearchResultItem
-from cache_manager import CacheManager, CacheConfig, CacheStrategy, FallbackResponseBuilder
-from circuit_breaker import CircuitBreaker, CircuitBreakerConfig, CircuitBreakerPool
+from models import SearchFilters
+from cache_manager import (
+    CacheManager,
+    CacheConfig,
+    CacheStrategy,
+    FallbackResponseBuilder,
+)
+from circuit_breaker import CircuitBreakerConfig, CircuitBreakerPool
 
 logger = logging.getLogger(__name__)
 
@@ -66,7 +71,9 @@ class EnhancedSearchService:
         # Qdrant client
         self.qdrant = QdrantClient(
             url=self.settings.qdrant_url,
-            api_key=self.settings.qdrant_api_key if self.settings.qdrant_api_key else None,
+            api_key=(
+                self.settings.qdrant_api_key if self.settings.qdrant_api_key else None
+            ),
             timeout=self.settings.qdrant_timeout,
         )
 
@@ -140,7 +147,9 @@ class EnhancedSearchService:
 
             if results and "status" not in results:
                 # Valid results
-                results["execution_time_ms"] = round((time.time() - start_time) * 1000, 2)
+                results["execution_time_ms"] = round(
+                    (time.time() - start_time) * 1000, 2
+                )
                 results["cache_status"] = "hit"
                 return results
 
@@ -356,9 +365,13 @@ class EnhancedSearchService:
             for topic in filters.topics:
                 conditions.append(["topics", "IN", [topic]])
         if filters.created_after:
-            conditions.append(["created_date", ">=", int(filters.created_after.timestamp())])
+            conditions.append(
+                ["created_date", ">=", int(filters.created_after.timestamp())]
+            )
         if filters.created_before:
-            conditions.append(["created_date", "<=", int(filters.created_before.timestamp())])
+            conditions.append(
+                ["created_date", "<=", int(filters.created_before.timestamp())]
+            )
 
         return conditions if conditions else None
 
@@ -409,7 +422,7 @@ class EnhancedSearchService:
             if is_semantic:
                 rrf_score *= semantic_weight
             else:
-                rrf_score *= (1.0 - semantic_weight)
+                rrf_score *= 1.0 - semantic_weight
 
             if doc_id not in doc_scores:
                 doc_scores[doc_id] = {"score": 0, "result": result}

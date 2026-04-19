@@ -7,13 +7,13 @@ This script generates sample documents and loads them into both search engines.
 
 import uuid
 from datetime import datetime, timedelta
-import json
 import requests
 from typing import List, Dict, Any
 import random
 
 # Configuration
 import os
+
 MEILISEARCH_URL = os.getenv("MEILISEARCH_URL", "http://kb-meilisearch:7700")
 QDRANT_URL = os.getenv("QDRANT_URL", "http://kb-qdrant:6333")
 MEILISEARCH_INDEX = "kb_documents"  # Must match config.py
@@ -124,6 +124,7 @@ def generate_mock_embedding(text: str) -> List[float]:
     """Generate a simple mock embedding (not real, but demonstrates the concept)."""
     # Use a deterministic hash-based approach for reproducibility
     import hashlib
+
     hash_obj = hashlib.sha256(text.encode())
     hash_bytes = hash_obj.digest()
 
@@ -187,7 +188,7 @@ def create_qdrant_points(docs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
                 "topics": doc["topics"],
                 "status": doc["status"],
                 "created_date": created_date.timestamp(),
-            }
+            },
         }
         qdrant_points.append(point)
 
@@ -216,7 +217,8 @@ def seed_meilisearch(documents: List[Dict[str, Any]]) -> bool:
             print(f"  ✅ Loaded {len(documents)} documents into Meilisearch")
             # Wait for indexing to complete
             import time
-            print(f"  ⏳ Waiting for indexing to complete...")
+
+            print("  ⏳ Waiting for indexing to complete...")
             for i in range(30):  # Wait up to 30 seconds
                 time.sleep(1)
                 stats_resp = requests.get(
@@ -244,12 +246,7 @@ def seed_qdrant(points: List[Dict[str, Any]]) -> bool:
 
     try:
         # Create collection with vector size
-        collection_config = {
-            "vectors": {
-                "size": 1536,
-                "distance": "Cosine"
-            }
-        }
+        collection_config = {"vectors": {"size": 1536, "distance": "Cosine"}}
 
         create_response = requests.put(
             f"{QDRANT_URL}/collections/{QDRANT_COLLECTION}",
@@ -335,7 +332,7 @@ def main():
         print("\nYou can now test the search API:")
         print("  curl -X POST http://localhost:8002/api/v1/search \\")
         print("    -H 'Content-Type: application/json' \\")
-        print("    -d '{\"query\": \"postgresql\", \"limit\": 5}'")
+        print('    -d \'{"query": "postgresql", "limit": 5}\'')
         return True
     else:
         print("\n" + "=" * 60)
