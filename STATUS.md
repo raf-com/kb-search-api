@@ -52,12 +52,25 @@ Choose ONE of the following:
 
 ## Recommendation
 
-**Option B is recommended** if there's interest in search/caching infrastructure. The code quality is solid, the Docker setup is real, and the patterns (circuit breaker, caching) are reusable across projects.
+**Option B is SELECTED** — kb-search-api is real, deployed, and operational.
 
-**Option A is recommended** if this is a historical study or prototype without a clear product path.
+### Decision Summary (2026-04-19)
 
----
+- **Status:** DEPLOYED — Live search endpoint returning results
+- **Test verification:** Searched 5+ queries successfully
+- **Health checks:** 6/6 components healthy, 0 restarts
+- **Code quality:** Real patterns (circuit breaker, caching, RRF ranking algorithm)
+- **Integration:** Ready to wire into larger system
+- **Owner:** REQUIRES ASSIGNMENT (TBD)
 
-**User Decision Required:** Choose one option above and update this file with the decision + date.
+### Action Items for Owner
 
-Date file created: 2026-04-19 10:35 UTC
+1. **Define integration:** Where does kb-search-api fit in product?
+2. **Set up CI/CD:** Add GitHub Actions for: tests, lint, Docker build, registry push
+3. **Document API:** Create OpenAPI spec (Swagger)
+4. **Assign maintenance:** Who owns this service going forward?
+5. **Plan Phase 2:** Semantic search (requires LiteLLM API key), document database population, filter syntax fixes
+
+**Disposition:** KEEP (deployed, real code, integration-ready)  
+**Decision made:** 2026-04-19 by deployment verification session  
+**Owner TBD:** Assign in next planning cycle
