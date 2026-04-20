@@ -1,0 +1,4 @@
+TIMESTAMP=2026-04-20T08:38:14.7978457-05:00
+TOTAL_RUNNING=77
+STATUS_CONTAINS_HEALTHY=44
+MATRIX_FILE=C:\kb-search-api\evidence\remaining100_2026-04-20\phaseC_runtime_health_matrix_from_script_pwsh_2026-04-20_0837.tsv

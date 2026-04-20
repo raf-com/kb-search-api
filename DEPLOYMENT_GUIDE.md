@@ -49,6 +49,11 @@ curl -X POST http://localhost:8010/api/v1/search \
   -d '{"query": "test", "limit": 10}'
 ```
 
+```powershell
+# Full runtime matrix (container-aware probes)
+pwsh -NoProfile -File C:\kb-search-api\scripts\runtime_health_matrix.ps1
+```
+
 ---
 
 ## Port Mapping
@@ -182,6 +187,13 @@ pytest --cov=. --cov-report=html
 curl http://localhost:8010/api/v1/health
 # Response: {"status": "ready", "dependencies": {"postgres": "ok", "redis": "ok", ...}}
 ```
+
+### Runtime Matrix Probe
+```powershell
+pwsh -NoProfile -File C:\kb-search-api\scripts\runtime_health_matrix.ps1
+```
+- Uses corrected API routes (`/api/v1/health`) for kb-search-api services.
+- Marks endpoints as `SKIP_NO_CONTAINER` when the related container is not running, instead of reporting a false request failure.
 
 ### Docker Healthcheck
 Configured for 10s interval, 5s timeout, 5 retries before marking unhealthy.

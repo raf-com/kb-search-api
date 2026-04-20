@@ -1,0 +1,15 @@
+﻿status	http_code	url	container_pattern	container_present	body_excerpt
+FAIL_REQUEST	ERR	http://localhost:3000/api/health	infra-grafana	YES	Object reference not set to an instance of an object.
+FAIL_REQUEST	ERR	http://localhost:9090/-/healthy	infra-prometheus	YES	Object reference not set to an instance of an object.
+FAIL_REQUEST	ERR	http://localhost:6333/readyz	infra-qdrant	YES	Object reference not set to an instance of an object.
+FAIL_REQUEST	ERR	http://localhost:3100/ready	infra-loki	YES	Object reference not set to an instance of an object.
+WARN_NON200	503	http://localhost:4000/health/readiness	apex-litellm	YES	
+FAIL_REQUEST	ERR	http://localhost:8001/api/v1/health	kb_search_api	YES	Object reference not set to an instance of an object.
+FAIL_REQUEST	ERR	http://localhost:8010/api/v1/health	kb_search_api_service	YES	Object reference not set to an instance of an object.
+FAIL_REQUEST	ERR	http://localhost:8110/health	automation-master	YES	Object reference not set to an instance of an object.
+SKIP_NO_CONTAINER	-	http://localhost:8301/arena/health	automation-arena	NO	container not running
+FAIL_REQUEST	ERR	http://localhost:3001/api/health	webapp-grafana-staging	YES	Object reference not set to an instance of an object.
+FAIL_REQUEST	ERR	http://localhost:9091/-/healthy	webapp-prometheus-staging	YES	Object reference not set to an instance of an object.
+FAIL_REQUEST	ERR	http://localhost:3002/api/health	kb_grafana	YES	Object reference not set to an instance of an object.
+FAIL_REQUEST	ERR	http://localhost:9095/-/healthy	kb_prometheus	YES	Object reference not set to an instance of an object.
+FAIL_REQUEST	ERR	http://localhost:8400/health	openmythos-api	YES	Object reference not set to an instance of an object.

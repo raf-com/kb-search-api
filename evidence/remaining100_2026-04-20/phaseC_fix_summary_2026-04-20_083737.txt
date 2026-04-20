@@ -1,0 +1,8 @@
+TIMESTAMP=2026-04-20T08:37:37.5205159-05:00
+FIX_1=Added scripts/runtime_health_matrix.ps1 with container-aware endpoint probing
+FIX_2=Updated DEPLOYMENT_GUIDE.md health commands to use pwsh -NoProfile and corrected matrix workflow
+MATRIX_FILE=C:\kb-search-api\evidence\remaining100_2026-04-20\phaseC_runtime_health_matrix_from_script_pwsh_2026-04-20_0837.tsv
+MATRIX_OK_COUNT=12
+MATRIX_WARN_COUNT=1
+MATRIX_SKIP_COUNT=1
+MATRIX_FAIL_COUNT=0
