@@ -1,0 +1,9 @@
+FAIL	http://localhost:8000/health	ERR	The request was canceled due to the configured HttpClient.Timeout of 8 seconds elapsing.
+FAIL	http://localhost:8301/arena/health	ERR	No connection could be made because the target machine actively refused it. (localhost:8301)
+OK	http://localhost:3000/api/health	200	{   "database": "ok",   "version": "13.0.1",   "commit": "a100054f" }
+OK	http://localhost:9090/-/healthy	200	Prometheus Server is Healthy. 
+OK	http://localhost:9091/-/healthy	200	Prometheus Server is Healthy. 
+OK	http://localhost:3001/api/health	200	{   "database": "ok",   "version": "13.0.1",   "commit": "a100054f" }
+OK	http://localhost:3002/api/health	200	{   "commit": "03f502a94d17f7dc4e6c34acdf8428aedd986e4c",   "database": "ok",   "version": "10.4.0" }
+FAIL	http://localhost:9092/-/healthy	ERR	No connection could be made because the target machine actively refused it. (localhost:9092)
+OK	http://localhost:6333/readyz	200	all shards are ready

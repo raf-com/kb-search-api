@@ -6,7 +6,7 @@ Includes request/response schemas, data models, and validation rules.
 
 from datetime import datetime
 from typing import List, Optional, Dict, Any, Literal
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field, validator, ConfigDict
 from uuid import UUID
 
 # ============================================================================
@@ -32,10 +32,8 @@ class SearchFilters(BaseModel):
         default=None, description="Filter documents created before this date"
     )
 
-    class Config:
-        """Pydantic configuration."""
-
-        json_schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "owner": "platform-eng",
                 "classification": "internal",
@@ -43,6 +41,7 @@ class SearchFilters(BaseModel):
                 "status": "active",
             }
         }
+    )
 
 
 class SearchRequest(BaseModel):
@@ -68,10 +67,8 @@ class SearchRequest(BaseModel):
         """Validate result limit."""
         return min(v, 100)
 
-    class Config:
-        """Pydantic configuration."""
-
-        json_schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "query": "postgresql replication",
                 "filters": {
@@ -85,6 +82,7 @@ class SearchRequest(BaseModel):
                 "include_similar": False,
             }
         }
+    )
 
 
 class MetadataUpdate(BaseModel):
@@ -93,10 +91,8 @@ class MetadataUpdate(BaseModel):
     doc_id: str = Field(..., description="Document ID")
     changes: Dict[str, Any] = Field(..., description="Fields to update")
 
-    class Config:
-        """Pydantic configuration."""
-
-        json_schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "doc_id": "550e8400-e29b-41d4-a716-446655440000",
                 "changes": {
@@ -105,6 +101,7 @@ class MetadataUpdate(BaseModel):
                 },
             }
         }
+    )
 
 
 class BulkMetadataUpdateRequest(BaseModel):
@@ -114,10 +111,8 @@ class BulkMetadataUpdateRequest(BaseModel):
         ..., min_items=1, max_items=100, description="List of metadata updates"
     )
 
-    class Config:
-        """Pydantic configuration."""
-
-        json_schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "updates": [
                     {
@@ -127,6 +122,7 @@ class BulkMetadataUpdateRequest(BaseModel):
                 ]
             }
         }
+    )
 
 
 class EmbeddingReindexRequest(BaseModel):
@@ -142,16 +138,15 @@ class EmbeddingReindexRequest(BaseModel):
         default="normal", description="Job priority"
     )
 
-    class Config:
-        """Pydantic configuration."""
-
-        json_schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "doc_ids": ["550e8400-e29b-41d4-a716-446655440000"],
                 "force": False,
                 "priority": "normal",
             }
         }
+    )
 
 
 # ============================================================================
@@ -181,10 +176,10 @@ class SearchResultItem(BaseModel):
     )
     topics: List[str] = Field(default_factory=list, description="Document topics")
 
-    class Config:
-        """Pydantic configuration."""
-
-        json_encoders = {UUID: str, datetime: lambda v: v.isoformat()}
+    model_config = ConfigDict(
+        populate_by_name=True,
+        json_encoders={UUID: str, datetime: lambda v: v.isoformat()},
+    )
 
 
 class FacetValue(BaseModel):
@@ -211,10 +206,8 @@ class SearchResponse(BaseModel):
     status: Literal["success", "error"] = Field(..., description="Response status")
     data: Optional[Dict[str, Any]] = Field(default=None, description="Response data")
 
-    class Config:
-        """Pydantic configuration."""
-
-        json_schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "status": "success",
                 "data": {
@@ -228,6 +221,7 @@ class SearchResponse(BaseModel):
                 },
             }
         }
+    )
 
 
 class DocumentMetadata(BaseModel):
@@ -248,10 +242,9 @@ class DocumentMetadata(BaseModel):
         default=None, description="External ID for linking"
     )
 
-    class Config:
-        """Pydantic configuration."""
-
-        json_encoders = {UUID: str, datetime: lambda v: v.isoformat()}
+    model_config = ConfigDict(
+        json_encoders={UUID: str, datetime: lambda v: v.isoformat()}
+    )
 
 
 class DocumentResponse(BaseModel):
@@ -260,10 +253,8 @@ class DocumentResponse(BaseModel):
     status: Literal["success", "error"] = Field(..., description="Response status")
     data: Optional[Dict[str, Any]] = Field(default=None, description="Document data")
 
-    class Config:
-        """Pydantic configuration."""
-
-        json_schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "status": "success",
                 "data": {
@@ -277,6 +268,7 @@ class DocumentResponse(BaseModel):
                 },
             }
         }
+    )
 
 
 class MetadataResponse(BaseModel):
@@ -285,10 +277,9 @@ class MetadataResponse(BaseModel):
     status: Literal["success", "error"] = Field(..., description="Response status")
     data: Optional[DocumentMetadata] = Field(default=None, description="Metadata only")
 
-    class Config:
-        """Pydantic configuration."""
-
-        json_encoders = {UUID: str, datetime: lambda v: v.isoformat()}
+    model_config = ConfigDict(
+        json_encoders={UUID: str, datetime: lambda v: v.isoformat()}
+    )
 
 
 class BulkUpdateResult(BaseModel):
@@ -307,10 +298,8 @@ class BulkUpdateResponse(BaseModel):
     status: Literal["success", "error"] = Field(..., description="Response status")
     data: Optional[Dict[str, Any]] = Field(default=None, description="Update results")
 
-    class Config:
-        """Pydantic configuration."""
-
-        json_schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "status": "success",
                 "data": {
@@ -326,6 +315,7 @@ class BulkUpdateResponse(BaseModel):
                 },
             }
         }
+    )
 
 
 class ReindexResponse(BaseModel):
@@ -334,10 +324,8 @@ class ReindexResponse(BaseModel):
     status: Literal["accepted", "error"] = Field(..., description="Response status")
     data: Optional[Dict[str, Any]] = Field(default=None, description="Job information")
 
-    class Config:
-        """Pydantic configuration."""
-
-        json_schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "status": "accepted",
                 "data": {
@@ -348,6 +336,7 @@ class ReindexResponse(BaseModel):
                 },
             }
         }
+    )
 
 
 class ComponentHealth(BaseModel):
@@ -375,11 +364,9 @@ class HealthResponse(BaseModel):
         ..., description="Component health details"
     )
 
-    class Config:
-        """Pydantic configuration."""
-
-        json_encoders = {datetime: lambda v: v.isoformat()}
-        json_schema_extra = {
+    model_config = ConfigDict(
+        json_encoders={datetime: lambda v: v.isoformat()},
+        json_schema_extra={
             "example": {
                 "status": "healthy",
                 "timestamp": "2026-04-18T14:30:00Z",
@@ -391,6 +378,7 @@ class HealthResponse(BaseModel):
                 },
             }
         }
+    )
 
 
 class ErrorResponse(BaseModel):
@@ -399,10 +387,8 @@ class ErrorResponse(BaseModel):
     status: Literal["error"] = Field(default="error", description="Response status")
     error: Dict[str, Any] = Field(..., description="Error details")
 
-    class Config:
-        """Pydantic configuration."""
-
-        json_schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "status": "error",
                 "error": {
@@ -412,3 +398,4 @@ class ErrorResponse(BaseModel):
                 },
             }
         }
+    )

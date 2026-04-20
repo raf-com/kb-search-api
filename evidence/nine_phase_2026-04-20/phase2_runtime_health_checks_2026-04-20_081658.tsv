@@ -1,0 +1,15 @@
+status	url	code	body_excerpt
+OK	http://localhost:3000/api/health	200	{   "database": "ok",   "version": "13.0.1",   "commit": "a100054f" }
+OK	http://localhost:9090/-/healthy	200	Prometheus Server is Healthy. 
+OK	http://localhost:6333/readyz	200	all shards are ready
+OK	http://localhost:3100/ready	200	ready 
+OK	http://localhost:4000/health/readiness	503	{"detail":"Service Unhealthy (All connection attempts failed)"}
+OK	http://localhost:8001/health	404	{"detail":"Not Found"}
+OK	http://localhost:8010/health	404	{"detail":"Not Found"}
+OK	http://localhost:8110/health	200	{"status":"healthy","fleet_size":0,"fleet_available":0}
+FAIL	http://localhost:8301/arena/health	ERR	You cannot call a method on a null-valued expression.
+OK	http://localhost:3001/api/health	200	{   "database": "ok",   "version": "13.0.1",   "commit": "a100054f" }
+OK	http://localhost:9091/-/healthy	200	Prometheus Server is Healthy. 
+OK	http://localhost:3002/api/health	200	{   "commit": "03f502a94d17f7dc4e6c34acdf8428aedd986e4c",   "database": "ok",   "version": "10.4.0" }
+OK	http://localhost:9095/-/healthy	200	Prometheus Server is Healthy. 
+OK	http://localhost:8400/health	200	{"status":"ok","service":"openmythos-wrapper","version":"0.1.0"}

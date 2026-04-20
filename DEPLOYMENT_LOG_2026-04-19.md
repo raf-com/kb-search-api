@@ -15,7 +15,7 @@
 | FastAPI (search-api) | 8000 | 8010 | Adjusted from main infra's 8000 to avoid conflict |
 | Meilisearch | 7700 | 7701 | Adjusted from main infra's 7700 |
 | Qdrant | 6333 | 6335 | Adjusted from main infra's 6333-6334 (6334 was taken) |
-| Redis | 6379 | 6380 | Adjusted from main infra's 6379 |
+| Redis | 6379 | 6381 | Adjusted from 6380 (conflict) to avoid backend service overlap |
 | PostgreSQL | 5432 | 5433 | Adjusted from main infra's 5432 |
 
 #### Container Names & Status
@@ -92,4 +92,17 @@ kb_search_redis            — Redis cache
 
 ---
 
-**Document Updated**: 2026-04-19 05:20 UTC-5
+### Update: 2026-04-19 21:14 UTC-5
+
+#### Changes
+1. **Redis Port Pivot**: Changed host port from `6380` to `6381` in `docker-compose.standalone.yml` due to conflict with PID 23388.
+2. **Environment Initialization**: Created `.env` with host-aware URLs for local testing.
+3. **Bug Fixes Applied**: 
+   - RRF rank initialization bug.
+   - Hybrid pagination offset bug.
+   - Meilisearch filterableAttributes configuration in `populate_search_indices.py`.
+
+#### Current Blocker
+- **LiteLLM API Key**: Semantic search will fail with `sk-placeholder-key` until a valid key is provided.
+
+**Document Updated**: 2026-04-19 21:14 UTC-5

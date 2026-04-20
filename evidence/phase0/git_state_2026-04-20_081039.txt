@@ -1,0 +1,3754 @@
+===== C:\Users\ajame\.claude\projects\C-- =====
+ai-linter-integration
+## ai-linter-integration
+ M 3dbeadf9-4c07-4eeb-a378-a62e93d528f5.jsonl
+ M 569ba0fa-d563-4b40-b807-80ea5bb58bd7.jsonl
+ M 58977fff-9245-4b76-a078-19b4b995f5b5.jsonl
+ M 5e0e5070-6702-4005-a149-73829adac7f6.jsonl
+ M 6970c85a-5f3d-41bb-9b9c-d40c63fa613b.jsonl
+ M 72dcf210-876a-46f1-9f78-93e6c17831e4.jsonl
+ M a1a7f981-ae16-42dc-a3f0-2b602cc17d28.jsonl
+ M a4eabc45-4e1e-4d4e-a85a-f33e7d84511a.jsonl
+ M ea4a844d-2a5d-4e5b-aafa-619c6807d20d.jsonl
+
+===== C:\kb-search-api =====
+test/case-5
+## test/case-5...origin/test/case-5
+ M DEPLOYMENT_GUIDE.md
+ M DEPLOYMENT_LOG_2026-04-19.md
+ M Dockerfile
+ M INTEGRATION_GUIDE.md
+ M STATUS.md
+ M __pycache__/models.cpython-312.pyc
+ M __pycache__/search_service.cpython-312.pyc
+ M config.py
+ M docker-compose.standalone.yml
+ M main.py
+ M models.py
+ M populate_search_indices.py
+ M search_service.py
+?? .env
+?? BATCH_6_COMPLETION_SUMMARY_20_STEPS_EMAIL_SIDECAR_2026-04-19.md
+?? MULTI_TENANT_ISOLATION_SECURITY_AUDIT_EMAIL_SIDECAR_2026-04-19.md
+?? PHASE_10_STEP_1_SMS_INTEGRATION_TWILIO_EMAIL_SIDECAR_2026-04-20.md
+?? PHASE_10_STEP_2_WHATSAPP_INTEGRATION_META_API_EMAIL_SIDECAR_2026-04-20.md
+?? PHASE_10_STEP_3_EU_MARKET_ENTRY_DEPLOYMENT_EMAIL_SIDECAR_2026-04-20.md
+?? PHASE_10_STEP_4_DEVELOPER_MARKETPLACE_PLUGINS_EMAIL_SIDECAR_2026-04-20.md
+?? PHASE_8_STEP_1_SELF_SERVICE_ADMIN_PORTAL_EMAIL_SIDECAR_2026-04-20.md
+?? PHASE_8_STEP_2_AI_POWERED_FEATURES_EMAIL_SIDECAR_2026-04-20.md
+?? PHASE_8_STEP_3_MARKETPLACE_INTEGRATION_EMAIL_SIDECAR_2026-04-20.md
+?? PHASE_8_STEP_4_USAGE_ANALYTICS_DASHBOARD_EMAIL_SIDECAR_2026-04-20.md
+?? PHASE_9_STEP_1_DATABASE_QUERY_OPTIMIZATION_EMAIL_SIDECAR_2026-04-20.md
+?? PHASE_9_STEP_2_LAMBDA_COST_OPTIMIZATION_EMAIL_SIDECAR_2026-04-20.md
+?? PHASE_9_STEP_3_STORAGE_BACKUP_OPTIMIZATION_EMAIL_SIDECAR_2026-04-20.md
+?? PHASE_9_STEP_4_AUTO_SCALING_ENHANCEMENTS_EMAIL_SIDECAR_2026-04-20.md
+?? PHASE_9_STEP_5_ARCHITECTURE_REVIEW_NEXT_GEN_PLANNING_EMAIL_SIDECAR_2026-04-20.md
+?? POST_PHASE_7_ROADMAP_PHASE_8_9_PLANNING_EMAIL_SIDECAR_2026-04-19.md
+?? __pycache__/search_utils.cpython-312.pyc
+?? __pycache__/test_integration.cpython-312-pytest-7.4.3.pyc
+?? __pycache__/test_logic_fixes.cpython-312-pytest-7.4.3.pyc
+?? evidence/
+?? exceptions.py
+?? search_utils.py
+?? test_integration.py
+?? test_logic_fixes.py
+origin	https://github.com/raf-com/kb-search-api.git (fetch)
+origin	https://github.com/raf-com/kb-search-api.git (push)
+
+===== C:\kb-web-ui =====
+test/case-10
+## test/case-10...origin/test/case-10 [ahead 5]
+ M PHASE_12_COMPLETION_SUMMARY_2026-04-19.md
+ M dev-setup.md
+ M src/App.tsx
+ M src/components/CodeBlock.tsx
+ M src/components/DocumentViewer.tsx
+ M src/components/FacetPanel.tsx
+ M src/components/Header.tsx
+ M src/components/Notifications.tsx
+ M src/components/RelatedDocuments.tsx
+ M src/components/ResultGrid.tsx
+ M src/components/SearchBox.tsx
+ M src/components/index.ts
+ M src/components/pages/AboutPage.tsx
+ M src/components/pages/BrowsePage.tsx
+ M src/components/pages/SearchPage.tsx
+ M src/hooks/index.ts
+ M src/hooks/useCopyToClipboard.ts
+ M src/hooks/useDebounce.ts
+ M src/hooks/useDocument.ts
+ M src/hooks/useKeyboard.ts
+ M src/hooks/useLocalStorage.ts
+ M src/hooks/useSearch.ts
+ M src/main.tsx
+ M src/services/api.ts
+ M src/stores/index.ts
+ M src/styles/global.css
+ M src/tests/formatting.test.ts
+ M src/tests/setup.ts
+ M src/types/index.ts
+ M src/utils/cache.ts
+ M src/utils/formatting.ts
+ M src/utils/index.ts
+ M src/utils/validation.ts
+ M src/vite-env.d.ts
+?? DELIVERABLES_INDEX_2026-04-19.md
+?? DEPLOYMENT_CHECKLIST_2026-05-17.md
+?? E2E_TEST_RESULTS_2026-04-19.md
+?? INTEGRATION_VERIFICATION_CHECKLIST_2026-04-19.md
+?? PERFORMANCE_BASELINE_2026-04-19.md
+?? PHASE_12A_COMPLETION_2026-04-19.md
+?? PHASE_12A_PROGRESS_2026-04-19.md
+?? PHASE_12E_TESTING_REPORT_2026-04-19.md
+?? PHASE_12H_POST_DEPLOYMENT_REVIEW_AGENDA_2026-05-03.md
+?? PHASE_12_FAQ_AND_TROUBLESHOOTING.md
+?? PHASE_12_FINAL_STATUS_REPORT_2026-04-19.md
+?? PHASE_12_LESSONS_LEARNED_AND_BEST_PRACTICES.md
+?? PHASE_12_MIGRATION_CHECKLIST_2026-04-19.md
+?? PHASE_12_TYPE_SAFETY_IMPLEMENTATION_2026-04-19.md
+?? PHASE_12_WORK_PACKAGE_2026-04-19.md
+?? PHASE_6_CHUNK_3_COMPLETION_2026-04-19.md
+?? PHASE_6_CHUNK_5_OPTIONAL_ENHANCEMENTS_2026-04-19.md
+?? PHASE_6_COMPLETION_SUMMARY_2026-04-19.md
+?? PHASE_6_STATUS_2026-04-19.md
+?? SESSION_SUMMARY_2026-04-19_PHASE_12GH.md
+?? TESTING_PROCEDURES_DETAILED_GUIDE.md
+?? WORK_COMPLETED_SESSION_2026-04-19.txt
+?? src/services/api-typed.example.ts
+?? src/tests/performance.test.ts
+?? src/types/api.ts
+?? src/types/components.ts
+?? src/types/store.ts
+?? src/utils/performance.ts
+origin	https://github.com/raf-com/kb-web-ui.git (fetch)
+origin	https://github.com/raf-com/kb-web-ui.git (push)
+
+===== C:\dev-projects =====
+main
+## main
+?? .env.example
+?? .env.test
+?? AUTOMATION_SCRIPTS_README_2026-04-19.md
+?? CAMPAIGN_COMPLETE_INDEX_2026-04-19.md
+?? CAMPAIGN_LESSONS_LEARNED_2026-04-19.md
+?? CAMPAIGN_MASTER_INDEX_2026-04-19.md
+?? CAMPAIGN_SUMMARY_BRIEF_2026-04-19.md
+?? CLEANUP_BEST_PRACTICES_QUICK_REFERENCE_2026-04-19.md
+?? CLEANUP_METHODOLOGY_PLAYBOOK_2026-04-19.md
+?? DEFERRED_WORK_CAMPAIGN_MANIFEST_2026-04-19.md
+?? DEFERRED_WORK_COMPLETION_2026-04-19.md
+?? DEFERRED_WORK_QUICK_REFERENCE_2026-04-19.md
+?? DEFERRED_WORK_VERIFICATION_CHECKLIST_2026-04-19.md
+?? DEPLOYMENT_READINESS_CERTIFICATION_2026-04-19.md
+?? EXECUTION_LEDGER_AND_SIGN_OFF_2026-04-19.md
+?? FABRICATION_CLEANUP_CAMPAIGN_EXECUTIVE_SUMMARY_2026-04-19.md
+?? FINAL_CAMPAIGN_VERIFICATION_2026-04-19.md
+?? FW_WWW_DISPOSITION_OPTIONS_2026-04-19.md
+?? INFRA_OPERATIONAL_PROCEDURES_2026-04-19.md
+?? INFRA_OPERATIONAL_READINESS_REPORT_2026-04-19.md
+?? MASTER_CAMPAIGN_COMPLETION_SUMMARY_2026-04-19.md
+?? OPERATIONAL_TRANSITION_CHECKLIST_2026-04-19.md
+?? PRIMARY_CLEANUP_CAMPAIGN_VERIFICATION_2026-04-19.md
+?? RECOVERY_ROLLBACK_PROCEDURES_2026-04-19.md
+?? THEATER_PATTERN_RECOGNITION_GUIDE_2026-04-19.md
+?? cleanup_health_check.sh
+?? cleanup_recovery_automation.sh
+?? workbench/
+origin	. (fetch)
+origin	. (push)
+
+===== C:\dev\monorepo =====
+master
+## master...origin/master [ahead 18]
+ m mingw-w64-src
+origin	https://github.com/raf-com/dev.git (fetch)
+origin	https://github.com/raf-com/dev.git (push)
+
+===== C:\webapp_core =====
+release-candidate-2026-04-19
+## release-candidate-2026-04-19
+ M .env.staging
+ M .pr-audit/PHASE7_CHUNK7_STEP3_CONFIGURE_STAGING_DATABASE_2026-04-20.md
+ M docker-compose.staging.yml
+ M logs/mysql-slow/slow-query.log
+ M nginx/conf.d/webapp.conf
+ M nginx/nginx.conf
+ M nginx/ssl/cert.pem
+ M nginx/ssl/key.pem
+ M prometheus/prometheus.yml
+ M prometheus/rules.yml
+ M routes/api.php
+ M storage/logs/access.log
+ M storage/logs/error.log
+?? .env
+?? .env.clean
+?? .env.reverb
+?? .gitignore
+?? .pr-audit/CHUNK_8_MAY_1-7_EXECUTION_GUIDE.md
+?? .pr-audit/MASTER_SESSION_COMPLETION_2026-04-20.md
+?? .pr-audit/MAY_15-19_QA_WEEK1_EXECUTION_GUIDE.md
+?? .pr-audit/MAY_22-26_QA_WEEK2_EXECUTION_GUIDE.md
+?? .pr-audit/MAY_26_QA_SIGN_OFF_REPORT.md
+?? .pr-audit/MAY_3_QA_TEAM_HANDOFF_EXECUTION.md
+?? .pr-audit/MAY_7_STAGING_DOCUMENTATION_ARCHIVE.md
+?? 503.html
+?? AGENT5_INTEGRATION_TEST_DELIVERABLES.txt
+?? ANALYTICS_TRACKING_MASTER.md
+?? BOOKING_VALIDATION_IMPLEMENTATION.md
+?? CATEGORIZATION_AUDIT_EXECUTIVE_SUMMARY.md
+?? CEO_ASSESSMENT_FINAL.md
+?? CEO_COO_REGATE_BRIEF.md
+?? CEO_DISPATCH_REMEDIATION_STRATEGY.md
+?? CHECKPOINT_2026-04-20_01-30-UTC.md
+?? CLAUDE.md
+?? COMPOSER_BLOCKER_ESCALATION.md
+?? COO_BRIEFING_FRIEND_DASHBOARD_REMEDIATION.md
+?? DATABASE-MIGRATION-SAFETY.md
+?? DEPLOYMENT_BLOCKERS_AND_WORKAROUNDS_2026-04-20.md
+?? DOCKER_BUILD_GUIDE.md
+?? Dockerfile.nginx
+?? Dockerfile.reverb
+?? Dockerfile.web
+?? ENV-SPECIALIST-ACTION-CHECKLIST.md
+?? EXECUTIVE_DECISION_LOCKED.md
+?? FRAUD_VELOCITY_TEST_DATA_REPORT.md
+?? FRONTEND_TEST_SUMMARY.txt
+?? INTEGRATION_TEST_ARCHITECTURE.md
+?? INTEGRATION_TEST_IMPLEMENTATION_SUMMARY.md
+?? INTEGRATION_TEST_QUICK_REFERENCE.md
+?? INTEGRATION_TEST_README.md
+?? KNOWLEDGE.md
+?? MAINTENANCE_BACKLOG_P3_ITEMS.md
+?? MOBILE_CHECKOUT_IMPLEMENTATION.md
+?? MOBILE_CHECKOUT_INTEGRATION_GUIDE.md
+?? MULTI_AGENT_SAFETY_RULES.md
+?? Makefile
+?? OPENAPI-DELIVERY-SUMMARY.md
+?? PAYMENT_ATOMICITY_IMPLEMENTATION.md
+?? PAYMENT_AUDIT_IMPLEMENTATION.md
+?? PAYMENT_FUNCTIONAL_TESTS_COMPLETION_BRIEF.md
+?? PAYMENT_FUNCTIONAL_TESTS_EXECUTION.md
+?? PAYMENT_SECURITY_AUDIT_REPORT.md
+?? PHASE1_LOAD_TEST_RESULTS.md
+?? PHASE1_T8_1_PERFORMANCE_COMPLETION.md
+?? PHASE2_TEST_VALIDATION_REPORT.md
+?? PHASE_3_IMPLEMENTATION_ISSUES.md
+?? PHASE_3_INTEGRATION_PLAN.md
+?? PHASE_3_JOB_6A_6B_COMPLETION.md
+?? PHASE_3_STABILIZATION_UPDATE.md
+?? PHASE_3_STATUS_SUMMARY.md
+?? PHASE_3_TEST_EXECUTION_REPORT.md
+?? PRE_DEPLOYMENT_CHECKLIST_FINAL_2026-04-20.md
+?? PRODUCTION_DEPLOYMENT_CONFIG_2026-04-20.md
+?? PRODUCTION_DEPLOYMENT_GATES_2026-04-20.md
+?? PROJECT_REPOSITORY_STRUCTURE.md
+?? REHAB_BRANCH_ANALYSIS.md
+?? RESCHEDULING_FEATURE_SUMMARY.md
+?? ROLLBACK_PROCEDURES_COMPLETION_REPORT.md
+?? Routes.MD
+?? SECURITY_INITIATIVE_FINAL_REPORT.md
+?? SECURITY_REMEDIATION_EXECUTIVE_SUMMARY.md
+?? SESSION_COMPLETION_SUMMARY.md
+?? STAGING_DEPLOYMENT_PLAN.md
+?? STAGING_DEPLOYMENT_STATUS_2026-04-20_continued.md
+?? STATUS.md
+?? STEP_2_TESTING_RESULTS_2026-04-20.md
+?? STREAM_D_COMPLETION_REPORT.md
+?? T2.3_IMPLEMENTATION_SUMMARY.md
+?? T4_1_COMPLETION_REPORT.md
+?? T7_1_MODERATION_QUEUE_COMPLETION.md
+?? TASK_COMPLETION_SUMMARY.txt
+?? TESTING_VERIFICATION_CHECKLIST.md
+?? TEST_DATA_GENERATION_SUMMARY.md
+?? TEST_EXECUTION_REPORT.md
+?? TEST_SUITE_SUMMARY.md
+?? TIER2_EXECUTIVE_SUMMARY.md
+?? TIER2_FILES_INDEX.txt
+?? TIER2_IMPLEMENTATION_PLAN.md
+?? TIER2_QUICK_REFERENCE.md
+?? WAMP_INTEGRATION_BLOCKERS.md
+?? WAVE-2-READINESS-CHECKPOINT.md
+?? WAVE1_COMPLETION_REPORT.md
+?? WAVE1_DELIVERY_MANIFEST.md
+?? WAVE1_DEPLOYMENT_STATUS.md
+?? WAVE1_DISPATCH_SUMMARY.md
+?? WAVE1_FILE_OWNERSHIP.md
+?? WAVE2_COMPLETION_REPORT.md
+?? WAVE3_COMPLETION_REPORT.md
+?? WAVE3_DELIVERY.md
+?? WAVE3_IMPLEMENTATION.md
+?? WAVE_1_2_COMPLETION_SUMMARY.md
+?? WEBAPP_CORE_CHARTER.md
+?? WEBAPP_CORE_EXECUTIVE_REPORT.md
+?? WEBAPP_CORE_PLAN.md
+?? WEBSOCKET_E2E_TEST_PLAN_2026-04-20.md
+?? WORKSTREAM_C_COMPLETION_SUMMARY.md
+?? _graveyard_2026-04-19/chat-fabrication/
+?? app/Actions/
+?? app/Casts/
+?? app/Console/
+?? app/Contracts/
+?? app/Database/
+?? app/Enums/
+?? app/Events/
+?? app/Exceptions/
+?? app/Exports/
+?? app/Facades/
+?? app/Helpers/
+?? app/Http/Controllers/AccountController.php
+?? app/Http/Controllers/Admin/
+?? app/Http/Controllers/AdminController.php
+?? app/Http/Controllers/AlbumController.php
+?? app/Http/Controllers/Api/
+?? app/Http/Controllers/Auth/
+?? app/Http/Controllers/BookmarkController.php
+?? app/Http/Controllers/Chronos/
+?? app/Http/Controllers/Controller.php
+?? app/Http/Controllers/CustomLinkController.php
+?? app/Http/Controllers/Dashboard/
+?? app/Http/Controllers/DashboardController.php
+?? app/Http/Controllers/Email/
+?? app/Http/Controllers/ExtraController.php
+?? app/Http/Controllers/Flagged/
+?? app/Http/Controllers/Fraud/
+?? app/Http/Controllers/FriendAlertController.php
+?? app/Http/Controllers/FriendRequest/
+?? app/Http/Controllers/FriendRequestController.php
+?? app/Http/Controllers/FunnelAnalyticsController.php
+?? app/Http/Controllers/GuestController.md
+?? app/Http/Controllers/GuestController.php
+?? app/Http/Controllers/HealthCheckController.php
+?? app/Http/Controllers/HomeController.php
+?? app/Http/Controllers/ImageController.php
+?? app/Http/Controllers/MailboxController.php
+?? app/Http/Controllers/Mailgun/
+?? app/Http/Controllers/Message/
+?? app/Http/Controllers/Newsletter/
+?? app/Http/Controllers/NotificationController.php
+?? app/Http/Controllers/NuxtController.php
+?? app/Http/Controllers/PhoneVerificationController.php
+?? app/Http/Controllers/PhotoController.php
+?? app/Http/Controllers/PrivacyController.php
+?? app/Http/Controllers/Profile/
+?? app/Http/Controllers/ProfileController.php
+?? app/Http/Controllers/Review/
+?? app/Http/Controllers/ReviewController.php
+?? app/Http/Controllers/SafetyController.php
+?? app/Http/Controllers/SearchController.php
+?? app/Http/Controllers/Security/
+?? app/Http/Controllers/SliderController.php
+?? app/Http/Controllers/Socialite/
+?? app/Http/Controllers/StaticPageController.php
+?? app/Http/Controllers/Subscription/
+?? app/Http/Controllers/SubscriptionController.php
+?? app/Http/Controllers/Template/
+?? app/Http/Controllers/TemporaryFileController.php
+?? app/Http/Controllers/TestController.php
+?? app/Http/Controllers/Testing/
+?? app/Http/Controllers/Users/
+?? app/Http/Controllers/V2/
+?? app/Http/Controllers/Variable/
+?? app/Http/Controllers/VerificationController.php
+?? app/Http/Controllers/Webhooks/
+?? app/Http/Controllers/Worker/
+?? app/Http/Kernel.php
+?? app/Http/Middleware/AcceptSafetyRules.php
+?? app/Http/Middleware/AdminRedirectMiddleware.php
+?? app/Http/Middleware/ApiKeyMiddleware.php
+?? app/Http/Middleware/Authenticate.php
+?? app/Http/Middleware/BannedIpMiddleware.php
+?? app/Http/Middleware/BypassMaintenanceMode.php
+?? app/Http/Middleware/CatchUserIp.php
+?? app/Http/Middleware/CheckForMaintenanceMode.php
+?? app/Http/Middleware/CorrelationIdMiddleware.php
+?? app/Http/Middleware/EncryptCookies.php
+?? app/Http/Middleware/EnsureGoogleAuthSetup.php
+?? app/Http/Middleware/ForceHttps.php
+?? app/Http/Middleware/FriendRegistrationThreshold.php
+?? app/Http/Middleware/GlobalThrottleMiddleware.php
+?? app/Http/Middleware/HandleCors.php
+?? app/Http/Middleware/HandleInertiaRequests.php
+?? app/Http/Middleware/HasActiveSubscription.php
+?? app/Http/Middleware/HttpsProtocolMiddleware.php
+?? app/Http/Middleware/IsAdminMiddleware.php
+?? app/Http/Middleware/IsEmailEnabled.php
+?? app/Http/Middleware/IsUserMiddleware.php
+?? app/Http/Middleware/MonitoringMiddleware.php
+?? app/Http/Middleware/NoAccountSession.php
+?? app/Http/Middleware/NoProfileSession.php
+?? app/Http/Middleware/OnlyActiveUser.php
+?? app/Http/Middleware/OptionalDatadogMiddleware.php
+?? app/Http/Middleware/PaymentRateLimitMiddleware.php
+?? app/Http/Middleware/PaymentSecurityMiddleware.php
+?? app/Http/Middleware/PiiMaskingMiddleware.php
+?? app/Http/Middleware/ProtectDevEnvironments.php
+?? app/Http/Middleware/RateLimitByTenant.php
+?? app/Http/Middleware/RateLimitingMiddleware.php
+?? app/Http/Middleware/ReVerifyMiddleware.php
+?? app/Http/Middleware/RedirectIfAuthenticated.php
+?? app/Http/Middleware/RegenerateSessionOnLogout.php
+?? app/Http/Middleware/RegistrationRestriction.php
+?? app/Http/Middleware/RequestLoggingMiddleware.php
+?? app/Http/Middleware/RequestSigningMiddleware.php
+?? app/Http/Middleware/RestrictCountries.php
+?? app/Http/Middleware/SanitizeInput.php
+?? app/Http/Middleware/SanitizeInputMiddleware.php
+?? app/Http/Middleware/SearchLocationLimiter.php
+?? app/Http/Middleware/SecurityHeadersMiddleware.php
+?? app/Http/Middleware/SecurityMiddleware.php
+?? app/Http/Middleware/SetCspNonce.php
+?? app/Http/Middleware/SqlInjectionGuard.php
+?? app/Http/Middleware/SqlInjectionGuardMiddleware.php
+?? app/Http/Middleware/TenantRateLimitMiddleware.php
+?? app/Http/Middleware/TestingEnvironmentOnly.php
+?? app/Http/Middleware/TrimStrings.php
+?? app/Http/Middleware/TrustProxies.php
+?? app/Http/Middleware/TwoFactorAuthMiddleware.php
+?? app/Http/Middleware/UserEmailVerified.php
+?? app/Http/Middleware/ValidateJwtToken.php
+?? app/Http/Middleware/ValidateWebhookCertificate.php
+?? app/Http/Middleware/VerifyCsrfToken.php
+?? app/Http/Middleware/VerifyPaypalWebhookSignature.php
+?? app/Http/Middleware/VerifyRecaptcha.php
+?? app/Http/Middleware/WebhookIpWhitelistMiddleware.php
+?? app/Http/Requests/
+?? app/Http/Resources/
+?? app/Img/
+?? app/Jobs/
+?? app/Listeners/
+?? app/Logging/
+?? app/Mail/
+?? app/Models/
+?? app/Notifications/
+?? app/Observers/
+?? app/Policies/
+?? app/Providers/
+?? app/Repositories/
+?? app/Rules/
+?? app/Scopes/
+?? app/Search/
+?? app/Services/Admin/
+?? app/Services/ApprovalModelEngine.php
+?? app/Services/AuditLog/
+?? app/Services/Auth/
+?? app/Services/AvailabilityConflictService.php
+?? app/Services/BaseService.php
+?? app/Services/BookingReschedulingSuggestionEngine.php
+?? app/Services/BookingService.php
+?? app/Services/Bookings/
+?? app/Services/Bulk/
+?? app/Services/Communication/
+?? app/Services/Database/
+?? app/Services/DepositService.php
+?? app/Services/DisputeResolverService.php
+?? app/Services/DocumentationAnalyticsService.php
+?? app/Services/DocumentationChangeNotifier.php
+?? app/Services/DocumentationDossierGenerator.php
+?? app/Services/DocumentationRecommendationEngine.php
+?? app/Services/DocumentationRecommendationService.php
+?? app/Services/DocumentationSnapshotManager.php
+?? app/Services/Email/
+?? app/Services/EmailService.php
+?? app/Services/EmailTemplateService.php
+?? app/Services/EmailTemplateVersionControlService.php
+?? app/Services/EmailTransactionService.php
+?? app/Services/ErrorHub/
+?? app/Services/EventTrackingService.php
+?? app/Services/FriendAlertService.php
+?? app/Services/FunnelAnalyticsService.php
+?? app/Services/Geo/
+?? app/Services/GitHubPRCommentFormatter.php
+?? app/Services/GuzzleClientHttpService.php
+?? app/Services/GuzzleClientService.php
+?? app/Services/Helpdesk/
+?? app/Services/Hub/
+?? app/Services/ImageModerationService.php
+?? app/Services/ImageOptimizationService.php
+?? app/Services/IpApiLocationService.php
+?? app/Services/IpnService.php
+?? app/Services/Janitor.bak/
+?? app/Services/JwtTokenService.php
+?? app/Services/Logging/
+?? app/Services/LoginAttemptService.php
+?? app/Services/Mailgun/
+?? app/Services/MeiliSearch/
+?? app/Services/Message/
+?? app/Services/Monitoring/
+?? app/Services/OpenCloudService.php
+?? app/Services/PasswordHistoryService.php
+?? app/Services/PayPal/
+?? app/Services/Payment/
+?? app/Services/PaymentAuditLog.php
+?? app/Services/PaymentAuditLogger.php
+?? app/Services/PaymentGateway/
+?? app/Services/PaymentGatewaySelector.php
+?? app/Services/PaymentMetricsService.php
+?? app/Services/PaymentRetryService.php
+?? app/Services/PaymentSecurityAudit.php
+?? app/Services/Payments/
+?? app/Services/PhotoService.php
+?? app/Services/PiiMaskingService.php
+?? app/Services/ProfileViewService.php
+?? app/Services/ProviderQualityService.php
+?? app/Services/PullRequestReviewService.php
+?? app/Services/RackspaceMigration/
+?? app/Services/RecaptchaVerificationService.php
+?? app/Services/RecommendationsService.php
+?? app/Services/Reporting/
+?? app/Services/Search/
+?? app/Services/SearchConversionAnalyzer.php
+?? app/Services/SearchRankingService.php
+?? app/Services/Security/
+?? app/Services/Slider/
+?? app/Services/Storage/
+?? app/Services/StorageFileService.php
+?? app/Services/Stubs/
+?? app/Services/Subscription/
+?? app/Services/TwilioService.php
+?? app/Services/User/
+?? app/Services/UserPhotoService.php
+?? app/Services/Utility/
+?? app/Services/V2/
+?? app/Services/WebhookSecurityValidator.php
+?? app/Services/Webhooks/
+?? app/Sms/
+?? app/Stubs/
+?? app/Support/
+?? app/Tools/
+?? app/Traits/
+?? app/ValueObjects/
+?? archives/
+?? artisan
+?? backups/
+?? bootstrap/
+?? bootstrap_test.php
+?? canary.Dockerfile
+?? cluster_a1_composer_retry.log
+?? composer-setup.php
+?? composer.json
+?? composer.lock
+?? config/
+?? container_debug.php
+?? cypress.config.ts
+?? cypress/
+?? data.ms/
+?? database/.gitignore
+?? database/factories/
+?? database/migrations/2014_10_12_000000_create_users_table.php
+?? database/migrations/2014_10_12_100000_create_password_resets_table.php
+?? database/migrations/2018_08_30_083309_create_roles_table.php
+?? database/migrations/2018_08_30_084303_create_user_roles_table.php
+?? database/migrations/2018_08_30_084401_create_user_profiles_table.php
+?? database/migrations/2018_08_30_084830_create_user_photos_table.php
+?? database/migrations/2018_08_30_085007_create_user_activities_table.php
+?? database/migrations/2018_08_30_085118_create_activities_table.php
+?? database/migrations/2018_08_30_085225_create_languages_table.php
+?? database/migrations/2018_08_30_085404_create_user_languages_table.php
+?? database/migrations/2018_08_30_085519_create_messages_table.php
+?? database/migrations/2018_08_30_085735_create_ethnicities_table.php
+?? database/migrations/2018_08_30_085937_create_heights_table.php
+?? database/migrations/2018_08_30_090528_create_genders_table.php
+?? database/migrations/2018_08_30_090914_create_flagged_users_table.php
+?? database/migrations/2018_08_30_091003_create_notes_table.php
+?? database/migrations/2018_08_30_091147_create_bookmarks_table.php
+?? database/migrations/2018_08_30_091534_create_user_subscriptions_table.php
+?? database/migrations/2018_08_30_091700_create_premium_friends_table.php
+?? database/migrations/2018_08_30_091831_create_blacklists_table.php
+?? database/migrations/2018_08_30_094341_create_abusive_messages_table.php
+?? database/migrations/2018_08_30_094619_create_abusive_profiles_table.php
+?? database/migrations/2018_08_30_094838_create_feedback_table.php
+?? database/migrations/2018_08_30_113326_create_body_types_table.php
+?? database/migrations/2018_08_30_130531_create_notifications_table.php
+?? database/migrations/2018_08_31_062415_create_view_counts_table.php
+?? database/migrations/2018_08_31_063033_create_newsletter_subscribers_table.php
+?? database/migrations/2018_08_31_063216_create_message_priorities_table.php
+?? database/migrations/2018_08_31_063343_create_hair_colors_table.php
+?? database/migrations/2018_08_31_063504_create_friend_requests_table.php
+?? database/migrations/2018_08_31_063634_create_flagged_keywords_table.php
+?? database/migrations/2018_08_31_063758_create_eye_colors_table.php
+?? database/migrations/2018_09_17_122643_create_statuses_table.php
+?? database/migrations/2018_09_20_101251_create_member_profiles_table.php
+?? database/migrations/2018_09_24_113728_create_reject_reasons_table.php
+?? database/migrations/2018_09_27_063926_create_countries_table.php
+?? database/migrations/2018_10_02_125733_create_emails_table.php
+?? database/migrations/2018_10_05_083050_create_subscription_packages_table.php
+?? database/migrations/2018_10_23_121730_create_friend_request_sents_table.php
+?? database/migrations/2018_10_25_084739_alter_friend_request_softdeletes.php
+?? database/migrations/2018_10_26_064238_create_request_variables_table.php
+?? database/migrations/2018_10_31_114338_alter_user_profile_softdelete.php
+?? database/migrations/2018_11_01_092955_create_request_crons_table.php
+?? database/migrations/2018_11_01_112313_alter_requestcron_last_send_to.php
+?? database/migrations/2018_11_02_091846_alter_friendrequestsent_requestcron_id.php
+?? database/migrations/2018_11_02_130737_create_badges_table.php
+?? database/migrations/2018_11_05_120140_alter_user_timezone.php
+?? database/migrations/2018_11_06_132117_alter_abusiveprofile_softdeletes.php
+?? database/migrations/2018_11_07_064824_alter_requestcrons_message.php
+?? database/migrations/2018_11_07_092846_create_member_phone_views_table.php
+?? database/migrations/2018_11_12_071033_alter_user_viewphonelock.php
+?? database/migrations/2018_11_12_115411_alter_memberphoneviews_ip.php
+?? database/migrations/2018_11_12_120545_create_logs_table.php
+?? database/migrations/2018_11_12_122610_create_view_phonenumber_variables_table.php
+?? database/migrations/2018_11_13_072756_alter_user_removemaxphoneview.php
+?? database/migrations/2018_11_15_072705_create_view_phonetimes_table.php
+?? database/migrations/2018_11_19_090952_alter_users_alert.php
+?? database/migrations/2018_11_19_091829_create_new__friend__alerts_table.php
+?? database/migrations/2018_11_21_073438_create_reviews_table.php
+?? database/migrations/2018_11_22_114416_create_workers_table.php
+?? database/migrations/2018_11_23_094619_create_permissions_table.php
+?? database/migrations/2018_11_23_095318_create_worker_permissions_table.php
+?? database/migrations/2018_12_06_114438_alter_flagged_users_reason.php
+?? database/migrations/2018_12_10_120558_alter_blacklists_lockphone.php
+?? database/migrations/2018_12_11_063559_alter_flaggedkeywords_msg.php
+?? database/migrations/2018_12_13_085455_alter_flaggedusers_blacklistid.php
+?? database/migrations/2018_12_14_105833_create_reported_messages_table.php
+?? database/migrations/2018_12_17_091641_alter_premiumfriends_latitude.php
+?? database/migrations/2018_12_26_080235_add_rate_to_reviews_table.php
+?? database/migrations/2019_01_01_072016_create_user_genders_table.php
+?? database/migrations/2019_01_02_065303_alter_gender_type.php
+?? database/migrations/2019_01_14_091643_alter_user_photos_profilepic.php
+?? database/migrations/2019_01_15_062926_create_user_verifications_table.php
+?? database/migrations/2019_01_24_074839_rename_notes_table.php
+?? database/migrations/2019_01_28_130511_alter_blacklist_reason.php
+?? database/migrations/2019_01_28_140347_alter_messages_approved_by.php
+?? database/migrations/2019_02_06_102531_alter_userphotos_photo_order.php
+?? database/migrations/2019_03_25_124012_alter_user_profile_profile_sharing.php
+?? database/migrations/2019_03_26_101751_create_shared_profiles_table.php
+?? database/migrations/2019_03_28_062330_change_column_subject_table_messages.php
+?? database/migrations/2019_04_11_131910_alter_emails_type.php
+?? database/migrations/2019_04_18_084702_alter_emails.php
+?? database/migrations/2019_05_03_114004_alter_friend_requests.php
+?? database/migrations/2019_05_10_125337_create_contact_options_table.php
+?? database/migrations/2019_05_16_130314_alter_user_photos_in_photos.php
+?? database/migrations/2019_05_20_133020_create_templates_table.php
+?? database/migrations/2019_05_28_094757_alter_subscription_packages.php
+?? database/migrations/2019_06_04_100414_alter_user_subscription.php
+?? database/migrations/2019_06_13_124649_create_paypal_subscribers_table.php
+?? database/migrations/2019_06_20_114144_create_email_reminders_table.php
+?? database/migrations/2019_06_27_065315_create_test_tables_table.php
+?? database/migrations/2019_06_28_113217_alter_messages_table.php
+?? database/migrations/2019_06_28_115046_alter_emailreminder_table.php
+?? database/migrations/2019_07_01_085529_alter_notification.php
+?? database/migrations/2019_09_13_124555_alter_users_state_code.php
+?? database/migrations/2019_09_27_093847_alter_users_user_token.php
+?? database/migrations/2019_10_03_093253_alter_abusiveprofiles_guestemail.php
+?? database/migrations/2019_10_11_074344_alter_subscription_packages_duration.php
+?? database/migrations/2019_10_14_125153_alter_user_subscription_date_type.php
+?? database/migrations/2019_10_18_131202_alter_user_subscription_payment_type.php
+?? database/migrations/2019_10_22_121727_alter_paypalsubscriber_startdate_enddate_type.php
+?? database/migrations/2019_10_31_144757_alter_paypal_subscribers_profile_id.php
+?? database/migrations/2019_11_15_094146_create_google_auths_table.php
+?? database/migrations/2019_12_02_071716_alter_users_nickname_nullable.php
+?? database/migrations/2019_12_18_115828_alter_user_photos_iscropped.php
+?? database/migrations/2020_01_17_084625_alter_user_table_countcode.php
+?? database/migrations/2020_01_20_121611_alter_countries_iso3.php
+?? database/migrations/2020_01_22_093956_create_admin_logins_table.php
+?? database/migrations/2020_01_22_132157_create_banned_ips_table.php
+?? database/migrations/2020_02_12_121557_create_sms_bans_table.php
+?? database/migrations/2020_02_12_134311_create_sms_counters_table.php
+?? database/migrations/2020_02_28_102935_alter_table_messages_attachments.php
+?? database/migrations/2020_03_02_130724_alter_messages_nullable.php
+?? database/migrations/2020_09_04_130055_bookmarks_table_friend_request_column.php
+?? database/migrations/2020_09_11_135435_create_blocked_users_table.php
+?? database/migrations/2020_10_21_115239_create_email_viewed_users_table.php
+?? database/migrations/2020_12_04_113340_alter_view_counts_isactive.php
+?? database/migrations/2020_12_09_140327_alter_emailvieweduser_subject.php
+?? database/migrations/2021_03_10_112004_create_email_verifications_table.php
+?? database/migrations/2021_04_12_123626_alter_table_notifictions_initiated_by.php
+?? database/migrations/2021_05_25_142548_create_member_counters_table.php
+?? database/migrations/2021_10_26_141510_alter_user_profile_skip_cell.php
+?? database/migrations/2021_12_09_141819_altertable_users_reverification.php
+?? database/migrations/2022_02_04_175646_add_share_to_messages_table.php
+?? database/migrations/2022_02_17_152840_add_stripe_plan_id_to_subscription_packages_table.php
+?? database/migrations/2022_02_17_162135_add_stripe_subcription_id_to_user_subscriptions_table.php
+?? database/migrations/2022_02_26_040540_add_paypal_plan_id_to_subscription_packages.php
+?? database/migrations/2022_03_05_170109_rename_recievers_to_receivers_in_request_crons_table.php
+?? database/migrations/2022_04_16_085152_add_statuses_timestamp_to_friend_requests_table.php
+?? database/migrations/2022_05_08_012222_add_status_to_subscriptions_table.php
+?? database/migrations/2022_06_05_013256_create_email_templates_table.php
+?? database/migrations/2022_06_05_014012_create_email_transactions_table.php
+?? database/migrations/2022_06_25_031454_add_columns_to_logs_table.php
+?? database/migrations/2022_06_25_071126_rename_subscription_id_to_user_subscriptions_table.php
+?? database/migrations/2022_06_25_073104_add_recurring_to_user_subscriptions_table.php
+?? database/migrations/2022_06_29_105351_create_storage_files_table.php
+?? database/migrations/2022_07_20_125203_migrate_emails_to_email_templates_table.php
+?? database/migrations/2022_07_28_081422_add_display_text_to_subscription_packages_table.php
+?? database/migrations/2022_08_29_133216_add_server_base_url_to_user_photos_table.php
+?? database/migrations/2022_09_02_112953_add_notification_status_to_user_profiles_table.php
+?? database/migrations/2022_09_09_093654_create_user_otp_verifications_table.php
+?? database/migrations/2022_09_11_104743_drop_pm_columns_from_users_table.php
+?? database/migrations/2022_09_13_063330_create_user_phone_views_table.php
+?? database/migrations/2022_09_13_111938_add_phone_view_balance_to_users_table.php
+?? database/migrations/2022_09_15_021440_create_event_logs_table.php
+?? database/migrations/2022_09_15_021745_create_event_loggables_table.php
+?? database/migrations/2022_09_16_113607_alter_default_value_from_user_profile_table.php
+?? database/migrations/2022_09_21_095644_create_allow_notifications_table.php
+?? database/migrations/2022_09_25_090248_alter_typo_columns_on_email_viewed_users_table.php
+?? database/migrations/2022_09_28_094157_add_paypal_subscription_id_to_user_subscriptions.php
+?? database/migrations/2022_09_28_102250_change_end_date_user_subscription.php
+?? database/migrations/2022_10_05_134623_create_conversations_table.php
+?? database/migrations/2022_10_05_134624_recreate_messages_table.php
+?? database/migrations/2022_10_05_134625_create_message_attachments_table.php
+?? database/migrations/2022_10_16_105753_create_failed_jobs_table.php
+?? database/migrations/2022_10_16_105801_create_laravel_queued_jobs_table.php
+?? database/migrations/2022_10_19_072521_create_fees_table.php
+?? database/migrations/2022_10_20_071913_alter_column_fees_amount.php
+?? database/migrations/2022_10_20_084225_change_user_profiles_fees_column_type.php
+?? database/migrations/2022_11_06_050703_alter_allow_blank_note_input_to_notes_table.php
+?? database/migrations/2022_11_12_114423_drop_view_phonetime_table.php
+?? database/migrations/2022_11_12_114520_create_max_phone_view_per_time_limits_table.php
+?? database/migrations/2022_11_19_060456_add_current_max_views_to_users_table.php
+?? database/migrations/2022_11_20_025319_add_is_newsletter_subscriber_to_users_table.php
+?? database/migrations/2022_11_20_030657_migrate_member_phone_views_table_to_user_phone_views_table.php
+?? database/migrations/2022_11_26_001813_set_current_max_phone_view_default_to_users_table.php
+?? database/migrations/2022_11_26_004611_set_current_max_phone_view_to_multiplication_of_50_to_users_table.php
+?? database/migrations/2022_11_28_022843_add_reverification_status_to_users_table.php
+?? database/migrations/2022_12_14_094716_remove_unique_index_username.php
+?? database/migrations/2022_12_16_083506_alter_review_nickname_to_review_name.php
+?? database/migrations/2023_01_01_035450_alter_phone_as_nullable_to_user_phone_views_table.php
+?? database/migrations/2023_01_11_053912_create_email_reminder_variables_table.php
+?? database/migrations/2023_02_02_130616_alter_columns_in_genders_table.php
+?? database/migrations/2023_02_03_143956_alter_gender_type_in_genders_table.php
+?? database/migrations/2023_02_09_114451_alter_nickname_username_in_users_table.php
+?? database/migrations/2023_02_10_105807_create_old_users_password_reset_table.php
+?? database/migrations/2023_02_14_115707_add_nullable_columns_in_users_table.php
+?? database/migrations/2023_03_03_142336_create_premium_friend_registrations_table.php
+?? database/migrations/2023_03_06_065447_add_review_status_column_in_user_profiles_table.php
+?? database/migrations/2023_03_07_111427_reset_subscriptions_table.php
+?? database/migrations/2023_03_07_111811_recreate_subscription_packages_table.php
+?? database/migrations/2023_03_07_111812_recreate_subscriptions_table.php
+?? database/migrations/2023_03_11_103351_create_custom_links_table.php
+?? database/migrations/2023_03_14_133550_create_search_limits_table.php
+?? database/migrations/2023_03_16_022959_add_email_notification_column_to_users_table.php
+?? database/migrations/2023_03_16_100155_add_has_been_flagged_column_to_users_table.php
+?? database/migrations/2023_03_22_090329_create_dashboard_table.php
+?? database/migrations/2023_03_24_093844_create_registration_capacities_table.php
+?? database/migrations/2023_03_30_171233_create_socials_table.php
+?? database/migrations/2023_04_06_125816_alter_subscription_plans_contents.php
+?? database/migrations/2023_04_07_074826_add_accepted_safety_rule_column_to_users_table.php
+?? database/migrations/2023_04_08_102249_add_guid_to_users_table.php
+?? database/migrations/2023_04_09_080956_alter_empty_packages.php
+?? database/migrations/2023_04_09_081256_alter_empty_packages_fix.php
+?? database/migrations/2023_04_19_061512_add_is_hidden_column_to_user_photos_table.php
+?? database/migrations/2023_04_25_060140_add_subscription_statues_to_badge_table.php
+?? database/migrations/2023_05_17_060800_create_announcements_table.php
+?? database/migrations/2023_05_18_080118_create_announcement_user_table.php
+?? database/migrations/2023_05_30_074123_create_coupons_table.php
+?? database/migrations/2023_05_31_105527_create_services_table.php
+?? database/migrations/2023_06_05_031331_add_new_permissions_to_permissions_table.php
+?? database/migrations/2023_06_07_061919_add_approve_by_column_to_friend_requests_table.php
+?? database/migrations/2023_06_07_090858_add_coupon_id_column_in_subscriptions_table.php
+?? database/migrations/2023_06_15_125244_add_id_column_in_password_resets_table.php
+?? database/migrations/2023_06_18_143808_add_category_columns_to_logs_table.php
+?? database/migrations/2023_06_20_111513_create_new_friend_register_subscribers_table.php
+?? database/migrations/2023_07_07_112225_create_new_friend_alert_locations_table.php
+?? database/migrations/2023_07_09_102102_create_user_albums_table.php
+?? database/migrations/2023_07_09_102109_create_user_photo_tags_table.php
+?? database/migrations/2023_07_09_102513_add_user_album_id_to_user_photos_table.php
+?? database/migrations/2023_07_30_113258_create_user_notification_settings_table.php
+?? database/migrations/2023_08_01_070026_add_benefits_to_subscription_packages_table.php
+?? database/migrations/2023_08_03_111536_create_media_table.php
+?? database/migrations/2023_08_04_093538_create_change_email_verifications_table.php
+?? database/migrations/2023_08_06_142845_create_user_photo_folder_migrations_table.php
+?? database/migrations/2023_08_06_142851_create_user_photo_name_migrations_table.php
+?? database/migrations/2023_08_06_151034_update_message_attachments_table.php
+?? database/migrations/2023_08_06_154608_create_user_mailboxes_table.php
+?? database/migrations/2023_08_06_163927_create_rooms_table.php
+?? database/migrations/2023_08_06_170000_create_participants_table.php
+?? database/migrations/2023_08_06_172001_create_conversation_participants_table.php
+?? database/migrations/2023_08_06_183902_create_handshakes_table.php
+?? database/migrations/2023_08_07_205908_add_fields_to_message_attachments_table.php
+?? database/migrations/2023_08_08_184040_create_mailboxes_table.php
+?? database/migrations/2023_08_08_232200_add_mailbox_id_to_participants_table.php
+?? database/migrations/2023_08_10_043818_create_schedule_monitor_tables.php
+?? database/migrations/2023_08_10_063833_add_new_column_into_conversation_table.php
+?? database/migrations/2023_08_15_055506_create_meilisearch_import_identifications_table.php
+?? database/migrations/2023_08_24_131502_update_failed_jobs.php
+?? database/migrations/2023_08_28_134915_delete_user_photo_folder_migrations_table.php
+?? database/migrations/2023_08_28_134916_delete_user_photo_folder_migrations_table.php
+?? database/migrations/2023_08_29_074810_drop_new_friend_register_subscribers_table.php
+?? database/migrations/2023_08_29_094126_add_column_has_duplicate_photos_to_users_table.php
+?? database/migrations/2023_08_30_093520_create_cache_search_friend_results_table.php
+?? database/migrations/2023_08_30_100020_create_states_table.php
+?? database/migrations/2023_08_30_100021_create_cities_table.php
+?? database/migrations/2023_08_30_102928_add_api_country_id_to_countries_table.php
+?? database/migrations/2023_08_30_111911_add_coordinates_to_countries_table.php
+?? database/migrations/2023_08_30_121647_add_state_count_to_countries_table.php
+?? database/migrations/2023_08_31_085000_create_cache_slider_friend_results_table.php
+?? database/migrations/2023_08_31_113948_create_user_deleteds_table.php
+?? database/migrations/2023_09_01_074949_rename_user_deleted_table.php
+?? database/migrations/2023_09_04_092302_create_waves_table.php
+?? database/migrations/2023_09_05_105348_add_is_public_in_mailboxes_table.php
+?? database/migrations/2023_09_06_152812_create_wave_messages_table.php
+?? database/migrations/2023_09_07_090213_modify_email_transaction_table.php
+?? database/migrations/2023_09_12_072955_create_user_photo_processed_table.php
+?? database/migrations/2023_09_13_113750_add_last_use_to_google_auths_table.php
+?? database/migrations/2023_09_13_130901_create_user_daily_event_counts_table.php
+?? database/migrations/2023_09_13_132859_add_deleted_at_on_bookmarks_table.php
+?? database/migrations/2023_09_14_083210_create_google_auth_recovery_codes_table.php
+?? database/migrations/2023_09_14_104344_add_stripe_columns_to_users_table.php
+?? database/migrations/2023_09_14_124023_add_checkout_id_to_subscriptions_table.php
+?? database/migrations/2023_09_15_073600_add_column_countries_table.php
+?? database/migrations/2023_09_15_131418_create_normalization_gender_function.php
+?? database/migrations/2023_09_20_033444_add_watermarked_to_user_photos_table.php
+?? database/migrations/2023_09_21_072030_add_search_timestamps_to_users.php
+?? database/migrations/2023_09_22_083849_add_user_cache_search_friend_results_index_timestamps.php
+?? database/migrations/2023_09_22_130005_create_migration_members_table.php
+?? database/migrations/2023_09_22_151545_update_migration_members_table_with_profile_fields.php
+?? database/migrations/2023_09_22_160353_add_transaction_and_subscription_to_subscriptions_table.php
+?? database/migrations/2023_09_23_022524_add_old_data_tracking_columns_to_users_table.php
+?? database/migrations/2023_09_23_044540_create_migration_friends_table.php
+?? database/migrations/2023_09_23_044640_add_status_rectification_attempts_to_migration_friends.php
+?? database/migrations/2023_09_23_101751_add_fields_to_cache_search_friend_results_table.php
+?? database/migrations/2023_09_23_102058_create_cache_search_friend_result_histories_table.php
+?? database/migrations/2023_09_24_020404_create_search_friend_users_table.php
+?? database/migrations/2023_09_27_103815_create_indexing_operations_table.php
+?? database/migrations/2023_09_27_113500_add_location_normalized_at_to_users_table.php
+?? database/migrations/2023_09_29_210208_create_search_queries_table.php
+?? database/migrations/2023_09_29_210343_create_search_results_table.php
+?? database/migrations/2023_09_30_003250_add_name_column_to_subscription_packages.php
+?? database/migrations/2023_09_30_003510_add_price_column_to_subscription_packages.php
+?? database/migrations/2023_09_30_004451_add_duration_column_to_subscription_packages.php
+?? database/migrations/2023_09_30_004957_add_recurring_price_column_to_subscription_packages.php
+?? database/migrations/2023_09_30_005230_add_visible_and_description_columns_to_subscription_packages.php
+?? database/migrations/2023_09_30_143909_create_log_categories_table.php
+?? database/migrations/2023_09_30_171024_add_user_key_to_bookmarks.php
+?? database/migrations/2023_09_30_191000_create_email_messages_table.php
+?? database/migrations/2023_10_01_140414_alter_member_profiles_table.php
+?? database/migrations/2023_10_01_195909_add_location_update_failed_to_users.php
+?? database/migrations/2023_10_04_203036_modify_reverification_column_in_users_table.php
+?? database/migrations/2023_10_05_225013_recreate_banned_ips_table.php
+?? database/migrations/2023_10_07_121735_add_email_verified_at_to_users_table.php
+?? database/migrations/2023_10_07_125240_update_subscriptions_table_with_stripe_data.php
+?? database/migrations/2023_10_07_134420_remove_plan_id_and_amount_from_subscription_packages.php
+?? database/migrations/2023_10_07_150728_add_stripe_columns_to_subscriptions_table.php
+?? database/migrations/2023_10_08_131014_create_paypal_transaction_details_table.php
+?? database/migrations/2023_10_09_193608_add_priority_to_email_reminders_table.php
+?? database/migrations/2023_10_10_125207_update_countries_table.php
+?? database/migrations/2023_10_10_181621_update_user_stripe_id_to_nullable.php
+?? database/migrations/2023_10_10_185824_create_user_albums_table.php
+?? database/migrations/2023_10_10_191349_update_subscription_packages_table_to_production.php
+?? database/migrations/2023_10_10_193048_add_user_id_to_message_attachments_table.php
+?? database/migrations/2023_10_10_193636_create_mailbox_participants_table.php
+?? database/migrations/2023_10_13_130213_add_searchable_data_to_users_table.php
+?? database/migrations/2023_10_14_202221_make_email_transactions_fields_nullable.php
+?? database/migrations/2023_10_14_203447_add_class_method_to_email_transactions.php
+?? database/migrations/2023_11_03_131123_create_subscriptions_index.php
+?? database/migrations/2023_11_03_134557_create_users_index.php
+?? database/migrations/2023_11_05_153752_make_state_code_nullable_in_states_table.php
+?? database/migrations/2023_11_05_161945_make_country_id_nullable_in_states_table.php
+?? database/migrations/2023_11_05_192315_set_state_code_nullable_in_cities_table.php
+?? database/migrations/2023_11_08_030157_add_city_id_to_cache_slider_friend_results_table.php
+?? database/migrations/2023_11_08_030405_add_city_id_index_to_cache_slider_friend_results_table.php
+?? database/migrations/2024_01_03_115545_create_spatial_index_on_users_table.php
+?? database/migrations/2024_01_23_055824_update_columns_in_cache_search_friend_results_table.php
+?? database/migrations/2024_03_14_154719_add_profile_views_to_users_table.php
+?? database/migrations/2024_03_31_055622_add_slug_to_users_table.php
+?? database/migrations/2024_03_31_055623_drop_telescope_tables.php
+?? database/migrations/2024_05_10_230614_create_otp_attempt_logs_table.php
+?? database/migrations/2024_05_10_230615_add_allow_otp_to_countries_table.php
+?? database/migrations/2024_05_14_000001_create_email_reminders_table.php
+?? database/migrations/2024_05_14_000002_create_sent_emails_table.php
+?? database/migrations/2024_05_15_000001_create_email_bounces_table.php
+?? database/migrations/2024_05_15_000002_create_email_complaints_table.php
+?? database/migrations/2024_05_15_000003_create_email_lists_table.php
+?? database/migrations/2024_05_15_000004_create_email_queues_table.php
+?? database/migrations/2024_05_15_000006_create_email_subscriptions_table.php
+?? database/migrations/2024_05_15_000007_create_email_templates_table.php
+?? database/migrations/2024_05_15_000008_create_email_unsubscribes_table.php
+?? database/migrations/2024_05_15_000009_create_sent_emails_table.php
+?? database/migrations/2024_05_15_000010_update_email_subscriptions_table.php
+?? database/migrations/2024_05_15_000011_alter_email_bounces_table.php
+?? database/migrations/2024_05_15_000012_alter_email_complaints_table.php
+?? database/migrations/2024_05_15_000012_alter_sent_emails_table.php
+?? database/migrations/2024_05_15_000013_create_email_events_table.php
+?? database/migrations/2024_05_15_000014_create_log_entries_table.php
+?? database/migrations/2024_05_15_000015_alter_email_templates_table.php
+?? database/migrations/2024_05_15_000016_alter_log_entries_table.php
+?? database/migrations/2024_05_15_000017_make_body_nullable_in_sent_emails.php
+?? database/migrations/2024_05_15_000018_create_tags_table.php
+?? database/migrations/2024_05_15_000019_create_role_user_table.php
+?? database/migrations/2024_07_10_000000_create_imageclient_images_table.php
+?? database/migrations/2024_07_10_000001_create_imageclient_image_backups_table.php
+?? database/migrations/2024_07_10_000002_create_imageclient_image_batches_table.php
+?? database/migrations/2024_07_10_000003_create_imageclient_image_batch_logs_table.php
+?? database/migrations/2024_07_10_000004_create_imageclient_image_caches_table.php
+?? database/migrations/2024_07_10_000005_create_imageclient_image_categories_table.php
+?? database/migrations/2024_07_10_000006_create_imageclient_image_comments_table.php
+?? database/migrations/2024_07_10_000007_create_imageclient_image_events_table.php
+?? database/migrations/2024_07_10_000008_create_imageclient_image_galleries_table.php
+?? database/migrations/2024_07_10_000009_create_imageclient_image_interactions_table.php
+?? database/migrations/2024_07_10_000010_create_imageclient_image_logs_table.php
+?? database/migrations/2024_07_10_000012_create_imageclient_image_metadata_table.php
+?? database/migrations/2024_07_10_000013_create_imageclient_image_owners_table.php
+?? database/migrations/2024_07_10_000014_create_imageclient_image_permissions_table.php
+?? database/migrations/2024_07_10_000015_create_imageclient_image_profiles_table.php
+?? database/migrations/2024_07_10_000016_create_imageclient_image_ratings_table.php
+?? database/migrations/2024_07_10_000017_create_imageclient_image_reactions_table.php
+?? database/migrations/2024_07_10_000018_create_imageclient_image_roles_table.php
+?? database/migrations/2024_07_10_000019_create_imageclient_image_tags_table.php
+?? database/migrations/2024_07_10_000030_create_imageclient_image_transformations_table.php
+?? database/migrations/2024_07_16_011529_create_activity_log_table.php
+?? database/migrations/2024_07_16_011530_add_event_column_to_activity_log_table.php
+?? database/migrations/2024_07_16_011531_add_batch_uuid_column_to_activity_log_table.php
+?? database/migrations/2024_07_16_011532_create_image_modifications_table.php
+?? database/migrations/2026_04_13_100001_create_feature_flags_table.php
+?? database/migrations/2026_04_13_200001_create_service_categories_table.php
+?? database/migrations/2026_04_13_200002_create_marketplace_services_table.php
+?? database/migrations/2026_04_13_200003_create_availabilities_table.php
+?? database/migrations/2026_04_13_200004_create_marketplace_reviews_table.php
+?? database/migrations/2026_04_13_200005_create_bookings_table.php
+?? database/migrations/2026_04_15_100000_add_payment_fields_to_bookings_table.php
+?? database/migrations/2026_04_15_100050_create_tenants_table.php
+?? database/migrations/2026_04_15_100100_create_services_table.php
+?? database/migrations/2026_04_15_100200_create_service_categories_table.php
+?? database/migrations/2026_04_15_100300_create_service_availabilities_table.php
+?? database/migrations/2026_04_15_100400_create_service_reviews_table.php
+?? database/migrations/2026_04_15_100500_create_commissions_table.php
+?? database/migrations/2026_04_15_100600_create_admin_audit_logs_table.php
+?? database/migrations/2026_04_16_000001_create_role_permissions_table.php
+?? database/migrations/2026_04_16_000002_create_moderation_flags_table.php
+?? database/migrations/2026_04_16_100000_add_stripe_charge_id_to_bookings_table.php
+?? database/migrations/2026_04_16_120001_create_password_reset_cleanup_job_config.php
+?? database/migrations/2026_04_16_120002_add_user_id_to_old_user_password_reset.php
+?? database/migrations/2026_04_16_120003_create_password_history_table.php
+?? database/migrations/2026_04_16_120004_create_google_auth_recovery_attempts_table.php
+?? database/migrations/2026_04_16_120005_create_user_login_audit_table.php
+?? database/migrations/2026_04_16_120006_create_user_login_lockouts_table.php
+?? database/migrations/2026_04_16_120007_create_password_reset_audit_table.php
+?? database/migrations/2026_04_16_120008_add_google_auth_grace_period_minutes_to_users.php
+?? database/migrations/2026_04_16_120009_add_last_ip_address_to_users.php
+?? database/migrations/2026_04_16_120010_add_unlock_at_to_users.php
+?? database/migrations/2026_04_16_120011_create_purge_expired_password_resets_schedule_record.php
+?? database/migrations/2026_04_16_120012_create_unlock_user_accounts_schedule_record.php
+?? database/migrations/2026_04_16_120013_create_google_auth_recovery_attempt_cleanup_job_record.php
+?? database/migrations/2026_04_16_185933_create_payment_reconciliations_table.php
+?? database/migrations/2026_04_16_234119_create_jwt_tokens_table.php
+?? database/migrations/2026_04_16_234212_update_google_auth_recovery_attempts_table.php
+?? database/migrations/2026_04_16_add_google_auth_grace_to_users.php
+?? database/migrations/2026_04_16_add_payment_to_premium_friends.php
+?? database/migrations/2026_04_16_add_search_indexes_to_messages.php
+?? database/migrations/2026_04_16_add_subscription_retry_to_premium_friends.php
+?? database/migrations/2026_04_16_add_unique_booking_timeslots.php
+?? database/migrations/2026_04_16_add_virus_scan_to_message_attachments.php
+?? database/migrations/2026_04_16_create_booking_status_history_table.php
+?? database/migrations/2026_04_16_payment_audit_logs_table.php
+?? database/migrations/2026_04_17_000000_add_encryption_to_sensitive_columns.php
+?? database/migrations/2026_04_17_000000_add_mailgun_webhook_idempotency_cache.php
+?? database/migrations/2026_04_17_000000_create_payments_table.php
+?? database/migrations/2026_04_17_000000_create_sessions_table.php
+?? database/migrations/2026_04_17_000001_add_threading_to_messages.php
+?? database/migrations/2026_04_17_000002_fix_monetary_data_types.php
+?? database/migrations/2026_04_17_004313_create_payment_status_history_table.php
+?? database/migrations/2026_04_17_024015_create_saved_searches_table.php
+?? database/migrations/2026_04_17_100000_add_pause_resume_to_subscriptions.php
+?? database/migrations/2026_04_17_100000_create_user_email_preferences_table.php
+?? database/migrations/2026_04_17_104628_add_suspension_columns_to_users_table.php
+?? database/migrations/2026_04_17_110000_create_secret_audit_logs_table.php
+?? database/migrations/2026_04_17_110000_enhance_availabilities.php
+?? database/migrations/2026_04_17_124735_wave1_dix_001_add_audit_timestamps.php
+?? database/migrations/2026_04_17_124736_wave1_dix_002_add_format_validations.php
+?? database/migrations/2026_04_17_131325_add_tenant_id_to_conversations_table.php
+?? database/migrations/2026_04_17_131358_add_tenant_id_to_messages_table.php
+?? database/migrations/2026_04_17_131409_add_tenant_id_to_message_read_receipts_table.php
+?? database/migrations/2026_04_17_140000_create_message_read_receipts_table.php
+?? database/migrations/2026_04_17_140001_create_message_typing_indicators_table.php
+?? database/migrations/2026_04_17_150000_create_rescheduling_requests_table.php
+?? database/migrations/2026_04_17_160000_add_encryption_to_message_threads.php
+?? database/migrations/2026_04_17_162241_add_booking_id_to_conversations_table.php
+?? database/migrations/2026_04_17_add_deposit_to_bookings_table.php
+?? database/migrations/2026_04_17_add_description_template_to_services_table.php
+?? database/migrations/2026_04_17_add_experiment_variant_to_payments.php
+?? database/migrations/2026_04_17_add_is_encrypted_to_messages_table.php
+?? database/migrations/2026_04_17_add_payment_status_state_machine.php
+?? database/migrations/2026_04_17_add_suspension_ban_fields_to_users.php
+?? database/migrations/2026_04_17_add_tenant_id_to_admin_audit_logs.php
+?? database/migrations/2026_04_17_add_tenant_id_to_password_reset_audit.php
+?? database/migrations/2026_04_17_add_tenant_id_to_payment_audit_logs.php
+?? database/migrations/2026_04_17_add_tenant_id_to_user_login_audit.php
+?? database/migrations/2026_04_17_create_api_keys_table.php
+?? database/migrations/2026_04_17_create_booking_escalations_table.php
+?? database/migrations/2026_04_17_create_events_table.php
+?? database/migrations/2026_04_17_create_experiment_assignments_table.php
+?? database/migrations/2026_04_17_create_login_attempts_table.php
+?? database/migrations/2026_04_17_create_payment_disputes_table.php
+?? database/migrations/2026_04_17_create_payment_manual_reviews_table.php
+?? database/migrations/2026_04_17_create_webhook_events_table.php
+?? database/migrations/2026_04_17_create_webhook_idempotency_logs.php
+?? database/migrations/2026_04_17_create_webhook_reconciliation_logs_table.php
+?? database/migrations/2026_04_18_add_immutability_to_audit_tables.php
+?? database/migrations/2026_04_23_100101_create_bulk_operations_table.php
+?? database/migrations/2026_04_23_100102_create_bulk_operation_items_table.php
+?? database/migrations/2026_04_23_100200_create_reports_table.php
+?? database/migrations/2026_04_23_100201_create_report_generations_table.php
+?? database/migrations/2026_04_23_100202_create_report_fields_table.php
+?? database/migrations/2026_04_24_000000_create_payment_retries_table.php
+?? database/migrations/2026_04_25_120000_wave1_phase1a_add_9_fk_indexes.php
+?? database/migrations/2026_04_25_120100_wave1_dix_001_audit_timestamps.php
+?? database/migrations/2026_04_25_120200_wave1_dix_002_format_validation.php
+?? database/migrations/old_db/
+?? database/optimizations/
+?? database/seeders/
+?? database/seeds-bak/
+?? database/seeds/
+?? debug_bootstrap.php
+?? debug_container_auth.php
+?? deploy/
+?? doc-quality-report.json
+?? doc-todos-report.txt
+?? docker-build-troubleshooting.md
+?? docker-compose.helpdesk.yml
+?? docker-compose.local.yml
+?? docker-compose.reverb.yml
+?? docker-compose.yml
+?? docker-win10-fix.bat
+?? docker/
+?? docs/
+?? email-code-documentation.md
+?? email-security-findings.md
+?? eslint.config.mjs
+?? execute_phase4.sh
+?? generate_test_data.py
+?? jsconfig.json
+?? knowledge_base/__init__.py
+?? knowledge_base/__main__.py
+?? knowledge_base/__pycache__/
+?? knowledge_base/api.py
+?? knowledge_base/bootstrap.py
+?? knowledge_base/cli.py
+?? knowledge_base/config.py
+?? knowledge_base/config.yaml
+?? knowledge_base/frontmatter.py
+?? knowledge_base/indexer.py
+?? knowledge_base/librarian_integration.py
+?? knowledge_base/scheduler.py
+?? knowledge_base/sdk.py
+?? knowledge_base/tests/
+?? lighthouse-ci.json
+?? load-testing/
+?? memory_schema.yaml
+?? migrate.sh
+?? mise.exe
+?? mise_install.ps1
+?? nbproject/
+?? note
+?? nul
+?? openapi.yaml
+?? package-lock.json
+?? package-lock.jsonbak
+?? package.json
+?? package.json.bak
+?? packages/
+?? phase4-test-output.log
+?? phase4-tests.sh
+?? phase4_test_output.log
+?? php/
+?? phpstan.neon
+?? phpstan_security_report.txt
+?? phpunit.xml
+?? phpunit.xml.dist
+?? postcss.config.js
+?? production.Dockerfile
+?? prompts/
+?? proxysql.cnf
+?? psalm.phar
+?? psalm.xml
+?? psalm_security_report.txt
+?? psalm_security_report_final.txt
+?? public/
+?? readme.md
+?? requirements.txt
+?? resources/
+?? routes/breadcrumbs.php
+?? routes/channels.php
+?? routes/console.php
+?? routes/mailbook.php
+?? routes/micro-service/
+?? routes/profile.php
+?? routes/user-dashboard/
+?? routes/web-admin-auth.php
+?? routes/web-admin.php
+?? routes/web-messaging.php
+?? routes/web.php
+?? routes/webhooks.php
+?? run_seeder.bat
+?? run_tests.php
+?? scripts/__init__.py
+?? scripts/__pycache__/
+?? scripts/add-frontmatter.py
+?? scripts/analytics-wave1-rollback.sh
+?? scripts/analyze-migrations.php
+?? scripts/audit-migration-safety.php
+?? scripts/build-assets.sh
+?? scripts/build-production.sh
+?? scripts/deficiency-check.php
+?? scripts/deprecation-workflow.sh
+?? scripts/detect-duplicate-docs.sh
+?? scripts/enforce-wip-commit.sh
+?? scripts/extract_routes.py
+?? scripts/generate-doc-report.py
+?? scripts/measure_funnel_baseline.php
+?? scripts/metadata/
+?? scripts/parse_routes.py
+?? scripts/pre-dispatch-verify.sh
+?? scripts/pre_compute_doc_summaries.py
+?? scripts/require-migration-approval.sh
+?? scripts/run-tests-authentically.ps1
+?? scripts/scan-doc-todos.sh
+?? scripts/setup-docker-registry.sh
+?? scripts/setup-trivy.sh
+?? scripts/setup-vault.sh
+?? scripts/test-docker-builds.sh
+?? scripts/validate-doc-links.sh
+?? scripts/velocity/
+?? security_scan.sh
+?? seed_test_data.php
+?? semgrep_report.json
+?? server.php
+?? smoke_test_plan.md
+?? sonar-project.properties
+?? staging.Dockerfile
+?? storage/app/
+?? storage/debugbar/
+?? storage/framework/
+?? storage/logs/.gitignore
+?? storage/ssl/
+?? storage/test_session_token.txt
+?? storage/testing/
+?? tailwind.config.js
+?? templates/
+?? test-mail.php
+?? test-run.log
+?? test.log
+?? test.txt
+?? test_bootstrap_providers.php
+?? test_db.php
+?? test_output.log
+?? test_results.log
+?? tests-old/
+?? tests/
+?? tooling/
+?? trace_auth_call.php
+?? tsconfig.json
+?? vapor.yml
+?? vendor/
+
+===== C:\infra =====
+NO_GIT_REPO
+
+===== C:\dev-infrastructure =====
+master
+## master
+ M docker-compose.yml
+?? 00-START-HERE.md
+?? 2WEEK_PROGRESS_TRACKER.md
+?? ADDING-METRICS.md
+?? ALERT-SETUP.md
+?? APEX_AGENT_DISPATCHER_CODE.md
+?? APEX_AGENT_INTEGRATION.md
+?? COMPLETE_DELIVERABLES_SUMMARY.md
+?? COMPLETE_DOCKER_APEX_INTEGRATION.md
+?? COMPLETE_VALIDATION_EXECUTION.md
+?? CONTAINER_AUDIT_REPORT.md
+?? DASHBOARD-GUIDE.md
+?? DEPLOYMENT-CHECKLIST.md
+?? DEPLOYMENT_AND_EXECUTION_GUIDE.md
+?? DEPLOYMENT_EXECUTION_SUMMARY.md
+?? DOCKERFILE_HARDENING_COMPLETION.md
+?? DOCKERFILE_SECURITY_STANDARDS.md
+?? DOCKER_BASE_IMAGE_REGISTRY.md
+?? DOCKER_BUILD_BEST_PRACTICES.md
+?? DOCKER_BUILD_CONTEXT_REPORT.md
+?? DOCKER_COMPOSE_AND_MAKEFILE.md
+?? DOCKER_INTEGRATION_EXECUTIVE_SUMMARY.md
+?? DOCKER_INTEGRATION_PLAN.md
+?? DOCKER_INTEGRATION_REPO_STRUCTURE.md
+?? DOCKER_QUICK_REFERENCE.md
+?? ECR-IMPLEMENTATION-GUIDE.md
+?? ECR-SETUP-SUMMARY.md
+?? EXECUTION_PATH_OPTIONS.md
+?? FILES_CREATED_2026_04_20.md
+?? FINAL_DELIVERABLES_SUMMARY.md
+?? FRIDAY_PREP_CHECKLIST.md
+?? INFISICAL_MIGRATION_EXECUTION_SUMMARY.md
+?? INFISICAL_MIGRATION_MAPPING.md
+?? INFISICAL_MIGRATION_README.md
+?? INTEGRATION_COMPLETE_STATUS.txt
+?? K8S-BEST-PRACTICES-REFERENCE.md
+?? K8S-READINESS-EXECUTIVE-SUMMARY.md
+?? K8S-READINESS-QUICK-REFERENCE.txt
+?? KNOWLEDGE_ROUTER_STARTER_CODE.md
+?? KUBERNETES-ORCHESTRATION-READINESS-ASSESSMENT.yaml
+?? MASTER_INDEX_AND_OVERVIEW.md
+?? MIGRATION_CHANGE_LOG.txt
+?? MIGRATION_VERIFICATION.md
+?? MISSION_COMPLETE_SUMMARY.md
+?? NEXT_10_STRATEGIC_STEPS.md
+?? OBSERVABILITY-DEPLOYMENT-REPORT.md
+?? OBSERVABILITY-INDEX.md
+?? OBSERVABILITY-SETUP.md
+?? PHASE1_EXECUTION_KIT.md
+?? PHASE_EXECUTION_CHECKLISTS.md
+?? PROJECT_COMPLETION_STATUS.md
+?? README-ECR-SETUP.md
+?? README.md
+?? REC-005-DELIVERY-REPORT.md
+?? REC-009-DELIVERY-REPORT.md
+?? REC-009-INDEX.md
+?? SERVICE-REGISTRY-GUIDE.md
+?? SERVICE_REGISTRY_STARTER_CODE.md
+?? SKILL_SDK_AND_EXAMPLES.md
+?? SOLO_PATH_A_2WEEK_EXECUTION.md
+?? STAGING_DEPLOYMENT_INDEX.md
+?? STAGING_DEPLOYMENT_PREPARATION_COMPLETE.md
+?? STAGING_DEPLOYMENT_READY.md
+?? STAGING_FILES_INVENTORY.md
+?? TEAM_EXECUTION_BRIEFING.md
+?? TOOL-SCHEMA-GUIDE.md
+?? TRACING-GUIDE.md
+?? TROUBLESHOOTING.md
+?? TROUBLESHOOTING_DECISION_TREE.md
+?? WAVE2-COMPLETION-SUMMARY.txt
+?? alert-rules.yml
+?? alertmanager.yml
+?? docker-compose.staging.yml
+?? docs/
+?? ecr-setup.tf
+?? github-actions-ecr-workflow.yml
+?? gito-compare-20260419-044513/
+?? gito-compare-20260419-055125/
+?? grafana-dashboards/
+?? k8s-registry-adapter.yaml
+?? loki-config.yml
+?? otel-collector-config.yml
+?? prometheus.yml
+?? promtail-config.yml
+?? recording-rules.yml
+?? registry/
+?? scripts/
+?? start-with-secrets.sh
+?? terraform.tfvars.example
+?? validate-ecr-setup.sh
+?? verify-dockerfile-security.sh
+origin	. (fetch)
+origin	. (push)
+
+===== C:\agentic-infra =====
+NO_GIT_REPO
+
+===== C:\apex-prod =====
+NO_GIT_REPO
+
+===== C:\kb-phase0 =====
+NO_GIT_REPO
+
+===== C:\raf-com-workspace\repos\department_marketing =====
+main
+## main...origin/main [ahead 45]
+ M app/Models/Campaign.php
+ M config/app.php
+ M docker-compose.yml
+ D docker/nginx/conf.d/app.conf
+ M public/index.php
+ M routes/api.php
+?? FINAL_LAUNCH_CHECKLIST_2026-04-19.md
+?? FINAL_SECURITY_SIGN_OFF_2026-04-19.md
+?? OPERATOR_HANDOFF_2026-04-19.md
+?? PHASE_K_VALIDATION_SUMMARY_2026-04-19.md
+?? PRODUCTION_DEPLOYMENT_PLAN_2026-04-19.md
+?? SUCCESS_METRICS_2026-04-19.md
+?? app/Providers/WebappCoreServiceProvider.php
+?? app/Services/WebappCoreUserClient.php
+?? docker-compose.quick.yml
+?? docker/nginx/conf.d/default.conf
+?? nul
+?? public/api-test.php
+?? public/health.php
+?? public/request-log.php
+?? public/test.txt
+?? routes/api-auth-test.php
+?? routes/api-campaigns.php
+origin	https://github.com/raf-com/department_marketing.git (fetch)
+origin	https://github.com/raf-com/department_marketing.git (push)
+
+===== F:\infra =====
+main
+## main...origin/main [ahead 30]
+ M staging/redis/config/redis-primary.conf
+ M staging/redis/config/redis-replica.conf
+ M staging/redis/config/sentinel.conf
+ M staging/redis/docker-compose.scale.yml
+origin	https://github.com/raf-com/infra.git (fetch)
+origin	https://github.com/raf-com/infra.git (push)
+
+===== F:\www =====
+HEAD
+## No commits yet on main
+?? ../$GetCurrent/
+?? ../$Recycle.Bin/
+?? ../$SysReset/
+?? ../$WINDOWS.~BT/
+?? ../$Windows.~WS/
+?? ../.GamingRoot
+?? ../.github/
+?? ../ASSETS/
+?? ../BOOTNXT
+?? ../DEV/
+?? ../DumpStack.log.tmp
+?? ../EFI/
+?? "../Program Files (x86)/"
+?? "../Program Files/"
+?? ../ProgramData/
+?? ../SERVICES/
+?? ../Users/
+?? ../Windows/
+?? ../Workbench/
+?? ../_graveyard_2026-04-18/
+?? ../_graveyard_2026-04-19/
+?? ../apex-stack/
+?? ../appverifUI.dll
+?? ../boot/
+?? ../bootmgr
+?? ../c/
+?? ../config/
+?? ../deploy/
+?? ../dev-env-provisioner/
+?? ../hifs_archives/
+?? ../iac-kubernetes-base/
+?? ../iac-terraform-modules/
+?? ../iac-terraform-stacks/
+?? ../infra/
+?? ../isrs/
+?? ../items/
+?? ../logs/
+?? ../msys64/
+?? ../openclaw/
+?? ../reports/
+?? ../secretless-infra/
+?? ../strata/
+?? ../swapfile.sys
+?? ../temp/
+?? ../temp_clone/
+?? ../tests/
+?? ../tmp-provisioner/
+?? ../tmp/
+?? ../tools/
+?? ../vcpkg/
+?? ../vfcompat.dll
+?? ../wamp/
+?? ./
+
+===== F:\Workbench =====
+ops/500-step-exec-2026-04-20T08-07-56
+## ops/500-step-exec-2026-04-20T08-07-56
+ D .epics/EPIC_CLAW_UNIFIED.md
+ M .gitignore
+ D BLOCKERS.md
+ D INTEGRATION.md
+ M automation-client/src/models.py
+ M automation-client/tests/test_handler.py
+ M automation-client/tests/test_handler_integration.py
+ M automation-eval/tests/test_response_format.py
+ M automation-init/locustfile.py
+ M claw-hub/build_skill_index.py
+ M claw-hub/claw_events.py
+ D docs/superpowers/plans/2026-04-08-email-gateway-plan-a-foundation.md
+ D docs/superpowers/plans/2026-04-08-email-gateway-plan-b-webapp-migration.md
+ D docs/superpowers/plans/2026-04-08-email-gateway-plan-c-webhook-pipeline.md
+ D docs/superpowers/plans/2026-04-08-email-gateway-plan-d-n8n-migration.md
+ M scripts/activate_fleet.py
+ M skills/approve_eval/Dockerfile
+ M skills/auth-harmonizer/Dockerfile
+ M skills/backpressure-valve/Dockerfile
+ M skills/circuit-breaker-tensor/Dockerfile
+ M skills/compliance-gate/Dockerfile
+ M skills/compliance-wrapper/Dockerfile
+ M skills/context-wrapper/Dockerfile
+ M skills/database/Dockerfile
+ M skills/debt-quantifier/Dockerfile
+ M skills/dependency-isolate/Dockerfile
+ M skills/dispatcher/Dockerfile
+ M skills/downstream-sink/Dockerfile
+ M skills/error-translator/Dockerfile
+ M skills/eval_generator/Dockerfile
+ M skills/event-synchronizer/Dockerfile
+ M skills/evolution-engine/Dockerfile
+ M skills/feature-interleaver/Dockerfile
+ M skills/generate_mock_env/Dockerfile
+ M skills/get_engineering_health/Dockerfile
+ M skills/github/Dockerfile
+ M skills/gpu-load-balancer/Dockerfile
+ M skills/hello-world/Dockerfile
+ M skills/idempotency-guard/Dockerfile
+ M skills/infisical/Dockerfile
+ M skills/interface-extractor/Dockerfile
+ M skills/knowledge_graph/Dockerfile
+ M skills/latency-balancer/Dockerfile
+ M skills/logic-decomposer/Dockerfile
+ M skills/mass_migration/Dockerfile
+ M skills/memory/Dockerfile
+ M skills/messenger/Dockerfile
+ M skills/multi-tenant-shard/Dockerfile
+ M skills/namespace-resolver/Dockerfile
+ M skills/node-heartbeat/Dockerfile
+ M skills/obsbot-c2-agent/Dockerfile
+ M skills/onboarding_audit/Dockerfile
+ M skills/orchestrator/Dockerfile
+ M skills/pattern-converger/Dockerfile
+ M skills/protocol-bridge/Dockerfile
+ M skills/purge_zero_value_evals/Dockerfile
+ M skills/redundancy-pruner/Dockerfile
+ M skills/rentafriend_sim/Dockerfile
+ M skills/request_finality_review/Dockerfile
+ M skills/run_eval/Dockerfile
+ M skills/run_in_nix_shell/Dockerfile
+ M skills/s3-logger/Dockerfile
+ M skills/scalability-manifold/Dockerfile
+ M skills/schema-suture/Dockerfile
+ M skills/semantic-lexer/Dockerfile
+ M skills/side-effect-mapper/Dockerfile
+ M skills/skill_generator/Dockerfile
+ M skills/skill_generator/main.py
+ M skills/state-hermetic/Dockerfile
+ M skills/telemetry-aggregator/Dockerfile
+ M skills/termination_logic/Dockerfile
+ M skills/truth-engine-eval/Dockerfile
+ M skills/update_eval_thresholds/Dockerfile
+?? .archive/
+?? .axon/
+?? .bandit
+?? .claude/
+?? .cleanup_log.jsonl
+?? .continue/
+?? .coverage
+?? .data/
+?? .deploy/
+?? .dockerignore
+?? .editorconfig
+?? .env.test
+?? .env.trufflehog
+?? .envrc
+?? .epics/EPIC_BLOCKER_RESOLVER.md
+?? .epics/EPIC_CI_PIPELINE_FIX.md
+?? .epics/EPIC_DEV_INFRA_CONSOLIDATION.md
+?? .epics/EPIC_FLEET.md
+?? .epics/EPIC_N8N_FLEET.md
+?? .epics/EPIC_PHPUNIT_MEMORY_SAFEGUARDS.md
+?? .epics/EPIC_PHP_UVICORN_ENV.md
+?? .epics/EPIC_PY_HCLI_TEST_PATH.md
+?? .epics/EPIC_RUST_COMPILER_FIX.md
+?? .epics/EPIC_SECURITY_GATE_CLEAR.md
+?? .epics/EPIC_STREAMDECK_BRIDGE.md
+?? .epics/EPIC_WCDREHAB.md
+?? .epics/_archived/
+?? .github/
+?? .gnupg/
+?? .hooks/README.md
+?? .hooks/manifest.json
+?? .infisical.json
+?? .pre-commit-config.yaml
+?? .reorg/
+?? .security_audit_log.jsonl
+?? .skill_security.conf
+?? .skills/
+?? .ssh_config_workbench
+?? .superpowers/
+?? .systems/
+?? .trae/
+?? .traerules
+?? .vsa_checksum
+?? AI-research-SKILLs/
+?? AUTOMATION_HIVE_EVALS.MD
+?? AUTONOMY.MD
+?? BLACKLIST.MD
+?? BLOCKERS_2026-04-19.md
+?? CHANGELOG_STANDARD.md
+?? CLAUDE.md
+?? CLONE_REPORT.JSON
+?? COMPLETION_STATUS_2026-04-20.md
+?? COOKIE_CONSENT_BANNER.MD
+?? Controller/
+?? DATABASE.MD
+?? DATABASE_OPTIMIZATION_RECOMMENDATIONS.json
+?? DATABASE_OPTIMIZATION_RECOMMENDATIONS_FULL.json
+?? DATA_PROCESSING_AGREEMENT.MD
+?? DECISION.MD
+?? DECISION.MD.asc
+?? DEPLOYMENT_GUIDE.md
+?? DEPLOYMENT_SESSION_REPORT_2026-04-20.md
+?? DEPLOYMENT_STATUS_2026-04-20.md
+?? DIAGNOSTIC.MD
+?? DOCKERIZATION_PLAN_2026-04-19.md
+?? DOCKER_PHASE1_SUMMARY.txt
+?? DOCKER_TASK_ROUTING_CHANGES.txt
+?? DOCS.MD
+?? DOMAINS.MD
+?? Dockerfile
+?? EVALS.MD
+?? EXECUTION_LOG_2026-04-19.md
+?? EXTRACTION_SUMMARY.txt
+?? Enter-Venv.ps1
+?? FINANCE.MD
+?? FITNESS_LEADERBOARD.MD
+?? FLEET_CONNECTIVITY_SUMMARY_2026-04-14.txt
+?? FLEET_DIAGNOSTIC_2026-04-14.txt
+?? F_DRIVE_SECURITY_COMPLIANCE_RECOMMENDATIONS.json
+?? GCRE_DOCUMENTATION.MD
+?? GENOME.MD
+?? INCIDENT_RESPONSE.MD
+?? INCIDENT_RESPONSE_RUNBOOK.md
+?? INFRA.MD
+?? InstallationLog.txt
+?? Invoke-ACLHardener.ps1
+?? JOURNAL.MD
+?? KEYS.JSON
+?? LICENSE
+?? LICENSE-for-less.txt
+?? LIVE_LOGS.jsonl
+?? LOAD_TESTING_GUIDE.md
+?? MEMORY_MANIFEST.json
+?? MET_EVALS.MD
+?? MONITORING_SETUP.md
+?? MUTATIONS.YAML
+?? NEXT_SESSION_ROADMAP.md
+?? NEXT_STEPS_QUICK_REFERENCE.md
+?? OPERATIONAL_PROCEDURES.md
+?? PENDING_AUTHORIZATION.json
+?? PERFORMANCE_SLO.md
+?? PERSONA_REGISTRY.JSON
+?? PERSONA_REGISTRY.YAML
+?? PHASE2_EXECUTION_LOG_2026-04-19.md
+?? PHASE3_EXECUTION_LOG_2026-04-19.md
+?? PHASE4_EXECUTION_LOG_2026-04-19.md
+?? PHASE5_EXECUTION_LOG_2026-04-20.md
+?? PHASE_1_COMPLETION_SUMMARY.md
+?? PHASE_2_EXECUTION_CHECKLIST.md
+?? PHASE_2_INTEGRATION_GUIDE.md
+?? PHASE_2_PROGRESS_REPORT.md
+?? PHASE_6_PLANNING_2026-04-20.md
+?? PRIVACY_POLICY.MD
+?? "Partially Deprecated.wake"
+?? Procfile
+?? Protect-Directory.ps1
+?? QUICK_REFERENCE.md
+?? QUICK_REFERENCE.txt
+?? RAF_CONSOLIDATOR/
+?? README.md
+?? README.txt
+?? REVIEW_PROTOCOL.MD
+?? RSE/
+?? SCRIPTS_MOVE_INVENTORY.txt
+?? SECURITY_AUDIT_EVALS.MD
+?? SECURITY_BLOCKER.MD
+?? SESSION_COMPLETION_SUMMARY_2026-04-20.md
+?? SESSION_SUMMARY_2026-04-19.md
+?? SESSION_SUMMARY_CHECKPOINT.md
+?? SKILLS.json
+?? SOP.MD
+?? STATUS_AND_BLOCKERS.md
+?? SlaveMaster/
+?? TEST_ARCHIVE_001/
+?? TEST_STRIP_001/
+?? TROUBLESHOOTING_GUIDE.md
+?? VENV.MD
+?? VSA/
+?? __init__.py
+?? _archive/
+?? _migration/
+?? _planning/
+?? _shared/
+?? _workbench_state/
+?? accessible-color-palettes.md
+?? agent-a11y-sentry/
+?? agent-api-version-guard/
+?? agent-browser-compat/
+?? agent-cloud-finops/
+?? agent-complexity-reducer/
+?? agent-dependency-janitor/
+?? agent-interaction-polisher-new/
+?? agent-interaction-polisher/
+?? agent-namespace-aligner/
+?? agent-os/
+?? agent-pattern-enforcer.git/
+?? agent-performance-watchdog-new/
+?? agent-seo-specialist/
+?? agent-state-architect/
+?? agent-supply-chain-guard/
+?? agent-type-integrity/
+?? agent_orchestration_principles.md
+?? agentic-self-reflection-resources.md
+?? agentic_toolkit/
+?? agents/
+?? alternative-financing-options.md
+?? anthropic-skills-mcp-proxy/
+?? anthropic-skills-mcp-server-2/
+?? anthropic-skills-mcp-server/
+?? anthropic-skills-mcp-server_acl_backup.txt
+?? api-fuzzing-with-restler.md
+?? approved_skills.yaml
+?? apps/
+?? architecture.md
+?? archive_skill.bat
+?? ast-based-test-generation.md
+?? audit_skills.bat
+?? auto-research-lab/
+?? autodoc/
+?? automated-compliance-tools.md
+?? automation-agent-manager/
+?? automation-authentication/
+?? automation-aws/
+?? automation-client/.env.example
+?? automation-client/DELIVERABLES.md
+?? automation-client/Dockerfile
+?? automation-client/Makefile
+?? automation-client/README.md
+?? automation-client/README_LAMBDA.md
+?? automation-client/SLAVEMASTER_BRIDGE.md
+?? automation-client/WAVE2_ACTIVATION.md
+?? automation-client/conftest.py
+?? automation-client/examples/
+?? automation-client/lambdastack.yml
+?? automation-client/n8n_integration.py
+?? automation-client/pyproject.toml
+?? automation-client/pytest.ini
+?? automation-client/requirements.txt
+?? automation-client/setup.py
+?? automation-client/src/__init__.py
+?? automation-client/src/client.py
+?? automation-client/src/exceptions.py
+?? automation-client/src/handler.py
+?? automation-client/tests/__init__.py
+?? automation-client/tests/fixtures/
+?? automation-client/tests/test_client.py
+?? automation-client/tests/test_integration.py
+?? automation-eval-response/
+?? automation-eval/.coverage
+?? automation-eval/.dockerignore
+?? automation-eval/Dockerfile
+?? automation-eval/README.md
+?? automation-eval/conftest.py
+?? automation-eval/lambdastack.yml
+?? automation-eval/manifest.json
+?? automation-eval/requirements.txt
+?? automation-eval/setup.py
+?? automation-eval/src/
+?? automation-eval/tests/fixtures/
+?? automation-eval/tests/test_handler.py
+?? automation-extension/
+?? automation-firecrawl-js/
+?? automation-firecrawl-python/
+?? automation-firecrawl/
+?? automation-gateway/
+?? automation-hive/
+?? automation-init/.coverage
+?? automation-init/Dockerfile
+?? automation-init/README.md
+?? automation-init/conftest.py
+?? automation-init/lambdastack.yml
+?? automation-init/load-test-results-1-user-serial_exceptions.csv
+?? automation-init/load-test-results-1-user-serial_failures.csv
+?? automation-init/load-test-results-1-user-serial_stats.csv
+?? automation-init/load-test-results-1-user-serial_stats_history.csv
+?? automation-init/load-test-results-10-users-optimized_exceptions.csv
+?? automation-init/load-test-results-10-users-optimized_failures.csv
+?? automation-init/load-test-results-10-users-optimized_stats.csv
+?? automation-init/load-test-results-10-users-optimized_stats_history.csv
+?? automation-init/load-test-results-10-users_exceptions.csv
+?? automation-init/load-test-results-10-users_failures.csv
+?? automation-init/load-test-results-10-users_stats.csv
+?? automation-init/load-test-results-10-users_stats_history.csv
+?? automation-init/load-test-results-100-users_exceptions.csv
+?? automation-init/load-test-results-100-users_failures.csv
+?? automation-init/load-test-results-100-users_stats.csv
+?? automation-init/load-test-results-100-users_stats_history.csv
+?? automation-init/manifest.json
+?? automation-init/requirements.txt
+?? automation-init/setup.py
+?? automation-init/src/
+?? automation-init/tests/fixtures/
+?? automation-init/tests/test_handler.py
+?? automation-loop/
+?? automation-master/.env.workbench
+?? automation-master/README.md
+?? automation-master/RUNBOOK.md
+?? automation-master/data/
+?? automation-master/docker/
+?? automation-master/manifest.json
+?? automation-master/master.pid
+?? automation-master/requirements.txt
+?? automation-master/requirements.txt.txt
+?? automation-master/setup.py
+?? automation-master/src/automation_master.egg-info/
+?? automation-master/src/automation_master/__init__.py
+?? automation-master/src/automation_master/cli.py
+?? automation-master/src/automation_master/discovery/
+?? automation-master/src/automation_master/dispatch/
+?? automation-master/src/automation_master/metrics/
+?? automation-master/src/automation_master/protocol.py
+?? automation-master/src/automation_master/queue/
+?? automation-master/src/automation_master/scoring/
+?? automation-master/src/automation_master/security/
+?? automation-master/src/data/
+?? automation-master/start-master.bat
+?? automation-master/task-scheduler-master.xml
+?? automation-master/tests/__init__.py
+?? automation-master/tests/conftest.py
+?? automation-master/tests/test_dispatcher.py
+?? automation-master/tests/test_fleet.py
+?? automation-master/tests/test_queue.py
+?? automation-master/tests/test_scorer.py
+?? automation-master/venv/
+?? automation-master/zerostack.yml
+?? automation-meta-evolution/
+?? automation-moderation/
+?? automation-optimizer/
+?? automation-prometheus/
+?? automation-roadmap-generator/
+?? automation-skill-loader/
+?? automation-slack/
+?? automation-slave/Dockerfile
+?? automation-slave/README.md
+?? automation-slave/config/slave-laptop2.yaml
+?? automation-slave/deploy-to-laptop2.sh
+?? automation-slave/docker/
+?? automation-slave/docs/
+?? automation-slave/manifest.json
+?? automation-slave/pytest.ini
+?? automation-slave/requirements.txt
+?? automation-slave/requirements.txt.txt
+?? automation-slave/setup.py
+?? automation-slave/src/
+?? automation-slave/tests/
+?? automation-slave/zerostack.yml
+?? automation-slavemaster/
+?? automation-smart-roadmap/
+?? automation-taxjar/
+?? benchmarks/
+?? bifrost/
+?? bin/
+?? bittensor-evaluation-suite/
+?? blocker-registry/
+?? blocker-resolver/
+?? browse-ai-poc.md
+?? catalog-api/
+?? check_disk.ps1
+?? claw-hub/Makefile
+?? claw-hub/RECONCILIATION_REPORT.md
+?? claw-hub/WAVE2_COMPLETION_SUMMARY.md
+?? claw-hub/analytics/
+?? claw-hub/api/
+?? claw-hub/contracts/
+?? claw-hub/integrations/
+?? claw-hub/lifecycle/
+?? claw-hub/manifest/
+?? claw-hub/resolvers/
+?? claw-hub/skill_registry.py
+?? claw-hub/state/
+?? claw-hub/tests/test_wave2_modules.py
+?? claw-hub/tests/test_wave3_integration.py
+?? claw.bat
+?? clean_final_test.ps1
+?? cleanup.bat
+?? cleanup.ps1
+?? cleanup2.ps1
+?? cleanup_all.ps1
+?? cleanup_exec.ps1
+?? cline-main/
+?? cohesive_unit/
+?? compliance-engine/
+?? compliant-example-001.md
+?? compose-tier1/
+?? composer-setup.php
+?? composer.json
+?? composer.lock
+?? composite.bat
+?? composite.json
+?? composite.txt
+?? comprehensive_integration_test.ps1
+?? config.py
+?? config.yaml
+?? context-window-optimization.md
+?? contrib/
+?? create_dir.bat
+?? credential_config_template.sh
+?? crewai-plan-and-execute/
+?? crewai_security/
+?? data-agent/
+?? data-migration-edge-cases.md
+?? data.txt.asc
+?? data/
+?? ddir_state.json
+?? decision-engine/
+?? default-agent/
+?? deploy.sh
+?? deploy/
+?? dev-infrastructure/
+?? dev-trigger-workflow.json
+?? dev.sh
+?? diagnose_infisical.js
+?? docker-compose.yml
+?? docs/ARTIFACT_VERSIONING_SCHEME.md
+?? docs/SECURITY_SCANNING_OUTPUT_FORMAT.md
+?? docs/SOPs/
+?? docs/WEEK_3_COMPLETION_REPORT.txt
+?? docs/WEEK_3_DELIVERABLES_INDEX.md
+?? docs/WORKBENCH_PIPELINE_ARCHITECTURE.md
+?? docs/WORKBENCH_RUNBOOK.md
+?? docs/referential/
+?? domain_index.json
+?? dummy_skills.json
+?? dynamic-orchestrator/
+?? eval_kubectl.bat
+?? eval_start.bat
+?? eval_status.bat
+?? eval_stop.bat
+?? evals.json
+?? events/
+?? fabric.yaml
+?? fast_cleanup.bat
+?? fast_cleanup2.ps1
+?? feature_flags.json
+?? fetch_skill.bat
+?? final_summary_test.ps1
+?? finality_specialist.yaml
+?? find_large_files.nu
+?? find_redundant_skills.bat
+?? find_skill.bat
+?? firecracker-integration/
+?? firmware-update-best-practices.md
+?? first_task_file.txt
+?? fitness-evaluator-EVALS.MD
+?? flake.nix
+?? fleet-syncthing/
+?? fleet.json
+?? fort-knox/
+?? fortKnoxProtocolManager/
+?? future-work/
+?? fuzzing_poc_api_swagger.json
+?? game_config.json
+?? garden.yml
+?? gcre-engine-EVALS.MD
+?? gen-key-batch
+?? gen-key-script.txt
+?? gen-key.bat
+?? gen_key.bat
+?? generate_skill_security_review.md
+?? genomic-registry-EVALS.MD
+?? git_status.nu
+?? gitingest_output.json
+?? gito-compare-20260419-045317/
+?? glances.conf
+?? gpg-agent.conf
+?? haptic-feedback-design.md
+?? headless-visual-regression-testing.md
+?? hivedenv.bat
+?? hydra-mutation-engine-EVALS.MD
+?? hypervisor-optimization.md
+?? inbox.json
+?? infisical_agent.yaml
+?? infra-edge/
+?? init.py
+?? install_dependencies.ps1
+?? install_langgraph.ps1
+?? install_mariadb.ps1
+?? install_memurai.ps1
+?? install_n8n.ps1
+?? install_postgres.ps1
+?? instructions/
+?? integration_summary.md
+?? integration_tests.ps1
+?? integration_tests_v2.ps1
+?? jq.exe
+?? k8s/
+?? kubectl.bat
+?? lancedb-vector-indexing-methods.md
+?? langgraph-design-patterns.md
+?? langgraph-skills-agent-integration/
+?? laravel-package-replacements.md
+?? laravel-zero-fastapi-sidecar/
+?? ledger.json
+?? llms.json
+?? llms.txt
+?? local-voice-to-text-models.md
+?? loki.hardened.yaml
+?? low-latency-terminals.md
+?? macroeconomic-resources.md
+?? main.py
+?? maximalist_prompt.md
+?? mcp-server-resources.md
+?? merge_skills.bat
+?? mergekit/
+?? meta_layer.json
+?? metaclaw-genetic-engine-EVALS.MD
+?? metamorphic-testing-for-agents.md
+?? midi-mapping-tools.md
+?? mise_version.txt
+?? model-distillation-techniques.md
+?? modernization_recommendations.json
+?? mosquitto/
+?? mqtt-prioritization.md
+?? mqtt_subscriber.js
+?? multi-agent-negotiation-tactics.md
+?? multi_agent_evals/
+?? netuse_l6.txt
+?? netuse_l7.txt
+?? nix-installer.ps1
+?? nix-installer.sh
+?? nix-shell.bat
+?? nix-update.service
+?? nix-update.timer
+?? node-1.wake
+?? node-2.wake
+?? node-red/
+?? non-compliant-example.md
+?? ollama-quantization-methods.md
+?? ollama.bat
+?? openclaw_evaluation/
+?? orchestration/intake/
+?? orchestration/specialist-apex-stack/.gitignore
+?? orchestration/specialist-apex-stack/README.md
+?? orchestration/specialist-apex-stack/config/
+?? orchestration/specialist-apex-stack/docker-compose.yml
+?? orchestration/specialist-apex-stack/docs/plans/
+?? orchestration/specialist-apex-stack/docs/reports/
+?? orchestration/specialist-apex-stack/docs/research/
+?? orchestration/specialist-apex-stack/manifest.json
+?? orchestration/specialist-apex-stack/pyproject.toml
+?? orchestration/specialist-apex-stack/scripts/
+?? orchestration/specialist-apex-stack/src/__init__.py
+?? orchestration/specialist-apex-stack/src/evaluation/
+?? orchestration/specialist-apex-stack/src/inference/
+?? orchestration/specialist-apex-stack/src/memory/
+?? orchestration/specialist-apex-stack/src/orchestration/__init__.py
+?? orchestration/specialist-apex-stack/src/orchestration/dspy_signatures.py
+?? orchestration/specialist-apex-stack/src/orchestration/graph.py
+?? orchestration/specialist-apex-stack/src/orchestration/pipeline.py
+?? orchestration/specialist-apex-stack/src/orchestration/registry.py
+?? orchestration/specialist-apex-stack/src/orchestration/specialist_schema.py
+?? orchestration/specialist-apex-stack/src/roadmap/
+?? orchestration/specialist-apex-stack/tests/
+?? oss-alternatives.md
+?? package-lock.json
+?? package.json
+?? pacman.conf
+?? parse_logs.nu
+?? patched_libs/
+?? path-manager/
+?? performance-benchmarking-with-markdown.md
+?? phase2_semantic_match.nu
+?? php.ini
+?? phpinfo.php
+?? pii_scrubber_config.yaml
+?? pioneer-dj-protocols.md
+?? pitch-deck-tools.md
+?? pkg-autonomous-iac/
+?? pkg-bat/
+?? pkg-certificate/
+?? pkg-department-finance/
+?? pkg-department-seo/
+?? pkg-finetuning/
+?? pkg-ideation-engine/
+?? pkg-isrs/
+?? pkg-lora-factory/
+?? pkg-personas/
+?? pkg-provision/
+?? pkg-smart-router/
+?? pkg-template-agent/
+?? pkg-trae-agent/.coverage
+?? pkg-trae-agent/.env.workbench
+?? pkg-trae-agent/Dockerfile
+?? pkg-trae-agent/README.md
+?? pkg-trae-agent/agent-injection.bundle.json
+?? pkg-trae-agent/agents/
+?? pkg-trae-agent/coordinator/__init__.py
+?? pkg-trae-agent/coordinator/agent_pool.py
+?? pkg-trae-agent/coordinator/config.py
+?? pkg-trae-agent/coordinator/langfuse_tracer.py
+?? pkg-trae-agent/coordinator/qdrant_memory.py
+?? pkg-trae-agent/coordinator/redis_queue.py
+?? pkg-trae-agent/coordinator/task_router.py
+?? pkg-trae-agent/coordinator/vault_client.py
+?? pkg-trae-agent/docker-compose.yml
+?? pkg-trae-agent/manifest.json
+?? pkg-trae-agent/mcp_bridge/
+?? pkg-trae-agent/protocols/
+?? pkg-trae-agent/pyproject.toml
+?? pkg-trae-agent/tests/__init__.py
+?? pkg-trae-agent/tests/test_a2a_protocol.py
+?? pkg-trae-agent/tests/test_agent_pool.py
+?? pkg-trae-agent/tests/test_coordinator.py
+?? pkg-trae-agent/tests/test_e2e_communication.py
+?? pkg-trae-agent/tests/test_mcp_bridge.py
+?? pkg-trae-agent/trae_config.yaml
+?? pkg-umc/
+?? pki/
+?? plane-selfhost/
+?? plans/
+?? play_audio.ps1
+?? plugins/
+?? pnpm-lock.yaml
+?? pnpm-workspace.yaml
+?? pricing-tier-optimization-strategies.md
+?? prod-key-script.txt
+?? prometheus.yml
+?? prompt-engineering-resources.md
+?? prompt-evolution-engine/
+?? prompt-injection-defense.md
+?? prompts/
+?? property-based-testing.md
+?? pulumi_project/
+?? py-hcli/
+?? queue.json
+?? raf-ranker/
+?? rbac.json
+?? rd-tax-credit-resources.md
+?? reference/
+?? references/
+?? register-services.bat
+?? renovate.json
+?? reports/
+?? requirements.txt
+?? reset-gpg.bat
+?? restore_skill.bat
+?? rfc-001.txt
+?? roadmap-data-layer/
+?? roadmap_agent_POLICY.MD
+?? run-aegra.sh
+?? run-agents.sh
+?? run-api.sh
+?? run.ps1
+?? run_consolidation.ps1
+?? run_eval.bat
+?? run_evals.bat
+?? run_injected.bat
+?? run_scheduler.bat
+?? run_scheduler.ps1
+?? run_security_audit.bat
+?? run_services.bat
+?? run_test.bat
+?? run_test.ps1
+?? run_tests.ps1
+?? safe_write_dir/
+?? sca_poc.sh
+?? scan_artifacts.ps1
+?? schema.json
+?? schemas/
+?? scripts/HiveSovereign.py
+?? scripts/__init__.py
+?? scripts/acl_test.py
+?? scripts/add_skills.py
+?? scripts/ado.py
+?? scripts/agent_framework.py
+?? scripts/agent_handoff.py
+?? scripts/agent_tool.py
+?? scripts/agentguard_example.py
+?? scripts/agents.py
+?? scripts/agnostic_runner.py
+?? scripts/api.hardened.py
+?? scripts/api_gateway.py
+?? scripts/ast_test_generator.py
+?? scripts/batch_scanner.py
+?? scripts/benchmark_poc.py
+?? scripts/blocker_marshal.py
+?? scripts/build-injection-plan.ps1
+?? scripts/build_graph.py
+?? scripts/build_skill.py
+?? scripts/calculate_hash.py
+?? scripts/check_falkor.py
+?? scripts/check_mqtt.py
+?? scripts/check_openai_version.py
+?? scripts/check_versions.py
+?? scripts/clean-production.sh
+?? scripts/clean_and_run_scan.py
+?? scripts/cleanup.py
+?? scripts/cognitive_overlay_agent.py
+?? scripts/collect_deps.py
+?? scripts/command_trigger.py
+?? scripts/composite.py
+?? scripts/composite_cli.py
+?? scripts/composite_helper.py
+?? scripts/conductor_agent.py
+?? scripts/conflict_resolution_dialogue.py
+?? scripts/consolidate_llms.py
+?? scripts/consolidate_requirements.py
+?? scripts/contextual_pronoun_resolution.py
+?? scripts/cps_linter.py
+?? scripts/create-artifact.sh
+?? scripts/create_evals_dir.py
+?? scripts/create_file_map.py
+?? scripts/create_port_catalog.py
+?? scripts/create_public_key.py
+?? scripts/create_test_key.py
+?? scripts/custom_anonymizers.py
+?? scripts/custom_tools.py
+?? scripts/db_snapshot.py
+?? scripts/db_spawner.py
+?? scripts/db_spawner_no_docker.py
+?? scripts/deploy_wave2.py
+?? scripts/deploy_wave2_v2.py
+?? scripts/doctor.py
+?? scripts/documentation_agent.py
+?? scripts/domain_discoverer.py
+?? scripts/domain_manifest.json
+?? scripts/domain_mapper.py
+?? scripts/driver_agent.py
+?? scripts/e2e_test.py
+?? scripts/e2e_test_final.py
+?? scripts/e2e_test_fixed.py
+?? scripts/e2e_test_working.py
+?? scripts/echo_cancellation.py
+?? scripts/emergency_kill.py
+?? scripts/eval_cline_main.py
+?? scripts/eval_runner.py
+?? scripts/explore_schema.py
+?? scripts/finality_specialist.py
+?? scripts/find_common_dependencies.py
+?? scripts/find_ctags.py
+?? scripts/find_requirements.py
+?? scripts/fix_and_run_scan.py
+?? scripts/follow_me_audio.py
+?? scripts/framework_agents.py
+?? scripts/fuzzing_poc_api.py
+?? scripts/generate_audio.py
+?? scripts/generate_audio_with_wakeword.py
+?? scripts/generate_cert.py
+?? scripts/generate_keys.py
+?? scripts/get_processes.py
+?? scripts/get_pulse.py
+?? scripts/get_skills.py
+?? scripts/ghost_scrub.py
+?? scripts/gpg_signer.py
+?? scripts/gpu_load_balancer.py
+?? scripts/hardware_haptic_sync.py
+?? scripts/hcli.py
+?? scripts/hcli_agent.py
+?? scripts/hello.py
+?? scripts/hive_agent.py
+?? scripts/index_worker.py
+?? scripts/indexer.py
+?? scripts/ingestion_test.py
+?? scripts/integrated_workflow.py
+?? scripts/intent_schema.py
+?? scripts/interrupt_protocol.py
+?? scripts/janitor.py
+?? scripts/lancedb_indexer.py
+?? scripts/live_loop_code_generation.py
+?? scripts/llm-price-check.py
+?? scripts/manage_autodoc.py
+?? scripts/map_repos.py
+?? scripts/mariadb_spawner_no_docker.py
+?? scripts/master_agent.py
+?? scripts/memurai_spawner.py
+?? scripts/metaclaw_retriever.py
+?? scripts/metacognition_mcp.py
+?? scripts/metamorphic_testing_poc.py
+?? scripts/mock_agent.py
+?? scripts/mock_mcp_server.py
+?? scripts/monad_sync.ps1
+?? scripts/monitoring_integration.py
+?? scripts/mqtt_client.py
+?? scripts/mqtt_subscriber.py
+?? scripts/mqtt_test.py
+?? scripts/multi_modal_confirmation.py
+?? scripts/new_file.py
+?? scripts/nix_shell_injector.py
+?? scripts/node_crawler.py
+?? scripts/old_file.py
+?? scripts/orchestrate_2000_swarm.ps1
+?? scripts/orchestrate_swarm.ps1
+?? scripts/orchestrate_swarm.py
+?? scripts/panic_flush_trigger.py
+?? scripts/parallel_nemotron_dispatcher.py
+?? scripts/parquet_chunking_poc.py
+?? scripts/parse_report.py
+?? scripts/patch_journal.py
+?? scripts/patched_skill_service.py
+?? scripts/person-inflator.py
+?? scripts/person-injector.py
+?? scripts/persona_mutation_engine.py
+?? scripts/phase2_query.py
+?? scripts/php_extension_checker.py
+?? scripts/pii_scrubber.py
+?? scripts/pin_dependencies.py
+?? scripts/plane_api_client.py
+?? scripts/play_chime.py
+?? scripts/populate_asset_inventory.py
+?? scripts/preflight_simulator.py
+?? scripts/proactive_status_reports.py
+?? scripts/property_based_testing_poc.py
+?? scripts/publisher.py
+?? scripts/quantization_poc.py
+?? scripts/refactor_tool.py
+?? scripts/refactor_workflow.py
+?? scripts/remote_runner.py
+?? scripts/review_entrypoint.py
+?? scripts/rfc_mapper.py
+?? scripts/roadmap_agent.py
+?? scripts/robust_scan.py
+?? scripts/rollback-artifact.sh
+?? scripts/run_agent.py
+?? scripts/run_all_evals.py
+?? scripts/run_all_tests.py
+?? scripts/run_analysis.py
+?? scripts/run_audit.py
+?? scripts/run_eval.py
+?? scripts/run_evals.py
+?? scripts/run_fixed_tests.py
+?? scripts/run_indexer.py
+?? scripts/run_manage_autodoc.py
+?? scripts/run_manager.py
+?? scripts/run_scanner.py
+?? scripts/run_single_test.py
+?? scripts/run_systems_tests.py
+?? scripts/run_test.py
+?? scripts/run_vexor_secure.py
+?? scripts/run_vulnerability_scan.py
+?? scripts/run_with_sentinel.py
+?? scripts/saas-financial-model.py
+?? scripts/scaffold-injection-bundle.ps1
+?? scripts/scanner.py
+?? scripts/search_client.py
+?? scripts/secure_generate_audio.py
+?? scripts/secure_logger.py
+?? scripts/security-scan.sh
+?? scripts/security_gate_middleware.py
+?? scripts/seeder.py
+?? scripts/self_healing.py
+?? scripts/semantic_clouding.py
+?? scripts/semantic_disambiguation.py
+?? scripts/sentiment_adjusted_response.py
+?? scripts/session_resumption.py
+?? scripts/setup-artifact-storage.sh
+?? scripts/shadow_conversation.py
+?? scripts/shadow_injector.py
+?? scripts/shared_memory_reader.py
+?? scripts/shared_memory_writer.py
+?? scripts/shorthand.py
+?? scripts/sidecar_wrapper.py
+?? scripts/sign_port_catalog.py
+?? scripts/sign_skill.py
+?? scripts/simple_refactor_workflow.py
+?? scripts/simple_ts_test.py
+?? scripts/skill_adopter.py
+?? scripts/skill_ca.py
+?? scripts/skill_client.py
+?? scripts/skill_interfaces.py
+?? scripts/skill_ledger.py
+?? scripts/skill_refiner.py
+?? scripts/skill_runner.py
+?? scripts/skill_server.py
+?? scripts/skill_signer.py
+?? scripts/skill_timer.py
+?? scripts/skill_verifier.py
+?? scripts/sovereign_gate.py
+?? scripts/spawner_agent.py
+?? scripts/specialist_harness.py
+?? scripts/staggered_dispatch.ps1
+?? scripts/standup_generator.py
+?? scripts/subscriber.py
+?? scripts/tailscale_client.py
+?? scripts/task.py
+?? scripts/tco-calculator.py
+?? scripts/temp_scanner.py
+?? scripts/temp_signer.py
+?? scripts/temp_test.py
+?? scripts/temp_vulnerability_scanner.py
+?? scripts/test_ado.py
+?? scripts/test_benchmark_poc.py
+?? scripts/test_code_formatter.py
+?? scripts/test_connectivity.py
+?? scripts/test_data_agent.py
+?? scripts/test_decision_engine.py
+?? scripts/test_decorator.py
+?? scripts/test_default_agent.py
+?? scripts/test_framework.py
+?? scripts/test_gpg.py
+?? scripts/test_hijack.py
+?? scripts/test_import.py
+?? scripts/test_lancedb.py
+?? scripts/test_memory.py
+?? scripts/test_replicated_skill_manager.py
+?? scripts/test_rich.py
+?? scripts/test_script.py
+?? scripts/test_security_audit.py
+?? scripts/test_sentencetransformers.py
+?? scripts/test_sentinel.py
+?? scripts/test_shell.py
+?? scripts/test_wakeword.py
+?? scripts/test_whisper.py
+?? scripts/test_worker.py
+?? scripts/tmp_paramiko_test.py
+?? scripts/token_throttler.py
+?? scripts/topological_sorter.py
+?? scripts/trace_system.py
+?? scripts/ultra_simple_workflow.py
+?? scripts/update_dependencies.py
+?? scripts/validate_and_run.py
+?? scripts/validate_skill_domains.py
+?? scripts/validate_skill_name.py
+?? scripts/vector_analysis.py
+?? scripts/verify_bifrost_auth.py
+?? scripts/verify_circuit_breaker.py
+?? scripts/verify_secret.py
+?? scripts/verify_slave.py
+?? scripts/voice_calculator.py
+?? scripts/vram_allocator.py
+?? scripts/vram_offload_poc.py
+?? scripts/vulnerability_scanner.py
+?? scripts/watchdog.py
+?? scripts/workbench_interaction.py
+?? scripts/zero_trace_handover.py
+?? scripts/zk_verifier.py
+?? secureFileDeleter/
+?? secureFileWriter/
+?? security-agent/
+?? security/
+?? self_healing_flow.json
+?? service-registry/
+?? session.py
+?? set-max-performance.ps1
+?? setup-nix-auto-update.sh
+?? setup-syncthing-test.sh
+?? setup.py
+?? sign_skill.bat
+?? skill_ledger.json
+?? skill_security.conf
+?? sov-agent-service/
+?? sov-dao-service/
+?? sov-identity-service/
+?? sov-inference-service/
+?? sov-reputation-service/
+?? sov-thunderbird-mcp/
+?? sovereign_gate_EVAL.MD
+?? sovereign_gate_POLICY.MD
+?? sovereign_gate_SECURITY.MD
+?? sovereign_gate_SECURITY_BLOCKER.MD
+?? spawner/
+?? specialists.yaml
+?? specs/
+?? ssh_l6_vv.txt
+?? ssh_test_stderr.txt
+?? ssh_test_stdout.txt
+?? ssh_ver_out.txt
+?? sshv.txt
+?? sshv_err.txt
+?? sshv_out.txt
+?? stream-deck-protocols.md
+?? streamdeck-dashboards/
+?? streamdeck_agent/
+?? streamdeck_agent_integration/
+?? streamdeck_command_center/
+?? super_traceability_ledger.json
+?? synthesis-engine/
+?? system-integration/
+?? systems/__init__.py
+?? systems/agent-skills/
+?? systems/agents/
+?? systems/analysis/
+?? systems/api-optimization/
+?? systems/bootstrap/
+?? systems/daas/
+?? systems/docs/
+?? systems/event-system/
+?? systems/execution/
+?? systems/external-services/
+?? systems/fort-knox/
+?? systems/fort_knox/
+?? systems/gateway/
+?? systems/intake/
+?? systems/integration-review/
+?? systems/integrations/
+?? systems/knowledge/automation-knowledgebase/README.md
+?? systems/knowledge/automation-knowledgebase/annotate.py
+?? systems/knowledge/automation-knowledgebase/annotations/
+?? systems/knowledge/automation-knowledgebase/backup.sh
+?? systems/knowledge/automation-knowledgebase/backups/
+?? systems/knowledge/automation-knowledgebase/index/
+?? systems/knowledge/automation-knowledgebase/kb.py
+?? systems/knowledge/automation-knowledgebase/librarian.py
+?? systems/knowledge/automation-knowledgebase/manifest.json
+?? systems/knowledge/automation-knowledgebase/policies/codex-apex-workbench/tools/enforce_batch_04.py
+?? systems/knowledge/automation-knowledgebase/reports/
+?? systems/knowledge/automation-knowledgebase/store.py
+?? systems/knowledge/automation-knowledgebase/zerostack.yml
+?? systems/knowledge/universal-doc-package/
+?? systems/metadata/
+?? systems/n8n-skills/
+?? systems/observability/
+?? systems/orchestration/
+?? systems/persistence/
+?? systems/php-catalog/
+?? systems/research/
+?? systems/resilience/
+?? systems/runtime/
+?? systems/runtimes/
+?? systems/scaffolding/
+?? systems/secrets/
+?? systems/templates/
+?? systems/toolkit/skills/EVAL.md
+?? systems/toolkit/skills/POLICY.md
+?? systems/toolkit/skills/README.md
+?? systems/toolkit/skills/SECURITY.md
+?? systems/toolkit/skills/SECURITY_BLOCKER.MD
+?? systems/toolkit/skills/SKILLS.json
+?? systems/toolkit/skills/__init__.py
+?? systems/toolkit/skills/abort_all_evals/
+?? systems/toolkit/skills/analyze_success_chain/
+?? systems/toolkit/skills/anonymize_persona/
+?? systems/toolkit/skills/approve_eval/
+?? systems/toolkit/skills/asset-inventory/
+?? systems/toolkit/skills/auth-harmonizer/EVAL.MD
+?? systems/toolkit/skills/auth-harmonizer/POLICY.MD
+?? systems/toolkit/skills/auth-harmonizer/SECURITY.MD
+?? systems/toolkit/skills/auth-harmonizer/SECURITY_BLOCKER.MD
+?? systems/toolkit/skills/auth-harmonizer/SKILL.md
+?? systems/toolkit/skills/auth-harmonizer/__init__.py
+?? systems/toolkit/skills/auth-harmonizer/main.py
+?? systems/toolkit/skills/autodoc/
+?? systems/toolkit/skills/backpressure-valve/
+?? systems/toolkit/skills/bandit-scan.skill.yaml
+?? systems/toolkit/skills/bitwarden_auth/
+?? systems/toolkit/skills/break_infinite_loop/
+?? systems/toolkit/skills/circuit-breaker-tensor/
+?? systems/toolkit/skills/compliance-gate/
+?? systems/toolkit/skills/compliance-wrapper/
+?? systems/toolkit/skills/context-wrapper/
+?? systems/toolkit/skills/create_zfs_snapshot/
+?? systems/toolkit/skills/database/EVAL.md
+?? systems/toolkit/skills/database/POLICY.MD
+?? systems/toolkit/skills/database/SECURITY.MD
+?? systems/toolkit/skills/database/SECURITY_BLOCKER.md
+?? systems/toolkit/skills/database/__init__.py
+?? systems/toolkit/skills/database/main.py
+?? systems/toolkit/skills/debt-quantifier/
+?? systems/toolkit/skills/dehydrate_and_send_to_sovereign/
+?? systems/toolkit/skills/dependency-isolate/
+?? systems/toolkit/skills/dispatcher/__init__.py
+?? systems/toolkit/skills/display_sentiment_hud/
+?? systems/toolkit/skills/downstream-sink/
+?? systems/toolkit/skills/error-translator/
+?? systems/toolkit/skills/eval_generator/
+?? systems/toolkit/skills/event-synchronizer/
+?? systems/toolkit/skills/evolution-engine/
+?? systems/toolkit/skills/excalidraw-diagram/
+?? systems/toolkit/skills/feature-interleaver/
+?? systems/toolkit/skills/flag_stalled_eval/
+?? systems/toolkit/skills/freeze_on_permission_escalation/
+?? systems/toolkit/skills/generate_certificate_of_finality/
+?? systems/toolkit/skills/generate_mock_env/
+?? systems/toolkit/skills/generate_randomized_test_vectors/
+?? systems/toolkit/skills/generate_regression_eval/
+?? systems/toolkit/skills/get_engineering_health/
+?? systems/toolkit/skills/github/
+?? systems/toolkit/skills/gpu-load-balancer/
+?? systems/toolkit/skills/halt_on_entropy/
+?? systems/toolkit/skills/hello-world/
+?? systems/toolkit/skills/idempotency-guard/
+?? systems/toolkit/skills/inference_serving/
+?? systems/toolkit/skills/infisical/
+?? systems/toolkit/skills/interface-extractor/
+?? systems/toolkit/skills/knowledge_graph/
+?? systems/toolkit/skills/latency-balancer/
+?? systems/toolkit/skills/link_eval_to_milestone/
+?? systems/toolkit/skills/log_forensic_data/
+?? systems/toolkit/skills/logic-decomposer/
+?? systems/toolkit/skills/mass_migration/
+?? systems/toolkit/skills/memory/
+?? systems/toolkit/skills/messenger/
+?? systems/toolkit/skills/multi-tenant-shard/
+?? systems/toolkit/skills/namespace-resolver/
+?? systems/toolkit/skills/node-heartbeat/
+?? systems/toolkit/skills/obsbot-c2-agent/
+?? systems/toolkit/skills/onboarding_audit/
+?? systems/toolkit/skills/orchestrator/EVAL.md
+?? systems/toolkit/skills/orchestrator/POLICY.md
+?? systems/toolkit/skills/orchestrator/SECURITY.md
+?? systems/toolkit/skills/orchestrator/SECURITY_BLOCKER.md
+?? systems/toolkit/skills/orchestrator/SKILL.md
+?? systems/toolkit/skills/orchestrator/__init__.py
+?? systems/toolkit/skills/orchestrator/main.py
+?? systems/toolkit/skills/pacman-install/
+?? systems/toolkit/skills/pattern-converger/
+?? systems/toolkit/skills/pause_evals_on_vram/
+?? systems/toolkit/skills/present_sample_for_review/
+?? systems/toolkit/skills/protocol-bridge/
+?? systems/toolkit/skills/purge_zero_value_evals/
+?? systems/toolkit/skills/py-hcli-config/
+?? systems/toolkit/skills/py_hcli/
+?? systems/toolkit/skills/redundancy-pruner/
+?? systems/toolkit/skills/reject_on_slop/
+?? systems/toolkit/skills/rentafriend_sim/
+?? systems/toolkit/skills/request_finality_review/
+?? systems/toolkit/skills/rollback_eval/
+?? systems/toolkit/skills/run_double_blind_review/
+?? systems/toolkit/skills/run_eval/
+?? systems/toolkit/skills/run_future_scenario/
+?? systems/toolkit/skills/run_in_nix_shell/
+?? systems/toolkit/skills/run_inter_node_air_gapped/
+?? systems/toolkit/skills/run_multi_model_cross_check/
+?? systems/toolkit/skills/run_war_games/
+?? systems/toolkit/skills/s3-logger/
+?? systems/toolkit/skills/s3_logger/
+?? systems/toolkit/skills/scalability-manifold/
+?? systems/toolkit/skills/schema-suture/
+?? systems/toolkit/skills/secure_pacman_install/
+?? systems/toolkit/skills/secure_spawner_skill/
+?? systems/toolkit/skills/security-audit-baseline/
+?? systems/toolkit/skills/security-auditor/
+?? systems/toolkit/skills/security-hub-healthcheck/
+?? systems/toolkit/skills/security-incident-triage/
+?? systems/toolkit/skills/security-register-spoke/
+?? systems/toolkit/skills/security-rotate-secrets/
+?? systems/toolkit/skills/security-scanner/
+?? systems/toolkit/skills/semantic-lexer/
+?? systems/toolkit/skills/side-effect-mapper/
+?? systems/toolkit/skills/simulate_wifi_loss/
+?? systems/toolkit/skills/skill-auditor/
+?? systems/toolkit/skills/skill_generator/
+?? systems/toolkit/skills/spawn_research_unit/
+?? systems/toolkit/skills/state-hermetic/
+?? systems/toolkit/skills/streamdeck_security_audit/
+?? systems/toolkit/skills/syncthing-security/
+?? systems/toolkit/skills/telemetry-aggregator/
+?? systems/toolkit/skills/termination_logic/
+?? systems/toolkit/skills/test-exception/
+?? systems/toolkit/skills/track_token_burn/
+?? systems/toolkit/skills/truth-engine-eval/
+?? systems/toolkit/skills/update_eval_thresholds/
+?? systems/toolkit/skills/update_sop/
+?? systems/toolkit/skills/upstream-ingestor/
+?? systems/toolkit/skills/vectorize_and_store_failures/
+?? systems/toolkit/skills/verify_eval_run/
+?? systems/toolkit/skills/version-pinion/
+?? systems/toolkit/skills/vsa-config/
+?? systems/toolkit/skills/vulnerability-scanner/
+?? systems/toolkit/skills/vulnerability_scanner/
+?? systems/toolkit/skills/zero_devops_trigger/
+?? systems/tools/
+?? systems/utilities/
+?? systems/validation/
+?? tactile-macro-keypads.md
+?? tags
+?? terraform/
+?? test-coverage-roadmap.md
+?? test-node_heartbeat.json
+?? test-reports/
+?? test-repro/
+?? test-service/
+?? testSecureWriter/
+?? test_atomic_merging/
+?? test_ledger.json
+?? test_prep.ps1
+?? test_results.txt
+?? test_skill/
+?? tests/
+?? tmp_out.txt
+?? tmp_ssh_ver.bat
+?? tooling/
+?? toolkits/
+?? tools/
+?? topological-sorter.agent
+?? trace_sentinel/
+?? traceability_ledger.json
+?? trae/
+?? transcription.txt
+?? trivy-report-cline-main.json
+?? trivy-report-contrib.json
+?? trivy-report-data-agent.json
+?? trivy-report-data.json
+?? trivy-report-fort-knox.json
+?? trivy-report-mergekit.json
+?? trivy-report-message-bus.json
+?? trivy-report-mosquitto.json
+?? trivy-report-ollama.json
+?? trivy-report-pkg-bat.json
+?? trivy-report-pkg-isrs.json
+?? trivy.exe
+?? trivy.zip
+?? truth-engine/
+?? uninstall_mariadb.ps1
+?? uninstall_memurai.ps1
+?? uninstall_postgres.ps1
+?? v8_spawner/
+?? v8_spawner_temp/
+?? vapor-dispatch-app/
+?? vector.secured.toml
+?? vector.toml
+?? verify_signature.bat
+?? vexor/
+?? vexor_config.json
+?? vexor_secure/
+?? visual_regression_poc.html
+?? visual_regression_poc.spec.js
+?? voice-agent/
+?? vram_usage.json
+?? watcher/
+?? wq_l6.txt
+?? www-email-sidecar/
+?? www-env-provisioner/
+?? www-extensions/
+?? www-omni-sync/
+?? www-project-aeternus/
+?? www-projects/
+?? www-quality-assurance/
+?? www-raf-com/
+?? www-rentafriend-prototype/
+?? www-webapp_core_v2_next/
+?? zero-dispatch/
+?? zero-frontend-stack/
+origin	. (fetch)
+origin	. (push)
+
+===== F:\dev-env-provisioner =====
+main
+## main...origin/main
+ M .dockerignore
+ M .pre-commit-config.yaml
+ M Makefile
+ M ansible/Dockerfile
+ M fleet-agent/Dockerfile
+ M fleet-api/Dockerfile
+ M fleet-api/config.py
+ M fleet-api/main.py
+ M fleet-api/models/node.py
+ M fleet-api/models/schemas.py
+ M fleet-api/routers/health.py
+ M fleet-api/routers/jobs.py
+ M fleet-api/services/redis_service.py
+ M fleet-api/tests/test_health.py
+ M fleet-api/tests/test_jobs.py
+ M fleet-api/tests/test_schemas.py
+ M fleet-cli/fleet_cli/client.py
+ M fleet-cli/fleet_cli/commands/run.py
+ M fleet-cli/tests/test_client.py
+ M fleet-cli/tests/test_run.py
+ M fleet-coordinator/Dockerfile
+ M fleet-coordinator/fleet_coordinator/main.py
+ M fleet-coordinator/fleet_coordinator/models.py
+ M fleet-coordinator/pyproject.toml
+ D fleet-ext/background.js
+ D fleet-ext/build.sh
+ D fleet-ext/icons/icon-128.png
+ D fleet-ext/icons/icon-16.png
+ D fleet-ext/icons/icon-48.png
+ D fleet-ext/manifest.json
+ D fleet-ext/popup.css
+ D fleet-ext/popup.html
+ D fleet-ext/popup.js
+ D fleet-ext/test_extension.js
+M  fleet-memory/pyproject.toml
+A  fleet-memory/tests/conftest.py
+A  fleet-memory/tests/test_chunker.py
+A  fleet-memory/tests/test_classifier.py
+A  fleet-memory/tests/test_embedder.py
+A  fleet-memory/tests/test_retriever.py
+ M fleet-sdk/src/fleet_sdk/config.py
+ D fleet-toolbar/.env.example
+ D fleet-toolbar/bunfig.toml
+ D fleet-toolbar/fleet-toolbar.service
+ D fleet-toolbar/icons/degraded.ico
+ D fleet-toolbar/icons/degraded.png
+ D fleet-toolbar/icons/healthy.ico
+ D fleet-toolbar/icons/healthy.png
+ D fleet-toolbar/icons/offline.ico
+ D fleet-toolbar/icons/offline.png
+ D fleet-toolbar/icons/unhealthy.ico
+ D fleet-toolbar/icons/unhealthy.png
+ D fleet-toolbar/install.ps1
+ D fleet-toolbar/install.sh
+ D fleet-toolbar/package.json
+ D fleet-toolbar/src/agent/lifecycle.ts
+ D fleet-toolbar/src/agent/linux-systemd.ts
+ D fleet-toolbar/src/agent/windows-process.ts
+ D fleet-toolbar/src/config.ts
+ D fleet-toolbar/src/health/health-poller.ts
+ D fleet-toolbar/src/health/state.ts
+ D fleet-toolbar/src/index.ts
+ D fleet-toolbar/src/notifications/notification-rules.ts
+ D fleet-toolbar/src/notifications/notifier.ts
+ D fleet-toolbar/src/tray/icons.ts
+ D fleet-toolbar/src/tray/menu-builder.ts
+ D fleet-toolbar/src/tray/tray-manager.ts
+ D fleet-toolbar/src/utils/logger.ts
+ D fleet-toolbar/src/utils/platform.ts
+ D fleet-toolbar/src/ws/message-types.ts
+ D fleet-toolbar/src/ws/ws-client.ts
+ D fleet-toolbar/tsconfig.json
+ D fleet-ui/Dockerfile
+ D fleet-ui/components.json
+ D fleet-ui/eslint.config.js
+ D fleet-ui/index.html
+ D fleet-ui/mock-api.js
+ D fleet-ui/nginx.conf
+ D fleet-ui/package-lock.json
+ D fleet-ui/package.json
+ D fleet-ui/postcss.config.js
+ D fleet-ui/src/App.tsx
+ D fleet-ui/src/__tests__/App.test.tsx
+ D fleet-ui/src/api/__tests__/client.test.ts
+ D fleet-ui/src/api/client.ts
+ D fleet-ui/src/api/types.ts
+ D fleet-ui/src/components/ErrorBoundary.tsx
+ D fleet-ui/src/components/Layout.tsx
+ D fleet-ui/src/components/MetricBar.tsx
+ D fleet-ui/src/components/StatusBadge.tsx
+ D fleet-ui/src/components/__tests__/ErrorBoundary.test.tsx
+ D fleet-ui/src/components/__tests__/Layout.test.tsx
+ D fleet-ui/src/components/__tests__/MetricBar.test.tsx
+ D fleet-ui/src/components/__tests__/StatusBadge.test.tsx
+ D fleet-ui/src/components/provision/NodeRow.tsx
+ D fleet-ui/src/components/provision/StepCredentials.tsx
+ D fleet-ui/src/components/provision/StepExecution.tsx
+ D fleet-ui/src/components/provision/StepInventory.tsx
+ D fleet-ui/src/components/provision/StepNetwork.tsx
+ D fleet-ui/src/components/provision/StepReview.tsx
+ D fleet-ui/src/components/provision/StepServices.tsx
+ D fleet-ui/src/components/provision/TerminalOutput.tsx
+ D fleet-ui/src/components/provision/WizardShell.tsx
+ D fleet-ui/src/components/provision/__tests__/NodeRow.test.tsx
+ D fleet-ui/src/components/provision/__tests__/StepCredentials.test.tsx
+ D fleet-ui/src/components/provision/__tests__/StepExecution.test.tsx
+ D fleet-ui/src/components/provision/__tests__/StepInventory.test.tsx
+ D fleet-ui/src/components/provision/__tests__/StepNetwork.test.tsx
+ D fleet-ui/src/components/provision/__tests__/StepReview.test.tsx
+ D fleet-ui/src/components/provision/__tests__/StepServices.test.tsx
+ D fleet-ui/src/components/provision/__tests__/TerminalOutput.test.tsx
+ D fleet-ui/src/components/provision/__tests__/WizardShell.test.tsx
+ D fleet-ui/src/components/ui/__tests__/button.test.tsx
+ D fleet-ui/src/components/ui/__tests__/card.test.tsx
+ D fleet-ui/src/components/ui/__tests__/checkbox.test.tsx
+ D fleet-ui/src/components/ui/__tests__/form.test.tsx
+ D fleet-ui/src/components/ui/__tests__/separator.test.tsx
+ D fleet-ui/src/components/ui/__tests__/switch.test.tsx
+ D fleet-ui/src/components/ui/badge.tsx
+ D fleet-ui/src/components/ui/button.tsx
+ D fleet-ui/src/components/ui/card.tsx
+ D fleet-ui/src/components/ui/checkbox.tsx
+ D fleet-ui/src/components/ui/form.tsx
+ D fleet-ui/src/components/ui/input.tsx
+ D fleet-ui/src/components/ui/label.tsx
+ D fleet-ui/src/components/ui/separator.tsx
+ D fleet-ui/src/components/ui/switch.tsx
+ D fleet-ui/src/hooks/__tests__/useWizard.test.ts
+ D fleet-ui/src/hooks/useWizard.ts
+ D fleet-ui/src/index.css
+ D fleet-ui/src/main.tsx
+ D fleet-ui/src/schemas/__tests__/provision.test.ts
+ D fleet-ui/src/schemas/provision.ts
+ D fleet-ui/src/test/fixtures.ts
+ D fleet-ui/src/test/setup.ts
+ D fleet-ui/src/views/Dashboard.tsx
+ D fleet-ui/src/views/Jobs.tsx
+ D fleet-ui/src/views/Knowledge.tsx
+ D fleet-ui/src/views/Logs.tsx
+ D fleet-ui/src/views/NAS.tsx
+ D fleet-ui/src/views/Nodes.tsx
+ D fleet-ui/src/views/Provision.tsx
+ D fleet-ui/src/views/Secrets.tsx
+ D fleet-ui/src/views/Services.tsx
+ D fleet-ui/src/views/Settings.tsx
+ D fleet-ui/src/views/Sync.tsx
+ D fleet-ui/src/views/Vapor.tsx
+ D fleet-ui/src/views/Vault.tsx
+ D fleet-ui/src/views/__tests__/Dashboard.test.tsx
+ D fleet-ui/src/views/__tests__/Jobs.test.tsx
+ D fleet-ui/src/views/__tests__/Logs.test.tsx
+ D fleet-ui/src/views/__tests__/NAS.test.tsx
+ D fleet-ui/src/views/__tests__/Nodes.test.tsx
+ D fleet-ui/src/views/__tests__/Provision.test.tsx
+ D fleet-ui/src/views/__tests__/Secrets.test.tsx
+ D fleet-ui/src/views/__tests__/Services.test.tsx
+ D fleet-ui/src/views/__tests__/Settings.test.tsx
+ D fleet-ui/src/views/__tests__/Sync.test.tsx
+ D fleet-ui/src/views/__tests__/Vault.test.tsx
+ D fleet-ui/src/vite-env.d.ts
+ D fleet-ui/tailwind.config.js
+ D fleet-ui/tsconfig.json
+ D fleet-ui/tsconfig.node.json
+ D fleet-ui/vite.config.ts
+ D fleet-ui/vitest.config.ts
+ M fleet-workers/Dockerfile
+ M fleet-workers/tasks/deploy.py
+ M fleet-workers/tests/test_deploy.py
+ M infra/.env.example
+ M infra/docker-compose.yml
+ M infra/scripts/deploy-fleet.sh
+ M syncthing/setup-syncthing.ps1
+?? ansible/playbooks/fleet-preflight.yml
+?? claude.json
+?? fleet-api/alembic/versions/003_job_idempotency_and_version.py
+?? fleet-api/services/preflight.py
+?? fleet-cli/scripts/
+?? infra/docker-compose.shared-network.yml
+?? infra/scripts/fleet-doctor.sh
+?? ruff.toml
+origin	https://github.com/raf-com/dev-env-provisioner.git (fetch)
+origin	https://github.com/raf-com/dev-env-provisioner.git (push)
+
+===== F:\apex-stack =====
+main
+## main
+ M Dockerfile
+ M README.md
+ M config/litellm_config.yaml
+ M docker/docker-compose.dev.yml
+ M docker/docker-compose.prod.yml
+ M docker/dspy-compiler/Dockerfile
+ M docker/eval/Dockerfile
+ M monad/src/core/src/lib.rs
+ M monad/src/core/target/.rustc_info.json
+ M monad/src/grpc/Cargo.lock
+ M monad/src/grpc/Cargo.toml
+ M monad/src/grpc/src/main.rs
+ M monad/src/grpc/src/server.rs
+ M monad/src/grpc/src/syscall_proxy.rs
+ M monad/src/grpc/src/transport.rs
+ M monad/src/grpc/target/.rustc_info.json
+ M monad/tests/Cargo.lock
+ M monad/tests/Cargo.toml
+ M monad/tests/target/.rustc_info.json
+ M scripts/daily-cost-report.py
+ M src/apex/adapters/fallback_dispatcher.py
+ M src/apex/adapters/recommendation_api_client.py
+ M src/apex/consensus/consensus_hub.py
+ M src/apex/consensus/model_clients.py
+ M src/apex/prometheus/__init__.py
+ M src/benchmark/src/models/providers/anthropic.py
+ M src/benchmark/src/models/providers/google.py
+ M src/benchmark/src/models/providers/openai.py
+ M src/inference/src/apex_inference/api/dependencies.py
+ M src/inference/src/apex_inference/api/middleware.py
+ M src/inference/src/apex_inference/api/service.py
+ M src/inference/src/apex_inference/config.py
+ M src/inference/src/apex_inference/events.py
+ M src/inference/src/apex_inference/telemetry/metrics_exporter.py
+?? .dockerignore
+?? .github/workflows/ci-cd.yml
+?? .github/workflows/deploy-production.yml
+?? .github/workflows/deploy-staging.yml
+?? .github/workflows/post-deployment-validation.yml
+?? .github/workflows/pre-deployment-tests.yml
+?? APEX_STACK_QA_COMPREHENSIVE_ASSESSMENT.md
+?? AWS_CONTINGENCY_PLANS.md
+?? BLOCKER_TEST_SPECIFICATIONS.md
+?? CHANGES_MADE.txt
+?? CI_CD_IMPLEMENTATION_SUMMARY.md
+?? COMPLETION_SUMMARY.txt
+?? COSE_CONTINGENCY_PLANS.md
+?? COST_TRACKING_AND_BUDGET_MONITORING.md
+?? DEPLOYMENT_CHECKLIST.md
+?? EXECUTIVE_DECISION_BRIEF.md
+?? HEALTH_CHECK_PROCEDURES.md
+?? IMMEDIATE_ACTION_CHECKLIST.md
+?? IMPLEMENTATION_COMPLETE.txt
+?? IMPLEMENTATION_REPORT.md
+?? IMPLEMENTATION_VERIFICATION.md
+?? LOAD_TEST_CONTINGENCY_PLANS.md
+?? MEMORY_API_FIX_SUMMARY.md
+?? METRICS_COLLECTION_AND_ANALYSIS.md
+?? ORCHESTRATION_SERVICE_IMPLEMENTATION.md
+?? ORGANIZATIONAL_DEPENDENCY_MAP.md
+?? P0_CONTINGENCY_PLANS_INDEX.md
+?? PHASE_1_VS_PHASE_2_DECISION_FRAMEWORK.md
+?? PRODUCTION_DEPLOYMENT_BLOCKERS_REPORT.md
+?? PRODUCTION_DEPLOYMENT_ROLLBACK_PROCEDURES.md
+?? QA_ASSESSMENT_EXECUTIVE_SUMMARY.md
+?? QA_ASSESSMENT_README.md
+?? QUICK_REFERENCE.md
+?? RATE_LIMITING_FIX_INDEX.md
+?? RATE_LIMITING_FIX_SUMMARY.md
+?? README_RATE_LIMITING_FIX.txt
+?? REDIS_PASSWORD_FIX_IMPLEMENTATION.md
+?? RISK_TRACKING_AND_ESCALATION_AUTHORITY.md
+?? SECRETS_FIX_IMPLEMENTATION_SUMMARY.txt
+?? SECRETS_FIX_INDEX.md
+?? SECRETS_QUICK_REFERENCE.md
+?? SECRETS_VAULT_FIX.md
+?? SLO_TARGETS_AND_TRACKING.md
+?? config/GITAI_DEPLOYMENT_GUIDE.md
+?? config/gitai_schema.sql
+?? docker/agent/.dockerignore
+?? docker/dspy-compiler/.dockerignore
+?? docker/eval/.dockerignore
+?? docker/orchestration/
+?? docs/ARCHITECTURE.md
+?? docs/CI_CD_WORKFLOW.md
+?? docs/DEPLOYMENT.md
+?? docs/DEPLOYMENT_APPROVAL.md
+?? docs/GITHUB_SECRETS_SETUP.md
+?? docs/IMPLEMENTATION_COMPLETE.txt
+?? docs/NETWORKING_FIX.md
+?? docs/RATE_LIMITING.md
+?? docs/TROUBLESHOOTING_CI_CD.md
+?? docs/ci-cd/
+?? docs/kb/
+?? docs/slo_completion_report.md
+?? docs/slo_definitions.md
+?? docs/slo_implementation_guide.md
+?? docs/slo_policy_and_response.md
+?? monad/COSE_IMPLEMENTATION_SUMMARY.md
+?? monad/IMPLEMENTATION_REPORT.md
+?? monad/THREADING_VIOLATION_FIX_SUMMARY.md
+?? monad/config/enclave/nitro/.dockerignore
+?? monad/docs/COSE_EXECUTIVE_BRIEF.md
+?? monad/docs/COSE_RESEARCH_REPORT.md
+?? monad/docs/IMPLEMENTATION_VERIFICATION.md
+?? monad/docs/REPLAY_CACHE_FIX_INDEX.md
+?? monad/docs/cose_implementation.md
+?? monad/docs/rate_limiter_security.md
+?? monad/docs/replay_cache_security.md
+?? monad/docs/threading_safety.md
+?? monad/src/attestation.rs
+?? monad/src/core/target/debug/.fingerprint/autocfg-b67444436f3339ac/
+?? monad/src/core/target/debug/.fingerprint/block-buffer-9d25c04ba667ec5b/
+?? monad/src/core/target/debug/.fingerprint/block-buffer-b198adeedacefe7c/
+?? monad/src/core/target/debug/.fingerprint/cfg-if-02c1fcfa729b180b/
+?? monad/src/core/target/debug/.fingerprint/cfg-if-4f7b0cf7a1111b0a/
+?? monad/src/core/target/debug/.fingerprint/ciborium-c1497a54071aae6d/
+?? monad/src/core/target/debug/.fingerprint/ciborium-ec37aac067dffc77/
+?? monad/src/core/target/debug/.fingerprint/ciborium-io-0b9b53c8e7263c3a/
+?? monad/src/core/target/debug/.fingerprint/ciborium-io-5a5f0e74b23c5555/
+?? monad/src/core/target/debug/.fingerprint/ciborium-ll-5eb6931e8aab9235/
+?? monad/src/core/target/debug/.fingerprint/ciborium-ll-f440945630977593/
+?? monad/src/core/target/debug/.fingerprint/cpufeatures-791ae9ef56c57228/
+?? monad/src/core/target/debug/.fingerprint/cpufeatures-916a0eba7c644170/
+?? monad/src/core/target/debug/.fingerprint/crypto-common-00b1b6fb703242b1/
+?? monad/src/core/target/debug/.fingerprint/crypto-common-5bd3b515bf50b4c9/
+?? monad/src/core/target/debug/.fingerprint/data-encoding-10849112e9b3a332/
+?? monad/src/core/target/debug/.fingerprint/data-encoding-9bad2fca114cdd4e/
+?? monad/src/core/target/debug/.fingerprint/digest-be36b73eaa107246/
+?? monad/src/core/target/debug/.fingerprint/digest-e1c183d6e00f17a5/
+?? monad/src/core/target/debug/.fingerprint/generic-array-4814ec2687919731/
+?? monad/src/core/target/debug/.fingerprint/generic-array-490a06e31d7c8632/
+?? monad/src/core/target/debug/.fingerprint/generic-array-832316723c94159c/
+?? monad/src/core/target/debug/.fingerprint/generic-array-f66f059b538bb827/
+?? monad/src/core/target/debug/.fingerprint/half-83991c2b2199cf25/
+?? monad/src/core/target/debug/.fingerprint/half-a5761db39a1995e7/
+?? monad/src/core/target/debug/.fingerprint/hkdf-6847ed686f355dca/
+?? monad/src/core/target/debug/.fingerprint/hkdf-8bcd0502f7dc7b24/
+?? monad/src/core/target/debug/.fingerprint/hmac-96a672946834aa86/
+?? monad/src/core/target/debug/.fingerprint/hmac-d8c4ef60e38e9a45/
+?? monad/src/core/target/debug/.fingerprint/monad-core-cca092fe75e3a1a5/
+?? monad/src/core/target/debug/.fingerprint/monad-core-d3b91d21ea3be123/
+?? monad/src/core/target/debug/.fingerprint/num-traits-0d7abf2e01ab12df/
+?? monad/src/core/target/debug/.fingerprint/num-traits-324f605294918983/
+?? monad/src/core/target/debug/.fingerprint/num-traits-687f8be80c9a038f/
+?? monad/src/core/target/debug/.fingerprint/num-traits-dd01fbe027106737/
+?? monad/src/core/target/debug/.fingerprint/proc-macro2-1e3825eae99c2f0e/
+?? monad/src/core/target/debug/.fingerprint/proc-macro2-9c5f9a7581196a70/
+?? monad/src/core/target/debug/.fingerprint/proc-macro2-a4f2d1e31cba33ee/
+?? monad/src/core/target/debug/.fingerprint/quote-00827448baf6bbdd/
+?? monad/src/core/target/debug/.fingerprint/quote-50d712ba54083881/
+?? monad/src/core/target/debug/.fingerprint/quote-fd5933fde5c396ea/
+?? monad/src/core/target/debug/.fingerprint/rmp-062157f51f86dcd6/
+?? monad/src/core/target/debug/.fingerprint/rmp-4dc3a54e848457e9/
+?? monad/src/core/target/debug/.fingerprint/rmp-serde-f59f878052caffb0/
+?? monad/src/core/target/debug/.fingerprint/rmp-serde-f94275ed09ee218b/
+?? monad/src/core/target/debug/.fingerprint/serde-a71f5b9e7a5ffd23/
+?? monad/src/core/target/debug/.fingerprint/serde-c1e382bd0163d811/
+?? monad/src/core/target/debug/.fingerprint/serde-d347237ca1d7d33f/
+?? monad/src/core/target/debug/.fingerprint/serde-fa6e8264d1889f3d/
+?? monad/src/core/target/debug/.fingerprint/serde_core-23a031272e283650/
+?? monad/src/core/target/debug/.fingerprint/serde_core-7bad27b5e746b2a1/
+?? monad/src/core/target/debug/.fingerprint/serde_core-a0ab62672a5c7d33/
+?? monad/src/core/target/debug/.fingerprint/serde_core-ccdb3be12f2b2732/
+?? monad/src/core/target/debug/.fingerprint/serde_derive-9ff674b7393d3ff5/
+?? monad/src/core/target/debug/.fingerprint/sha1-17d57caf96f9dccf/
+?? monad/src/core/target/debug/.fingerprint/sha1-fec0f6eec263b8fe/
+?? monad/src/core/target/debug/.fingerprint/sha2-48a868cf8d14f08b/
+?? monad/src/core/target/debug/.fingerprint/sha2-bcd1f4c0206b5024/
+?? monad/src/core/target/debug/.fingerprint/subtle-948e7717a3449451/
+?? monad/src/core/target/debug/.fingerprint/subtle-957cffea236b2910/
+?? monad/src/core/target/debug/.fingerprint/syn-2fc8abc81fa9421b/
+?? monad/src/core/target/debug/.fingerprint/totp-lite-8999f9ffeb39ce66/
+?? monad/src/core/target/debug/.fingerprint/totp-lite-bbc5657c33eba1bc/
+?? monad/src/core/target/debug/.fingerprint/typenum-14b8d3d671f371c0/
+?? monad/src/core/target/debug/.fingerprint/typenum-a2dc70799c28d7ee/
+?? monad/src/core/target/debug/.fingerprint/typenum-dd720cb4ca5d585d/
+?? monad/src/core/target/debug/.fingerprint/typenum-f4f75ca6e91db2fa/
+?? monad/src/core/target/debug/.fingerprint/unicode-ident-57a69b04e6792e96/
+?? monad/src/core/target/debug/.fingerprint/version_check-9c1d8cd9e79cbc95/
+?? monad/src/core/target/debug/.fingerprint/zerocopy-03fe1a9547b00ad7/
+?? monad/src/core/target/debug/.fingerprint/zerocopy-8c01e642b5eb8c1b/
+?? monad/src/core/target/debug/.fingerprint/zerocopy-b67c9c12475f9673/
+?? monad/src/core/target/debug/.fingerprint/zerocopy-d43c22a08320433d/
+?? monad/src/core/target/debug/.fingerprint/zerocopy-derive-da380cd07f0fe9f1/
+?? monad/src/core/target/debug/.fingerprint/zeroize-3b14d1187687b001/
+?? monad/src/core/target/debug/.fingerprint/zeroize-8bd0782651f84a28/
+?? monad/src/core/target/debug/.fingerprint/zeroize_derive-d70be977902a5888/
+?? monad/src/core/target/debug/deps/autocfg-b67444436f3339ac.d
+?? monad/src/core/target/debug/deps/block_buffer-9d25c04ba667ec5b.d
+?? monad/src/core/target/debug/deps/block_buffer-b198adeedacefe7c.d
+?? monad/src/core/target/debug/deps/cfg_if-02c1fcfa729b180b.d
+?? monad/src/core/target/debug/deps/cfg_if-4f7b0cf7a1111b0a.d
+?? monad/src/core/target/debug/deps/ciborium-c1497a54071aae6d.d
+?? monad/src/core/target/debug/deps/ciborium-ec37aac067dffc77.d
+?? monad/src/core/target/debug/deps/ciborium_io-0b9b53c8e7263c3a.d
+?? monad/src/core/target/debug/deps/ciborium_io-5a5f0e74b23c5555.d
+?? monad/src/core/target/debug/deps/ciborium_ll-5eb6931e8aab9235.d
+?? monad/src/core/target/debug/deps/ciborium_ll-f440945630977593.d
+?? monad/src/core/target/debug/deps/cpufeatures-791ae9ef56c57228.d
+?? monad/src/core/target/debug/deps/cpufeatures-916a0eba7c644170.d
+?? monad/src/core/target/debug/deps/crypto_common-00b1b6fb703242b1.d
+?? monad/src/core/target/debug/deps/crypto_common-5bd3b515bf50b4c9.d
+?? monad/src/core/target/debug/deps/data_encoding-10849112e9b3a332.d
+?? monad/src/core/target/debug/deps/data_encoding-9bad2fca114cdd4e.d
+?? monad/src/core/target/debug/deps/digest-be36b73eaa107246.d
+?? monad/src/core/target/debug/deps/digest-e1c183d6e00f17a5.d
+?? monad/src/core/target/debug/deps/generic_array-4814ec2687919731.d
+?? monad/src/core/target/debug/deps/generic_array-490a06e31d7c8632.d
+?? monad/src/core/target/debug/deps/half-83991c2b2199cf25.d
+?? monad/src/core/target/debug/deps/half-a5761db39a1995e7.d
+?? monad/src/core/target/debug/deps/hkdf-6847ed686f355dca.d
+?? monad/src/core/target/debug/deps/hkdf-8bcd0502f7dc7b24.d
+?? monad/src/core/target/debug/deps/hmac-96a672946834aa86.d
+?? monad/src/core/target/debug/deps/hmac-d8c4ef60e38e9a45.d
+?? monad/src/core/target/debug/deps/libautocfg-b67444436f3339ac.rlib
+?? monad/src/core/target/debug/deps/libautocfg-b67444436f3339ac.rmeta
+?? monad/src/core/target/debug/deps/libblock_buffer-9d25c04ba667ec5b.rmeta
+?? monad/src/core/target/debug/deps/libblock_buffer-b198adeedacefe7c.rlib
+?? monad/src/core/target/debug/deps/libblock_buffer-b198adeedacefe7c.rmeta
+?? monad/src/core/target/debug/deps/libcfg_if-02c1fcfa729b180b.rlib
+?? monad/src/core/target/debug/deps/libcfg_if-02c1fcfa729b180b.rmeta
+?? monad/src/core/target/debug/deps/libcfg_if-4f7b0cf7a1111b0a.rmeta
+?? monad/src/core/target/debug/deps/libciborium-c1497a54071aae6d.rmeta
+?? monad/src/core/target/debug/deps/libciborium-ec37aac067dffc77.rlib
+?? monad/src/core/target/debug/deps/libciborium-ec37aac067dffc77.rmeta
+?? monad/src/core/target/debug/deps/libciborium_io-0b9b53c8e7263c3a.rlib
+?? monad/src/core/target/debug/deps/libciborium_io-0b9b53c8e7263c3a.rmeta
+?? monad/src/core/target/debug/deps/libciborium_io-5a5f0e74b23c5555.rmeta
+?? monad/src/core/target/debug/deps/libciborium_ll-5eb6931e8aab9235.rmeta
+?? monad/src/core/target/debug/deps/libciborium_ll-f440945630977593.rlib
+?? monad/src/core/target/debug/deps/libciborium_ll-f440945630977593.rmeta
+?? monad/src/core/target/debug/deps/libcpufeatures-791ae9ef56c57228.rmeta
+?? monad/src/core/target/debug/deps/libcpufeatures-916a0eba7c644170.rlib
+?? monad/src/core/target/debug/deps/libcpufeatures-916a0eba7c644170.rmeta
+?? monad/src/core/target/debug/deps/libcrypto_common-00b1b6fb703242b1.rmeta
+?? monad/src/core/target/debug/deps/libcrypto_common-5bd3b515bf50b4c9.rlib
+?? monad/src/core/target/debug/deps/libcrypto_common-5bd3b515bf50b4c9.rmeta
+?? monad/src/core/target/debug/deps/libdata_encoding-10849112e9b3a332.rmeta
+?? monad/src/core/target/debug/deps/libdata_encoding-9bad2fca114cdd4e.rlib
+?? monad/src/core/target/debug/deps/libdata_encoding-9bad2fca114cdd4e.rmeta
+?? monad/src/core/target/debug/deps/libdigest-be36b73eaa107246.rmeta
+?? monad/src/core/target/debug/deps/libdigest-e1c183d6e00f17a5.rlib
+?? monad/src/core/target/debug/deps/libdigest-e1c183d6e00f17a5.rmeta
+?? monad/src/core/target/debug/deps/libgeneric_array-4814ec2687919731.rmeta
+?? monad/src/core/target/debug/deps/libgeneric_array-490a06e31d7c8632.rlib
+?? monad/src/core/target/debug/deps/libgeneric_array-490a06e31d7c8632.rmeta
+?? monad/src/core/target/debug/deps/libhalf-83991c2b2199cf25.rlib
+?? monad/src/core/target/debug/deps/libhalf-83991c2b2199cf25.rmeta
+?? monad/src/core/target/debug/deps/libhalf-a5761db39a1995e7.rmeta
+?? monad/src/core/target/debug/deps/libhkdf-6847ed686f355dca.rlib
+?? monad/src/core/target/debug/deps/libhkdf-6847ed686f355dca.rmeta
+?? monad/src/core/target/debug/deps/libhkdf-8bcd0502f7dc7b24.rmeta
+?? monad/src/core/target/debug/deps/libhmac-96a672946834aa86.rmeta
+?? monad/src/core/target/debug/deps/libhmac-d8c4ef60e38e9a45.rlib
+?? monad/src/core/target/debug/deps/libhmac-d8c4ef60e38e9a45.rmeta
+?? monad/src/core/target/debug/deps/libnum_traits-0d7abf2e01ab12df.rmeta
+?? monad/src/core/target/debug/deps/libnum_traits-687f8be80c9a038f.rlib
+?? monad/src/core/target/debug/deps/libnum_traits-687f8be80c9a038f.rmeta
+?? monad/src/core/target/debug/deps/libproc_macro2-9c5f9a7581196a70.rlib
+?? monad/src/core/target/debug/deps/libproc_macro2-9c5f9a7581196a70.rmeta
+?? monad/src/core/target/debug/deps/libquote-00827448baf6bbdd.rlib
+?? monad/src/core/target/debug/deps/libquote-00827448baf6bbdd.rmeta
+?? monad/src/core/target/debug/deps/librmp-062157f51f86dcd6.rlib
+?? monad/src/core/target/debug/deps/librmp-062157f51f86dcd6.rmeta
+?? monad/src/core/target/debug/deps/librmp-4dc3a54e848457e9.rmeta
+?? monad/src/core/target/debug/deps/librmp_serde-f59f878052caffb0.rlib
+?? monad/src/core/target/debug/deps/librmp_serde-f59f878052caffb0.rmeta
+?? monad/src/core/target/debug/deps/librmp_serde-f94275ed09ee218b.rmeta
+?? monad/src/core/target/debug/deps/libserde-c1e382bd0163d811.rlib
+?? monad/src/core/target/debug/deps/libserde-c1e382bd0163d811.rmeta
+?? monad/src/core/target/debug/deps/libserde-fa6e8264d1889f3d.rmeta
+?? monad/src/core/target/debug/deps/libserde_core-7bad27b5e746b2a1.rmeta
+?? monad/src/core/target/debug/deps/libserde_core-a0ab62672a5c7d33.rlib
+?? monad/src/core/target/debug/deps/libserde_core-a0ab62672a5c7d33.rmeta
+?? monad/src/core/target/debug/deps/libserde_derive-9ff674b7393d3ff5.dll.a
+?? monad/src/core/target/debug/deps/libsha1-17d57caf96f9dccf.rmeta
+?? monad/src/core/target/debug/deps/libsha1-fec0f6eec263b8fe.rlib
+?? monad/src/core/target/debug/deps/libsha1-fec0f6eec263b8fe.rmeta
+?? monad/src/core/target/debug/deps/libsha2-48a868cf8d14f08b.rlib
+?? monad/src/core/target/debug/deps/libsha2-48a868cf8d14f08b.rmeta
+?? monad/src/core/target/debug/deps/libsha2-bcd1f4c0206b5024.rmeta
+?? monad/src/core/target/debug/deps/libsubtle-948e7717a3449451.rlib
+?? monad/src/core/target/debug/deps/libsubtle-948e7717a3449451.rmeta
+?? monad/src/core/target/debug/deps/libsubtle-957cffea236b2910.rmeta
+?? monad/src/core/target/debug/deps/libsyn-2fc8abc81fa9421b.rlib
+?? monad/src/core/target/debug/deps/libsyn-2fc8abc81fa9421b.rmeta
+?? monad/src/core/target/debug/deps/libtotp_lite-8999f9ffeb39ce66.rlib
+?? monad/src/core/target/debug/deps/libtotp_lite-8999f9ffeb39ce66.rmeta
+?? monad/src/core/target/debug/deps/libtotp_lite-bbc5657c33eba1bc.rmeta
+?? monad/src/core/target/debug/deps/libtypenum-a2dc70799c28d7ee.rlib
+?? monad/src/core/target/debug/deps/libtypenum-a2dc70799c28d7ee.rmeta
+?? monad/src/core/target/debug/deps/libtypenum-dd720cb4ca5d585d.rmeta
+?? monad/src/core/target/debug/deps/libunicode_ident-57a69b04e6792e96.rlib
+?? monad/src/core/target/debug/deps/libunicode_ident-57a69b04e6792e96.rmeta
+?? monad/src/core/target/debug/deps/libversion_check-9c1d8cd9e79cbc95.rlib
+?? monad/src/core/target/debug/deps/libversion_check-9c1d8cd9e79cbc95.rmeta
+?? monad/src/core/target/debug/deps/libzerocopy-03fe1a9547b00ad7.rmeta
+?? monad/src/core/target/debug/deps/libzerocopy-d43c22a08320433d.rlib
+?? monad/src/core/target/debug/deps/libzerocopy-d43c22a08320433d.rmeta
+?? monad/src/core/target/debug/deps/libzerocopy_derive-da380cd07f0fe9f1.dll.a
+?? monad/src/core/target/debug/deps/libzeroize-3b14d1187687b001.rmeta
+?? monad/src/core/target/debug/deps/libzeroize-8bd0782651f84a28.rlib
+?? monad/src/core/target/debug/deps/libzeroize-8bd0782651f84a28.rmeta
+?? monad/src/core/target/debug/deps/libzeroize_derive-d70be977902a5888.dll.a
+?? monad/src/core/target/debug/deps/monad_core-cca092fe75e3a1a5.d
+?? monad/src/core/target/debug/deps/monad_core-d3b91d21ea3be123.d
+?? monad/src/core/target/debug/deps/num_traits-0d7abf2e01ab12df.d
+?? monad/src/core/target/debug/deps/num_traits-687f8be80c9a038f.d
+?? monad/src/core/target/debug/deps/proc_macro2-9c5f9a7581196a70.d
+?? monad/src/core/target/debug/deps/quote-00827448baf6bbdd.d
+?? monad/src/core/target/debug/deps/rmp-062157f51f86dcd6.d
+?? monad/src/core/target/debug/deps/rmp-4dc3a54e848457e9.d
+?? monad/src/core/target/debug/deps/rmp_serde-f59f878052caffb0.d
+?? monad/src/core/target/debug/deps/rmp_serde-f94275ed09ee218b.d
+?? monad/src/core/target/debug/deps/serde-c1e382bd0163d811.d
+?? monad/src/core/target/debug/deps/serde-fa6e8264d1889f3d.d
+?? monad/src/core/target/debug/deps/serde_core-7bad27b5e746b2a1.d
+?? monad/src/core/target/debug/deps/serde_core-a0ab62672a5c7d33.d
+?? monad/src/core/target/debug/deps/serde_derive-9ff674b7393d3ff5.d
+?? monad/src/core/target/debug/deps/serde_derive-9ff674b7393d3ff5.dll
+?? monad/src/core/target/debug/deps/sha1-17d57caf96f9dccf.d
+?? monad/src/core/target/debug/deps/sha1-fec0f6eec263b8fe.d
+?? monad/src/core/target/debug/deps/sha2-48a868cf8d14f08b.d
+?? monad/src/core/target/debug/deps/sha2-bcd1f4c0206b5024.d
+?? monad/src/core/target/debug/deps/subtle-948e7717a3449451.d
+?? monad/src/core/target/debug/deps/subtle-957cffea236b2910.d
+?? monad/src/core/target/debug/deps/syn-2fc8abc81fa9421b.d
+?? monad/src/core/target/debug/deps/totp_lite-8999f9ffeb39ce66.d
+?? monad/src/core/target/debug/deps/totp_lite-bbc5657c33eba1bc.d
+?? monad/src/core/target/debug/deps/typenum-a2dc70799c28d7ee.d
+?? monad/src/core/target/debug/deps/typenum-dd720cb4ca5d585d.d
+?? monad/src/core/target/debug/deps/unicode_ident-57a69b04e6792e96.d
+?? monad/src/core/target/debug/deps/version_check-9c1d8cd9e79cbc95.d
+?? monad/src/core/target/debug/deps/zerocopy-03fe1a9547b00ad7.d
+?? monad/src/core/target/debug/deps/zerocopy-d43c22a08320433d.d
+?? monad/src/core/target/debug/deps/zerocopy_derive-da380cd07f0fe9f1.d
+?? monad/src/core/target/debug/deps/zerocopy_derive-da380cd07f0fe9f1.dll
+?? monad/src/core/target/debug/deps/zeroize-3b14d1187687b001.d
+?? monad/src/core/target/debug/deps/zeroize-8bd0782651f84a28.d
+?? monad/src/core/target/debug/deps/zeroize_derive-d70be977902a5888.d
+?? monad/src/core/target/debug/deps/zeroize_derive-d70be977902a5888.dll
+?? monad/src/core/target/debug/incremental/
+?? monad/src/grpc/src/config.rs
+?? monad/src/grpc/target/debug/.fingerprint/anyhow-d1a090dd53978b31/
+?? monad/src/grpc/target/debug/.fingerprint/anyhow-ed786489784c8d3e/
+?? monad/src/grpc/target/debug/.fingerprint/anyhow-f300711b3bb85343/
+?? monad/src/grpc/target/debug/.fingerprint/atomic-waker-a00f87b4f940e9c4/
+?? monad/src/grpc/target/debug/.fingerprint/atomic-waker-c903e32d63adb2bf/
+?? monad/src/grpc/target/debug/.fingerprint/autocfg-b67444436f3339ac/
+?? monad/src/grpc/target/debug/.fingerprint/bytes-5a50463d45135b1d/
+?? monad/src/grpc/target/debug/.fingerprint/bytes-b5d675dec218edd2/
+?? monad/src/grpc/target/debug/.fingerprint/bytes-c780a4af4aeeb454/
+?? monad/src/grpc/target/debug/.fingerprint/cfg-if-02c1fcfa729b180b/
+?? monad/src/grpc/target/debug/.fingerprint/cfg-if-3b9648dea93745d9/
+?? monad/src/grpc/target/debug/.fingerprint/cfg-if-4f7b0cf7a1111b0a/
+?? monad/src/grpc/target/debug/.fingerprint/const-oid-5aab40d6d260f6e6/
+?? monad/src/grpc/target/debug/.fingerprint/cpufeatures-791ae9ef56c57228/
+?? monad/src/grpc/target/debug/.fingerprint/deranged-c6102e4d93691131/
+?? monad/src/grpc/target/debug/.fingerprint/either-96424c06321c421d/
+?? monad/src/grpc/target/debug/.fingerprint/equivalent-29c828db9aeef882/
+?? monad/src/grpc/target/debug/.fingerprint/equivalent-65ccb681e647714b/
+?? monad/src/grpc/target/debug/.fingerprint/equivalent-d87a20f483d7febf/
+?? monad/src/grpc/target/debug/.fingerprint/fastrand-0b27a85d186b3da7/
+?? monad/src/grpc/target/debug/.fingerprint/fixedbitset-59281d1e51d938b8/
+?? monad/src/grpc/target/debug/.fingerprint/fnv-05f2746511c53111/
+?? monad/src/grpc/target/debug/.fingerprint/fnv-e69834bdc0f4f255/
+?? monad/src/grpc/target/debug/.fingerprint/futures-channel-5bdcdf71e6c59ea7/
+?? monad/src/grpc/target/debug/.fingerprint/futures-channel-a5eb72a9a4cbeaa2/
+?? monad/src/grpc/target/debug/.fingerprint/futures-core-21f4cdb80befbfc1/
+?? monad/src/grpc/target/debug/.fingerprint/futures-core-78ff6f3b935d9426/
+?? monad/src/grpc/target/debug/.fingerprint/futures-io-b0f6bd50da734e35/
+?? monad/src/grpc/target/debug/.fingerprint/futures-io-de565d80e609352f/
+?? monad/src/grpc/target/debug/.fingerprint/futures-sink-28f9c47b89ad3c2d/
+?? monad/src/grpc/target/debug/.fingerprint/futures-sink-9de4dbd3508271c6/
+?? monad/src/grpc/target/debug/.fingerprint/futures-task-5acadfbb67a14115/
+?? monad/src/grpc/target/debug/.fingerprint/futures-task-69f9ac36f5a7bfe6/
+?? monad/src/grpc/target/debug/.fingerprint/generic-array-4814ec2687919731/
+?? monad/src/grpc/target/debug/.fingerprint/generic-array-832316723c94159c/
+?? monad/src/grpc/target/debug/.fingerprint/generic-array-f66f059b538bb827/
+?? monad/src/grpc/target/debug/.fingerprint/getrandom-0d5404220848236c/
+?? monad/src/grpc/target/debug/.fingerprint/getrandom-839a256ad5dcc3f6/
+?? monad/src/grpc/target/debug/.fingerprint/getrandom-9961d143d9059b86/
+?? monad/src/grpc/target/debug/.fingerprint/getrandom-af394102e899e814/
+?? monad/src/grpc/target/debug/.fingerprint/getrandom-d44e8fea687890a6/
+?? monad/src/grpc/target/debug/.fingerprint/getrandom-ddb379b587ee590f/
+?? monad/src/grpc/target/debug/.fingerprint/hashbrown-5a6407c5309a5b28/
+?? monad/src/grpc/target/debug/.fingerprint/hashbrown-a454c530c5478152/
+?? monad/src/grpc/target/debug/.fingerprint/hashbrown-f559b1d1b3ca3786/
+?? monad/src/grpc/target/debug/.fingerprint/http-afd8e1b052601dc3/
+?? monad/src/grpc/target/debug/.fingerprint/http-body-09ae3c0a66aef3e5/
+?? monad/src/grpc/target/debug/.fingerprint/http-body-e1bfe97dd0893d38/
+?? monad/src/grpc/target/debug/.fingerprint/http-body-util-aadd760ce390254a/
+?? monad/src/grpc/target/debug/.fingerprint/http-db505f9196691e92/
+?? monad/src/grpc/target/debug/.fingerprint/httparse-8a6962dedf0d5866/
+?? monad/src/grpc/target/debug/.fingerprint/httparse-d6f03e658db2a5c3/
+?? monad/src/grpc/target/debug/.fingerprint/httparse-e220eb4ce079f67f/
+?? monad/src/grpc/target/debug/.fingerprint/httpdate-109d9900f2a5ef2c/
+?? monad/src/grpc/target/debug/.fingerprint/httpdate-3d956e79cb5f097c/
+?? monad/src/grpc/target/debug/.fingerprint/indexmap-262c11f8434c716e/
+?? monad/src/grpc/target/debug/.fingerprint/indexmap-f59e76be9ac9f05d/
+?? monad/src/grpc/target/debug/.fingerprint/itertools-dc39b5c7e0f7e6e7/
+?? monad/src/grpc/target/debug/.fingerprint/itoa-6efd1b2869f4e659/
+?? monad/src/grpc/target/debug/.fingerprint/itoa-7a25aa04986b0f21/
+?? monad/src/grpc/target/debug/.fingerprint/libc-0f959292d65334c7/
+?? monad/src/grpc/target/debug/.fingerprint/libc-8d588d8b8a0fc4c6/
+?? monad/src/grpc/target/debug/.fingerprint/libc-aa6e1b6a39756e26/
+?? monad/src/grpc/target/debug/.fingerprint/memchr-093c4213e48e87e1/
+?? monad/src/grpc/target/debug/.fingerprint/memchr-b335fb957eeb3d23/
+?? monad/src/grpc/target/debug/.fingerprint/memoffset-b6e6257487fa5c08/
+?? monad/src/grpc/target/debug/.fingerprint/minimal-lexical-957ebf21ca6a7165/
+?? monad/src/grpc/target/debug/.fingerprint/mio-b2773c9d364fefe0/
+?? monad/src/grpc/target/debug/.fingerprint/nom-978864d7870b8d61/
+?? monad/src/grpc/target/debug/.fingerprint/num-conv-3489893e13e56be7/
+?? monad/src/grpc/target/debug/.fingerprint/num-conv-7c30a40dd3b531d5/
+?? monad/src/grpc/target/debug/.fingerprint/num-traits-25b3aa26f4da0cb5/
+?? monad/src/grpc/target/debug/.fingerprint/num-traits-979624933cbd65b6/
+?? monad/src/grpc/target/debug/.fingerprint/num-traits-9d5e55060f15640d/
+?? monad/src/grpc/target/debug/.fingerprint/num-traits-dd01fbe027106737/
+?? monad/src/grpc/target/debug/.fingerprint/once_cell-2d7557c9fa0f3db9/
+?? monad/src/grpc/target/debug/.fingerprint/once_cell-5ac09adf85db5a13/
+?? monad/src/grpc/target/debug/.fingerprint/once_cell-7bc6f6557a071ec7/
+?? monad/src/grpc/target/debug/.fingerprint/pin-project-lite-750a8cc93d1d362f/
+?? monad/src/grpc/target/debug/.fingerprint/pin-project-lite-8f5952c6924e037c/
+?? monad/src/grpc/target/debug/.fingerprint/powerfmt-b8e28a0a9cfd8d9f/
+?? monad/src/grpc/target/debug/.fingerprint/prettyplease-9188e0b37428b5b4/
+?? monad/src/grpc/target/debug/.fingerprint/prettyplease-ddeb29b93b114cb4/
+?? monad/src/grpc/target/debug/.fingerprint/proc-macro2-1e3825eae99c2f0e/
+?? monad/src/grpc/target/debug/.fingerprint/proc-macro2-9c5f9a7581196a70/
+?? monad/src/grpc/target/debug/.fingerprint/proc-macro2-a4f2d1e31cba33ee/
+?? monad/src/grpc/target/debug/.fingerprint/quote-00827448baf6bbdd/
+?? monad/src/grpc/target/debug/.fingerprint/quote-50d712ba54083881/
+?? monad/src/grpc/target/debug/.fingerprint/quote-fd5933fde5c396ea/
+?? monad/src/grpc/target/debug/.fingerprint/rand_core-e4358c0d3df95466/
+?? monad/src/grpc/target/debug/.fingerprint/regex-automata-4e0ee8a7fb43509a/
+?? monad/src/grpc/target/debug/.fingerprint/regex-syntax-d5b4f9c362acaaa3/
+?? monad/src/grpc/target/debug/.fingerprint/rustversion-7857cc8892b1c1a9/
+?? monad/src/grpc/target/debug/.fingerprint/serde-a71f5b9e7a5ffd23/
+?? monad/src/grpc/target/debug/.fingerprint/serde-d347237ca1d7d33f/
+?? monad/src/grpc/target/debug/.fingerprint/serde_core-4c793520d15e666f/
+?? monad/src/grpc/target/debug/.fingerprint/serde_core-799da4a8ab37fb4c/
+?? monad/src/grpc/target/debug/.fingerprint/serde_core-e7ebf3d38a55192e/
+?? monad/src/grpc/target/debug/.fingerprint/serde_core-edcafb71f525d7f9/
+?? monad/src/grpc/target/debug/.fingerprint/slab-3b7c184522b093ad/
+?? monad/src/grpc/target/debug/.fingerprint/slab-634fa25441b7c251/
+?? monad/src/grpc/target/debug/.fingerprint/smallvec-825b5cc7ce62d876/
+?? monad/src/grpc/target/debug/.fingerprint/smallvec-c3bc23d62f060543/
+?? monad/src/grpc/target/debug/.fingerprint/socket2-29a3194145581bc4/
+?? monad/src/grpc/target/debug/.fingerprint/subtle-948e7717a3449451/
+?? monad/src/grpc/target/debug/.fingerprint/subtle-957cffea236b2910/
+?? monad/src/grpc/target/debug/.fingerprint/syn-1c56ae5ac742a26b/
+?? monad/src/grpc/target/debug/.fingerprint/syn-20fc55d38a37b595/
+?? monad/src/grpc/target/debug/.fingerprint/syn-3595bc196a9b60ea/
+?? monad/src/grpc/target/debug/.fingerprint/syn-8b427e92fc2d3421/
+?? monad/src/grpc/target/debug/.fingerprint/sync_wrapper-022dfbfbf430d940/
+?? monad/src/grpc/target/debug/.fingerprint/sync_wrapper-4e88dc2e281848aa/
+?? monad/src/grpc/target/debug/.fingerprint/thiserror-b799351502e438cf/
+?? monad/src/grpc/target/debug/.fingerprint/time-core-8499916bb230bd8b/
+?? monad/src/grpc/target/debug/.fingerprint/time-core-c8ed7553df8ed28c/
+?? monad/src/grpc/target/debug/.fingerprint/time-macros-b07285df7161fd34/
+?? monad/src/grpc/target/debug/.fingerprint/tower-layer-aa136918092061b8/
+?? monad/src/grpc/target/debug/.fingerprint/tower-layer-f9e5146c9ddc8fff/
+?? monad/src/grpc/target/debug/.fingerprint/tower-service-108eeb1dca85bf3e/
+?? monad/src/grpc/target/debug/.fingerprint/tower-service-f7723e7ec065e121/
+?? monad/src/grpc/target/debug/.fingerprint/tracing-core-1cc4be71e03f6403/
+?? monad/src/grpc/target/debug/.fingerprint/tracing-core-358f1376c303f9eb/
+?? monad/src/grpc/target/debug/.fingerprint/try-lock-f56bec8b2a4e5f56/
+?? monad/src/grpc/target/debug/.fingerprint/try-lock-f95c33797b726657/
+?? monad/src/grpc/target/debug/.fingerprint/typenum-14b8d3d671f371c0/
+?? monad/src/grpc/target/debug/.fingerprint/typenum-a2dc70799c28d7ee/
+?? monad/src/grpc/target/debug/.fingerprint/typenum-dd720cb4ca5d585d/
+?? monad/src/grpc/target/debug/.fingerprint/typenum-f4f75ca6e91db2fa/
+?? monad/src/grpc/target/debug/.fingerprint/unicode-ident-57a69b04e6792e96/
+?? monad/src/grpc/target/debug/.fingerprint/unicode-xid-88a75c244b3504ea/
+?? monad/src/grpc/target/debug/.fingerprint/version_check-9c1d8cd9e79cbc95/
+?? monad/src/grpc/target/debug/.fingerprint/want-10f333c19850dd39/
+?? monad/src/grpc/target/debug/.fingerprint/want-42c6aadd01c9cddb/
+?? monad/src/grpc/target/debug/.fingerprint/windows-link-14240581f140bfc5/
+?? monad/src/grpc/target/debug/.fingerprint/windows-link-4d033cbc13cbaf35/
+?? monad/src/grpc/target/debug/.fingerprint/windows-link-affae4d123520547/
+?? monad/src/grpc/target/debug/.fingerprint/windows-sys-30424bcf7d53d5ac/
+?? monad/src/grpc/target/debug/.fingerprint/windows-sys-75d9319a99a0ccb8/
+?? monad/src/grpc/target/debug/.fingerprint/windows-sys-8f584926af5727f4/
+?? monad/src/grpc/target/debug/.fingerprint/windows-sys-e5b579492bc5b2a8/
+?? monad/src/grpc/target/debug/.fingerprint/windows_x86_64_gnu-33f7dfa816a6085f/
+?? monad/src/grpc/target/debug/.fingerprint/windows_x86_64_gnu-671954ac41e1403b/
+?? monad/src/grpc/target/debug/.fingerprint/zerocopy-8c01e642b5eb8c1b/
+?? monad/src/grpc/target/debug/.fingerprint/zerocopy-b67c9c12475f9673/
+?? monad/src/grpc/target/debug/deps/anyhow-d1a090dd53978b31.d
+?? monad/src/grpc/target/debug/deps/atomic_waker-a00f87b4f940e9c4.d
+?? monad/src/grpc/target/debug/deps/atomic_waker-c903e32d63adb2bf.d
+?? monad/src/grpc/target/debug/deps/autocfg-b67444436f3339ac.d
+?? monad/src/grpc/target/debug/deps/bytes-5a50463d45135b1d.d
+?? monad/src/grpc/target/debug/deps/bytes-b5d675dec218edd2.d
+?? monad/src/grpc/target/debug/deps/bytes-c780a4af4aeeb454.d
+?? monad/src/grpc/target/debug/deps/cfg_if-02c1fcfa729b180b.d
+?? monad/src/grpc/target/debug/deps/cfg_if-3b9648dea93745d9.d
+?? monad/src/grpc/target/debug/deps/cfg_if-4f7b0cf7a1111b0a.d
+?? monad/src/grpc/target/debug/deps/const_oid-5aab40d6d260f6e6.d
+?? monad/src/grpc/target/debug/deps/cpufeatures-791ae9ef56c57228.d
+?? monad/src/grpc/target/debug/deps/deranged-c6102e4d93691131.d
+?? monad/src/grpc/target/debug/deps/either-96424c06321c421d.d
+?? monad/src/grpc/target/debug/deps/equivalent-29c828db9aeef882.d
+?? monad/src/grpc/target/debug/deps/equivalent-65ccb681e647714b.d
+?? monad/src/grpc/target/debug/deps/equivalent-d87a20f483d7febf.d
+?? monad/src/grpc/target/debug/deps/fastrand-0b27a85d186b3da7.d
+?? monad/src/grpc/target/debug/deps/fixedbitset-59281d1e51d938b8.d
+?? monad/src/grpc/target/debug/deps/fnv-05f2746511c53111.d
+?? monad/src/grpc/target/debug/deps/fnv-e69834bdc0f4f255.d
+?? monad/src/grpc/target/debug/deps/futures_channel-5bdcdf71e6c59ea7.d
+?? monad/src/grpc/target/debug/deps/futures_channel-a5eb72a9a4cbeaa2.d
+?? monad/src/grpc/target/debug/deps/futures_core-21f4cdb80befbfc1.d
+?? monad/src/grpc/target/debug/deps/futures_core-78ff6f3b935d9426.d
+?? monad/src/grpc/target/debug/deps/futures_io-b0f6bd50da734e35.d
+?? monad/src/grpc/target/debug/deps/futures_io-de565d80e609352f.d
+?? monad/src/grpc/target/debug/deps/futures_sink-28f9c47b89ad3c2d.d
+?? monad/src/grpc/target/debug/deps/futures_sink-9de4dbd3508271c6.d
+?? monad/src/grpc/target/debug/deps/futures_task-5acadfbb67a14115.d
+?? monad/src/grpc/target/debug/deps/futures_task-69f9ac36f5a7bfe6.d
+?? monad/src/grpc/target/debug/deps/generic_array-4814ec2687919731.d
+?? monad/src/grpc/target/debug/deps/getrandom-0d5404220848236c.d
+?? monad/src/grpc/target/debug/deps/getrandom-839a256ad5dcc3f6.d
+?? monad/src/grpc/target/debug/deps/getrandom-9961d143d9059b86.d
+?? monad/src/grpc/target/debug/deps/getrandom-9961d143d9059b86.getrandom.4f09ac66fb9201c6-cgu.0.rcgu.o
+?? monad/src/grpc/target/debug/deps/getrandom-ddb379b587ee590f.d
+?? monad/src/grpc/target/debug/deps/getrandom-ddb379b587ee590f.getrandom.be9288d56c553970-cgu.0.rcgu.o
+?? monad/src/grpc/target/debug/deps/hashbrown-5a6407c5309a5b28.d
+?? monad/src/grpc/target/debug/deps/hashbrown-a454c530c5478152.d
+?? monad/src/grpc/target/debug/deps/hashbrown-f559b1d1b3ca3786.d
+?? monad/src/grpc/target/debug/deps/http-afd8e1b052601dc3.d
+?? monad/src/grpc/target/debug/deps/http-db505f9196691e92.d
+?? monad/src/grpc/target/debug/deps/http_body-09ae3c0a66aef3e5.d
+?? monad/src/grpc/target/debug/deps/http_body-e1bfe97dd0893d38.d
+?? monad/src/grpc/target/debug/deps/http_body_util-aadd760ce390254a.d
+?? monad/src/grpc/target/debug/deps/httparse-e220eb4ce079f67f.d
+?? monad/src/grpc/target/debug/deps/httpdate-109d9900f2a5ef2c.d
+?? monad/src/grpc/target/debug/deps/httpdate-3d956e79cb5f097c.d
+?? monad/src/grpc/target/debug/deps/indexmap-262c11f8434c716e.d
+?? monad/src/grpc/target/debug/deps/indexmap-f59e76be9ac9f05d.d
+?? monad/src/grpc/target/debug/deps/itertools-dc39b5c7e0f7e6e7.d
+?? monad/src/grpc/target/debug/deps/itoa-6efd1b2869f4e659.d
+?? monad/src/grpc/target/debug/deps/itoa-7a25aa04986b0f21.d
+?? monad/src/grpc/target/debug/deps/libanyhow-d1a090dd53978b31.rlib
+?? monad/src/grpc/target/debug/deps/libanyhow-d1a090dd53978b31.rmeta
+?? monad/src/grpc/target/debug/deps/libatomic_waker-a00f87b4f940e9c4.rlib
+?? monad/src/grpc/target/debug/deps/libatomic_waker-a00f87b4f940e9c4.rmeta
+?? monad/src/grpc/target/debug/deps/libatomic_waker-c903e32d63adb2bf.rmeta
+?? monad/src/grpc/target/debug/deps/libautocfg-b67444436f3339ac.rlib
+?? monad/src/grpc/target/debug/deps/libautocfg-b67444436f3339ac.rmeta
+?? monad/src/grpc/target/debug/deps/libbytes-5a50463d45135b1d.rmeta
+?? monad/src/grpc/target/debug/deps/libbytes-b5d675dec218edd2.rlib
+?? monad/src/grpc/target/debug/deps/libbytes-b5d675dec218edd2.rmeta
+?? monad/src/grpc/target/debug/deps/libbytes-c780a4af4aeeb454.rlib
+?? monad/src/grpc/target/debug/deps/libbytes-c780a4af4aeeb454.rmeta
+?? monad/src/grpc/target/debug/deps/libc-0f959292d65334c7.d
+?? monad/src/grpc/target/debug/deps/libcfg_if-02c1fcfa729b180b.rlib
+?? monad/src/grpc/target/debug/deps/libcfg_if-02c1fcfa729b180b.rmeta
+?? monad/src/grpc/target/debug/deps/libcfg_if-3b9648dea93745d9.rlib
+?? monad/src/grpc/target/debug/deps/libcfg_if-3b9648dea93745d9.rmeta
+?? monad/src/grpc/target/debug/deps/libcfg_if-4f7b0cf7a1111b0a.rmeta
+?? monad/src/grpc/target/debug/deps/libconst_oid-5aab40d6d260f6e6.rmeta
+?? monad/src/grpc/target/debug/deps/libcpufeatures-791ae9ef56c57228.rmeta
+?? monad/src/grpc/target/debug/deps/libderanged-c6102e4d93691131.rmeta
+?? monad/src/grpc/target/debug/deps/libeither-96424c06321c421d.rlib
+?? monad/src/grpc/target/debug/deps/libeither-96424c06321c421d.rmeta
+?? monad/src/grpc/target/debug/deps/libequivalent-29c828db9aeef882.rlib
+?? monad/src/grpc/target/debug/deps/libequivalent-29c828db9aeef882.rmeta
+?? monad/src/grpc/target/debug/deps/libequivalent-65ccb681e647714b.rmeta
+?? monad/src/grpc/target/debug/deps/libequivalent-d87a20f483d7febf.rlib
+?? monad/src/grpc/target/debug/deps/libequivalent-d87a20f483d7febf.rmeta
+?? monad/src/grpc/target/debug/deps/libfastrand-0b27a85d186b3da7.rlib
+?? monad/src/grpc/target/debug/deps/libfastrand-0b27a85d186b3da7.rmeta
+?? monad/src/grpc/target/debug/deps/libfixedbitset-59281d1e51d938b8.rlib
+?? monad/src/grpc/target/debug/deps/libfixedbitset-59281d1e51d938b8.rmeta
+?? monad/src/grpc/target/debug/deps/libfnv-05f2746511c53111.rmeta
+?? monad/src/grpc/target/debug/deps/libfnv-e69834bdc0f4f255.rlib
+?? monad/src/grpc/target/debug/deps/libfnv-e69834bdc0f4f255.rmeta
+?? monad/src/grpc/target/debug/deps/libfutures_channel-5bdcdf71e6c59ea7.rlib
+?? monad/src/grpc/target/debug/deps/libfutures_channel-5bdcdf71e6c59ea7.rmeta
+?? monad/src/grpc/target/debug/deps/libfutures_channel-a5eb72a9a4cbeaa2.rmeta
+?? monad/src/grpc/target/debug/deps/libfutures_core-21f4cdb80befbfc1.rmeta
+?? monad/src/grpc/target/debug/deps/libfutures_core-78ff6f3b935d9426.rlib
+?? monad/src/grpc/target/debug/deps/libfutures_core-78ff6f3b935d9426.rmeta
+?? monad/src/grpc/target/debug/deps/libfutures_io-b0f6bd50da734e35.rlib
+?? monad/src/grpc/target/debug/deps/libfutures_io-b0f6bd50da734e35.rmeta
+?? monad/src/grpc/target/debug/deps/libfutures_io-de565d80e609352f.rmeta
+?? monad/src/grpc/target/debug/deps/libfutures_sink-28f9c47b89ad3c2d.rlib
+?? monad/src/grpc/target/debug/deps/libfutures_sink-28f9c47b89ad3c2d.rmeta
+?? monad/src/grpc/target/debug/deps/libfutures_sink-9de4dbd3508271c6.rmeta
+?? monad/src/grpc/target/debug/deps/libfutures_task-5acadfbb67a14115.rlib
+?? monad/src/grpc/target/debug/deps/libfutures_task-5acadfbb67a14115.rmeta
+?? monad/src/grpc/target/debug/deps/libfutures_task-69f9ac36f5a7bfe6.rmeta
+?? monad/src/grpc/target/debug/deps/libgeneric_array-4814ec2687919731.rmeta
+?? monad/src/grpc/target/debug/deps/libgetrandom-0d5404220848236c.rlib
+?? monad/src/grpc/target/debug/deps/libgetrandom-0d5404220848236c.rmeta
+?? monad/src/grpc/target/debug/deps/libgetrandom-839a256ad5dcc3f6.rmeta
+?? monad/src/grpc/target/debug/deps/libgetrandom-9961d143d9059b86.rmeta
+?? monad/src/grpc/target/debug/deps/libgetrandom-ddb379b587ee590f.rmeta
+?? monad/src/grpc/target/debug/deps/libhashbrown-5a6407c5309a5b28.rmeta
+?? monad/src/grpc/target/debug/deps/libhashbrown-a454c530c5478152.rlib
+?? monad/src/grpc/target/debug/deps/libhashbrown-a454c530c5478152.rmeta
+?? monad/src/grpc/target/debug/deps/libhashbrown-f559b1d1b3ca3786.rlib
+?? monad/src/grpc/target/debug/deps/libhashbrown-f559b1d1b3ca3786.rmeta
+?? monad/src/grpc/target/debug/deps/libhttp-afd8e1b052601dc3.rmeta
+?? monad/src/grpc/target/debug/deps/libhttp-db505f9196691e92.rlib
+?? monad/src/grpc/target/debug/deps/libhttp-db505f9196691e92.rmeta
+?? monad/src/grpc/target/debug/deps/libhttp_body-09ae3c0a66aef3e5.rmeta
+?? monad/src/grpc/target/debug/deps/libhttp_body-e1bfe97dd0893d38.rlib
+?? monad/src/grpc/target/debug/deps/libhttp_body-e1bfe97dd0893d38.rmeta
+?? monad/src/grpc/target/debug/deps/libhttp_body_util-aadd760ce390254a.rmeta
+?? monad/src/grpc/target/debug/deps/libhttparse-e220eb4ce079f67f.rmeta
+?? monad/src/grpc/target/debug/deps/libhttpdate-109d9900f2a5ef2c.rlib
+?? monad/src/grpc/target/debug/deps/libhttpdate-109d9900f2a5ef2c.rmeta
+?? monad/src/grpc/target/debug/deps/libhttpdate-3d956e79cb5f097c.rmeta
+?? monad/src/grpc/target/debug/deps/libindexmap-262c11f8434c716e.rlib
+?? monad/src/grpc/target/debug/deps/libindexmap-262c11f8434c716e.rmeta
+?? monad/src/grpc/target/debug/deps/libindexmap-f59e76be9ac9f05d.rmeta
+?? monad/src/grpc/target/debug/deps/libitertools-dc39b5c7e0f7e6e7.rlib
+?? monad/src/grpc/target/debug/deps/libitertools-dc39b5c7e0f7e6e7.rmeta
+?? monad/src/grpc/target/debug/deps/libitoa-6efd1b2869f4e659.rmeta
+?? monad/src/grpc/target/debug/deps/libitoa-7a25aa04986b0f21.rlib
+?? monad/src/grpc/target/debug/deps/libitoa-7a25aa04986b0f21.rmeta
+?? monad/src/grpc/target/debug/deps/liblibc-0f959292d65334c7.rmeta
+?? monad/src/grpc/target/debug/deps/libmemchr-093c4213e48e87e1.rmeta
+?? monad/src/grpc/target/debug/deps/libmemchr-b335fb957eeb3d23.rlib
+?? monad/src/grpc/target/debug/deps/libmemchr-b335fb957eeb3d23.rmeta
+?? monad/src/grpc/target/debug/deps/libminimal_lexical-957ebf21ca6a7165.rmeta
+?? monad/src/grpc/target/debug/deps/libmio-b2773c9d364fefe0.rlib
+?? monad/src/grpc/target/debug/deps/libmio-b2773c9d364fefe0.rmeta
+?? monad/src/grpc/target/debug/deps/libnom-978864d7870b8d61.rmeta
+?? monad/src/grpc/target/debug/deps/libnum_conv-3489893e13e56be7.rlib
+?? monad/src/grpc/target/debug/deps/libnum_conv-3489893e13e56be7.rmeta
+?? monad/src/grpc/target/debug/deps/libnum_conv-7c30a40dd3b531d5.rmeta
+?? monad/src/grpc/target/debug/deps/libnum_traits-25b3aa26f4da0cb5.rmeta
+?? monad/src/grpc/target/debug/deps/libonce_cell-2d7557c9fa0f3db9.rlib
+?? monad/src/grpc/target/debug/deps/libonce_cell-2d7557c9fa0f3db9.rmeta
+?? monad/src/grpc/target/debug/deps/libonce_cell-5ac09adf85db5a13.rlib
+?? monad/src/grpc/target/debug/deps/libonce_cell-5ac09adf85db5a13.rmeta
+?? monad/src/grpc/target/debug/deps/libonce_cell-7bc6f6557a071ec7.rmeta
+?? monad/src/grpc/target/debug/deps/libpin_project_lite-750a8cc93d1d362f.rmeta
+?? monad/src/grpc/target/debug/deps/libpin_project_lite-8f5952c6924e037c.rlib
+?? monad/src/grpc/target/debug/deps/libpin_project_lite-8f5952c6924e037c.rmeta
+?? monad/src/grpc/target/debug/deps/libpowerfmt-b8e28a0a9cfd8d9f.rmeta
+?? monad/src/grpc/target/debug/deps/libproc_macro2-9c5f9a7581196a70.rlib
+?? monad/src/grpc/target/debug/deps/libproc_macro2-9c5f9a7581196a70.rmeta
+?? monad/src/grpc/target/debug/deps/libquote-00827448baf6bbdd.rlib
+?? monad/src/grpc/target/debug/deps/libquote-00827448baf6bbdd.rmeta
+?? monad/src/grpc/target/debug/deps/librand_core-e4358c0d3df95466.rmeta
+?? monad/src/grpc/target/debug/deps/libregex_automata-4e0ee8a7fb43509a.rlib
+?? monad/src/grpc/target/debug/deps/libregex_automata-4e0ee8a7fb43509a.rmeta
+?? monad/src/grpc/target/debug/deps/libregex_syntax-d5b4f9c362acaaa3.rlib
+?? monad/src/grpc/target/debug/deps/libregex_syntax-d5b4f9c362acaaa3.rmeta
+?? monad/src/grpc/target/debug/deps/libserde_core-4c793520d15e666f.rlib
+?? monad/src/grpc/target/debug/deps/libserde_core-4c793520d15e666f.rmeta
+?? monad/src/grpc/target/debug/deps/libserde_core-799da4a8ab37fb4c.rmeta
+?? monad/src/grpc/target/debug/deps/libslab-3b7c184522b093ad.rlib
+?? monad/src/grpc/target/debug/deps/libslab-3b7c184522b093ad.rmeta
+?? monad/src/grpc/target/debug/deps/libslab-634fa25441b7c251.rmeta
+?? monad/src/grpc/target/debug/deps/libsmallvec-825b5cc7ce62d876.rlib
+?? monad/src/grpc/target/debug/deps/libsmallvec-825b5cc7ce62d876.rmeta
+?? monad/src/grpc/target/debug/deps/libsmallvec-c3bc23d62f060543.rmeta
+?? monad/src/grpc/target/debug/deps/libsocket2-29a3194145581bc4.rlib
+?? monad/src/grpc/target/debug/deps/libsocket2-29a3194145581bc4.rmeta
+?? monad/src/grpc/target/debug/deps/libsubtle-948e7717a3449451.rlib
+?? monad/src/grpc/target/debug/deps/libsubtle-948e7717a3449451.rmeta
+?? monad/src/grpc/target/debug/deps/libsubtle-957cffea236b2910.rmeta
+?? monad/src/grpc/target/debug/deps/libsyn-20fc55d38a37b595.rlib
+?? monad/src/grpc/target/debug/deps/libsyn-20fc55d38a37b595.rmeta
+?? monad/src/grpc/target/debug/deps/libsyn-3595bc196a9b60ea.rlib
+?? monad/src/grpc/target/debug/deps/libsyn-3595bc196a9b60ea.rmeta
+?? monad/src/grpc/target/debug/deps/libsync_wrapper-022dfbfbf430d940.rlib
+?? monad/src/grpc/target/debug/deps/libsync_wrapper-022dfbfbf430d940.rmeta
+?? monad/src/grpc/target/debug/deps/libsync_wrapper-4e88dc2e281848aa.rmeta
+?? monad/src/grpc/target/debug/deps/libtime_core-8499916bb230bd8b.rmeta
+?? monad/src/grpc/target/debug/deps/libtime_core-c8ed7553df8ed28c.rlib
+?? monad/src/grpc/target/debug/deps/libtime_core-c8ed7553df8ed28c.rmeta
+?? monad/src/grpc/target/debug/deps/libtime_macros-b07285df7161fd34.dll.a
+?? monad/src/grpc/target/debug/deps/libtower_layer-aa136918092061b8.rlib
+?? monad/src/grpc/target/debug/deps/libtower_layer-aa136918092061b8.rmeta
+?? monad/src/grpc/target/debug/deps/libtower_layer-f9e5146c9ddc8fff.rmeta
+?? monad/src/grpc/target/debug/deps/libtower_service-108eeb1dca85bf3e.rmeta
+?? monad/src/grpc/target/debug/deps/libtower_service-f7723e7ec065e121.rlib
+?? monad/src/grpc/target/debug/deps/libtower_service-f7723e7ec065e121.rmeta
+?? monad/src/grpc/target/debug/deps/libtracing_core-1cc4be71e03f6403.rlib
+?? monad/src/grpc/target/debug/deps/libtracing_core-1cc4be71e03f6403.rmeta
+?? monad/src/grpc/target/debug/deps/libtracing_core-358f1376c303f9eb.rmeta
+?? monad/src/grpc/target/debug/deps/libtry_lock-f56bec8b2a4e5f56.rmeta
+?? monad/src/grpc/target/debug/deps/libtry_lock-f95c33797b726657.rlib
+?? monad/src/grpc/target/debug/deps/libtry_lock-f95c33797b726657.rmeta
+?? monad/src/grpc/target/debug/deps/libtypenum-a2dc70799c28d7ee.rlib
+?? monad/src/grpc/target/debug/deps/libtypenum-a2dc70799c28d7ee.rmeta
+?? monad/src/grpc/target/debug/deps/libtypenum-dd720cb4ca5d585d.rmeta
+?? monad/src/grpc/target/debug/deps/libunicode_ident-57a69b04e6792e96.rlib
+?? monad/src/grpc/target/debug/deps/libunicode_ident-57a69b04e6792e96.rmeta
+?? monad/src/grpc/target/debug/deps/libunicode_xid-88a75c244b3504ea.rlib
+?? monad/src/grpc/target/debug/deps/libunicode_xid-88a75c244b3504ea.rmeta
+?? monad/src/grpc/target/debug/deps/libversion_check-9c1d8cd9e79cbc95.rlib
+?? monad/src/grpc/target/debug/deps/libversion_check-9c1d8cd9e79cbc95.rmeta
+?? monad/src/grpc/target/debug/deps/libwant-10f333c19850dd39.rmeta
+?? monad/src/grpc/target/debug/deps/libwant-42c6aadd01c9cddb.rlib
+?? monad/src/grpc/target/debug/deps/libwant-42c6aadd01c9cddb.rmeta
+?? monad/src/grpc/target/debug/deps/libwindows_link-14240581f140bfc5.rlib
+?? monad/src/grpc/target/debug/deps/libwindows_link-14240581f140bfc5.rmeta
+?? monad/src/grpc/target/debug/deps/libwindows_link-4d033cbc13cbaf35.rmeta
+?? monad/src/grpc/target/debug/deps/libwindows_link-affae4d123520547.rlib
+?? monad/src/grpc/target/debug/deps/libwindows_link-affae4d123520547.rmeta
+?? monad/src/grpc/target/debug/deps/libwindows_sys-30424bcf7d53d5ac.rmeta
+?? monad/src/grpc/target/debug/deps/libwindows_sys-75d9319a99a0ccb8.rmeta
+?? monad/src/grpc/target/debug/deps/libwindows_sys-8f584926af5727f4.rmeta
+?? monad/src/grpc/target/debug/deps/libwindows_sys-e5b579492bc5b2a8.rmeta
+?? monad/src/grpc/target/debug/deps/memchr-093c4213e48e87e1.d
+?? monad/src/grpc/target/debug/deps/memchr-b335fb957eeb3d23.d
+?? monad/src/grpc/target/debug/deps/minimal_lexical-957ebf21ca6a7165.d
+?? monad/src/grpc/target/debug/deps/mio-b2773c9d364fefe0.d
+?? monad/src/grpc/target/debug/deps/nom-978864d7870b8d61.d
+?? monad/src/grpc/target/debug/deps/num_conv-3489893e13e56be7.d
+?? monad/src/grpc/target/debug/deps/num_conv-7c30a40dd3b531d5.d
+?? monad/src/grpc/target/debug/deps/num_traits-25b3aa26f4da0cb5.d
+?? monad/src/grpc/target/debug/deps/once_cell-2d7557c9fa0f3db9.d
+?? monad/src/grpc/target/debug/deps/once_cell-5ac09adf85db5a13.d
+?? monad/src/grpc/target/debug/deps/once_cell-7bc6f6557a071ec7.d
+?? monad/src/grpc/target/debug/deps/pin_project_lite-750a8cc93d1d362f.d
+?? monad/src/grpc/target/debug/deps/pin_project_lite-8f5952c6924e037c.d
+?? monad/src/grpc/target/debug/deps/powerfmt-b8e28a0a9cfd8d9f.d
+?? monad/src/grpc/target/debug/deps/proc_macro2-9c5f9a7581196a70.d
+?? monad/src/grpc/target/debug/deps/quote-00827448baf6bbdd.d
+?? monad/src/grpc/target/debug/deps/rand_core-e4358c0d3df95466.d
+?? monad/src/grpc/target/debug/deps/regex_automata-4e0ee8a7fb43509a.d
+?? monad/src/grpc/target/debug/deps/regex_syntax-d5b4f9c362acaaa3.d
+?? monad/src/grpc/target/debug/deps/serde_core-4c793520d15e666f.d
+?? monad/src/grpc/target/debug/deps/serde_core-799da4a8ab37fb4c.d
+?? monad/src/grpc/target/debug/deps/slab-3b7c184522b093ad.d
+?? monad/src/grpc/target/debug/deps/slab-634fa25441b7c251.d
+?? monad/src/grpc/target/debug/deps/smallvec-825b5cc7ce62d876.d
+?? monad/src/grpc/target/debug/deps/smallvec-c3bc23d62f060543.d
+?? monad/src/grpc/target/debug/deps/socket2-29a3194145581bc4.d
+?? monad/src/grpc/target/debug/deps/subtle-948e7717a3449451.d
+?? monad/src/grpc/target/debug/deps/subtle-957cffea236b2910.d
+?? monad/src/grpc/target/debug/deps/syn-20fc55d38a37b595.d
+?? monad/src/grpc/target/debug/deps/syn-3595bc196a9b60ea.d
+?? monad/src/grpc/target/debug/deps/sync_wrapper-022dfbfbf430d940.d
+?? monad/src/grpc/target/debug/deps/sync_wrapper-4e88dc2e281848aa.d
+?? monad/src/grpc/target/debug/deps/time_core-8499916bb230bd8b.d
+?? monad/src/grpc/target/debug/deps/time_core-c8ed7553df8ed28c.d
+?? monad/src/grpc/target/debug/deps/time_macros-b07285df7161fd34.d
+?? monad/src/grpc/target/debug/deps/time_macros-b07285df7161fd34.dll
+?? monad/src/grpc/target/debug/deps/tower_layer-aa136918092061b8.d
+?? monad/src/grpc/target/debug/deps/tower_layer-f9e5146c9ddc8fff.d
+?? monad/src/grpc/target/debug/deps/tower_service-108eeb1dca85bf3e.d
+?? monad/src/grpc/target/debug/deps/tower_service-f7723e7ec065e121.d
+?? monad/src/grpc/target/debug/deps/tracing_core-1cc4be71e03f6403.d
+?? monad/src/grpc/target/debug/deps/tracing_core-358f1376c303f9eb.d
+?? monad/src/grpc/target/debug/deps/try_lock-f56bec8b2a4e5f56.d
+?? monad/src/grpc/target/debug/deps/try_lock-f95c33797b726657.d
+?? monad/src/grpc/target/debug/deps/typenum-a2dc70799c28d7ee.d
+?? monad/src/grpc/target/debug/deps/typenum-dd720cb4ca5d585d.d
+?? monad/src/grpc/target/debug/deps/unicode_ident-57a69b04e6792e96.d
+?? monad/src/grpc/target/debug/deps/unicode_xid-88a75c244b3504ea.d
+?? monad/src/grpc/target/debug/deps/version_check-9c1d8cd9e79cbc95.d
+?? monad/src/grpc/target/debug/deps/want-10f333c19850dd39.d
+?? monad/src/grpc/target/debug/deps/want-42c6aadd01c9cddb.d
+?? monad/src/grpc/target/debug/deps/windows_link-14240581f140bfc5.d
+?? monad/src/grpc/target/debug/deps/windows_link-4d033cbc13cbaf35.d
+?? monad/src/grpc/target/debug/deps/windows_link-affae4d123520547.d
+?? monad/src/grpc/target/debug/deps/windows_sys-30424bcf7d53d5ac.d
+?? monad/src/grpc/target/debug/deps/windows_sys-30424bcf7d53d5ac.windows_sys.d08ceb9f2a7198b1-cgu.0.rcgu.o
+?? monad/src/grpc/target/debug/deps/windows_sys-75d9319a99a0ccb8.d
+?? monad/src/grpc/target/debug/deps/windows_sys-8f584926af5727f4.d
+?? monad/src/grpc/target/debug/deps/windows_sys-8f584926af5727f4.windows_sys.1f40abc3e240d9de-cgu.0.rcgu.o
+?? monad/src/grpc/target/debug/deps/windows_sys-e5b579492bc5b2a8.d
+?? monad/src/grpc/target/debug/deps/windows_sys-e5b579492bc5b2a8.windows_sys.6c3ddcfd0f01933d-cgu.0.rcgu.o
+?? monad/src/grpc/target/debug/deps/windows_sys-e5b579492bc5b2a8.windows_sys.6c3ddcfd0f01933d-cgu.1.rcgu.o
+?? monad/src/grpc/target/debug/deps/windows_sys-e5b579492bc5b2a8.windows_sys.6c3ddcfd0f01933d-cgu.2.rcgu.o
+?? monad/src/grpc/target/debug/deps/windows_sys-e5b579492bc5b2a8.windows_sys.6c3ddcfd0f01933d-cgu.3.rcgu.o
+?? monad/src/grpc/target/debug/deps/windows_sys-e5b579492bc5b2a8.windows_sys.6c3ddcfd0f01933d-cgu.4.rcgu.o
+?? monad/src/grpc/target/debug/deps/windows_sys-e5b579492bc5b2a8.windows_sys.6c3ddcfd0f01933d-cgu.5.rcgu.o
+?? monad/src/grpc/tests/
+?? monad/tests/attestation_tests.rs
+?? monad/tests/rate_limiter_fuzz_tests.rs
+?? monad/tests/rate_limiter_load_tests.rs
+?? monad/tests/replay_cache_tests.rs
+?? monad/tests/target/debug/.fingerprint/ahash-b4f9f2fada182f16/
+?? monad/tests/target/debug/.fingerprint/anyhow-3f9e8d1f3189f86e/
+?? monad/tests/target/debug/.fingerprint/anyhow-f300711b3bb85343/
+?? monad/tests/target/debug/.fingerprint/autocfg-b67444436f3339ac/
+?? monad/tests/target/debug/.fingerprint/base64ct-67bdeba309ce8d51/
+?? monad/tests/target/debug/.fingerprint/bitflags-7bd2907bdbbadc0f/
+?? monad/tests/target/debug/.fingerprint/bytes-b5d675dec218edd2/
+?? monad/tests/target/debug/.fingerprint/cfg-if-02c1fcfa729b180b/
+?? monad/tests/target/debug/.fingerprint/cranelift-codegen-shared-952bcc47d18bde5b/
+?? monad/tests/target/debug/.fingerprint/cranelift-isle-a3a441341d99f24f/
+?? monad/tests/target/debug/.fingerprint/crossbeam-utils-d1af2a2f2c95bf4c/
+?? monad/tests/target/debug/.fingerprint/either-5cf753efac75c631/
+?? monad/tests/target/debug/.fingerprint/equivalent-d87a20f483d7febf/
+?? monad/tests/target/debug/.fingerprint/find-msvc-tools-851ebabaa5b44302/
+?? monad/tests/target/debug/.fingerprint/futures-core-78ff6f3b935d9426/
+?? monad/tests/target/debug/.fingerprint/futures-task-cd170cf76863114d/
+?? monad/tests/target/debug/.fingerprint/generic-array-832316723c94159c/
+?? monad/tests/target/debug/.fingerprint/getrandom-0d5404220848236c/
+?? monad/tests/target/debug/.fingerprint/getrandom-9205437e090f5d9b/
+?? monad/tests/target/debug/.fingerprint/getrandom-a137c388c4a406ee/
+?? monad/tests/target/debug/.fingerprint/getrandom-e027c35838130574/
+?? monad/tests/target/debug/.fingerprint/hashbrown-a454c530c5478152/
+?? monad/tests/target/debug/.fingerprint/http-db505f9196691e92/
+?? monad/tests/target/debug/.fingerprint/itoa-7a25aa04986b0f21/
+?? monad/tests/target/debug/.fingerprint/log-7f475765d27903c2/
+?? monad/tests/target/debug/.fingerprint/memchr-b335fb957eeb3d23/
+?? monad/tests/target/debug/.fingerprint/num-traits-9d5e55060f15640d/
+?? monad/tests/target/debug/.fingerprint/once_cell-5ac09adf85db5a13/
+?? monad/tests/target/debug/.fingerprint/pin-project-lite-8f5952c6924e037c/
+?? monad/tests/target/debug/.fingerprint/powerfmt-f40ea2a6b81a3068/
+?? monad/tests/target/debug/.fingerprint/proc-macro2-1e3825eae99c2f0e/
+?? monad/tests/target/debug/.fingerprint/proc-macro2-a4f2d1e31cba33ee/
+?? monad/tests/target/debug/.fingerprint/quote-50d712ba54083881/
+?? monad/tests/target/debug/.fingerprint/quote-fd5933fde5c396ea/
+?? monad/tests/target/debug/.fingerprint/rand_core-c17265ab344fc9db/
+?? monad/tests/target/debug/.fingerprint/serde-a71f5b9e7a5ffd23/
+?? monad/tests/target/debug/.fingerprint/serde-d347237ca1d7d33f/
+?? monad/tests/target/debug/.fingerprint/serde_core-23a031272e283650/
+?? monad/tests/target/debug/.fingerprint/serde_core-a0ab62672a5c7d33/
+?? monad/tests/target/debug/.fingerprint/serde_core-ccdb3be12f2b2732/
+?? monad/tests/target/debug/.fingerprint/serde_json-96f0c728c2150993/
+?? monad/tests/target/debug/.fingerprint/serde_json-b747f10e0ed7dc8b/
+?? monad/tests/target/debug/.fingerprint/shlex-ccbf9bee3a5d4d6a/
+?? monad/tests/target/debug/.fingerprint/slab-3b7c184522b093ad/
+?? monad/tests/target/debug/.fingerprint/subtle-56ef170ece983b2e/
+?? monad/tests/target/debug/.fingerprint/target-lexicon-1eb62cbbd5c8a15b/
+?? monad/tests/target/debug/.fingerprint/thiserror-3acfaf220e8ea0ef/
+?? monad/tests/target/debug/.fingerprint/thiserror-b799351502e438cf/
+?? monad/tests/target/debug/.fingerprint/typenum-14b8d3d671f371c0/
+?? monad/tests/target/debug/.fingerprint/typenum-f4f75ca6e91db2fa/
+?? monad/tests/target/debug/.fingerprint/unicode-ident-57a69b04e6792e96/
+?? monad/tests/target/debug/.fingerprint/version_check-9c1d8cd9e79cbc95/
+?? monad/tests/target/debug/.fingerprint/windows-link-14240581f140bfc5/
+?? monad/tests/target/debug/.fingerprint/windows-sys-6e5fe022c03248a6/
+?? monad/tests/target/debug/.fingerprint/windows_x86_64_gnu-33f7dfa816a6085f/
+?? monad/tests/target/debug/.fingerprint/windows_x86_64_gnu-671954ac41e1403b/
+?? monad/tests/target/debug/.fingerprint/zerocopy-01c04b81016bba7d/
+?? monad/tests/target/debug/.fingerprint/zerocopy-8c01e642b5eb8c1b/
+?? monad/tests/target/debug/.fingerprint/zerocopy-b67c9c12475f9673/
+?? monad/tests/target/debug/.fingerprint/zeroize-8c1a5c7657fdbb2a/
+?? monad/tests/target/debug/.fingerprint/zmij-54e0192a2107816b/
+?? monad/tests/target/debug/.fingerprint/zmij-7c11a542372a2e22/
+?? monad/tests/target/debug/.fingerprint/zmij-a504c6b9b71ce0cc/
+?? monad/tests/target/debug/deps/autocfg-b67444436f3339ac.d
+?? monad/tests/target/debug/deps/base64ct-67bdeba309ce8d51.d
+?? monad/tests/target/debug/deps/bitflags-7bd2907bdbbadc0f.d
+?? monad/tests/target/debug/deps/bytes-b5d675dec218edd2.d
+?? monad/tests/target/debug/deps/cfg_if-02c1fcfa729b180b.d
+?? monad/tests/target/debug/deps/cranelift_codegen_shared-952bcc47d18bde5b.d
+?? monad/tests/target/debug/deps/either-5cf753efac75c631.d
+?? monad/tests/target/debug/deps/equivalent-d87a20f483d7febf.d
+?? monad/tests/target/debug/deps/find_msvc_tools-851ebabaa5b44302.d
+?? monad/tests/target/debug/deps/futures_core-78ff6f3b935d9426.d
+?? monad/tests/target/debug/deps/futures_task-cd170cf76863114d.d
+?? monad/tests/target/debug/deps/getrandom-0d5404220848236c.d
+?? monad/tests/target/debug/deps/getrandom-9205437e090f5d9b.d
+?? monad/tests/target/debug/deps/getrandom-9205437e090f5d9b.getrandom.391fad1e2de28f72-cgu.0.rcgu.o
+?? monad/tests/target/debug/deps/hashbrown-a454c530c5478152.d
+?? monad/tests/target/debug/deps/http-db505f9196691e92.d
+?? monad/tests/target/debug/deps/itoa-7a25aa04986b0f21.d
+?? monad/tests/target/debug/deps/libautocfg-b67444436f3339ac.rlib
+?? monad/tests/target/debug/deps/libautocfg-b67444436f3339ac.rmeta
+?? monad/tests/target/debug/deps/libbase64ct-67bdeba309ce8d51.rlib
+?? monad/tests/target/debug/deps/libbase64ct-67bdeba309ce8d51.rmeta
+?? monad/tests/target/debug/deps/libbitflags-7bd2907bdbbadc0f.rlib
+?? monad/tests/target/debug/deps/libbitflags-7bd2907bdbbadc0f.rmeta
+?? monad/tests/target/debug/deps/libbytes-b5d675dec218edd2.rlib
+?? monad/tests/target/debug/deps/libbytes-b5d675dec218edd2.rmeta
+?? monad/tests/target/debug/deps/libcfg_if-02c1fcfa729b180b.rlib
+?? monad/tests/target/debug/deps/libcfg_if-02c1fcfa729b180b.rmeta
+?? monad/tests/target/debug/deps/libcranelift_codegen_shared-952bcc47d18bde5b.rlib
+?? monad/tests/target/debug/deps/libcranelift_codegen_shared-952bcc47d18bde5b.rmeta
+?? monad/tests/target/debug/deps/libeither-5cf753efac75c631.rlib
+?? monad/tests/target/debug/deps/libeither-5cf753efac75c631.rmeta
+?? monad/tests/target/debug/deps/libequivalent-d87a20f483d7febf.rlib
+?? monad/tests/target/debug/deps/libequivalent-d87a20f483d7febf.rmeta
+?? monad/tests/target/debug/deps/libfind_msvc_tools-851ebabaa5b44302.rlib
+?? monad/tests/target/debug/deps/libfind_msvc_tools-851ebabaa5b44302.rmeta
+?? monad/tests/target/debug/deps/libfutures_core-78ff6f3b935d9426.rlib
+?? monad/tests/target/debug/deps/libfutures_core-78ff6f3b935d9426.rmeta
+?? monad/tests/target/debug/deps/libfutures_task-cd170cf76863114d.rlib
+?? monad/tests/target/debug/deps/libfutures_task-cd170cf76863114d.rmeta
+?? monad/tests/target/debug/deps/libgetrandom-0d5404220848236c.rlib
+?? monad/tests/target/debug/deps/libgetrandom-0d5404220848236c.rmeta
+?? monad/tests/target/debug/deps/libgetrandom-9205437e090f5d9b.rmeta
+?? monad/tests/target/debug/deps/libhashbrown-a454c530c5478152.rlib
+?? monad/tests/target/debug/deps/libhashbrown-a454c530c5478152.rmeta
+?? monad/tests/target/debug/deps/libhttp-db505f9196691e92.rlib
+?? monad/tests/target/debug/deps/libhttp-db505f9196691e92.rmeta
+?? monad/tests/target/debug/deps/libitoa-7a25aa04986b0f21.rlib
+?? monad/tests/target/debug/deps/libitoa-7a25aa04986b0f21.rmeta
+?? monad/tests/target/debug/deps/liblog-7f475765d27903c2.rlib
+?? monad/tests/target/debug/deps/liblog-7f475765d27903c2.rmeta
+?? monad/tests/target/debug/deps/libmemchr-b335fb957eeb3d23.rlib
+?? monad/tests/target/debug/deps/libmemchr-b335fb957eeb3d23.rmeta
+?? monad/tests/target/debug/deps/libonce_cell-5ac09adf85db5a13.rlib
+?? monad/tests/target/debug/deps/libonce_cell-5ac09adf85db5a13.rmeta
+?? monad/tests/target/debug/deps/libpin_project_lite-8f5952c6924e037c.rlib
+?? monad/tests/target/debug/deps/libpin_project_lite-8f5952c6924e037c.rmeta
+?? monad/tests/target/debug/deps/libpowerfmt-f40ea2a6b81a3068.rlib
+?? monad/tests/target/debug/deps/libpowerfmt-f40ea2a6b81a3068.rmeta
+?? monad/tests/target/debug/deps/librand_core-c17265ab344fc9db.rlib
+?? monad/tests/target/debug/deps/librand_core-c17265ab344fc9db.rmeta
+?? monad/tests/target/debug/deps/libserde_core-a0ab62672a5c7d33.rlib
+?? monad/tests/target/debug/deps/libserde_core-a0ab62672a5c7d33.rmeta
+?? monad/tests/target/debug/deps/libshlex-ccbf9bee3a5d4d6a.rlib
+?? monad/tests/target/debug/deps/libshlex-ccbf9bee3a5d4d6a.rmeta
+?? monad/tests/target/debug/deps/libslab-3b7c184522b093ad.rlib
+?? monad/tests/target/debug/deps/libslab-3b7c184522b093ad.rmeta
+?? monad/tests/target/debug/deps/libsubtle-56ef170ece983b2e.rlib
+?? monad/tests/target/debug/deps/libsubtle-56ef170ece983b2e.rmeta
+?? monad/tests/target/debug/deps/libunicode_ident-57a69b04e6792e96.rlib
+?? monad/tests/target/debug/deps/libunicode_ident-57a69b04e6792e96.rmeta
+?? monad/tests/target/debug/deps/libversion_check-9c1d8cd9e79cbc95.rlib
+?? monad/tests/target/debug/deps/libversion_check-9c1d8cd9e79cbc95.rmeta
+?? monad/tests/target/debug/deps/libwindows_link-14240581f140bfc5.rlib
+?? monad/tests/target/debug/deps/libwindows_link-14240581f140bfc5.rmeta
+?? monad/tests/target/debug/deps/libwindows_sys-6e5fe022c03248a6.rmeta
+?? monad/tests/target/debug/deps/libzeroize-8c1a5c7657fdbb2a.rlib
+?? monad/tests/target/debug/deps/libzeroize-8c1a5c7657fdbb2a.rmeta
+?? monad/tests/target/debug/deps/libzmij-a504c6b9b71ce0cc.rlib
+?? monad/tests/target/debug/deps/libzmij-a504c6b9b71ce0cc.rmeta
+?? monad/tests/target/debug/deps/log-7f475765d27903c2.d
+?? monad/tests/target/debug/deps/memchr-b335fb957eeb3d23.d
+?? monad/tests/target/debug/deps/once_cell-5ac09adf85db5a13.d
+?? monad/tests/target/debug/deps/pin_project_lite-8f5952c6924e037c.d
+?? monad/tests/target/debug/deps/powerfmt-f40ea2a6b81a3068.d
+?? monad/tests/target/debug/deps/rand_core-c17265ab344fc9db.d
+?? monad/tests/target/debug/deps/serde_core-a0ab62672a5c7d33.d
+?? monad/tests/target/debug/deps/shlex-ccbf9bee3a5d4d6a.d
+?? monad/tests/target/debug/deps/slab-3b7c184522b093ad.d
+?? monad/tests/target/debug/deps/subtle-56ef170ece983b2e.d
+?? monad/tests/target/debug/deps/unicode_ident-57a69b04e6792e96.d
+?? monad/tests/target/debug/deps/version_check-9c1d8cd9e79cbc95.d
+?? monad/tests/target/debug/deps/windows_link-14240581f140bfc5.d
+?? monad/tests/target/debug/deps/windows_sys-6e5fe022c03248a6.d
+?? monad/tests/target/debug/deps/windows_sys-6e5fe022c03248a6.windows_sys.31d91120e4dd6107-cgu.0.rcgu.o
+?? monad/tests/target/debug/deps/windows_sys-6e5fe022c03248a6.windows_sys.31d91120e4dd6107-cgu.1.rcgu.o
+?? monad/tests/target/debug/deps/windows_sys-6e5fe022c03248a6.windows_sys.31d91120e4dd6107-cgu.2.rcgu.o
+?? monad/tests/target/debug/deps/windows_sys-6e5fe022c03248a6.windows_sys.31d91120e4dd6107-cgu.3.rcgu.o
+?? monad/tests/target/debug/deps/windows_sys-6e5fe022c03248a6.windows_sys.31d91120e4dd6107-cgu.4.rcgu.o
+?? monad/tests/target/debug/deps/windows_sys-6e5fe022c03248a6.windows_sys.31d91120e4dd6107-cgu.5.rcgu.o
+?? monad/tests/target/debug/deps/zeroize-8c1a5c7657fdbb2a.d
+?? monad/tests/target/debug/deps/zmij-a504c6b9b71ce0cc.d
+?? scripts/canary-monitor.sh
+?? scripts/deploy-prod.sh
+?? scripts/deploy-staging.sh
+?? scripts/pre-deployment-checks.sh
+?? scripts/test-networking.sh
+?? scripts/verify-deployment.sh
+?? src/apex/auth_service/
+?? src/apex/orchestration/__main__.py
+?? src/apex/orchestration/serve.py
+?? src/apex/secrets.py
+?? src/apex/secrets_infisical.py
+?? src/apex/server.py
+?? src/inference/.dockerignore
+?? src/inference/tests/unit/test_rate_limiting.py
+?? tests/conftest.py
+?? tests/conftest_apex.py
+?? tests/unit/test_secrets.py
+origin	https://github.com/raf-com/apex-stack.git (fetch)
+origin	https://github.com/raf-com/apex-stack.git (push)
+
