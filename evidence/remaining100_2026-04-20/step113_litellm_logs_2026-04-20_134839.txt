@@ -1,0 +1,220 @@
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: All connection attempts failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/apscheduler/executors/base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/utils.py", line 4743, in update_spend
+    await proxy_logging_obj.db_spend_update_writer.db_update_spend_transaction_handler(
+    ...<3 lines>...
+    )
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/db/db_spend_update_writer.py", line 772, in db_update_spend_transaction_handler
+    await self._commit_spend_updates_to_db_without_redis_buffer(
+    ...<3 lines>...
+    )
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/db/db_spend_update_writer.py", line 973, in _commit_spend_updates_to_db_without_redis_buffer
+    await DBSpendUpdateWriter.update_daily_team_spend(
+    ...<4 lines>...
+    )
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/db/db_spend_update_writer.py", line 1760, in update_daily_team_spend
+    await DBSpendUpdateWriter._update_daily_spend(
+    ...<8 lines>...
+    )
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/db/db_spend_update_writer.py", line 1725, in _update_daily_spend
+    _raise_failed_update_spend_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e=e, start_time=start_time, proxy_logging_obj=proxy_logging_obj
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/utils.py", line 4930, in _raise_failed_update_spend_exception
+    raise e
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/db/db_spend_update_writer.py", line 1707, in _update_daily_spend
+    _raise_failed_update_spend_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e=e,
+        ^^^^
+        start_time=start_time,
+        ^^^^^^^^^^^^^^^^^^^^^^
+        proxy_logging_obj=proxy_logging_obj,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/utils.py", line 4930, in _raise_failed_update_spend_exception
+    raise e
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/db/db_spend_update_writer.py", line 1563, in _update_daily_spend
+    async with prisma_client.db.batch_() as batcher:
+               ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/site-packages/prisma/client.py", line 984, in __aexit__
+    await self.commit()
+  File "/usr/lib/python3.13/site-packages/prisma/client.py", line 960, in commit
+    await self.__client._engine.query(
+    ...<2 lines>...
+    )
+  File "/usr/lib/python3.13/site-packages/prisma/engine/query.py", line 244, in query
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/usr/lib/python3.13/site-packages/prisma/engine/http.py", line 119, in request
+    resp = await self.session.request(method, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/prisma/_async_http.py", line 28, in request
+    return Response(await self.session.request(method, url, **kwargs))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/usr/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/usr/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: All connection attempts failed
+[92m18:48:35 - LiteLLM Proxy:WARNING[0m: utils.py:4691 - Spend tracking - DB connection error writing spend logs, retry 3/3. logs_count=1, error=All connection attempts failed
+[92m18:48:39 - LiteLLM Proxy:WARNING[0m: utils.py:4691 - Spend tracking - DB connection error writing spend logs, retry 4/3. logs_count=1, error=All connection attempts failed
+[92m18:48:39 - LiteLLM Proxy:ERROR[0m: utils.py:4897 - Error in spend logs queue monitor: All connection attempts failed
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/usr/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/usr/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/usr/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/usr/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: All connection attempts failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/utils.py", line 4884, in _monitor_spend_logs_queue
+    await update_spend_logs_job(
+    ...<3 lines>...
+    )
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/utils.py", line 4794, in update_spend_logs_job
+    await ProxyUpdateSpend.update_spend_logs(
+    ...<5 lines>...
+    )
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/utils.py", line 4705, in update_spend_logs
+    _raise_failed_update_spend_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e=e, start_time=start_time, proxy_logging_obj=proxy_logging_obj
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/utils.py", line 4930, in _raise_failed_update_spend_exception
+    raise e
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/utils.py", line 4672, in update_spend_logs
+    await prisma_client.db.litellm_spendlogs.create_many(
+        data=batch_with_dates, skip_duplicates=True
+    )
+  File "/usr/lib/python3.13/site-packages/prisma/actions.py", line 20795, in create_many
+    resp = await self._client._execute(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/usr/lib/python3.13/site-packages/prisma/client.py", line 651, in _execute
+    return await self._engine.query(builder.build(), tx_id=self._tx_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/prisma/engine/query.py", line 244, in query
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/usr/lib/python3.13/site-packages/prisma/engine/http.py", line 119, in request
+    resp = await self.session.request(method, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/prisma/_async_http.py", line 28, in request
+    return Response(await self.session.request(method, url, **kwargs))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/usr/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/usr/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: All connection attempts failed
+

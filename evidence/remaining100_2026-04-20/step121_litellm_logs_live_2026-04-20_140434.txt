@@ -1,0 +1,66 @@
+
+2026-04-20 19:00:49,239 - litellm_proxy_extras - INFO - Running prisma migrate deploy
+   ██╗     ██╗████████╗███████╗██╗     ██╗     ███╗   ███╗
+   ██║     ██║╚══██╔══╝██╔════╝██║     ██║     ████╗ ████║
+   ██║     ██║   ██║   █████╗  ██║     ██║     ██╔████╔██║
+   ██║     ██║   ██║   ██╔══╝  ██║     ██║     ██║╚██╔╝██║
+   ███████╗██║   ██║   ███████╗███████╗███████╗██║ ╚═╝ ██║
+   ╚══════╝╚═╝   ╚═╝   ╚══════╝╚══════╝╚══════╝╚═╝     ╚═╝
+
+query-engine ac9d7041ed77bcc8a8dbd2ab6616b39013829574
+
+[1;37m#------------------------------------------------------------#[0m
+[1;37m#                                                            #[0m
+[1;37m#       'This feature doesn't meet my needs because...'       #[0m
+2026-04-20 19:01:23,401 - litellm_proxy_extras - INFO - prisma migrate deploy stdout: Prisma schema loaded from schema.prisma
+[1;37m#        https://github.com/BerriAI/litellm/issues/new        #[0m
+[1;37m#                                                            #[0m
+Datasource "client": PostgreSQL database "apex_litellm", schema "public" at "postgres:5432"
+[1;37m#------------------------------------------------------------#[0m
+
+
+ Thank you for using LiteLLM! - Krrish & Ishaan
+109 migrations found in prisma/migrations
+
+
+
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+No pending migrations to apply.
+
+
+
+INFO:     127.0.0.1:42972 - "GET /health/liveliness HTTP/1.1" 200 OK
+2026-04-20 19:01:23,401 - litellm_proxy_extras - INFO - prisma migrate deploy completed
+INFO:     127.0.0.1:47852 - "GET /health/liveliness HTTP/1.1" 200 OK
+2026-04-20 19:01:23,401 - litellm_proxy_extras - INFO - Running post-migration sanity check...
+INFO:     127.0.0.1:47850 - "GET /health/liveliness HTTP/1.1" 200 OK
+2026-04-20 19:01:23,420 - litellm_proxy_extras - INFO - Generating migration diff between DB and schema.prisma...
+INFO:     127.0.0.1:56152 - "GET /health/liveliness HTTP/1.1" 200 OK
+prisma:warn Prisma doesn't know which engines to download for the Linux distro "wolfi". Falling back to Prisma engines built "debian".
+INFO:     127.0.0.1:52350 - "GET /health/liveliness HTTP/1.1" 200 OK
+Please report your experience by creating an issue at https://github.com/prisma/prisma/issues so we can add your distro to the list of known supported distros.
+prisma:warn Prisma doesn't know which engines to download for the Linux distro "wolfi". Falling back to Prisma engines built "debian".
+INFO:     172.19.0.1:59040 - "GET /health HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:58676 - "GET /health/liveliness HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34024 - "GET /health/liveliness HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59362 - "GET /health/liveliness HTTP/1.1" 200 OK
+INFO:     172.19.0.1:55454 - "GET /health/readiness HTTP/1.1" 200 OK
+Please report your experience by creating an issue at https://github.com/prisma/prisma/issues so we can add your distro to the list of known supported distros.
+2026-04-20 19:01:56,387 - litellm_proxy_extras - INFO - Migration diff created at /usr/lib/python3.13/site-packages/litellm_proxy_extras/migrations/20260420190123_baseline_diff/migration.sql
+2026-04-20 19:01:56,387 - litellm_proxy_extras - INFO - Running prisma db execute to apply the migration diff...
+2026-04-20 19:02:20,620 - litellm_proxy_extras - INFO - prisma db execute stdout: Script executed successfully.
+
+2026-04-20 19:02:20,620 - litellm_proxy_extras - INFO - ✅ Migration diff applied successfully
+2026-04-20 19:02:20,620 - litellm_proxy_extras - INFO - ✅ Post-migration sanity check completed
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:4000 (Press CTRL+C to quit)
+[92m19:03:44 - LiteLLM Proxy:ERROR[0m: auth_exception_handler.py:78 - litellm.proxy.proxy_server.user_api_key_auth(): Exception occured - No api key passed in.
+Requester IP Address:172.19.0.1
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/litellm/proxy/auth/user_api_key_auth.py", line 886, in _user_api_key_auth_builder
+    raise Exception("No api key passed in.")
+Exception: No api key passed in.

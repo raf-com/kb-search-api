@@ -22,7 +22,8 @@ $targets = @(
     @{ url = "http://localhost:6333/readyz"; containerPattern = "infra-qdrant" },
     @{ url = "http://localhost:3100/ready"; containerPattern = "infra-loki" },
     @{ url = "http://localhost:4000/health/readiness"; containerPattern = "apex-litellm" },
-    @{ url = "http://localhost:8001/api/v1/health"; containerPattern = "kb_search_api" },
+    # kb_search_api runs deeper dependency checks and regularly exceeds 10s in this environment.
+    @{ url = "http://localhost:8001/api/v1/health"; containerPattern = "kb_search_api"; timeoutSec = 30 },
     @{ url = "http://localhost:8010/api/v1/health"; containerPattern = "kb_search_api_service" },
     @{ url = "http://localhost:8110/health"; containerPattern = "automation-master" },
     @{ url = "http://localhost:8301/arena/health"; containerPattern = "automation-arena" },
@@ -37,6 +38,7 @@ $targets = @(
 
 foreach ($t in $targets) {
     $pattern = $t.containerPattern
+    $timeoutSec = if ($t.ContainsKey("timeoutSec")) { [int]$t.timeoutSec } else { 10 }
     $present = ($containers | Select-String -SimpleMatch $pattern | Measure-Object).Count -gt 0
 
     if (-not $present) {
@@ -45,7 +47,7 @@ foreach ($t in $targets) {
     }
 
     try {
-        $resp = Invoke-WebRequest -Uri $t.url -Method GET -TimeoutSec 10
+        $resp = Invoke-WebRequest -Uri $t.url -Method GET -TimeoutSec $timeoutSec
         $code = [int]$resp.StatusCode
         $body = [string]$resp.Content -replace "`r|`n", " "
         if ($body.Length -gt 160) { $body = $body.Substring(0, 160) }

@@ -1,0 +1,15 @@
+status	http_code	url	container_pattern	container_present	body_excerpt
+OK	200	http://localhost:3000/api/health	infra-grafana	YES	{   "database": "ok",   "version": "13.0.1",   "commit": "a100054f" }
+OK	200	http://localhost:9090/-/healthy	infra-prometheus	YES	Prometheus Server is Healthy. 
+OK	200	http://localhost:6333/readyz	infra-qdrant	YES	all shards are ready
+OK	200	http://localhost:3100/ready	infra-loki	YES	ready 
+OK	200	http://localhost:4000/health/readiness	apex-litellm	YES	{"status":"healthy","db":"connected","cache":null,"litellm_version":"1.82.6","success_callbacks":["SkillsInjectionHook","_PROXY_VirtualKeyModelMaxBudgetLimiter"
+OK	200	http://localhost:8001/api/v1/health	kb_search_api	YES	{"status":"degraded","timestamp":"2026-04-20T19:09:46.210294","components":{"postgresql":{"status":"error","latency_ms":null,"details":{"error":"Connection fail
+OK	200	http://localhost:8010/api/v1/health	kb_search_api_service	YES	{"status":"degraded","timestamp":"2026-04-20T19:09:46.556071","components":{"postgresql":{"status":"ok","latency_ms":5,"details":{"connections":"4/20"}},"redis"
+OK	200	http://localhost:8110/health	automation-master	YES	{"status":"healthy","fleet_size":0,"fleet_available":0}
+OK	200	http://localhost:8301/arena/health	automation-arena	YES	{"status":"ok","service":"automation-arena","port":8301}
+OK	200	http://localhost:3001/api/health	webapp-grafana-staging	YES	{   "database": "ok",   "version": "13.0.1",   "commit": "a100054f" }
+OK	200	http://localhost:9091/-/healthy	webapp-prometheus-staging	YES	Prometheus Server is Healthy. 
+OK	200	http://localhost:3002/api/health	kb_grafana	YES	{   "commit": "03f502a94d17f7dc4e6c34acdf8428aedd986e4c",   "database": "ok",   "version": "10.4.0" }
+OK	200	http://localhost:9095/-/healthy	kb_prometheus	YES	Prometheus Server is Healthy. 
+OK	200	http://localhost:8400/health	openmythos-api	YES	{"status":"ok","service":"openmythos-wrapper","version":"0.1.0"}

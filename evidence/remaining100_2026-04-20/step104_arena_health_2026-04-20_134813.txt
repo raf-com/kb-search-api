@@ -1,0 +1,1 @@
+HTTP=200 BODY={"status":"ok","service":"automation-arena","port":8301}

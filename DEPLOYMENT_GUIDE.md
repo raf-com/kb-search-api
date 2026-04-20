@@ -182,18 +182,76 @@ pytest --cov=. --cov-report=html
 
 ## Health Monitoring
 
-### Readiness Probe
-```bash
-curl http://localhost:8010/api/v1/health
-# Response: {"status": "ready", "dependencies": {"postgres": "ok", "redis": "ok", ...}}
-```
+### Canonical Probe Invocation
 
-### Runtime Matrix Probe
 ```powershell
 pwsh -NoProfile -File C:\kb-search-api\scripts\runtime_health_matrix.ps1
 ```
-- Uses corrected API routes (`/api/v1/health`) for kb-search-api services.
-- Marks endpoints as `SKIP_NO_CONTAINER` when the related container is not running, instead of reporting a false request failure.
+
+Use `-NoProfile` to avoid local profile aliases/functions changing command behavior (for example, overriding `rg` or injecting shell startup noise).
+
+### Probe Status Semantics
+
+| Status | Meaning | Operator action |
+|---|---|---|
+| `OK` | Endpoint returned HTTP 200 within timeout | No action required |
+| `WARN_NON200` | Endpoint responded but with non-200 code | Triage service-specific readiness/health semantics |
+| `SKIP_NO_CONTAINER` | Related container is not running in this environment | Confirm if container is optional for current stack profile |
+| `FAIL_REQUEST` | Probe transport-level failure (timeout/connection error) | Treat as incident and collect logs/network evidence |
+
+### Canonical Endpoint Matrix
+
+| URL | Container Pattern | Required | Notes |
+|---|---|---|---|
+| `http://localhost:3000/api/health` | `infra-grafana` | Yes | Infra observability baseline |
+| `http://localhost:9090/-/healthy` | `infra-prometheus` | Yes | Infra metrics baseline |
+| `http://localhost:6333/readyz` | `infra-qdrant` | Yes | Qdrant readiness endpoint |
+| `http://localhost:3100/ready` | `infra-loki` | Yes | Loki ready endpoint |
+| `http://localhost:4000/health/readiness` | `apex-litellm` | Yes | LiteLLM readiness + DB connectivity |
+| `http://localhost:8001/api/v1/health` | `kb_search_api` | Yes | Uses 30s timeout in script due deeper dependency checks |
+| `http://localhost:8010/api/v1/health` | `kb_search_api_service` | Yes | Secondary search API service health |
+| `http://localhost:8110/health` | `automation-master` | Optional | Optional automation plane in some profiles |
+| `http://localhost:8301/arena/health` | `automation-arena` | Optional | Optional arena service; required only for arena-enabled profile |
+| `http://localhost:3001/api/health` | `webapp-grafana-staging` | Optional | Webapp staging observability |
+| `http://localhost:9091/-/healthy` | `webapp-prometheus-staging` | Optional | Webapp staging metrics |
+| `http://localhost:3002/api/health` | `kb_grafana` | Optional | KB stack observability |
+| `http://localhost:9095/-/healthy` | `kb_prometheus` | Optional | KB stack metrics |
+| `http://localhost:8400/health` | `openmythos-api` | Optional | OpenMythos wrapper service |
+
+### Expected Non-200 / Degraded Notes
+
+- `kb_search_api` and `kb_search_api_service` can return HTTP 200 with body `"status":"degraded"` when one or more dependency checks fail. This is expected behavior for partial degradation and should be triaged as a dependency issue, not a transport failure.
+- Optional endpoints may legitimately report `SKIP_NO_CONTAINER` when their stack is not deployed in the current runtime profile.
+
+### Sample Output (Latest Successful Matrix)
+
+Source artifact: `C:\kb-search-api\evidence\remaining100_2026-04-20\step111_runtime_matrix_after_timeout_fix_2026-04-20_140912.tsv`
+
+```tsv
+status	http_code	url	container_pattern	container_present
+OK	200	http://localhost:4000/health/readiness	apex-litellm	YES
+OK	200	http://localhost:8001/api/v1/health	kb_search_api	YES
+OK	200	http://localhost:8301/arena/health	automation-arena	YES
+```
+
+### Evidence Naming Convention
+
+Use `step<NNN>_<topic>_<YYYY-MM-DD_HHMMSS>.<ext>` under:
+
+`C:\kb-search-api\evidence\remaining100_2026-04-20\`
+
+Examples:
+- `step121_litellm_readiness_live_2026-04-20_140430.txt`
+- `step111_runtime_matrix_after_timeout_fix_2026-04-20_140912.tsv`
+
+### Operator Checklist (Post-Probe Triage)
+
+1. Confirm probe ran with `pwsh -NoProfile`.
+2. Validate there are zero `FAIL_REQUEST` rows.
+3. Review any `WARN_NON200` rows and capture container logs.
+4. Confirm each `SKIP_NO_CONTAINER` endpoint is optional for the active profile.
+5. Store probe + logs artifacts in the evidence folder.
+6. Update continuation report with resolved/unresolved items.
 
 ### Docker Healthcheck
 Configured for 10s interval, 5s timeout, 5 retries before marking unhealthy.

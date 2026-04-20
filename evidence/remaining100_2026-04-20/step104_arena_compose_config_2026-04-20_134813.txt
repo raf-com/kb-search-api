@@ -1,0 +1,42 @@
+name: arena-service
+services:
+  arena:
+    build:
+      context: C:\agentic-infra\services\arena
+      dockerfile: Dockerfile
+    container_name: automation-arena
+    environment:
+      FITNESS_FAILURE_THRESHOLD: "0.4"
+      LOG_LEVEL: INFO
+      MEMBRANE_URL: http://automation-membrane:8300
+      PORT: "8301"
+      REDIS_URL: redis://redis:6379/1
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://localhost:8301/arena/health')
+      timeout: 10s
+      interval: 30s
+      retries: 3
+      start_period: 20s
+    logging:
+      driver: json-file
+      options:
+        max-file: "3"
+        max-size: 10m
+    networks:
+      infra_network: null
+    ports:
+      - mode: ingress
+        host_ip: 127.0.0.1
+        target: 8301
+        published: "8301"
+        protocol: tcp
+    restart: unless-stopped
+    user: 1000:1000
+networks:
+  infra_network:
+    name: infra_network
+    external: true

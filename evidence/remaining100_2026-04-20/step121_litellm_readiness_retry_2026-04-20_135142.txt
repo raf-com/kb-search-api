@@ -1,0 +1,8 @@
+ATTEMPT=1 ERROR=An error occurred while sending the request.
+ATTEMPT=2 ERROR=An error occurred while sending the request.
+ATTEMPT=3 ERROR=An error occurred while sending the request.
+ATTEMPT=4 ERROR=An error occurred while sending the request.
+ATTEMPT=5 ERROR=An error occurred while sending the request.
+ATTEMPT=6 ERROR=An error occurred while sending the request.
+ATTEMPT=7 ERROR=An error occurred while sending the request.
+ATTEMPT=8 ERROR=An error occurred while sending the request.

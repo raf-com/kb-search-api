@@ -53,3 +53,51 @@ Source: phase D git state refresh
 
 - Prior cycle final verification: [NINE_PHASE_FINAL_VERIFICATION_2026-04-20.md](C:/kb-search-api/NINE_PHASE_FINAL_VERIFICATION_2026-04-20.md)
 - Current cycle roadmap: [STEPS_101_200_9_PHASES_2026-04-20.md](C:/kb-search-api/STEPS_101_200_9_PHASES_2026-04-20.md)
+
+## Continuation Update (2026-04-20 14:09 local)
+
+This continuation executed the next tranche for Steps 103-122 and closed previously open runtime blockers.
+
+### Newly Completed Items
+
+1. `automation-arena` compose baseline fixed and service restored.
+2. LiteLLM readiness triage completed with live `HTTP 200` readiness + `db=connected`.
+3. Runtime matrix timeout governance corrected for `kb_search_api` (30s endpoint-specific timeout).
+4. Fresh matrix gate now passes with zero `FAIL_REQUEST`.
+
+### New Evidence Artifacts
+
+- Arena restore:
+  - [step104_arena_compose_config_2026-04-20_134813.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step104_arena_compose_config_2026-04-20_134813.txt)
+  - [step104_arena_compose_up_2026-04-20_134813.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step104_arena_compose_up_2026-04-20_134813.txt)
+  - [step104_arena_health_2026-04-20_134813.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step104_arena_health_2026-04-20_134813.txt)
+- LiteLLM triage and recovery:
+  - [step112_litellm_readiness_2026-04-20_134839.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step112_litellm_readiness_2026-04-20_134839.txt)
+  - [step113_litellm_logs_2026-04-20_134839.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step113_litellm_logs_2026-04-20_134839.txt)
+  - [step114_litellm_env_network_2026-04-20_134839.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step114_litellm_env_network_2026-04-20_134839.txt)
+  - [step119_litellm_redeploy_2026-04-20_135029.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step119_litellm_redeploy_2026-04-20_135029.txt)
+  - [step121_litellm_readiness_live_2026-04-20_140430.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step121_litellm_readiness_live_2026-04-20_140430.txt)
+  - [step121_litellm_logs_live_2026-04-20_140434.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step121_litellm_logs_live_2026-04-20_140434.txt)
+- Runtime gate recheck:
+  - [step111_runtime_matrix_after_timeout_fix_2026-04-20_140912.tsv](C:/kb-search-api/evidence/remaining100_2026-04-20/step111_runtime_matrix_after_timeout_fix_2026-04-20_140912.tsv)
+  - [step107_kb_search_api_health_probe_2026-04-20_140648.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step107_kb_search_api_health_probe_2026-04-20_140648.txt)
+  - [step107_kb_search_api_logs_2026-04-20_140646.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step107_kb_search_api_logs_2026-04-20_140646.txt)
+- Hygiene and consistency:
+  - [step143_hygiene_verification_2026-04-20_142137.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step143_hygiene_verification_2026-04-20_142137.txt)
+  - [step154_consistency_check_2026-04-20_142225.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step154_consistency_check_2026-04-20_142225.txt)
+  - [step154_link_validation_2026-04-20_142225.tsv](C:/kb-search-api/evidence/remaining100_2026-04-20/step154_link_validation_2026-04-20_142225.tsv)
+  - [step153_doc_hash_manifest_2026-04-20_142252.tsv](C:/kb-search-api/evidence/remaining100_2026-04-20/step153_doc_hash_manifest_2026-04-20_142252.tsv)
+
+### Current Runtime Gate (Latest Matrix)
+
+Source: [step111_runtime_matrix_after_timeout_fix_2026-04-20_140912.tsv](C:/kb-search-api/evidence/remaining100_2026-04-20/step111_runtime_matrix_after_timeout_fix_2026-04-20_140912.tsv)
+
+- `OK`: 14
+- `WARN_NON200`: 0
+- `SKIP_NO_CONTAINER`: 0
+- `FAIL_REQUEST`: 0
+
+### Notes
+
+- Evidence files in this continuation were sanitized for token/password patterns before staging.
+- `.env` remains intentionally untracked.

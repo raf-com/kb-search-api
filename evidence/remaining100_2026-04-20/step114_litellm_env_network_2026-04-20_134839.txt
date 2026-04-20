@@ -1,0 +1,7 @@
+INSPECT_ENV_BEGIN
+["REDIS_PORT=6379","LITELLM_MASTER_KEY=[REDACTED]","OPENAI_API_KEY=managed_by_infisical","GOOGLE_API_KEY=managed_by_infisical","LETTA_BASE_URL=http://letta-server:8283","STORE_MODEL_IN_DB=True","LITELLM_SALT_KEY=[REDACTED]","REDIS_PASSWORD=managed_by_infisical","REDIS_HOST=redis","ANTHROPIC_API_KEY=managed_by_infisical","DATABASE_URL=postgresql://apex_litellm:[REDACTED]@apex-pgbouncer:6432/apex_litellm","PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin","SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt"]
+INSPECT_ENV_END
+INSPECT_NETWORKS_BEGIN
+{"infra_network":{"IPAMConfig":null,"Links":null,"Aliases":["apex-litellm","litellm-proxy"],"DriverOpts":null,"GwPriority":0,"NetworkID":"d85bcca6b6d78af63b0a3964ce3dc5324b4f2a78a1bc99870606458323cb6bb9","EndpointID":"26d0894d60cc041cddfca614a2da6e3fddc466078f74796ecb711266b2af38e6","Gateway":"172.19.0.1","IPAddress":"172.19.0.6","MacAddress":"ca:2c:f7:aa:2f:3f","IPPrefixLen":16,"IPv6Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"DNSNames":["apex-litellm","litellm-proxy","428089a8afab"]}}
+INSPECT_NETWORKS_END
+

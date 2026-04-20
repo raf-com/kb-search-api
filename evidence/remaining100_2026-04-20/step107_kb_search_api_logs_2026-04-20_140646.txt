@@ -1,0 +1,201 @@
+INFO:     172.24.0.4:40034 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40034 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42482 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40034 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40034 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54296 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:41566 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57148 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:35520 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.1:58638 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:45674 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33382 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:38064 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:34606 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51850 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:59926 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:43072 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:40088 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33886 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54506 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:35308 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57114 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:34206 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55686 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:37552 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57102 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:40188 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56358 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48332 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56110 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56318 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:35528 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56256 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:41768 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52132 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33200 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.1:55990 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:45754 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:46786 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:52474 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48956 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:34604 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48956 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48956 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:44720 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48956 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48956 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:43148 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48956 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:48956 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54984 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:48956 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:35366 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:39648 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:46396 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49636 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48902 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58420 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54334 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.1:46820 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59938 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.1:58232 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54512 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:41590 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52166 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:40784 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54278 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:43046 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58678 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:34712 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:40828 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55998 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+INFO:     127.0.0.1:53742 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59836 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+2026-04-20 19:05:03,900 - database - ERROR - PostgreSQL health check failed: password authentication failed for user "kb_user"
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:38376 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57762 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:47054 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+2026-04-20 19:05:06,802 - database - ERROR - Redis health check failed: Connection closed by server.
+2026-04-20 19:05:15,292 - httpx - INFO - HTTP Request: GET http://qdrant:6333/collections "HTTP/1.1 200 OK"
+2026-04-20 19:05:15,636 - embedding_service - ERROR - Embedding service health check failed: No valid embedding model args passed in - {'model': 'text-embedding-3-small', 'input': 'test', 'azure': False, 'force_timeout': 60, 'litellm_call_id': '57df242f-cae4-4446-a8ba-b91def0b92ca', 'litellm_logging_obj': <litellm.utils.Logging object at 0x73e95b5ac250>, 'logger_fn': None, 'api_base': None, 'api_version': None, 'api_key': '[REDACTED]', 'api_type': None, 'caching': False, 'custom_llm_provider': 'openai', 'kwargs': {'timeout': 5}, 'dynamic_api_key': None, 'response': None, 'logging': <litellm.utils.Logging object at 0x73e95b5ac250>}
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58276 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:46456 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42576 - "GET / HTTP/1.1" 200 OK
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     172.24.0.4:33938 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59094 - "GET / HTTP/1.1" 200 OK
+

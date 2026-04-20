@@ -1,0 +1,35 @@
+TIMESTAMP=2026-04-20T14:21:40.3790189-05:00
+GIT_STATUS_SHORT_BEGIN
+ M .gitignore
+ M CLAUDE_WEEKLY_MASTER_INDEX_2026-04-20_VERIFIED.md
+ M DEPLOYMENT_GUIDE.md
+ M REMAINING_100_EXECUTION_REPORT_2026-04-20.md
+ M REMAINING_100_FINAL_VERIFICATION_2026-04-20.md
+ M scripts/runtime_health_matrix.ps1
+?? STEPS_101_200_PROGRESS_TRACKER_2026-04-20.md
+?? evidence/remaining100_2026-04-20/README.md
+?? evidence/remaining100_2026-04-20/runtime_health_matrix_2026-04-20_140434.tsv
+?? evidence/remaining100_2026-04-20/step104_arena_compose_config_2026-04-20_134813.txt
+?? evidence/remaining100_2026-04-20/step104_arena_compose_up_2026-04-20_134813.txt
+?? evidence/remaining100_2026-04-20/step104_arena_health_2026-04-20_134813.txt
+?? evidence/remaining100_2026-04-20/step107_kb_search_api_health_probe_2026-04-20_140648.txt
+?? evidence/remaining100_2026-04-20/step107_kb_search_api_logs_2026-04-20_140646.txt
+?? evidence/remaining100_2026-04-20/step111_runtime_matrix_after_timeout_fix_2026-04-20_140912.tsv
+?? evidence/remaining100_2026-04-20/step111_runtime_matrix_recheck2_2026-04-20_140735.tsv
+?? evidence/remaining100_2026-04-20/step111_runtime_matrix_recheck_2026-04-20_140434.tsv
+?? evidence/remaining100_2026-04-20/step112_litellm_readiness_2026-04-20_134839.txt
+?? evidence/remaining100_2026-04-20/step113_litellm_logs_2026-04-20_134839.txt
+?? evidence/remaining100_2026-04-20/step114_litellm_env_network_2026-04-20_134839.txt
+?? evidence/remaining100_2026-04-20/step119_litellm_redeploy_2026-04-20_135029.txt
+?? evidence/remaining100_2026-04-20/step121_litellm_logs_live_2026-04-20_140434.txt
+?? evidence/remaining100_2026-04-20/step121_litellm_logs_retry_2026-04-20_135142.txt
+?? evidence/remaining100_2026-04-20/step121_litellm_readiness_after_fix_2026-04-20_135029.txt
+?? evidence/remaining100_2026-04-20/step121_litellm_readiness_live_2026-04-20_140430.txt
+?? evidence/remaining100_2026-04-20/step121_litellm_readiness_recheck_2026-04-20_135055.txt
+?? evidence/remaining100_2026-04-20/step121_litellm_readiness_retry_2026-04-20_135142.txt
+GIT_STATUS_SHORT_END
+STAGED_FILES_BEGIN
+STAGED_FILES_END
+UNREDACTED_SECRET_HITS_COUNT=0
+UNREDACTED_SECRET_HITS_BEGIN
+UNREDACTED_SECRET_HITS_END

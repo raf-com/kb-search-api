@@ -81,4 +81,8 @@ Claim status source: [phase5_claim_classification_2026-04-20_082102.tsv](C:/kb-s
 
 - Prior weekly index: [CLAUDE_WEEKLY_MASTER_INDEX_2026-04-20.md](C:/kb-search-api/CLAUDE_WEEKLY_MASTER_INDEX_2026-04-20.md)
 - Next actions: [NEXT_100_STEPS_9_PHASES_2026-04-20.md](C:/kb-search-api/NEXT_100_STEPS_9_PHASES_2026-04-20.md)
+- Current execution roadmap: [STEPS_101_200_9_PHASES_2026-04-20.md](C:/kb-search-api/STEPS_101_200_9_PHASES_2026-04-20.md)
+- Current execution report: [REMAINING_100_EXECUTION_REPORT_2026-04-20.md](C:/kb-search-api/REMAINING_100_EXECUTION_REPORT_2026-04-20.md)
+- Current final verification: [REMAINING_100_FINAL_VERIFICATION_2026-04-20.md](C:/kb-search-api/REMAINING_100_FINAL_VERIFICATION_2026-04-20.md)
+- Current progress tracker: [STEPS_101_200_PROGRESS_TRACKER_2026-04-20.md](C:/kb-search-api/STEPS_101_200_PROGRESS_TRACKER_2026-04-20.md)
 - Phase evidence folder: [nine_phase_2026-04-20](C:/kb-search-api/evidence/nine_phase_2026-04-20)

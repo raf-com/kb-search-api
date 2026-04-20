@@ -35,3 +35,20 @@ From latest matrix artifact:
 1. `apex-litellm` readiness endpoint currently returns 503.
 2. `automation-arena` endpoint is skipped because container is not running.
 
+## Continuation Addendum (2026-04-20 14:09 local)
+
+The carry-forward items above are superseded by continuation evidence from the same date.
+
+### Superseded By
+
+- [REMAINING_100_EXECUTION_REPORT_2026-04-20.md](C:/kb-search-api/REMAINING_100_EXECUTION_REPORT_2026-04-20.md) (Continuation Update section)
+- [step121_litellm_readiness_live_2026-04-20_140430.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step121_litellm_readiness_live_2026-04-20_140430.txt)
+- [step104_arena_health_2026-04-20_134813.txt](C:/kb-search-api/evidence/remaining100_2026-04-20/step104_arena_health_2026-04-20_134813.txt)
+- [step111_runtime_matrix_after_timeout_fix_2026-04-20_140912.tsv](C:/kb-search-api/evidence/remaining100_2026-04-20/step111_runtime_matrix_after_timeout_fix_2026-04-20_140912.tsv)
+
+### Updated State
+
+1. LiteLLM readiness now returns `HTTP 200` with `db=connected`.
+2. `automation-arena` is running and `/arena/health` returns `HTTP 200`.
+3. Runtime matrix gate currently has zero `FAIL_REQUEST` rows.
+
