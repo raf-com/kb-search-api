@@ -1,0 +1,11 @@
+TIMESTAMP=2026-04-20T08:19:41.7549064-05:00
+HISTORY_ROOT=C:\Users\ajame\.claude\projects\C--
+CUTOFF=2026-04-13T08:19:38.5472987-05:00
+FILES_UPDATED_LAST_7_DAYS=1566
+COUNT_MD=319
+COUNT_JSONL=574
+COUNT_JSON=555
+COUNT_TXT=68
+RECENT_FILES_ARTIFACT=C:\kb-search-api\evidence\nine_phase_2026-04-20\phase4_recent_files_2026-04-20_081938.tsv
+EXTENSION_COUNTS_ARTIFACT=C:\kb-search-api\evidence\nine_phase_2026-04-20\phase4_extension_counts_2026-04-20_081938.tsv
+RECENT_COMMITS_ARTIFACT=C:\kb-search-api\evidence\nine_phase_2026-04-20\phase4_recent_commits_2026-04-20_081938.tsv

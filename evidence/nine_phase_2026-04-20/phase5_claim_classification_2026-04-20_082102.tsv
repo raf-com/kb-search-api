@@ -1,0 +1,9 @@
+claim_id	source_file	source_line	claim_value	evidence_value	status	evidence_artifact
+weekly_total_files	C:\kb-search-api\CLAUDE_WEEKLY_MASTER_INDEX_2026-04-20.md	38	1565	1566	STALE	C:\kb-search-api\evidence\nine_phase_2026-04-20\phase4_activity_summary_2026-04-20_081938.txt
+weekly_count_jsonl	C:\kb-search-api\CLAUDE_WEEKLY_MASTER_INDEX_2026-04-20.md	40	574	574	VERIFIED	C:\kb-search-api\evidence\nine_phase_2026-04-20\phase4_activity_summary_2026-04-20_081938.txt
+weekly_count_json	C:\kb-search-api\CLAUDE_WEEKLY_MASTER_INDEX_2026-04-20.md	-1	554	555	STALE	C:\kb-search-api\evidence\nine_phase_2026-04-20\phase4_activity_summary_2026-04-20_081938.txt
+weekly_count_md	C:\kb-search-api\CLAUDE_WEEKLY_MASTER_INDEX_2026-04-20.md	18	319	319	VERIFIED	C:\kb-search-api\evidence\nine_phase_2026-04-20\phase4_activity_summary_2026-04-20_081938.txt
+weekly_count_txt	C:\kb-search-api\CLAUDE_WEEKLY_MASTER_INDEX_2026-04-20.md	43	68	68	VERIFIED	C:\kb-search-api\evidence\nine_phase_2026-04-20\phase4_activity_summary_2026-04-20_081938.txt
+weekly_count_ts	C:\kb-search-api\CLAUDE_WEEKLY_MASTER_INDEX_2026-04-20.md	44	18	18	VERIFIED	C:\kb-search-api\evidence\nine_phase_2026-04-20\phase4_activity_summary_2026-04-20_081938.txt
+weekly_count_yaml	C:\kb-search-api\CLAUDE_WEEKLY_MASTER_INDEX_2026-04-20.md	45	18	18	VERIFIED	C:\kb-search-api\evidence\nine_phase_2026-04-20\phase4_activity_summary_2026-04-20_081938.txt
+runtime_container_total_current_session	C:\kb-search-api\CLAUDE_WEEKLY_MASTER_INDEX_2026-04-20.md	105	(container counts differ across docs)	81	VERIFIED_RUNTIME_SNAPSHOT	C:\kb-search-api\evidence\nine_phase_2026-04-20\phase2_runtime_counts_2026-04-20_081658.txt

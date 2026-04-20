@@ -1,0 +1,137 @@
+repo	hash	date_iso	author	subject
+C:\Users\ajame\.claude\projects\C--	61fe4ff	2026-04-20 07:34:48 -0500	Governance System	chore: checkpoint full dirty worktree state
+C:\Users\ajame\.claude\projects\C--	5db214b	2026-04-18 13:41:49 -0500	Governance System	Final: Phase 2 pre-launch infrastructure 100% complete - all 8 action items finished
+C:\Users\ajame\.claude\projects\C--	9a4b771	2026-04-18 13:34:09 -0500	Governance System	Items 2-8: Deploy git infrastructure, status update mechanism, contingency backups, and feature branches
+C:\Users\ajame\.claude\projects\C--	0ed0edd	2026-04-18 13:26:57 -0500	Governance System	Item 2: Deploy daily report auto-generation with sample reports for Apr 22-25
+C:\Users\ajame\.claude\projects\C--	e1b0c50	2026-04-18 04:51:41 -0500	Governance System	Add PRE_LAUNCH_STATUS.md tracking progress on 8 critical action items
+C:\Users\ajame\.claude\projects\C--	a0f2596	2026-04-18 04:42:39 -0500	Governance System	Critical Action Item 1: Create dispatch subdirectories and templates (6 dispatches, 7 template files per dispatch)
+C:\Users\ajame\.claude\projects\C--	002a3ae	2026-04-18 02:04:39 -0500	Governance System	Phase 1: Initialize governance system repository
+C:\kb-search-api	eb61c81	2026-04-20 06:13:18 -0500	Knowledge Base Search API Owner	docs: add Claude weekly master index with source referentials
+C:\kb-search-api	927da49	2026-04-19 16:22:48 -0500	Knowledge Base Search API Owner	test: case-5 type error (should fail)
+C:\kb-search-api	20ce6e1	2026-04-19 16:20:41 -0500	Knowledge Base Search API Owner	docs: add API documentation guide (2026-04-19)
+C:\kb-search-api	c79a117	2026-04-19 15:07:57 -0500	Knowledge Base Search API Owner	lint: auto-format with Black and fix Ruff issues
+C:\kb-search-api	7fa4a66	2026-04-19 15:01:25 -0500	Knowledge Base Search API Owner	ci: add GitHub Actions workflow and verification guide
+C:\kb-search-api	c471697	2026-04-19 13:31:05 -0500	Knowledge Base Search API Owner	docs: add Phase 4 disposition decisions summary
+C:\kb-search-api	3f1b0bd	2026-04-19 13:30:16 -0500	Knowledge Base Search API Owner	decision: kb-search-api disposition - KEEP + assign owner
+C:\kb-search-api	a4418db	2026-04-19 13:19:04 -0500	Knowledge Base Search API Owner	fix: resolve search endpoint JSON serialization issues
+C:\kb-search-api	a14c942	2026-04-19 12:48:06 -0500	Knowledge Base Search API Owner	docs: add integration guide and deployment readiness checklist
+C:\kb-search-api	5222279	2026-04-19 12:46:53 -0500	Knowledge Base Search API Owner	docs: add API contract for kb-search-api
+C:\kb-search-api	8c2268e	2026-04-19 12:45:55 -0500	Knowledge Base Search API Owner	docs: assign kb-search-api owner and establish maintenance expectations
+C:\kb-search-api	83bae98	2026-04-19 05:34:39 -0500	Knowledge Base Search API Owner	Add STATUS.md documenting disposition options (Archive/Owner-assign/Leave)
+C:\kb-search-api	2d88db6	2026-04-19 04:41:21 -0500	Claude Code Agent	Add .gitignore: exclude archived theater md and deliverables
+C:\kb-search-api	9c54f66	2026-04-19 04:28:28 -0500	Claude Code Agent	Add Docker + requirements infrastructure
+C:\kb-search-api	7b82ba1	2026-04-19 04:28:19 -0500	Claude Code Agent	Initial commit: kb-search-api circuit breaker + search services
+C:\kb-web-ui	c16d901	2026-04-19 18:01:41 -0500	Knowledge Base Web UI Owner	docs: Add comprehensive Phase 12F session update
+C:\kb-web-ui	a126507	2026-04-19 18:01:09 -0500	Knowledge Base Web UI Owner	docs: Add Phase 12F Manual Testing Preparation completion report
+C:\kb-web-ui	944f997	2026-04-19 18:00:30 -0500	Knowledge Base Web UI Owner	fix: Resolve TypeScript type errors in integration tests
+C:\kb-web-ui	b03588b	2026-04-19 17:27:13 -0500	Knowledge Base Web UI Owner	docs: Add session completion report for Phase 12E Integration Testing
+C:\kb-web-ui	595e86c	2026-04-19 17:26:25 -0500	Knowledge Base Web UI Owner	feat: Complete Phase 12E Integration Testing (17 tests, 100% pass rate)
+C:\kb-web-ui	6612db8	2026-04-19 16:23:29 -0500	Knowledge Base Web UI Owner	test: case-10 type error (should fail)
+C:\kb-web-ui	02af89d	2026-04-19 16:20:42 -0500	Knowledge Base Web UI Owner	docs: add frontend integration and setup guides (2026-04-19)
+C:\kb-web-ui	d72f86d	2026-04-19 15:19:26 -0500	Knowledge Base Web UI Owner	feat: complete Phase 10 frontend integration
+C:\kb-web-ui	96606a5	2026-04-19 15:16:24 -0500	Knowledge Base Web UI Owner	feat: implement API integration with kb-search-api
+C:\kb-web-ui	0b4b41e	2026-04-19 15:11:32 -0500	Knowledge Base Web UI Owner	lint: fix ESLint errors (unused imports/vars)
+C:\kb-web-ui	e6b64bc	2026-04-19 15:01:26 -0500	Knowledge Base Web UI Owner	ci: add GitHub Actions workflow and verification guide
+C:\kb-web-ui	5b14e07	2026-04-19 13:30:22 -0500	Knowledge Base Web UI Owner	decision: kb-web-ui disposition - KEEP + active frontend
+C:\kb-web-ui	01c63a8	2026-04-19 13:00:51 -0500	Knowledge Base Web UI Owner	docs: document kb-search-api integration status and build blockers
+C:\kb-web-ui	ef9cdc0	2026-04-19 13:00:05 -0500	Knowledge Base Web UI Owner	feat: update API service to integrate with kb-search-api endpoints
+C:\kb-web-ui	e297771	2026-04-19 12:51:30 -0500	Knowledge Base Web UI Owner	docs: add component structure and API integration map
+C:\kb-web-ui	c537b89	2026-04-19 05:36:43 -0500	Knowledge Base Web UI Owner	Add STATUS.md documenting disposition options (Archive/Keep-Active/Leave)
+C:\kb-web-ui	bf833f0	2026-04-19 04:57:17 -0500	Knowledge Base Web UI Owner	init: kb-web-ui React/TypeScript SPA with vite build tooling
+C:\dev-projects	48a067c	2026-04-19 06:00:40 -0500	Claude Code Agent	test: verify hook works after git config
+C:\dev-projects	8020aba	2026-04-19 05:59:50 -0500	Claude Code Agent	test: hook deployment verification
+C:\dev-projects	780ea5d	2026-04-19 04:53:20 -0500	Claude Code Agent	audit: Add comprehensive cleanup verification report
+C:\dev-projects	dd1021e	2026-04-19 04:47:09 -0500	Claude Code Agent	docs: Add fabrication cleanup summary report
+C:\dev-projects	fcde7b0	2026-04-19 04:46:58 -0500	Claude Code Agent	Merge: Fabrication cleanup + real CI restoration
+C:\dev-projects	3d41417	2026-04-19 04:39:16 -0500	Claude Code Agent	Graveyard Tier B + underscore-prefix: full fabrication sweep of workbench/
+C:\dev-projects	c9d5f62	2026-04-19 04:32:15 -0500	Claude Code Agent	Restore CI/CD: linting and unit tests
+C:\dev-projects	8b23264	2026-04-19 04:22:00 -0500	Claude Code Agent	Graveyard 63 fabrication-pattern files to _graveyard_2026-04-19/
+C:\dev-projects	83f4acf	2026-04-18 16:19:38 -0500	Claude Code Agent	Add hard coverage threshold enforcement to test stage
+C:\dev\monorepo	f9c26b02	2026-04-19 05:22:25 -0500	raf-andrew	Cleanup: remove gito-compare artifacts and update ESLint archive documentation
+C:\dev\monorepo	0f94dc76	2026-04-19 04:38:53 -0500	raf-andrew	Clean: remove unwired ai-linter ESLint plugin config
+C:\dev\monorepo	0b3b1a34	2026-04-19 04:36:46 -0500	raf-andrew	Cleanup: normalize whitespace in pyproject.toml, update mingw-w64-src submodule
+C:\dev\monorepo	7732618a	2026-04-19 04:33:45 -0500	raf-andrew	Cleanup: remove theater markdown + Rust library hardening
+C:\dev\monorepo	420c7ba9	2026-04-18 16:27:15 -0500	raf-andrew	Task 5.3: Add completion summary with final metrics and recommendations
+C:\dev\monorepo	1289cbca	2026-04-18 16:27:00 -0500	raf-andrew	Task 5.2: Fix all CRITICAL and HIGH severity import issues
+C:\dev\monorepo	7df1affa	2026-04-18 16:26:32 -0500	raf-andrew	Task 5.3: Code quality improvements - dead code analysis complete
+C:\dev\monorepo	dd6840f1	2026-04-18 16:25:08 -0500	raf-andrew	Add import validation GitHub Actions workflow (Task 4.1)
+C:\dev\monorepo	2834cfe1	2026-04-18 16:14:23 -0500	raf-andrew	feat(build): Integrate import validation into webpack/vite build pipeline
+C:\dev\monorepo	d9e166ce	2026-04-18 16:13:03 -0500	raf-andrew	Enforce 100% code coverage threshold across all test configs
+C:\dev\monorepo	32621ee0	2026-04-18 16:10:45 -0500	raf-andrew	Tighten TypeScript compiler options across all projects
+C:\dev\monorepo	298dcfaf	2026-04-18 16:07:58 -0500	raf-andrew	feat: Add enhanced pre-push validator with comprehensive checks
+C:\dev\monorepo	82d58575	2026-04-18 16:03:17 -0500	raf-andrew	Standardize linting and formatting configs
+C:\dev\monorepo	ad97b9f2	2026-04-18 16:02:39 -0500	raf-andrew	Task 2.1: Install and configure Husky pre-commit/pre-push hooks
+C:\dev\monorepo	9e6cae39	2026-04-18 15:56:42 -0500	raf-andrew	Task 1.2: Implement AliasResolver for multi-framework alias resolution
+C:\dev\monorepo	c671c28d	2026-04-18 15:20:42 -0500	raf-andrew	Add ESLint plugin documentation and coverage report
+C:\dev\monorepo	3a6b98eb	2026-04-18 15:17:25 -0500	raf-andrew	Build ESLint plugin with 15 AI-generated code detection rules
+F:\infra	2ce7a55	2026-04-19 05:01:35 -0500	raf-andrew	Cleanup: Remove 31 fabrication-pattern theater files from /f/infra root
+F:\infra	11b075f	2026-04-19 04:41:05 -0500	raf-andrew	Update .gitignore: exclude scaffolding files from tracking
+F:\infra	f07303b	2026-04-19 04:33:56 -0500	raf-andrew	Clean: remove fabrication-pattern root markdown files
+F:\infra	54075f1	2026-04-18 14:01:37 -0500	raf-andrew	Add Phase 2 completion report with detailed deliverables summary
+F:\infra	e0d2c4f	2026-04-18 14:00:51 -0500	raf-andrew	Phase 2: Operations Hardening - Complete Implementation
+F:\infra	781fe6a	2026-04-18 02:16:09 -0500	raf-andrew	CRITICAL: Implement security fixes for Harbor and Kubernetes secrets
+F:\infra	a61cb6e	2026-04-18 02:00:48 -0500	raf-andrew	Add comprehensive governance, policies, procedures, and operational frameworks for local deployment
+F:\infra	19a730e	2026-04-18 01:51:50 -0500	raf-andrew	STEP 8: Add completion summary with key metrics
+F:\infra	86417c8	2026-04-18 01:50:52 -0500	raf-andrew	STEP 8: Tier 3-4 Rapid Hardening - 213 services fixed, 320 verified compliant
+F:\infra	0986e31	2026-04-18 01:39:23 -0500	raf-andrew	Add STEP 9 quick start guide and documentation map
+F:\infra	1a74c68	2026-04-18 01:39:09 -0500	raf-andrew	Add STEP 10 completion summary and index
+F:\infra	ebac196	2026-04-18 01:38:22 -0500	raf-andrew	Add STEP 9 Planning Completion Summary
+F:\infra	c98d88c	2026-04-18 01:38:22 -0500	raf-andrew	STEP 10: Production Rollout & Monitoring Strategy - Complete
+F:\infra	a3eab2c	2026-04-18 01:37:30 -0500	raf-andrew	STEP 9: Comprehensive Testing & Validation Framework
+F:\infra	0e5905e	2026-04-18 01:37:20 -0500	raf-andrew	Add STEP7 files inventory and checklist
+F:\infra	75cc7e6	2026-04-18 01:36:35 -0500	raf-andrew	STEP 7: Kubernetes Manifests & Helm Charts - Production Ready
+F:\infra	82007be	2026-04-18 01:35:44 -0500	raf-andrew	STEP 6: Base Image Standardization - Complete
+F:\infra	d6b0e28	2026-04-18 01:21:12 -0500	raf-andrew	STEP 7 plan: Kubernetes manifests & Helm charts (79 services, zero-trust networking, resource limits)
+F:\infra	03349c0	2026-04-18 01:20:37 -0500	raf-andrew	Add comprehensive STEPS 1-5 completion summary (79 services hardened, 50% progress, on schedule)
+F:\infra	4b789be	2026-04-18 01:19:48 -0500	raf-andrew	STEP 5: Full staging deployment framework (integration tests, performance baseline, 79 services ready)
+F:\infra	6208520	2026-04-18 01:18:01 -0500	raf-andrew	Update progress report: STEP 4 complete (71 Tier 2 services hardened, 40% overall progress)
+F:\infra	b0885d8	2026-04-18 01:05:40 -0500	raf-andrew	STEP 4: Tier 2 hardening - bulk Dockerfile fixer script (71 services, automated non-root USER + pinned images)
+F:\infra	e7d10e1	2026-04-18 01:05:38 -0500	raf-andrew	STEP 3: Docker Registry Setup - Harbor deployment (9 services, full config, setup guide)
+F:\infra	515ec54	2026-04-17 23:21:31 -0500	raf-andrew	feat(docker): STEP 2 - CI/CD Security Pipeline
+F:\infra	7d4e382	2026-04-17 23:19:36 -0500	raf-andrew	feat(docker): STEP 1 - Tier 1 staging environment
+F:\infra	d84dc96	2026-04-17 22:29:52 -0500	raf-andrew	fix(docker): harden infrastructure layer - non-root + pinned versions
+F:\infra	d62a469	2026-04-16 11:14:45 -0500	raf-andrew	Move Vault dev token from hardcoded to .env with validation
+F:\infra	5ffe029	2026-04-15 18:12:56 -0500	raf-andrew	feat: add Docker sidecar for Infisical credentials + Hub JWT
+F:\infra	0ccc3aa	2026-04-15 17:20:42 -0500	raf-andrew	fix: update Docker test script to check actual sidecar paths
+F:\infra	0714d8c	2026-04-15 17:13:33 -0500	raf-andrew	feat: add Docker sidecar for Infisical credentials + Hub JWT
+F:\infra	1ba8301	2026-04-15 05:27:10 -0500	raf-andrew	feat: redis_exporter + retention alerts
+F:\infra	a23495b	2026-04-14 23:47:22 -0500	raf-andrew	feat(P1-01): Alertmanager integration with webhook routing
+F:\infra	432d213	2026-04-14 23:40:54 -0500	raf-andrew	feat(P1-01): observability stack (Prometheus + Grafana)
+F:\infra	a9d215e	2026-04-14 21:18:51 -0500	raf-andrew	feat(ops): register backup scripts with OS schedulers
+F:\infra	3f6641c	2026-04-14 20:56:23 -0500	raf-andrew	fix(CRITICAL): backup/restore correctness hardening
+F:\Workbench	700bc90	2026-04-20 08:09:00 -0500	raf-andrew	feat(policy): execute batch-03 (T041-T060) with CI governance audit tooling
+F:\Workbench	845b13e	2026-04-20 07:51:45 -0500	raf-andrew	feat(policy): execute batch-02 (T021-T040) with listener hardening and validator orchestration
+F:\Workbench	25fd340	2026-04-20 07:31:12 -0500	raf-andrew	feat(policy): add batch-01 runtime hook and task-contract enforcement
+F:\Workbench	bf36228	2026-04-20 07:20:25 -0500	raf-andrew	docs(kb): execute batch-01 (T001-T020) with policy enforcer and tracker
+F:\Workbench	f052a6d	2026-04-20 06:26:02 -0500	raf-andrew	docs(kb): add codex-apex-workbench agent policy pack and top-100 mapping
+F:\Workbench	e57ea11	2026-04-19 15:31:24 -0500	raf-andrew	Phase 2 Step 9-10: Load testing framework and scenarios setup
+F:\Workbench	4a047ee	2026-04-19 14:28:26 -0500	raf-andrew	Step 5: Add Lambda HTTP response format compliance tests
+F:\Workbench	91c08b0	2026-04-19 14:24:03 -0500	raf-andrew	Step 4: Add comprehensive parametrized tests for input validation
+F:\Workbench	2290a3a	2026-04-19 14:22:15 -0500	raf-andrew	Step 3: Add integration tests for handler + external dependencies
+F:\Workbench	fa69ce6	2026-04-19 14:18:25 -0500	raf-andrew	Step 2: Fix models.py ordering and add comprehensive handler tests
+F:\Workbench	5047314	2026-04-17 22:29:57 -0500	raf-andrew	fix(docker): harden Workbench Tier 1 services
+F:\Workbench	aa84874	2026-04-15 12:14:56 -0500	raf-andrew	Add research-exec team manifest and domain specialists
+F:\Workbench	bd38f3b	2026-04-15 11:48:16 -0500	raf-andrew	feat: add auto-research team manifest to Claw Hub
+F:\Workbench	1282041	2026-04-14 20:33:36 -0500	raf-andrew	fix: add source_service to all publish() calls
+F:\Workbench	fcd1fa0	2026-04-14 19:06:25 -0500	raf-andrew	fix(security): don't capture subprocess output from gen-key
+F:\Workbench	67e8d6b	2026-04-14 19:03:07 -0500	raf-andrew	fix(security): require REDIS_PASSWORD, add optional TLS
+F:\Workbench	deaa0f4	2026-04-13 23:13:05 -0500	raf-andrew	Fix doctor bug, add skill usage tracker
+F:\Workbench	5511033	2026-04-13 23:00:34 -0500	raf-andrew	docs(sp5): fleet integration guide
+F:\Workbench	4fd6512	2026-04-13 23:00:03 -0500	raf-andrew	feat(sp5): gateway registration and fleet activation scripts
+F:\Workbench	8cb8eea	2026-04-13 22:59:31 -0500	raf-andrew	fix(sp5): update slave master_url for local dev
+F:\Workbench	20be19a	2026-04-13 22:59:00 -0500	raf-andrew	feat(sp5): event publisher for fleet.events stream
+F:\Workbench	b57114f	2026-04-13 22:25:25 -0500	raf-andrew	Add teams and route commands to claw-hub CLI
+F:\Workbench	6ed936e	2026-04-13 22:03:37 -0500	raf-andrew	Add unified agent orchestration pipeline
+F:\apex-stack	90a2b58	2026-04-17 22:30:01 -0500	raf-andrew	fix(docker): standardize apex-stack Tier 1 services
+F:\apex-stack	43b4af2	2026-04-16 21:17:24 -0500	raf-andrew	Wave 2: Consolidate apex-stack consensus hub
+F:\apex-stack	cc0ba87	2026-04-15 12:23:19 -0500	raf-andrew	Add Quick Win 3 completion summary
+F:\apex-stack	30f8710	2026-04-15 12:22:45 -0500	raf-andrew	Wire Recommendation API to Apex dispatch
+F:\apex-stack	883cf03	2026-04-14 20:33:28 -0500	raf-andrew	fix: add source_service to all publish() calls
+F:\apex-stack	672fb3e	2026-04-14 19:06:19 -0500	raf-andrew	fix(security): don't capture subprocess output from gen-key
+F:\apex-stack	3a3ff7a	2026-04-14 19:03:03 -0500	raf-andrew	fix(security): require REDIS_PASSWORD, add optional TLS
+F:\apex-stack	9af3a5e	2026-04-13 22:51:08 -0500	raf-andrew	docs(sp4): integration guide
+F:\apex-stack	8500434	2026-04-13 22:50:53 -0500	raf-andrew	feat(sp4): gateway registration script
+F:\apex-stack	d09b14b	2026-04-13 22:50:41 -0500	raf-andrew	feat(sp4): event publisher for apex.events stream
+F:\apex-stack	99989d5	2026-04-13 22:49:14 -0500	raf-andrew	feat(sp4): add rate limiting to inference API (60/min)
+F:\apex-stack	bf6478e	2026-04-13 22:46:30 -0500	raf-andrew	feat(sp4): secret generator script for Apex .env
+F:\apex-stack	42c7098	2026-04-13 21:08:22 -0500	raf-andrew	Fix 5 CRITICAL security vulnerabilities in memory layer

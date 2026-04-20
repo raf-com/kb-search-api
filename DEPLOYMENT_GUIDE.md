@@ -299,3 +299,11 @@ curl http://localhost:7701/indexes/kb_documents/stats
 **Deployment Status**: ✓ Ready for deployment  
 **Last Updated**: 2026-04-19  
 **Maintainer**: Knowledge Base Team
+
+
+## Binding and production path
+
+This guide’s deployment model is part of the larger cross-stack model documented at:
+- [KB Bootstrap, Binding, and Deployment Map](C:\kb\SYSTEM_BOOTSTRAP_DEPLOYMENT_MAP.md)
+
+Use this map to confirm when to run in standalone mode versus shared-infra mode, and to verify the accepted network/port/service boundaries before production cutover. The documented production bootstrap path does not require Discord.

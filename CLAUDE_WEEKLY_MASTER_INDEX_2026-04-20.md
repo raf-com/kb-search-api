@@ -1,5 +1,7 @@
 # Claude Weekly Master Index (2026-04-13 to 2026-04-20)
 
+> Verification update: use [CLAUDE_WEEKLY_MASTER_INDEX_2026-04-20_VERIFIED.md](C:/kb-search-api/CLAUDE_WEEKLY_MASTER_INDEX_2026-04-20_VERIFIED.md) as the current evidence-backed continuation snapshot for this date range.
+
 ## Purpose
 
 This index consolidates what Claude worked on in the last week and points back to the source referentials so future sessions can continue without re-discovery.
@@ -235,4 +237,3 @@ Recent high-volume root session logs (UUID jsonl) for deep traceability:
 - This index intentionally prioritizes reproducibility over narrative.
 - Any status claim should be considered provisional until validated by current-session commands.
 - Quarantined memory content remains historical evidence, not operational truth.
-

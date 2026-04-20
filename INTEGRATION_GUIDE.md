@@ -230,3 +230,11 @@ All responses include:
 
 **Last Updated**: 2026-04-19  
 **Status**: Active
+
+
+## Integration note
+
+Integrations and dependent stacks should align with:
+- [KB Bootstrap, Binding, and Deployment Map](C:\kb\SYSTEM_BOOTSTRAP_DEPLOYMENT_MAP.md)
+
+Current integration assumption: no Discord service is required as a bootstrap or deployment dependency in this repository path.

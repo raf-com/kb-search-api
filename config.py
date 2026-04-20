@@ -17,6 +17,8 @@ class Settings(BaseSettings):
     environment: str = Field(
         default="development", description="Environment: development|staging|production"
     )
+    api_key: str = Field(default="dev-key-12345", description="API key for authentication")
+    cors_origins: str = Field(default="*", description="Comma-separated allowed CORS origins")
     debug: bool = Field(default=False, description="Enable debug mode")
     log_level: str = Field(default="INFO", description="Logging level")
 
