@@ -1,0 +1,17 @@
+BRANCH=main
+HEAD=d21746e08c303c737309a077b0293e25042d211a
+MAIN_LOCAL=d21746e08c303c737309a077b0293e25042d211a
+MAIN_REMOTE=d21746e08c303c737309a077b0293e25042d211a
+CASE5_LOCAL=c1deee775e0960bfe6ab84a17f3b5ce1d283d4be
+CASE5_REMOTE=c1deee775e0960bfe6ab84a17f3b5ce1d283d4be
+MERGE_BASE_MAIN_CASE5=c1deee775e0960bfe6ab84a17f3b5ce1d283d4be
+STATUS_START
+## main...origin/main
+?? .env
+?? evidence/nine_phase_2026-04-20/phase8_commit_output_2026-04-20_082527.txt
+?? evidence/nine_phase_2026-04-20/phase8_merge_to_main_2026-04-20_082544.txt
+?? evidence/nine_phase_2026-04-20/phase8_post_push_state_2026-04-20_082606.txt
+?? evidence/nine_phase_2026-04-20/phase8_push_main_2026-04-20_082544.txt
+?? evidence/nine_phase_2026-04-20/phase8_push_test_case5_2026-04-20_082544.txt
+?? evidence/nine_phase_2026-04-20/phase8_staged_status_2026-04-20_082527.txt
+STATUS_END
