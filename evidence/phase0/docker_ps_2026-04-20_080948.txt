@@ -1,0 +1,77 @@
+CONTAINER ID   NAMES                                 IMAGE                                                STATUS                             PORTS
+33c4a920911f   wamp-nginx                            wamp-stack-wamp-nginx                                Restarting (1) 3 seconds ago       
+721491c61114   wamp-php-fpm                          wamp-stack/php-fpm:8.2                               Up 7 minutes (healthy)             9000/tcp
+4116e1dc8b50   kb_search_api                         kb-phase0-search-api                                 Up 8 minutes (healthy)             0.0.0.0:8001->8000/tcp, [::]:8001->8000/tcp
+eadfb4067087   bifrost                               raf-com/bifrost:latest                               Up 8 minutes (healthy)             0.0.0.0:8160->8000/tcp, [::]:8160->8000/tcp
+1c62858f0248   infra-fleet-coordinator-1             infra-fleet-coordinator                              Up 20 minutes (healthy)            
+9886cf9aff87   apex-pgbouncer                        edoburu/pgbouncer:latest                             Up 22 minutes (healthy)            127.0.0.1:6432->5432/tcp
+63808d6573e3   wamp-php-fpm-exporter                 hipages/php-fpm_exporter:2.2.0                       Up 22 minutes (healthy)            9253/tcp
+1238b9d1185f   kb_nginx                              nginx:1.25-alpine                                    Up 23 minutes                      0.0.0.0:8451->80/tcp, [::]:8451->80/tcp
+10d8c977e922   kb_postgres_exporter                  prometheuscommunity/postgres-exporter:v0.15.0        Up 23 minutes                      0.0.0.0:9187->9187/tcp, [::]:9187->9187/tcp
+e6a8c64071ba   kb_redis_exporter                     oliver006/redis_exporter:v1.59.0                     Up 23 minutes                      0.0.0.0:9121->9121/tcp, [::]:9121->9121/tcp
+d9ce144a7547   kb_grafana                            grafana/grafana:10.4.0                               Up 23 minutes                      0.0.0.0:3002->3000/tcp, [::]:3002->3000/tcp
+f742edce598f   kb_postgresql                         postgres:15-alpine                                   Up 23 minutes (healthy)            0.0.0.0:5434->5432/tcp, [::]:5434->5432/tcp
+c5d152274fea   kb_prometheus                         prom/prometheus:v2.51.0                              Up 23 minutes                      0.0.0.0:9095->9090/tcp, [::]:9095->9090/tcp
+483449afbe9f   kb_redis                              redis:7-alpine                                       Up 23 minutes (healthy)            0.0.0.0:6380->6379/tcp, [::]:6380->6379/tcp
+5773ed745e75   kb_meilisearch                        getmeili/meilisearch:v1.11.3                         Up 23 minutes (healthy)            0.0.0.0:7702->7700/tcp, [::]:7702->7700/tcp
+b787b4e1b619   kb_qdrant                             qdrant/qdrant:v1.9.2                                 Up 23 minutes                      0.0.0.0:6337->6333/tcp, [::]:6337->6333/tcp, 0.0.0.0:6338->6334/tcp, [::]:6338->6334/tcp
+1282b8f5188d   webapp-reverb-staging                 webapp_core-app                                      Up 27 seconds (health: starting)   6001/tcp, 9000/tcp
+eb904a1e5915   webapp-php-fpm-staging                webapp_core-app                                      Up 23 minutes (healthy)            9000/tcp
+4598779c709c   service-image                         webapp_core_services-service-image                   Up 29 minutes (healthy)            80/tcp, 9000/tcp
+c26178d45691   openmythos-api                        openmythos-local-prod:latest                         Up 33 minutes (healthy)            0.0.0.0:8400->8400/tcp, [::]:8400->8400/tcp
+0bd524adee3c   service-image-fpm-exporter            hipages/php-fpm_exporter:2.2.0                       Up 29 minutes                      127.0.0.1:9502->9253/tcp
+40e6ebccd32e   infra-edge-vault-1                    hashicorp/vault:1.15                                 Up 43 minutes (healthy)            127.0.0.1:8201->8200/tcp
+a7dee233bd89   infra-redis-1                         redis:7.2.5-alpine                                   Up 30 minutes (healthy)            127.0.0.1:6379->6379/tcp
+adebacd93a63   infra-postgres-1                      postgres:16.4-alpine                                 Up 45 minutes (healthy)            127.0.0.1:55432->5432/tcp
+abfa94bd93cd   webapp-database-staging               mysql:8.0                                            Up 52 minutes (healthy)            3306/tcp, 33060/tcp
+7e4aa6afd01b   kb_search_qdrant                      qdrant/qdrant:latest                                 Up 52 minutes (healthy)            0.0.0.0:6335->6333/tcp, [::]:6335->6333/tcp
+c79020c48cb3   prompt-evolution-engine               prompt-evolution-engine-prompt-evolution-engine      Up 52 minutes (healthy)            0.0.0.0:8130->8100/tcp, [::]:8130->8100/tcp
+5b1b298214cc   zero-frontend-stack                   zero-frontend-stack-web                              Up 53 minutes (healthy)            0.0.0.0:8150->8000/tcp, [::]:8150->8000/tcp
+428089a8afab   apex-litellm                          ghcr.io/berriai/litellm:main-latest                  Up 53 minutes (healthy)            0.0.0.0:4000->4000/tcp, [::]:4000->4000/tcp
+872dbe77a45d   apex-phoenix                          arizephoenix/phoenix:latest                          Up 2 hours                         0.0.0.0:6006->6006/tcp, [::]:6006->6006/tcp
+722de5ef7361   localstack-bridge                     alpine:latest                                        Up 3 hours                         
+b488d95bf25f   localstack-hybrid                     localstack/localstack:3.0.0                          Up 3 hours (healthy)               0.0.0.0:4566->4566/tcp, [::]:4566->4566/tcp, 0.0.0.0:4571->4571/tcp, [::]:4571->4571/tcp, 0.0.0.0:4574->4574/tcp, [::]:4574->4574/tcp
+e4aae448c70d   infra-grafana-1                       grafana/grafana:latest                               Up 4 hours (healthy)               127.0.0.1:3000->3000/tcp
+ac25966a7a68   infra-qdrant-1                        qdrant/qdrant:v1.11.0                                Up 4 hours (healthy)               127.0.0.1:6333-6334->6333-6334/tcp
+076546f73cc3   pkg-trae-agent                        pkg-trae-agent-trae-agent                            Up 4 hours (healthy)               0.0.0.0:8120->8100/tcp, [::]:8120->8100/tcp
+f9eb598788f7   webapp-grafana-staging                grafana/grafana:latest                               Up 4 hours                         0.0.0.0:3001->3000/tcp, [::]:3001->3000/tcp
+05e911398546   webapp-nginx-exporter-staging         nginx/nginx-prometheus-exporter:latest               Up 4 hours                         
+4674be35155d   webapp-prometheus-staging             prom/prometheus:latest                               Up 4 hours                         0.0.0.0:9091->9090/tcp, [::]:9091->9090/tcp
+709e97a78c1e   webapp-alertmanager-staging           prom/alertmanager:latest                             Up 4 hours                         0.0.0.0:9094->9093/tcp, [::]:9094->9093/tcp
+0960ef12a072   webapp-redis-exporter-staging         oliver006/redis_exporter:latest                      Up 4 hours                         9121/tcp
+79ff7a381dc1   department_marketing_app              department_marketing-app                             Up 4 hours                         9000/tcp
+5b2614dc826f   department_marketing_nginx            nginx:alpine                                         Up 4 hours                         0.0.0.0:8000->80/tcp, [::]:8000->80/tcp
+43e39afe7120   department_marketing_db               mysql:8.0                                            Up 4 hours                         0.0.0.0:3307->3306/tcp, [::]:3307->3306/tcp
+2e72142762bb   department_marketing_redis            redis:alpine                                         Up 4 hours                         0.0.0.0:6390->6379/tcp, [::]:6390->6379/tcp
+32bb6752662c   automation-master                     raf-com/automation-master:latest                     Up 4 hours (healthy)               0.0.0.0:8110->8000/tcp, [::]:8110->8000/tcp
+5a8c83e4434f   service-elasticsearch                 service-elasticsearch:local                          Up 4 hours (healthy)               0.0.0.0:8465->8200/tcp, [::]:8465->8200/tcp
+e9df4cdf99ad   service-elasticsearch-es              elasticsearch:8.15.3                                 Up 4 hours (healthy)               127.0.0.1:9200->9200/tcp
+e522fe21952c   service-elasticsearch-meili           getmeili/meilisearch:v1.10                           Up 4 hours                         127.0.0.1:7700->7700/tcp
+5cf1839f52ef   infra-edge-traefik-1                  traefik:v3.1                                         Up 4 hours (healthy)               0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp, 127.0.0.1:8088->8080/tcp
+5512738050ac   infra-edge-docker-socket-proxy-1      tecnativa/docker-socket-proxy:latest                 Up 4 hours (healthy)               2375/tcp
+db7481b10cc0   infra-prometheus-1                    prom/prometheus:latest                               Up 41 minutes (healthy)            127.0.0.1:9090->9090/tcp
+984fb930b873   services-proxy                        nginx:1.25-alpine                                    Up 4 hours (healthy)               127.0.0.1:8500->80/tcp
+2f681f4008e9   customer-service-gateway              customer-service-gateway:local                       Up 4 hours (healthy)               127.0.0.1:3101->3100/tcp
+2a2534af66b1   kb_search_api_service                 kb-search-api-search-api                             Up 4 hours (healthy)               0.0.0.0:8010->8000/tcp, [::]:8010->8000/tcp
+1a5b099e94d8   kb_search_redis                       redis:7-alpine                                       Up 4 hours (healthy)               0.0.0.0:6381->6379/tcp, [::]:6381->6379/tcp
+6819f5b6148e   kb_search_postgresql                  postgres:15-alpine                                   Up 4 hours (healthy)               0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp
+304cae3b6024   kb_search_meilisearch                 getmeili/meilisearch:v1.7.0                          Up 4 hours (healthy)               0.0.0.0:7701->7700/tcp, [::]:7701->7700/tcp
+c8f1810837d9   wamp-scheduler                        7d38a195d5d0                                         Up 4 hours (healthy)               9000/tcp
+bd0e56d4891c   wamp-queue-worker                     7d38a195d5d0                                         Up 21 seconds (healthy)            9000/tcp
+f021ccbde98e   wamp-nginx-exporter                   nginx/nginx-prometheus-exporter:1.3                  Up 4 hours                         
+b3a18e01b1f0   wamp-vault-agent                      hashicorp/vault:1.15                                 Up 4 hours (healthy)               8200/tcp
+b5f1c457e380   wamp-redis-exporter                   oliver006/redis_exporter:v1.62.0-alpine              Up 4 hours (healthy)               9121/tcp
+8dacca295c4b   infra-promtail                        grafana/promtail:latest                              Up 4 hours                         127.0.0.1:9080->9080/tcp
+9c852259305e   infra-loki                            grafana/loki:latest                                  Up 4 hours                         127.0.0.1:3100->3100/tcp
+da6c6dd9f41f   lambda-automation-init                localhost:5000/automation-init:latest                Up 4 hours                         0.0.0.0:9006->8080/tcp, [::]:9006->8080/tcp
+a4195db1a6f5   infra-alertmanager                    prom/alertmanager:latest                             Up 4 hours                         127.0.0.1:9093->9093/tcp
+2eaf19fef0a0   lambda-automation-eval                localhost:5000/automation-eval:latest                Up 4 hours                         0.0.0.0:9004->8080/tcp, [::]:9004->8080/tcp
+842f5436c3fa   lambda-automation-roadmap-generator   localhost:5000/automation-roadmap-generator:latest   Up 4 hours                         0.0.0.0:9007->8080/tcp, [::]:9007->8080/tcp
+69f0bcc2117e   lambda-automation-smart-roadmap       localhost:5000/automation-smart-roadmap:latest       Up 4 hours                         0.0.0.0:9009->8080/tcp, [::]:9009->8080/tcp
+582c5753ddc7   lambda-automation-eval-response       localhost:5000/automation-eval-response:latest       Up 4 hours                         0.0.0.0:9005->8080/tcp, [::]:9005->8080/tcp
+e8b04c75ce63   lambda-firecrawl-python               localhost:5000/automation-firecrawl-python:latest    Up 4 hours                         0.0.0.0:9001->8080/tcp, [::]:9001->8080/tcp
+76cfef2a97da   lambda-automation-skill-loader        localhost:5000/automation-skill-loader:latest        Up 4 hours                         0.0.0.0:9008->8080/tcp, [::]:9008->8080/tcp
+44980114f3ba   lambda-firecrawl-js                   localhost:5000/automation-firecrawl-js:latest        Up 4 hours                         0.0.0.0:9002->8080/tcp, [::]:9002->8080/tcp
+11ab8520c65e   lambda-automation-client              localhost:5000/automation-client:latest              Up 4 hours                         0.0.0.0:9003->8080/tcp, [::]:9003->8080/tcp
+8b299d5a91cc   lambda-migration-registry             registry:2                                           Up 4 hours                         0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp
+76d441abfcea   infra-vault-1                         hashicorp/vault:1.15                                 Up 4 hours (unhealthy)             127.0.0.1:8200->8200/tcp

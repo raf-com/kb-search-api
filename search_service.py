@@ -18,6 +18,7 @@ from redis.asyncio import Redis
 
 from config import get_settings
 from models import SearchFilters, SearchResultItem
+from search_utils import SearchUtils
 
 logger = logging.getLogger(__name__)
 
@@ -94,21 +95,26 @@ class SearchService:
         results = []
 
         try:
+            # For hybrid search pagination, we fetch (limit + offset) from each source
+            # and then slice the final combined results.
+            fetch_limit = limit + offset
+
             if semantic_weight < 1.0:
                 # Full-text search (Meilisearch)
+                # Pass offset=0 to fetch from the top for better fusion
                 keyword_results = await self._meilisearch_search(
-                    query, filters, limit, offset, highlight
+                    query, filters, fetch_limit, 0, highlight
                 )
                 results.extend(keyword_results)
 
             if semantic_weight > 0.0:
                 # Semantic search (Qdrant)
-                semantic_results = await self._qdrant_search(query, filters, limit)
+                semantic_results = await self._qdrant_search(query, filters, fetch_limit)
                 results.extend(semantic_results)
 
             # Combine and rank results using Reciprocal Rank Fusion
-            combined_results = self._reciprocal_rank_fusion(
-                results, semantic_weight, limit
+            combined_results = SearchUtils.reciprocal_rank_fusion(
+                results, semantic_weight, limit, offset
             )
 
             # Build response
@@ -343,119 +349,6 @@ class SearchService:
             )
 
         return Filter(must=must_conditions) if must_conditions else None
-
-    def _reciprocal_rank_fusion(
-        self,
-        results: List[Dict[str, Any]],
-        semantic_weight: float,
-        limit: int,
-    ) -> List[Dict[str, Any]]:
-        """
-        Combine results using Reciprocal Rank Fusion (RRF).
-
-        RRF formula: score = sum(1 / (k + rank)) where k is constant (60)
-
-        Args:
-            results: Combined results from all sources
-            semantic_weight: Weight for semantic results (0-1)
-            limit: Final result limit
-
-        Returns:
-            list: Ranked and deduplicated results
-
-        Example:
-            >>> results = [
-            ...     {"doc_id": "1", "rank": 1, "search_type": "keyword", ...},
-            ...     {"doc_id": "1", "rank": 1, "search_type": "semantic", ...},
-            ... ]
-            >>> combined = service._reciprocal_rank_fusion(results, 0.5, 10)
-            >>> len(combined)
-            1
-        """
-        # Group results by doc_id
-        doc_scores: Dict[str, Dict[str, Any]] = {}
-        k = 60  # RRF constant
-
-        for result in results:
-            doc_id = str(result["doc_id"])
-
-            if doc_id not in doc_scores:
-                # Convert datetime to ISO string for JSON serialization
-                created_date = result["created_date"]
-                if isinstance(created_date, datetime):
-                    created_date = created_date.isoformat()
-
-                doc_scores[doc_id] = {
-                    "doc_id": result["doc_id"],
-                    "title": result["title"],
-                    "source": result["source"],
-                    "owner": result["owner"],
-                    "classification": result["classification"],
-                    "created_date": created_date,
-                    "excerpt": result["excerpt"],
-                    "highlighted_excerpt": result["highlighted_excerpt"],
-                    "topics": result["topics"],
-                    "keyword_score": 0.0,
-                    "semantic_score": 0.0,
-                }
-
-            # Apply weights based on search type
-            if result["search_type"] == "keyword":
-                doc_scores[doc_id]["keyword_score"] += result.get(
-                    "relevance_score", 0.5
-                )
-            elif result["search_type"] == "semantic":
-                doc_scores[doc_id]["semantic_score"] += result.get(
-                    "relevance_score", 0.5
-                )
-
-        # Calculate final scores
-        final_results = []
-        for doc_id, scores in doc_scores.items():
-            keyword_rrf = (
-                1 / (k + scores.get("rank", 1000))
-                if scores.get("keyword_score", 0) > 0
-                else 0
-            )
-            semantic_rrf = (
-                1 / (k + scores.get("rank", 1000))
-                if scores.get("semantic_score", 0) > 0
-                else 0
-            )
-
-            # Blend scores
-            keyword_weight = 1 - semantic_weight
-            final_score = (keyword_weight * keyword_rrf) + (
-                semantic_weight * semantic_rrf
-            )
-
-            # Ensure created_date is a string
-            created_date = scores["created_date"]
-            if isinstance(created_date, datetime):
-                created_date = created_date.isoformat()
-
-            final_results.append(
-                SearchResultItem(
-                    doc_id=str(
-                        scores["doc_id"]
-                    ),  # Convert UUID to string for JSON serialization
-                    rank=len(final_results) + 1,
-                    title=scores["title"],
-                    source=scores["source"],
-                    owner=scores["owner"],
-                    classification=scores["classification"],
-                    created_date=created_date,  # ISO format string
-                    relevance_score=min(final_score, 1.0),
-                    search_type="hybrid",
-                    excerpt=scores["excerpt"],
-                    highlighted_excerpt=scores["highlighted_excerpt"],
-                    topics=scores["topics"],
-                )
-            )
-
-        # Sort by relevance score and limit
-        final_results.sort(key=lambda x: x.relevance_score, reverse=True)
-        return [r.dict() for r in final_results[:limit]]
 
     def _get_cache_key(
         self,

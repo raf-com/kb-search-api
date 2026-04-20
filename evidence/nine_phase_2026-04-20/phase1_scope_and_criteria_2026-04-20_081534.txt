@@ -1,0 +1,16 @@
+RUN_ID=nine_phase_2026-04-20_2026-04-20_081534
+DATE_LOCAL=2026-04-20T08:15:34.7877152-05:00
+TIMEZONE=America/Chicago
+SCOPE=Continue weekly Claude evaluation, create evidence-backed master index update, produce next-100-step plan, commit and push to knowledge-base repo
+PRIMARY_REPO=C:\kb-search-api
+HISTORY_ROOT=C:\Users\ajame\.claude\projects\C--
+POLICY_BASIS=No fabricated execution claims; each status line must map to evidence in this session
+VERIFICATION_RULE_1=Each phase writes at least one evidence artifact under evidence\\nine_phase_2026-04-20
+VERIFICATION_RULE_2=No phase marked complete until a second pass re-check confirms outputs exist
+VERIFICATION_RULE_3=Any unknown claim remains unverified and is labeled explicitly
+MANDATORY_POLICY_FILE_HASHES_BEGIN
+OK|C:\Users\ajame\.claude\projects\C--\memory\feedback_no_fabricated_execution.md|SHA256=C3A23C3B9377F979BC2F9F996149404FE543761F1AB7E7B0E5546FCF58A64D90
+OK|C:\Users\ajame\.claude\projects\C--\EXECUTION_POLICY.md|SHA256=8F58A12E746824D6A59474A345EAC82D4D6F55D293D1A399E6DB0CD5BA9D0E83
+OK|C:\Users\ajame\.claude\projects\C--\HONEST_INFRASTRUCTURE_REVIEW_2026-04-18.md|SHA256=425A11FFCDD731BAEDBB3AFB2986FB088650378942671EADD68619418E2A234B
+OK|C:\Users\ajame\.claude\projects\C--\PROFILE_REPORT_2026-04-19.md|SHA256=8754153FBBEDB0A2E83B09CE0102DD231335B64E1E8204B7366E2E7C79AC543B
+MANDATORY_POLICY_FILE_HASHES_END

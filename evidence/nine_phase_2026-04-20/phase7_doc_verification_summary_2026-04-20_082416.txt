@@ -1,0 +1,8 @@
+TIMESTAMP=2026-04-20T08:24:18.0734470-05:00
+DOCS_VALIDATED=3
+TOTAL_LINKS_SCANNED=82
+MISSING_LINKS=0
+CLAIMS_FILE=C:\kb-search-api\evidence\nine_phase_2026-04-20\phase5_claim_classification_2026-04-20_082102.tsv
+STALE_CLAIMS_IDENTIFIED=2
+LINK_CHECK_FILE=C:\kb-search-api\evidence\nine_phase_2026-04-20\phase7_doc_link_check_2026-04-20_082416.tsv
+HASH_MANIFEST_FILE=C:\kb-search-api\evidence\nine_phase_2026-04-20\phase7_doc_hash_manifest_2026-04-20_082416.tsv

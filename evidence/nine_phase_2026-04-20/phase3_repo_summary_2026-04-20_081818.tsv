@@ -1,0 +1,21 @@
+path	exists	git_repo	branch	status_lines	remote_count	last_commit
+C:\Users\ajame\.claude\projects\C--	YES	YES	ai-linter-integration	10	0	61fe4ff|2026-04-20 07:34:48 -0500|Governance System|chore: checkpoint full dirty worktree state
+C:\kb-search-api	YES	YES	test/case-5	39	2	eb61c81|2026-04-20 06:13:18 -0500|Knowledge Base Search API Owner|docs: add Claude weekly master index with source referentials
+C:\kb-web-ui	YES	YES	test/case-10	63	2	c16d901|2026-04-19 18:01:41 -0500|Knowledge Base Web UI Owner|docs: Add comprehensive Phase 12F session update
+C:\dev-projects	YES	YES	main	29	2	48a067c|2026-04-19 06:00:40 -0500|Claude Code Agent|test: verify hook works after git config
+C:\dev\monorepo	YES	YES	master	2	2	f9c26b02|2026-04-19 05:22:25 -0500|raf-andrew|Cleanup: remove gito-compare artifacts and update ESLint archive documentation
+C:\webapp_core	YES	YES	release-candidate-2026-04-19	965	0	ef43a77|2026-04-20 06:41:48 -0500|raf-andrew|docs(kb): add webapp_core deployment readiness and next-week objectives
+C:\apex-prod	YES	NO	-	-	-	-
+C:\agentic-infra	YES	NO	-	-	-	-
+C:\kb-phase0	YES	NO	-	-	-	-
+C:\infra	YES	NO	-	-	-	-
+C:\dev-infrastructure	YES	YES	master	92	2	0b90400|2026-04-19 13:04:03 -0500|CloudDeploy|test: verify pre-commit hook deployment
+C:\raf-com-workspace\repos\department_marketing	YES	YES	main	24	2	4f2e4187a8|2026-04-19 14:25:27 -0500|ajame|feat: add Phase K tooling scripts and guides (Steps 22-27)
+F:\infra	YES	YES	main	5	2	2ce7a55|2026-04-19 05:01:35 -0500|raf-andrew|Cleanup: Remove 31 fabrication-pattern theater files from /f/infra root
+F:\Workbench	YES	YES	ops/500-step-exec-2026-04-20T08-07-56	1264	2	700bc90|2026-04-20 08:09:00 -0500|raf-andrew|feat(policy): execute batch-03 (T041-T060) with CI governance audit tooling
+F:\apex-stack	YES	YES	main	963	2	90a2b58|2026-04-17 22:30:01 -0500|raf-andrew|fix(docker): standardize apex-stack Tier 1 services
+F:\DEV	YES	YES	master	19236	2	88e34d9d|2026-04-17 19:36:37 -0700|raf-andrew|docs: add bootstrap knowledge base master index
+F:\dev-env-provisioner	YES	YES	main	182	2	7a4c7fa|2026-04-02 00:00:39 -0700|BetaRaff|fix: resolve Ansible container initialization issues (#4)
+F:\www	YES	NO	-	-	-	-
+F:\wamp	YES	YES	master	3	0	b2c1b33|2026-04-20 00:54:30 -0500|Admin|feat: add SearchProxyController and service_elasticsearch integration
+F:\openclaw	YES	YES	main	199	2	b5fa2ed5cb|2026-04-14 01:42:41 +0100|Peter Steinberger|build: refresh a2ui bundle hash

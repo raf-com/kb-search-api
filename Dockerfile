@@ -5,6 +5,11 @@
 # ============================================================================
 FROM python:3.11-slim as builder
 
+LABEL maintainer="APEX Infrastructure Team"
+LABEL version="1.0.0"
+LABEL description="Knowledge Base Search API - High Performance Hybrid Search"
+LABEL component="search-api"
+
 WORKDIR /build
 
 # Install build dependencies
@@ -51,7 +56,7 @@ COPY --chown=appuser:appuser . .
 USER appuser
 
 # Health check
-HEALTHCHECK --interval=10s --timeout=5s --retries=3 \
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:8000/api/v1/health || exit 1
 
 # Expose port

@@ -14,14 +14,20 @@ import requests
 from typing import List, Dict, Any
 import hashlib
 import asyncpg
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Configuration
 MEILISEARCH_URL = os.getenv("MEILISEARCH_URL", "http://localhost:7700")
+MEILISEARCH_KEY = os.getenv("MEILISEARCH_KEY", "masterKey")
 QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6335")
-MEILISEARCH_INDEX = "documents"  # Must match api config
-QDRANT_COLLECTION = "documents"  # Must match api config
+MEILISEARCH_INDEX = os.getenv("MEILISEARCH_INDEX", "kb_documents")
+QDRANT_COLLECTION = os.getenv("QDRANT_COLLECTION", "kb_embeddings")
 
 # PostgreSQL Configuration
+DATABASE_URL = os.getenv("DATABASE_URL")
 PG_HOST = os.getenv("DB_HOST", "localhost")
 PG_PORT = int(os.getenv("DB_PORT", "5433"))
 PG_USER = os.getenv("DB_USER", "kb_user")
@@ -50,13 +56,16 @@ async def fetch_documents_from_postgresql() -> List[Dict[str, Any]]:
     print("\n[*] Connecting to PostgreSQL...")
 
     try:
-        conn = await asyncpg.connect(
-            host=PG_HOST,
-            port=PG_PORT,
-            user=PG_USER,
-            password=PG_PASSWORD,
-            database=PG_DATABASE,
-        )
+        if DATABASE_URL:
+            conn = await asyncpg.connect(DATABASE_URL)
+        else:
+            conn = await asyncpg.connect(
+                host=PG_HOST,
+                port=PG_PORT,
+                user=PG_USER,
+                password=PG_PASSWORD,
+                database=PG_DATABASE,
+            )
 
         # Fetch all documents
         docs_data = await conn.fetch("""
@@ -118,10 +127,12 @@ def seed_meilisearch(documents: List[Dict[str, Any]]) -> bool:
     """Load documents into Meilisearch."""
     print("\n[*] Seeding Meilisearch...")
 
+    headers = {"Authorization": f"Bearer {MEILISEARCH_KEY}"}
+
     try:
         # Delete existing index if it exists
         delete_response = requests.delete(
-            f"{MEILISEARCH_URL}/indexes/{MEILISEARCH_INDEX}"
+            f"{MEILISEARCH_URL}/indexes/{MEILISEARCH_INDEX}", headers=headers
         )
         print(f"  Clean index response: {delete_response.status_code}")
 
@@ -129,6 +140,7 @@ def seed_meilisearch(documents: List[Dict[str, Any]]) -> bool:
         index_response = requests.post(
             f"{MEILISEARCH_URL}/indexes",
             json={"uid": MEILISEARCH_INDEX, "primaryKey": "id"},
+            headers=headers,
         )
         print(f"  Create index response: {index_response.status_code}")
 
@@ -136,8 +148,27 @@ def seed_meilisearch(documents: List[Dict[str, Any]]) -> bool:
         docs_response = requests.post(
             f"{MEILISEARCH_URL}/indexes/{MEILISEARCH_INDEX}/documents",
             json=documents,
+            headers=headers,
             timeout=30,
         )
+
+        # Configure filterable attributes
+        settings_response = requests.patch(
+            f"{MEILISEARCH_URL}/indexes/{MEILISEARCH_INDEX}/settings",
+            json={
+                "filterableAttributes": [
+                    "owner",
+                    "classification",
+                    "status",
+                    "topics",
+                    "created_date",
+                ],
+                "sortableAttributes": ["created_date", "updated_date"],
+            },
+            headers=headers,
+            timeout=10,
+        )
+        print(f"  Configure settings response: {settings_response.status_code}")
 
         if docs_response.status_code in [200, 202]:
             print(f"  [OK] Indexed {len(documents)} documents into Meilisearch")
@@ -235,8 +266,10 @@ def verify_seeding() -> bool:
 
     try:
         # Check Meilisearch
+        headers = {"Authorization": f"Bearer {MEILISEARCH_KEY}"}
         stats_response = requests.get(
             f"{MEILISEARCH_URL}/indexes/{MEILISEARCH_INDEX}/stats",
+            headers=headers,
             timeout=10,
         )
         if stats_response.status_code == 200:
@@ -263,7 +296,7 @@ def verify_seeding() -> bool:
         return doc_count > 0 and points_count > 0
 
     except Exception as e:
-        print(f"  ❌ Verification error: {e}")
+        print(f"  [ERROR] Verification error: {e}")
         return False
 
 
@@ -278,10 +311,10 @@ async def main():
         documents = await fetch_documents_from_postgresql()
 
         if not documents:
-            print("\n❌ No documents found in PostgreSQL")
+            print("\n[ERROR] No documents found in PostgreSQL")
             return False
 
-        print(f"\n📄 Preparing {len(documents)} documents for indexing...")
+        print(f"\n[*] Preparing {len(documents)} documents for indexing...")
 
         # Seed search engines
         meilisearch_ok = seed_meilisearch(documents)
@@ -290,7 +323,7 @@ async def main():
         # Verify
         if verify_seeding():
             print("\n" + "=" * 70)
-            print("✅ Search indices populated successfully")
+            print("[OK] Search indices populated successfully")
             print("=" * 70)
             print("\nYou can now test the search API:")
             print("  curl -X POST http://localhost:8000/api/v1/search \\")
@@ -299,12 +332,12 @@ async def main():
             return True
         else:
             print("\n" + "=" * 70)
-            print("⚠️  Indices populated but verification incomplete")
+            print("[WARN] Indices populated but verification incomplete")
             print("=" * 70)
             return meilisearch_ok and qdrant_ok
 
     except Exception as e:
-        print(f"\n❌ Fatal error: {e}")
+        print(f"\n[ERROR] Fatal error: {e}")
         import traceback
 
         traceback.print_exc()

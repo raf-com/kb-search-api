@@ -8,13 +8,15 @@ import logging
 from contextlib import asynccontextmanager
 from datetime import datetime
 
-from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi import FastAPI, Depends, HTTPException, status, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from sqlalchemy.ext.asyncio import AsyncSession
+import time
 
 from config import get_settings
 from database import get_database_manager
+from exceptions import KBSearchError, AuthenticationError
 from models import (
     SearchRequest,
     SearchResponse,
@@ -53,14 +55,17 @@ async def lifespan(app: FastAPI):
     Handles startup and shutdown events.
     """
     # Startup
-    logger.info("Starting Knowledge Base Search API...")
+    logger.info(f"Starting Knowledge Base Search API v{settings.api_version}...")
     await db_manager.initialize()
     logger.info("Database connections initialized")
     yield
     # Shutdown
     logger.info("Shutting down Knowledge Base Search API...")
-    await db_manager.close()
-    logger.info("Database connections closed")
+    try:
+        await db_manager.close()
+        logger.info("Database connections closed gracefully")
+    except Exception as e:
+        logger.error(f"Error during graceful shutdown: {e}")
 
 
 # Create FastAPI app
@@ -74,11 +79,63 @@ app = FastAPI(
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=settings.cors_origins.split(","),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Global Exception Handler
+@app.exception_handler(KBSearchError)
+async def kb_search_exception_handler(request: Request, exc: KBSearchError):
+    return JSONResponse(
+        status_code=exc.status_code,
+        content={
+            "status": "error",
+            "error": {
+                "code": exc.code,
+                "message": exc.message,
+                "details": exc.details
+            }
+        },
+    )
+
+# API Key Authentication Middleware
+@app.middleware("http")
+async def api_key_auth(request, call_next):
+    # Skip auth for health check and docs
+    if request.url.path in ["/api/v1/health", "/docs", "/redoc", "/openapi.json"]:
+        return await call_next(request)
+    
+    api_key = request.headers.get("X-API-Key")
+    if not api_key or api_key != settings.api_key:
+        raise AuthenticationError()
+    return await call_next(request)
+
+# Custom middleware for Request-ID, Version, and Timing
+@app.middleware("http")
+async def add_process_time_header(request: Request, call_next):
+    import uuid
+    request_id = request.headers.get("X-Request-ID", str(uuid.uuid4()))
+    start_time = time.time()
+    
+    response = await call_next(request)
+    
+    process_time = time.time() - start_time
+    response.headers["X-Request-ID"] = request_id
+    response.headers["X-API-Version"] = settings.api_version
+    response.headers["X-Process-Time"] = str(process_time)
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    
+    # Log slow queries
+    if process_time > 0.5: # 500ms threshold
+        logger.warning(
+            f"Slow request: {request.method} {request.url.path} "
+            f"took {process_time:.4f}s (Request-ID: {request_id})"
+        )
+    
+    return response
 
 
 # ============================================================================
@@ -161,7 +218,7 @@ async def search(
         results = await search_service.search(
             query=request.query,
             filters=request.filters,
-            limit=request.limit,
+            limit=request.limit or settings.default_search_limit,
             offset=request.offset,
             semantic_weight=request.semantic_weight,
             highlight=request.highlight,

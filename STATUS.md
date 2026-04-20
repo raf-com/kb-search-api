@@ -74,3 +74,10 @@ Choose ONE of the following:
 **Disposition:** KEEP (deployed, real code, integration-ready)  
 **Decision made:** 2026-04-19 by deployment verification session  
 **Owner TBD:** Assign in next planning cycle
+
+
+## Deployment and integration alignment
+
+- This service supports local, shared-infra, and staged deployment verification modes.
+- The bootstrap/deployment contract and binding choices are summarized in [KB Bootstrap, Binding, and Deployment Map](C:\kb\SYSTEM_BOOTSTRAP_DEPLOYMENT_MAP.md).
+- Discord is not part of current production bootstrap/deployment requirements.

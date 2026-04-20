@@ -1,0 +1,15 @@
+ CLAUDE_WEEKLY_MASTER_INDEX_2026-04-20.md   |   3 +-
+ DEPLOYMENT_GUIDE.md                        |   8 ++
+ DEPLOYMENT_LOG_2026-04-19.md               |  17 +++-
+ Dockerfile                                 |   7 +-
+ INTEGRATION_GUIDE.md                       |   8 ++
+ STATUS.md                                  |   7 ++
+ __pycache__/models.cpython-312.pyc         | Bin 17031 -> 15158 bytes
+ __pycache__/search_service.cpython-312.pyc | Bin 19929 -> 20337 bytes
+ config.py                                  |   2 +
+ docker-compose.standalone.yml              |   9 +-
+ main.py                                    |  69 ++++++++++++++--
+ models.py                                  | 103 ++++++++++-------------
+ populate_search_indices.py                 |  65 +++++++++++----
+ search_service.py                          | 127 +++--------------------------
+ 14 files changed, 222 insertions(+), 203 deletions(-)
