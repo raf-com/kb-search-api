@@ -1,0 +1,11 @@
+[main 2e2c4e2] docs: finalize phase-9 verification and handoff artifacts
+ 9 files changed, 332 insertions(+)
+ create mode 100644 NINE_PHASE_FINAL_VERIFICATION_2026-04-20.md
+ create mode 100644 evidence/nine_phase_2026-04-20/phase8_commit_output_2026-04-20_082527.txt
+ create mode 100644 evidence/nine_phase_2026-04-20/phase8_merge_to_main_2026-04-20_082544.txt
+ create mode 100644 evidence/nine_phase_2026-04-20/phase8_post_push_state_2026-04-20_082606.txt
+ create mode 100644 evidence/nine_phase_2026-04-20/phase8_push_main_2026-04-20_082544.txt
+ create mode 100644 evidence/nine_phase_2026-04-20/phase8_push_test_case5_2026-04-20_082544.txt
+ create mode 100644 evidence/nine_phase_2026-04-20/phase8_staged_status_2026-04-20_082527.txt
+ create mode 100644 evidence/nine_phase_2026-04-20/phase9_artifact_index_2026-04-20_082732.tsv
+ create mode 100644 evidence/nine_phase_2026-04-20/phase9_git_state_2026-04-20_082732.txt
