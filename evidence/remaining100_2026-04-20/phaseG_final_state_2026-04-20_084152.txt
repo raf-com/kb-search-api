@@ -1,0 +1,13 @@
+TIMESTAMP=2026-04-20T08:41:52.8796315-05:00
+HEAD=7f0833d0075eb5abbd3a02190b6bb215725b856d
+ORIGIN_MAIN=7f0833d0075eb5abbd3a02190b6bb215725b856d
+MATRIX_FILE=C:\kb-search-api\evidence\remaining100_2026-04-20\phaseC_runtime_health_matrix_from_script_pwsh_2026-04-20_0837.tsv
+OK_COUNT=12
+WARN_COUNT=1
+SKIP_COUNT=1
+FAIL_COUNT=0
+STATUS_START
+## main...origin/main
+?? .env
+?? evidence/remaining100_2026-04-20/phaseG_final_state_2026-04-20_084152.txt
+STATUS_END
