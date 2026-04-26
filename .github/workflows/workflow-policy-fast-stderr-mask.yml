@@ -1,0 +1,36 @@
+name: workflow-policy-fast-stderr-mask
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main, develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  workflow-policy-fast-stderr-mask:
+    name: workflow-policy-fast-stderr-mask
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pinned-from:v4
+      - name: Setup Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # pinned-from:v5
+        with:
+          python-version: "3.12"
+      - name: Run policy scan (stderr-mask blocking)
+        run: |
+          python .ci/portable/scan_workflow_policy.py \
+            --repo . \
+            --fail-on-stderr-mask \
+            --stderr-mask-threshold 0 \
+            --output workflow_policy_scan.json
+      - name: Upload scan artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # pinned-from:v4
+        with:
+          name: workflow-policy-scan
+          path: workflow_policy_scan.json
+          retention-days: 30
