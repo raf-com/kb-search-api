@@ -1,0 +1,81 @@
+name: fabrication-scanner
+on:
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  fabrication-scanner:
+    name: Scan changed markdown for fabrication patterns
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pinned-from:v4
+        with:
+          fetch-depth: 0
+
+      - name: Scan PR-changed markdown for fabrication tells
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+
+          PATTERNS=(
+            'X/Y tasks complete'
+            'Hour [0-9]+ checkpoint'
+            'P99 *= *[0-9]+ *ms'
+            '[0-9]+ agents dispatched'
+            'Gate [A-Z0-9]+ *✅ *PASS'
+            '100% compliance verified'
+            'UNANIMOUS GO FOR PRODUCTION'
+            'Wave [0-9]+ complete'
+            '[0-9]+/[0-9]+ artifacts delivered'
+            'validation swarm running'
+          )
+
+          ESCAPE_HATCH='<!--allow-theater-->'
+
+          mapfile -t CHANGED_MD < <(git diff --name-only --diff-filter=AM "$BASE_SHA...$HEAD_SHA" -- '*.md')
+
+          if [ ${#CHANGED_MD[@]} -eq 0 ]; then
+            echo "No changed markdown files. Skipping."
+            exit 0
+          fi
+
+          echo "Scanning ${#CHANGED_MD[@]} changed markdown file(s)..."
+
+          FAIL=0
+          for FILE in "${CHANGED_MD[@]}"; do
+            [ ! -f "$FILE" ] && continue
+
+            if grep -Fq "$ESCAPE_HATCH" "$FILE"; then
+              echo "::notice file=$FILE::Escape hatch present (allow-theater); not scanned."
+              continue
+            fi
+
+            for PATTERN in "${PATTERNS[@]}"; do
+              MATCHES=$(grep -nE "$PATTERN" "$FILE" || true)
+              if [ -n "$MATCHES" ]; then
+                while IFS= read -r LINE; do
+                  LINE_NO="${LINE%%:*}"
+                  SNIPPET="${LINE#*:}"
+                  echo "::error file=$FILE,line=$LINE_NO::Fabrication pattern '$PATTERN' — $SNIPPET"
+                done <<< "$MATCHES"
+                FAIL=1
+              fi
+            done
+          done
+
+          if [ "$FAIL" -ne 0 ]; then
+            echo ""
+            echo "Fabrication patterns detected. If a hit is a legitimate historical"
+            echo "quote, add the escape hatch comment to the file:"
+            echo "    <!--allow-theater-->"
+            echo "Otherwise rewrite without the flagged phrasing."
+            exit 1
+          fi
+
+          echo "No fabrication patterns found in changed markdown."

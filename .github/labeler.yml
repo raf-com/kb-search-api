@@ -1,0 +1,81 @@
+# Auto-label PRs by changed paths. Used by .github/workflows/auto-label.yml.
+
+api:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "main.py"
+          - "search_service*.py"
+          - "embedding_service.py"
+          - "metadata_service.py"
+
+caching:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "cache_manager.py"
+          - "caching_patterns.py"
+
+resilience:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "circuit_breaker.py"
+
+database:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "database.py"
+          - "models.py"
+          - "init-scripts/**"
+          - "alembic/**"
+
+reindex:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "*reindex*.py"
+          - "populate_*.py"
+          - "seed_*.py"
+
+tests:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "test_*.py"
+          - "tests/**"
+
+docker:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "Dockerfile"
+          - "docker-compose*.yml"
+          - ".dockerignore"
+
+scripts:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "scripts/**"
+          - "*.sh"
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/workflows/**"
+          - ".ci/**"
+
+docs:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "README.md"
+          - "CONTRIBUTING.md"
+          - "SECURITY.md"
+          - "*.md"
+
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "requirements.txt"
+          - "pyproject.toml"
+          - "poetry.lock"
+
+config:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "config.py"
+          - ".env.example"

@@ -1,0 +1,40 @@
+name: commitlint
+on:
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  commitlint:
+    name: Lint PR title and commit messages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pinned-from:v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # pinned-from:v5
+        with:
+          node-version: "20"
+
+      - name: Install commitlint
+        run: |
+          npm install --no-save \
+            @commitlint/cli@20 \
+            @commitlint/config-conventional@20
+
+      - name: Lint PR title
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          echo "$PR_TITLE" | npx commitlint --config commitlint.config.js
+
+      - name: Lint each commit on the branch
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          npx commitlint --config commitlint.config.js --from "$BASE_SHA" --to "$HEAD_SHA"
