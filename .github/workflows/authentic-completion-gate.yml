@@ -1,0 +1,59 @@
+name: authentic-completion-gate
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main, develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  authentic-completion-gate:
+    name: authentic-completion-gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history for unlock-audit step)
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pinned-from:v4
+        with:
+          fetch-depth: 0
+      - name: Setup Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # pinned-from:v5
+        with:
+          python-version: "3.12"
+      - name: Run composite completion gate
+        run: |
+          python .ci/portable/run_authentic_completion_gate.py \
+            --scan-repo . \
+            --audit-repo . \
+            --artifacts-dir gate-artifacts \
+            --output authentic_completion_gate.json
+      - name: Annotate dropped guardrails
+        if: always()
+        run: |
+          python - <<'EOF'
+          import json, sys, pathlib
+          gate_file = pathlib.Path("authentic_completion_gate.json")
+          if not gate_file.exists():
+              print("Gate output not found — skipping annotation.")
+              sys.exit(0)
+          data = json.loads(gate_file.read_text())
+          dropped = data.get("dropped_steps", [])
+          if "guardrails-dev-run" in dropped:
+              print("::warning::authentic-completion-gate: guardrails-dev-run was "
+                    "listed in dropped_steps. Guardrail enforcement was skipped for "
+                    "this run. Review gate-artifacts/ for details.")
+          for step in dropped:
+              if step != "guardrails-dev-run":
+                  print(f"::notice::authentic-completion-gate: step '{step}' dropped.")
+          EOF
+      - name: Upload gate artifacts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # pinned-from:v4
+        with:
+          name: authentic-completion-gate
+          path: |
+            authentic_completion_gate.json
+            gate-artifacts/
+          retention-days: 30
