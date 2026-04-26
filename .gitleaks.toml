@@ -1,0 +1,19 @@
+# gitleaks config. Allowlists project-specific placeholders.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Local placeholders that look like secrets but aren't"
+regexes = [
+  '''changeme''',
+  '''CHANGE_?ME''',
+  '''placeholder''',
+  '''YOUR_[A-Z_]+_HERE''',
+  '''sk-test-[a-z0-9]+''',
+]
+paths = [
+  '''.env\.example''',
+  '''.*\.md$''',
+  '''_graveyard_.*''',
+  '''_archive_.*''',
+]

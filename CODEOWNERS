@@ -1,10 +1,25 @@
-# CODEOWNERS for kb-search-api
+# Auto-assigned reviewer for everything by default.
+*                       @raf-andrew
 
-# Default owner for all code
-* @ajame
+# CI / branch protection / portable gate suite.
+/.github/               @raf-andrew
+/.ci/                   @raf-andrew
 
-# Critical components
-/src/main.py @ajame
-/src/config/ @ajame
-/src/circuit_breaker.py @ajame
-/src/caching_patterns.py @ajame
+# Critical service entrypoints + resilience.
+/main.py                @raf-andrew
+/config.py              @raf-andrew
+/circuit_breaker.py     @raf-andrew
+/caching_patterns.py    @raf-andrew
+/cache_manager.py       @raf-andrew
+
+# Build + dep manifests — touch with care.
+/Dockerfile             @raf-andrew
+/docker-compose*.yml    @raf-andrew
+/requirements.txt       @raf-andrew
+/pyproject.toml         @raf-andrew
+
+# Top-level docs that gate onboarding / contribution.
+/README.md              @raf-andrew
+/CONTRIBUTING.md        @raf-andrew
+/SECURITY.md            @raf-andrew
+/CHANGELOG.md           @raf-andrew

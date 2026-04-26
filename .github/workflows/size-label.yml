@@ -1,0 +1,30 @@
+name: size-label
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  size-label:
+    name: Auto-label by diff size
+    runs-on: ubuntu-latest
+    steps:
+      - uses: pascalgn/size-label-action@v0.5.5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IGNORED: |
+            poetry.lock
+            requirements.txt
+            *.lock
+        with:
+          sizes: |
+            {
+              "0":   "size/XS",
+              "20":  "size/S",
+              "100": "size/M",
+              "500": "size/L",
+              "1000":"size/XL",
+              "2000":"size/XXL"
+            }
